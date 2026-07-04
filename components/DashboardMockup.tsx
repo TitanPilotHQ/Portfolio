@@ -201,7 +201,7 @@ export function DashboardMockup() {
           </div>
 
           {/* Recent signal */}
-          <div className="rounded-xl border border-white/5 bg-bg/60 p-3.5 sm:col-span-2">
+          <div className="min-w-0 rounded-xl border border-white/5 bg-bg/60 p-3.5 sm:col-span-2">
             <div className="flex items-center gap-2">
               <Activity className="size-4 text-electric" />
               <p className="font-mono text-[10px] uppercase tracking-widest text-secondary">
@@ -240,7 +240,7 @@ export function DashboardMockup() {
             </ul>
           </div>
 
-          <div className="flex flex-col justify-between rounded-xl border border-white/5 bg-bg/60 p-4 sm:col-span-2">
+          <div className="flex min-w-0 flex-col justify-between rounded-xl border border-white/5 bg-bg/60 p-4 sm:col-span-2">
             <p className="font-mono text-[10px] uppercase tracking-widest text-secondary">
               Replay / Audit
             </p>
@@ -257,8 +257,10 @@ export function DashboardMockup() {
             </div>
           </div>
 
-          {/* Evidence strip — event id, timestamp, model version */}
-          <div className="rounded-xl border border-white/5 bg-bg/60 px-4 py-2.5 sm:col-span-5">
+          {/* Evidence strip — event id, timestamp, model version.
+              min-w-0 keeps the nowrap truncate text from expanding the
+              grid track (it blew the whole hero wide on mobile). */}
+          <div className="min-w-0 rounded-xl border border-white/5 bg-bg/60 px-4 py-2.5 sm:col-span-5">
             <p className="truncate font-mono text-[9px] tracking-wide text-white/35">
               evt_01JQ8F2M9K · 2026-07-04T14:00:05Z · signal
               sha256:c41d7e… · model titan-analyst v1.4 · scorer v2.0.1
