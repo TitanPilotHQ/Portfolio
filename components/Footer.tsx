@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { Github, Linkedin } from "lucide-react";
-import { DISCLAIMER, GITHUB_URL } from "@/lib/content";
+import Link from "next/link";
+import { Github, Linkedin, Mail } from "lucide-react";
+import { CONTACT_EMAIL, DISCLAIMER, GITHUB_URL } from "@/lib/content";
 
 export function Footer() {
   return (
@@ -33,24 +34,34 @@ export function Footer() {
               </p>
               <ul className="space-y-2.5 text-sm text-secondary">
                 <li>
-                  <a href="#product" className="transition-colors hover:text-white">
+                  <a href="/#product" className="transition-colors hover:text-white">
                     Product
                   </a>
                 </li>
                 <li>
-                  <a href="#architecture" className="transition-colors hover:text-white">
+                  <a href="/#architecture" className="transition-colors hover:text-white">
                     Architecture
                   </a>
                 </li>
                 <li>
-                  <a href="#roadmap" className="transition-colors hover:text-white">
+                  <a href="/#roadmap" className="transition-colors hover:text-white">
                     Roadmap
                   </a>
                 </li>
                 <li>
-                  <a href="#faq" className="transition-colors hover:text-white">
+                  <a href="/#faq" className="transition-colors hover:text-white">
                     FAQ
                   </a>
+                </li>
+                <li>
+                  <Link href="/manifesto" className="transition-colors hover:text-white">
+                    Manifesto
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/disclaimer" className="transition-colors hover:text-white">
+                    Disclaimer
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -80,7 +91,15 @@ export function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://titanpilot.app"
+                    href={`mailto:${CONTACT_EMAIL}`}
+                    className="flex items-center gap-2 transition-colors hover:text-white"
+                  >
+                    <Mail className="size-4" aria-hidden /> {CONTACT_EMAIL}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.titanpilot.app"
                     className="font-mono text-xs transition-colors hover:text-cyan"
                   >
                     titanpilot.app

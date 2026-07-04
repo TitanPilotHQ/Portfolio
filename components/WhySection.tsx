@@ -17,8 +17,8 @@ export function WhySection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Why Titan Pilot"
-          title="Built for Traders Who Care About What Happens After the Signal."
-          copy="Most trading systems focus on entries. Titan Pilot focuses on the entire lifecycle: analysis, validation, execution, reconciliation, recovery, replay, and auditability."
+          title="Built for Traders Who Care What Happens After the Signal."
+          copy="Most trading systems obsess over entries. Titan Pilot is for technical traders and automation builders who want AI assistance without surrendering control — validation, scoring, risk control, broker reconciliation, recovery, replay, and auditability."
         />
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

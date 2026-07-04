@@ -20,13 +20,19 @@ const unbounded = Unbounded({
   weight: ["500", "600", "700", "800"],
 });
 
-const siteUrl = "https://titanpilot.app";
+const siteUrl = "https://www.titanpilot.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Titan Pilot — AI Trading Infrastructure Built for Replayable, Risk-First Automation",
+  title: {
+    default: "Titan Pilot — Replayable AI Trading Infrastructure",
+    template: "%s — Titan Pilot",
+  },
   description:
-    "Titan Pilot is an AI trading infrastructure platform combining deterministic execution, replayable decisions, broker reconciliation, risk controls, and AI-assisted market reasoning.",
+    "Titan Pilot is a risk-first AI trading infrastructure platform with replayable decisions, deterministic scoring, MT5 execution, broker reconciliation, and shadow-mode validation.",
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
     "AI trading infrastructure",
     "autonomous trading platform",
@@ -48,9 +54,9 @@ export const metadata: Metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Titan Pilot",
-    title: "Titan Pilot — AI Trading Infrastructure",
+    title: "Titan Pilot — Replayable AI Trading Infrastructure",
     description:
-      "Autonomous trading intelligence built like mission-critical infrastructure. Deterministic execution, replayable decisions, risk-first automation.",
+      "AI reasons. Software decides. Risk-first AI trading infrastructure with replayable decisions, deterministic scoring, and shadow-mode validation.",
     images: [
       {
         url: "/banner.png",

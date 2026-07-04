@@ -82,11 +82,14 @@ export function DashboardMockup() {
         <div className="flex items-center justify-between border-b border-white/5 px-5 py-3">
           <div className="flex items-center gap-2 font-mono text-[11px] tracking-[0.3em] text-secondary">
             TITAN <span className="text-white/30">·</span> COCKPIT
+            <span className="ml-1 hidden rounded border border-white/10 px-1.5 py-0.5 text-[9px] tracking-widest text-white/40 sm:inline">
+              ENV: SHADOW
+            </span>
           </div>
           <div className="flex items-center gap-2 rounded-full border border-cyan/25 bg-cyan/10 px-3 py-1">
             <span className="animate-ticker size-1.5 rounded-full bg-cyan" />
             <span className="font-mono text-[10px] tracking-widest text-cyan">
-              LIVE SHADOW MODE
+              SHADOW MODE
             </span>
           </div>
         </div>
@@ -211,6 +214,9 @@ export function DashboardMockup() {
                 SHADOW MODE
               </span>
             </div>
+            <p className="mt-2 font-mono text-[9px] text-white/35">
+              risk gate: PASS · reject reason: none
+            </p>
           </div>
 
           {/* Agent consensus + replay */}
@@ -250,10 +256,19 @@ export function DashboardMockup() {
               </p>
             </div>
           </div>
+
+          {/* Evidence strip — event id, timestamp, model version */}
+          <div className="rounded-xl border border-white/5 bg-bg/60 px-4 py-2.5 sm:col-span-5">
+            <p className="truncate font-mono text-[9px] tracking-wide text-white/35">
+              evt_01JQ8F2M9K · 2026-07-04T14:00:05Z · signal
+              sha256:c41d7e… · model titan-analyst v1.4 · scorer v2.0.1
+            </p>
+          </div>
         </div>
 
         <p className="border-t border-white/5 px-5 py-2.5 text-center font-mono text-[9px] tracking-widest text-white/30">
-          PRODUCT VISUALIZATION — NOT A PERFORMANCE CLAIM
+          PRODUCT SIMULATION · EXAMPLE SHADOW SIGNAL · NON-LIVE DATA · NOT A
+          PERFORMANCE CLAIM
         </p>
       </div>
     </motion.div>

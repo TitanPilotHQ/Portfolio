@@ -1,12 +1,17 @@
 "use client";
 
-import { Send } from "lucide-react";
+import { Check, Send, X } from "lucide-react";
 import { useState, type FormEvent } from "react";
+import {
+  CONTACT_EMAIL,
+  EARLY_ACCESS_DISCLAIMER,
+  EARLY_ACCESS_GETS,
+  EARLY_ACCESS_NOT_GETS,
+} from "@/lib/content";
 import { Reveal, SectionHeading } from "./ui";
 
 // TODO: Replace the mailto handoff with a real backend (server action,
 // Resend, or a form service) before scale. Kept dependency-free for v1.
-const CONTACT_EMAIL = "hello@titanpilot.app";
 
 export function EarlyAccessForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -41,10 +46,40 @@ export function EarlyAccessForm() {
         <SectionHeading
           eyebrow="Early Access"
           title="Follow the Build. Join Early Access."
-          copy="Titan Pilot is currently validating its AI shadow pipeline on production infrastructure. If you are interested in AI trading infrastructure, autonomous systems, or technical collaboration, join early access."
+          copy="Early access is for technical traders, AI automation builders, and infrastructure-minded market participants who want to follow or test Titan Pilot's shadow-mode validation."
         />
 
-        <Reveal className="mx-auto mt-14 max-w-xl">
+        {/* What early access means — sets expectations, filters the audience */}
+        <Reveal className="mx-auto mt-12 grid max-w-3xl gap-4 sm:grid-cols-2">
+          <div className="glass rounded-2xl p-6">
+            <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.3em] text-success">
+              You may receive
+            </p>
+            <ul className="space-y-2.5">
+              {EARLY_ACCESS_GETS.map((item) => (
+                <li key={item} className="flex items-start gap-2.5 text-sm text-secondary">
+                  <Check className="mt-0.5 size-4 shrink-0 text-success" aria-hidden />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="glass rounded-2xl p-6">
+            <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.3em] text-amber">
+              You will not receive
+            </p>
+            <ul className="space-y-2.5">
+              {EARLY_ACCESS_NOT_GETS.map((item) => (
+                <li key={item} className="flex items-start gap-2.5 text-sm text-secondary">
+                  <X className="mt-0.5 size-4 shrink-0 text-amber" aria-hidden />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Reveal>
+
+        <Reveal className="mx-auto mt-8 max-w-xl">
           <form
             onSubmit={handleSubmit}
             className="glass-strong space-y-4 rounded-2xl p-6 sm:p-8"
@@ -113,6 +148,9 @@ export function EarlyAccessForm() {
                 Your email client should open — send the drafted message to finish.
               </p>
             ) : null}
+            <p className="pt-1 text-center text-[11px] leading-relaxed text-white/35">
+              {EARLY_ACCESS_DISCLAIMER}
+            </p>
           </form>
         </Reveal>
       </div>

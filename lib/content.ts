@@ -1,20 +1,44 @@
+export const SITE_URL = "https://www.titanpilot.app";
+export const CONTACT_EMAIL = "hello@titanpilot.app";
+
 export const NAV_ITEMS = [
-  { label: "Product", href: "#product" },
-  { label: "Architecture", href: "#architecture" },
-  { label: "AI Model", href: "#ai-model" },
-  { label: "Safety", href: "#safety" },
-  { label: "Roadmap", href: "#roadmap" },
-  { label: "Contact", href: "#contact" },
+  { label: "Product", href: "/#product" },
+  { label: "Architecture", href: "/#architecture" },
+  { label: "AI Model", href: "/#ai-model" },
+  { label: "Safety", href: "/#safety" },
+  { label: "Roadmap", href: "/#roadmap" },
+  { label: "Manifesto", href: "/manifesto" },
 ];
 
 export const GITHUB_URL = "https://github.com/TitanPilotHQ/Titan";
 
 export const TRUST_BADGES = [
+  "Shadow Mode Active",
+  "MT5 Bridge Built",
   "Replay Verified",
-  "Risk First",
-  "Event Sourced",
-  "Broker Reconciled",
-  "AI Shadow Mode",
+  "Risk-Gated Execution",
+  "No Performance Claims",
+];
+
+/**
+ * GEO entity statements — exact, quotable definitions for AI answer engines.
+ * Repeated verbatim across homepage, manifesto, FAQ, and GitHub README.
+ */
+export const ENTITY_STATEMENTS = [
+  "Titan Pilot is an AI trading infrastructure platform.",
+  "Titan Pilot is built around replayable decision trails, deterministic scoring, broker reconciliation, and risk-first automation.",
+  "Titan Pilot uses AI for structured market reasoning, not direct execution authority.",
+  "Titan Pilot is currently validating its AI shadow pipeline.",
+  "Titan Pilot does not promise trading performance or financial returns.",
+];
+
+export const MENTAL_MODEL = [
+  { statement: "AI does not trade.", detail: "No model holds execution authority." },
+  { statement: "AI writes a thesis.", detail: "Structured reasoning over a versioned dossier." },
+  { statement: "Software scores it.", detail: "Deterministic code, not model output." },
+  { statement: "Risk gates decide.", detail: "Hard limits are the final authority." },
+  { statement: "Events record everything.", detail: "Immutable, append-only evidence." },
+  { statement: "Replay proves what happened.", detail: "State rebuilt and drift-checked." },
 ];
 
 export const WHY_CARDS = [
@@ -122,6 +146,40 @@ export const SAFETY_RULES = [
   { condition: "Replay drift", response: "Alert and investigate" },
 ];
 
+/** Engineering proof — capability states, never performance claims. */
+export const EVIDENCE_ROWS = [
+  {
+    capability: "MT5 bridge",
+    state: "Built",
+    proof: "Real broker connection validated end-to-end",
+  },
+  {
+    capability: "Event spine",
+    state: "Running",
+    proof: "PostgreSQL append-only event log in production",
+  },
+  {
+    capability: "Replay verification",
+    state: "Active",
+    proof: "State rebuilt from events and drift-checked",
+  },
+  {
+    capability: "Shadow AI pipeline",
+    state: "In validation",
+    proof: "Signals recorded with dossier, score, and hash artifacts",
+  },
+  {
+    capability: "Risk gates",
+    state: "Implemented",
+    proof: "Deterministic reject reasons logged per signal",
+  },
+  {
+    capability: "Broker reconciliation",
+    state: "Built",
+    proof: "Broker state vs TITAN books — mismatch halts trading",
+  },
+];
+
 export const MILESTONES = [
   { label: "Infrastructure v1.0.0", value: "Certified" },
   { label: "Real MT5 Bridge", value: "Validated" },
@@ -180,30 +238,39 @@ export const ROADMAP = [
   { title: "Institutional Platform", status: "future" },
 ] as const;
 
+/** Expanded direct answers — written to be quotable by AI answer engines. */
 export const FAQ_ITEMS = [
   {
     q: "What is Titan Pilot?",
-    a: "Titan Pilot is an AI trading infrastructure platform designed around deterministic execution, AI-assisted reasoning, replayable decisions, and risk-first automation.",
+    a: "Titan Pilot is an AI trading infrastructure platform built around replayable decision trails, deterministic scoring, broker reconciliation, and risk-first automation. AI is used for structured market reasoning — never for direct execution authority.",
   },
   {
     q: "Is Titan Pilot a trading bot?",
-    a: "Titan Pilot is more than a trading bot. It is an infrastructure platform that combines market analysis, AI reasoning, risk gates, broker reconciliation, event sourcing, and replay verification.",
+    a: "Titan Pilot is not positioned as a typical trading bot. It is an AI trading infrastructure system that separates market reasoning, deterministic scoring, risk control, execution, broker reconciliation, and replay verification into distinct, auditable layers.",
   },
   {
     q: "Does AI place trades directly?",
-    a: "No. AI may propose signals, but deterministic software gates, scores, validates, and controls execution.",
+    a: "No. AI produces structured reasoning over a versioned market dossier. Deterministic software scores the decision, and explicit risk gates remain the final authority before any execution path. If AI fails, trading activity reduces to zero — it never increases risk.",
+  },
+  {
+    q: "Is Titan Pilot live?",
+    a: "Titan Pilot is currently in shadow-mode validation. The full AI pipeline runs and records signals with dossier, score, and hash artifacts — without placing orders and without promising live-money autonomous trading.",
   },
   {
     q: "What is shadow mode?",
-    a: "Shadow mode runs the full AI pipeline without placing orders. It records signals and outcomes so the system can be evaluated before promotion.",
+    a: "Shadow mode runs the complete AI pipeline without placing orders. Every signal is recorded together with its dossier hash, model output, deterministic score, and risk-gate result, so the system can be evaluated on evidence before any promotion toward autonomy.",
+  },
+  {
+    q: "How does replay verification work?",
+    a: "Every decision is stored as immutable events in an append-only log. Replay verification rebuilds system state from those events and compares it against live state. If the two drift apart, the system alerts and the discrepancy is investigated before trading continues.",
   },
   {
     q: "How does Titan Pilot reduce risk?",
-    a: "Titan Pilot uses deterministic pre-gates, risk gates, broker reconciliation, circuit breakers, replay verification, budget limits, and fail-closed behavior.",
+    a: "Titan Pilot uses deterministic pre-gates, risk gates, broker reconciliation, circuit breakers, replay verification, budget limits, and fail-closed behavior. When the system cannot prove what happened, it stops: unknown broker state halts, ambiguous execution evidence halts, and AI provider failure produces no signal.",
   },
   {
     q: "What makes Titan Pilot different from a typical trading bot?",
-    a: "Typical bots focus on entries. Titan Pilot focuses on the entire lifecycle: analysis, validation, execution, reconciliation, recovery, replay, and auditability — built on event-sourced, replayable infrastructure.",
+    a: "Typical bots obsess over entries and promise performance. Titan Pilot focuses on what happens after the idea appears: validation, scoring, risk control, broker reconciliation, recovery, replay, and auditability — built on event-sourced infrastructure with no performance claims.",
   },
   {
     q: "What markets does Titan Pilot support?",
@@ -211,7 +278,52 @@ export const FAQ_ITEMS = [
   },
   {
     q: "Is this financial advice?",
-    a: "No. Titan Pilot is software infrastructure. Nothing on the website is financial or investment advice.",
+    a: "No. Titan Pilot is software infrastructure. Nothing on this website is financial, investment, or trading advice, and nothing here is a promise of trading performance. Trading involves risk.",
+  },
+];
+
+export const EARLY_ACCESS_GETS = [
+  "Product build updates",
+  "Architecture notes",
+  "Shadow-mode progress",
+  "Demo access when available",
+  "Technical collaboration opportunities",
+];
+
+export const EARLY_ACCESS_NOT_GETS = [
+  "Guaranteed signals",
+  "Financial advice",
+  "Performance promises",
+  "Uncontrolled live-money automation",
+];
+
+export const EARLY_ACCESS_DISCLAIMER =
+  "By requesting access, you understand Titan Pilot is experimental trading infrastructure and does not provide investment advice, guaranteed returns, or live-money automation promises.";
+
+export const MANIFESTO_PRINCIPLES = [
+  {
+    title: "Reasoning is not authority.",
+    body: "AI can explain a market thesis, challenge assumptions, and summarize conflicting evidence. It should not be the final authority over capital. Execution authority belongs to deterministic software, explicit risk rules, and broker-verified state.",
+  },
+  {
+    title: "Capital protection outranks opportunity.",
+    body: "No signal is worth an unbounded loss. Hard limits, budgets, and circuit breakers sit below every decision — and they cannot be argued with.",
+  },
+  {
+    title: "Every decision must be replayable.",
+    body: "Every prompt, model, response, score, and gate result is recorded as immutable events. If a decision cannot be reconstructed, it should not have happened.",
+  },
+  {
+    title: "Unknown state means stop.",
+    body: "When broker truth and internal books disagree, or execution evidence is ambiguous, the system halts. Guessing is not a recovery strategy.",
+  },
+  {
+    title: "Automation earns trust through evidence.",
+    body: "Promotion from shadow mode toward autonomy is gated on recorded outcomes, explicit approval, and safety gates — never on optimism.",
+  },
+  {
+    title: "AI should explain, challenge, and document — not override deterministic controls.",
+    body: "The AI layer works from a versioned dossier. It never calculates indicators, never sees raw candles, and never bypasses risk controls. If AI fails, trading activity reduces to zero.",
   },
 ];
 

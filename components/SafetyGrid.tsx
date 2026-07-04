@@ -11,8 +11,8 @@ export function SafetyGrid() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Safety & Capital Protection"
-          title="The System Is Designed to Stop Before It Guesses."
-          copy="When the system cannot prove what happened, it stops. Fail-closed behavior is not a feature flag — it is the foundation."
+          title="When Titan Pilot Cannot Prove State, It Stops."
+          copy="This is the emotional opposite of reckless automation. Fail-closed behavior is not a feature flag — it is the foundation."
         />
 
         <div className="mx-auto mt-14 grid max-w-5xl gap-10 lg:grid-cols-[1fr_1.4fr] lg:items-center">

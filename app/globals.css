@@ -101,6 +101,13 @@ body {
   color: #ffffff;
 }
 
+/* Visible keyboard focus everywhere */
+:focus-visible {
+  outline: 2px solid rgba(0, 215, 255, 0.7);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 /* Thin neon scrollbar */
 ::-webkit-scrollbar {
   width: 10px;

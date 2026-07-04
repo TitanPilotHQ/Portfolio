@@ -46,19 +46,18 @@ export function Hero() {
             className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan/20 bg-cyan/5 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.3em] text-cyan"
           >
             <span className="animate-ticker size-1.5 rounded-full bg-cyan" />
-            AI Trading Infrastructure
+            AI Reasons. Software Decides.
           </motion.p>
 
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-display text-balance text-[1.7rem] font-bold leading-[1.15] sm:text-4xl lg:text-[2.9rem] lg:leading-[1.12]"
+            className="font-display text-balance text-[1.6rem] font-bold leading-[1.16] sm:text-4xl lg:text-[2.7rem] lg:leading-[1.14]"
           >
-            Autonomous Trading Intelligence, Built Like{" "}
-            <span className="text-gradient">
-              Mission-Critical Infrastructure.
-            </span>
+            AI Trading Infrastructure That{" "}
+            <span className="text-gradient">Records Every Decision</span> Before
+            It Risks Capital.
           </motion.h1>
 
           <motion.p
@@ -67,9 +66,9 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.22 }}
             className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-secondary sm:text-lg"
           >
-            Titan Pilot combines deterministic engineering, AI-assisted market
-            reasoning, replayable decision trails, and risk-first automation into
-            a platform designed for serious market systems.
+            Titan Pilot is a replayable AI trading system where LLMs generate
+            structured reasoning, deterministic software scores decisions, and
+            risk gates remain in control.
           </motion.p>
 
           <motion.div
@@ -82,10 +81,10 @@ export function Hero() {
               whileHover={{ scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              href="#architecture"
+              href="#contact"
               className="group inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-cyan to-azure px-6 py-3 text-sm font-semibold text-bg shadow-[0_0_24px_-8px_rgba(0,215,255,0.5)] transition-shadow hover:shadow-[0_0_44px_-6px_rgba(0,215,255,0.7)]"
             >
-              Explore the Architecture
+              Join Early Access
               <ArrowRight
                 className="size-4 transition-transform group-hover:translate-x-0.5"
                 aria-hidden
@@ -95,10 +94,10 @@ export function Hero() {
               whileHover={{ scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              href="#contact"
+              href="#architecture"
               className="rounded-lg border border-white/15 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-cyan/40 hover:bg-cyan/5"
             >
-              Join Early Access
+              Explore the Architecture
             </motion.a>
           </motion.div>
 
