@@ -9,16 +9,16 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-10 md:flex-row">
           <div className="max-w-sm">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
               <Image
                 src="/logo.png"
                 alt="Titan Pilot logo"
-                width={32}
-                height={32}
-                className="rounded-lg"
+                width={56}
+                height={56}
+                className="rounded-xl"
               />
               <div>
-                <p className="text-sm font-semibold">Titan Pilot</p>
+                <p className="text-base font-semibold">Titan Pilot</p>
                 <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-secondary">
                   AI Trading Infrastructure
                 </p>

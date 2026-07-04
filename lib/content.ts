@@ -1,5 +1,5 @@
 export const SITE_URL = "https://www.titanpilot.app";
-export const CONTACT_EMAIL = "hello@titanpilot.app";
+export const CONTACT_EMAIL = "admin@titanpilot.app";
 
 export const NAV_ITEMS = [
   { label: "Product", href: "/#product" },
