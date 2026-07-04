@@ -1,0 +1,105 @@
+import Image from "next/image";
+import { Github, Linkedin } from "lucide-react";
+import { DISCLAIMER, GITHUB_URL } from "@/lib/content";
+
+export function Footer() {
+  return (
+    <footer className="border-t border-white/5 bg-surface/30">
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-start justify-between gap-10 md:flex-row">
+          <div className="max-w-sm">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/logo.png"
+                alt="Titan Pilot logo"
+                width={32}
+                height={32}
+                className="rounded-lg"
+              />
+              <div>
+                <p className="text-sm font-semibold">Titan Pilot</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-secondary">
+                  AI Trading Infrastructure
+                </p>
+              </div>
+            </div>
+            <p className="mt-5 text-xs leading-relaxed text-white/40">{DISCLAIMER}</p>
+          </div>
+
+          <div className="flex gap-16">
+            <div>
+              <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.3em] text-secondary">
+                Platform
+              </p>
+              <ul className="space-y-2.5 text-sm text-secondary">
+                <li>
+                  <a href="#product" className="transition-colors hover:text-white">
+                    Product
+                  </a>
+                </li>
+                <li>
+                  <a href="#architecture" className="transition-colors hover:text-white">
+                    Architecture
+                  </a>
+                </li>
+                <li>
+                  <a href="#roadmap" className="transition-colors hover:text-white">
+                    Roadmap
+                  </a>
+                </li>
+                <li>
+                  <a href="#faq" className="transition-colors hover:text-white">
+                    FAQ
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.3em] text-secondary">
+                Connect
+              </p>
+              <ul className="space-y-2.5 text-sm text-secondary">
+                <li>
+                  <a
+                    href={GITHUB_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 transition-colors hover:text-white"
+                  >
+                    <Github className="size-4" aria-hidden /> GitHub
+                  </a>
+                </li>
+                <li>
+                  {/* TODO: add LinkedIn company page URL */}
+                  <a
+                    href="#"
+                    className="flex items-center gap-2 transition-colors hover:text-white"
+                  >
+                    <Linkedin className="size-4" aria-hidden /> LinkedIn
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://titanpilot.app"
+                    className="font-mono text-xs transition-colors hover:text-cyan"
+                  >
+                    titanpilot.app
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-6 sm:flex-row">
+          <p className="font-mono text-[10px] tracking-widest text-white/30">
+            © {new Date().getFullYear()} TITAN PILOT — TITANPILOT.APP
+          </p>
+          <p className="font-mono text-[10px] tracking-widest text-white/30">
+            AI REASONS. SOFTWARE DECIDES.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
