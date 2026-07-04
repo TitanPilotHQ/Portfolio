@@ -23,7 +23,7 @@ export function AIPhilosophy() {
               className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-electric/60 to-transparent"
               aria-hidden
             />
-            <p className="text-balance text-2xl font-semibold leading-snug tracking-tight sm:text-3xl">
+            <p className="font-display text-balance text-xl font-bold leading-snug sm:text-2xl lg:text-[1.7rem]">
               &ldquo;LLMs never compute what{" "}
               <span className="text-gradient">deterministic software</span> can
               prove.&rdquo;

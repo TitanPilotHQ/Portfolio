@@ -1,7 +1,18 @@
 "use client";
 
-import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
-import { useEffect, useRef, type ReactNode } from "react";
+import {
+  motion,
+  useInView,
+  useMotionValue,
+  useSpring,
+  useTransform,
+} from "framer-motion";
+import {
+  useEffect,
+  useRef,
+  type MouseEvent as ReactMouseEvent,
+  type ReactNode,
+} from "react";
 
 export function Reveal({
   children,
@@ -35,11 +46,11 @@ export function SectionHeading({
   copy?: string;
 }) {
   return (
-    <Reveal className="mx-auto max-w-3xl text-center">
+    <Reveal className="mx-auto max-w-4xl text-center">
       <p className="mb-4 font-mono text-xs uppercase tracking-[0.35em] text-cyan">
         {eyebrow}
       </p>
-      <h2 className="text-balance text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+      <h2 className="font-display text-balance text-2xl font-bold leading-[1.15] sm:text-3xl lg:text-4xl">
         {title}
       </h2>
       {copy ? (
@@ -51,6 +62,10 @@ export function SectionHeading({
   );
 }
 
+/**
+ * Glass panel with a 3D tilt that follows the cursor.
+ * Touch devices never fire mousemove, so mobile gets the static card.
+ */
 export function GlassCard({
   children,
   className = "",
@@ -58,12 +73,54 @@ export function GlassCard({
   children: ReactNode;
   className?: string;
 }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const px = useMotionValue(0.5);
+  const py = useMotionValue(0.5);
+  const rotateX = useSpring(useTransform(py, [0, 1], [7, -7]), {
+    stiffness: 250,
+    damping: 22,
+  });
+  const rotateY = useSpring(useTransform(px, [0, 1], [-9, 9]), {
+    stiffness: 250,
+    damping: 22,
+  });
+  const glowX = useTransform(px, [0, 1], ["0%", "100%"]);
+  const glowY = useTransform(py, [0, 1], ["0%", "100%"]);
+
+  function onMouseMove(e: ReactMouseEvent<HTMLDivElement>) {
+    const rect = ref.current?.getBoundingClientRect();
+    if (!rect) return;
+    px.set((e.clientX - rect.left) / rect.width);
+    py.set((e.clientY - rect.top) / rect.height);
+  }
+
+  function onMouseLeave() {
+    px.set(0.5);
+    py.set(0.5);
+  }
+
   return (
-    <div
-      className={`glass group relative overflow-hidden rounded-2xl p-6 transition-all duration-300 hover:border-cyan/30 hover:shadow-[0_0_40px_-12px_rgba(0,215,255,0.3)] ${className}`}
-    >
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-      {children}
+    <div className="perspective-1000 h-full">
+      <motion.div
+        ref={ref}
+        onMouseMove={onMouseMove}
+        onMouseLeave={onMouseLeave}
+        style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
+        whileHover={{ scale: 1.02 }}
+        transition={{ scale: { duration: 0.25 } }}
+        className={`glass group relative h-full overflow-hidden rounded-2xl p-6 transition-colors duration-300 hover:border-cyan/30 ${className}`}
+      >
+        {/* Cursor-tracking glow */}
+        <motion.div
+          className="pointer-events-none absolute size-64 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          style={{ left: glowX, top: glowY, x: "-50%", y: "-50%" }}
+          aria-hidden
+        >
+          <div className="size-full rounded-full bg-cyan/15 blur-3xl" />
+        </motion.div>
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+        <div style={{ transform: "translateZ(24px)" }}>{children}</div>
+      </motion.div>
     </div>
   );
 }

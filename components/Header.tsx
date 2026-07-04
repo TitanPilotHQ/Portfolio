@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -67,21 +68,29 @@ export function Header() {
         </button>
       </div>
 
+      <AnimatePresence>
       {open ? (
-        <nav
-          className="border-t border-white/5 bg-bg/95 px-4 py-4 backdrop-blur-xl lg:hidden"
+        <motion.nav
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{ duration: 0.3, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="overflow-hidden border-t border-white/5 bg-bg/95 backdrop-blur-xl lg:hidden"
           aria-label="Mobile"
         >
-          <div className="flex flex-col gap-1">
-            {NAV_ITEMS.map((item) => (
-              <a
+          <div className="flex flex-col gap-1 px-4 py-4">
+            {NAV_ITEMS.map((item, i) => (
+              <motion.a
                 key={item.href}
+                initial={{ opacity: 0, x: -14 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.05 + i * 0.05 }}
                 href={item.href}
                 onClick={() => setOpen(false)}
                 className="rounded-lg px-3 py-2.5 text-sm text-secondary hover:bg-white/5 hover:text-white"
               >
                 {item.label}
-              </a>
+              </motion.a>
             ))}
             <div className="mt-3 flex flex-col gap-2">
               <a
@@ -102,8 +111,9 @@ export function Header() {
               </a>
             </div>
           </div>
-        </nav>
+        </motion.nav>
       ) : null}
+      </AnimatePresence>
     </header>
   );
 }

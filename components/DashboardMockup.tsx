@@ -1,7 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
+import {
+  motion,
+  useMotionValue,
+  useSpring,
+  useTransform,
+} from "framer-motion";
 import { Activity, Lock, ShieldCheck } from "lucide-react";
+import { useRef, type MouseEvent as ReactMouseEvent } from "react";
 
 const CANDLES = [
   { h: 34, y: 46, up: true },
@@ -27,11 +33,39 @@ const AGENTS = [
 ];
 
 export function DashboardMockup() {
+  const ref = useRef<HTMLDivElement>(null);
+  const px = useMotionValue(0.5);
+  const py = useMotionValue(0.5);
+  const rotateX = useSpring(useTransform(py, [0, 1], [6, -6]), {
+    stiffness: 160,
+    damping: 20,
+  });
+  const rotateY = useSpring(useTransform(px, [0, 1], [-8, 8]), {
+    stiffness: 160,
+    damping: 20,
+  });
+
+  function onMouseMove(e: ReactMouseEvent<HTMLDivElement>) {
+    const rect = ref.current?.getBoundingClientRect();
+    if (!rect) return;
+    px.set((e.clientX - rect.left) / rect.width);
+    py.set((e.clientY - rect.top) / rect.height);
+  }
+
+  function onMouseLeave() {
+    px.set(0.5);
+    py.set(0.5);
+  }
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40, rotateX: 8 }}
-      animate={{ opacity: 1, y: 0, rotateX: 0 }}
+      ref={ref}
+      onMouseMove={onMouseMove}
+      onMouseLeave={onMouseLeave}
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, delay: 0.35, ease: [0.21, 0.47, 0.32, 0.98] }}
+      style={{ rotateX, rotateY, transformPerspective: 1200 }}
       className="relative"
       aria-hidden
     >

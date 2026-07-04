@@ -12,10 +12,12 @@ import { RoadmapTimeline } from "@/components/RoadmapTimeline";
 import { FAQ } from "@/components/FAQ";
 import { EarlyAccessForm } from "@/components/EarlyAccessForm";
 import { Footer } from "@/components/Footer";
+import { ScrollExtras } from "@/components/ScrollExtras";
 
 export default function Home() {
   return (
     <>
+      <ScrollExtras />
       <Header />
       <main>
         <Hero />

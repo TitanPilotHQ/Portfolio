@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { TECH_STACK } from "@/lib/content";
 import { SectionHeading } from "./ui";
 
@@ -12,19 +11,19 @@ export function TechStack() {
           eyebrow="Technology Stack"
           title="Built on Proven Engineering Primitives."
         />
+      </div>
 
-        <ul className="mx-auto mt-12 flex max-w-4xl flex-wrap items-center justify-center gap-3">
-          {TECH_STACK.map((tech, i) => (
-            <motion.li
-              key={tech}
-              initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ delay: i * 0.05, duration: 0.4 }}
-              className="rounded-lg border border-white/10 bg-surface/70 px-4 py-2.5 font-mono text-xs tracking-wide text-secondary transition-colors hover:border-cyan/30 hover:text-white"
+      {/* Infinite marquee — duplicated list scrolls 50% then loops seamlessly */}
+      <div className="marquee-mask mt-12 overflow-hidden">
+        <ul className="animate-marquee flex w-max gap-4 hover:[animation-play-state:paused]">
+          {[...TECH_STACK, ...TECH_STACK].map((tech, i) => (
+            <li
+              key={`${tech}-${i >= TECH_STACK.length ? "b" : "a"}`}
+              aria-hidden={i >= TECH_STACK.length}
+              className="rounded-xl border border-white/10 bg-surface/70 px-6 py-3.5 font-mono text-sm tracking-wide text-secondary transition-colors hover:border-cyan/40 hover:text-white"
             >
               {tech}
-            </motion.li>
+            </li>
           ))}
         </ul>
       </div>
