@@ -57,9 +57,40 @@ needs building) · **Needs owner/legal decision** (I cannot decide this one).
 | Vercel configuration | No `vercel.json` or `vercel.ts` in the repo root; deployment relies entirely on Vercel's zero-config Next.js auto-detection | No config file means the security headers this audit flags as `Add` (row above) will need to land via `next.config.ts` `headers()` or a new `vercel.ts` — worth deciding which now that `vercel.ts` is the current recommended path for headers/redirects on Vercel, so W5 doesn't build on the deprecated `vercel.json` pattern. | Add (W5) | direct repo read |
 | Secret scanning | `git ls-files \| grep -iE ".env\|secret\|credential"` returns nothing; no `.env*` files are git-tracked | Clean — no committed secrets found. | Keep | direct repo read, captured 2026-07-10 |
 
-## Live production audit (pending)
+## Live production audit
 
-Replaced by Task 2.
+Captured 2026-07-10 against `https://www.titanpilot.app`.
+
+Methodology note: the installed `chrome-devtools` MCP `lighthouse_audit` tool
+(Lighthouse 13.3.0, this environment's build) only returns
+accessibility/best-practices/SEO/agentic-browsing — it excludes the
+performance category entirely (tool description: "This excludes
+performance. For performance audits, run performance_start_trace"). To get
+a real numeric Performance score rather than inventing one, a direct
+`npx lighthouse@13.4.0` CLI run (headless Chrome, `--preset=desktop`, same
+four categories) was used instead. Accessibility/Best Practices/SEO scores
+from the CLI run (96/100/100) matched the MCP tool's desktop run exactly,
+confirming both measured the same live page consistently. Separately, the
+MCP `resize_page` tool floored the effective viewport width at 500px
+(requests for 390 and 440 both yielded `innerWidth: 500`) — the `emulate`
+tool's `viewport` parameter was used instead and correctly produced
+`innerWidth: 390` and `440` respectively.
+
+| Area | Result | Classification | Notes |
+| --- | --- | --- | --- |
+| Lighthouse — Performance | 95/100 | Keep (≥95) | `npx lighthouse` desktop run; top opportunity was Largest Contentful Paint (audit score 0.81, 25% weight, LCP = 1.5s / 1464ms) |
+| Lighthouse — Accessibility | 96/100 | Revise (<98) | `color-contrast` audit failed (score 0): footer disclaimer paragraph (`text-white/40` on `bg-bg`/`#070a11`) measures 3.76:1, below the required 4.5:1 |
+| Lighthouse — Best Practices | 100/100 | Keep (≥95) | no issues flagged |
+| Lighthouse — SEO | 100/100 | Keep (=100) | no issues flagged |
+| Console errors | 0 error-level messages | Keep (=0) | 1 warn-level message noted (not an error): "The resource https://www.titanpilot.app/_next/image?url=%2Flogo.png&w=96&q=75 was preloaded using link preload but not used within a few seconds from the window's load event" |
+| Network errors | 0 non-2xx/3xx requests | Keep (=0) | all 23 requests observed on initial load + `/manifesto` + `/disclaimer` navigation returned `200` |
+| Mobile overflow — 390×844 | scrollWidth 390 vs clientWidth 390 | Keep (equal) | screenshot `mobile-390x844.png` (hero, badge row, cockpit widget) — no visible horizontal clipping |
+| Mobile overflow — 440×956 | scrollWidth 440 vs clientWidth 440 | Keep (equal) | screenshot `mobile-440x956.png` (hero, badge row, cockpit widget with market data) — no visible horizontal clipping |
+| `sitemap.xml` | Lists exactly 3 routes: `https://www.titanpilot.app` (weekly, priority 1), `/manifesto` (monthly, priority 0.8), `/disclaimer` (yearly, priority 0.4) | Keep | matches `app/sitemap.ts` source |
+| `robots.txt` | `User-Agent: *` / `Allow: /` plus `Sitemap: https://www.titanpilot.app/sitemap.xml` | Keep | matches `app/robots.ts` source |
+| OG image (`/banner.png`) | HTTP 200, content-type `image/png` (`content-length: 1640453`, served via Vercel with `x-vercel-cache: HIT`) | Keep | |
+| JSON-LD parse check | 4/4 blocks parsed (`Organization`, `WebSite`, `SoftwareApplication`, `FAQPage`, in that order) | Keep | all four `application/ld+json` script blocks `JSON.parse` without error |
+| Broken/unresolved links | 1 found | Revise | footer social icon labelled "LinkedIn" has `href="#"` (no real destination) — every other internal link resolves: `/`, `/manifesto`, `/disclaimer`, and hash links `#product`/`#architecture`/`#ai-model`/`#safety`/`#roadmap`/`#contact`/`#faq` all land on an existing `id` on the homepage; `https://www.titanpilot.app` and `mailto:admin@titanpilot.app` are also valid |
 
 ## Synthesis
 
