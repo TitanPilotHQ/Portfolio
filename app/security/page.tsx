@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { PageShell } from "@/components/PageShell";
-import { Reveal, SectionHeading } from "@/components/ui";
+import { Reveal } from "@/components/ui";
 import { DISCLAIMER, SECURITY_CAPABILITIES } from "@/lib/content";
 
 export const metadata: Metadata = {
