@@ -10,7 +10,7 @@ const STATE_STYLES: Record<string, string> = {
   Running: "border-success/25 bg-success/10 text-success",
   Active: "border-success/25 bg-success/10 text-success",
   Implemented: "border-success/25 bg-success/10 text-success",
-  "In validation": "border-cyan/25 bg-cyan/10 text-cyan",
+  Certified: "border-success/25 bg-success/10 text-success",
 };
 
 export function EvidenceSection() {
@@ -68,7 +68,7 @@ export function EvidenceSection() {
               ))}
             </ul>
           </div>
-          <p className="mt-5 text-center font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">
+          <p className="mt-5 text-center font-mono text-[10px] uppercase tracking-[0.3em] text-white/60">
             Capability states only — never performance claims
           </p>
         </Reveal>
