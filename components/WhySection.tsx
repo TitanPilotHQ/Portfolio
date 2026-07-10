@@ -1,6 +1,6 @@
 "use client";
 
-import { BrainCircuit, Cpu, History, ShieldCheck } from "lucide-react";
+import { ArrowRight, BrainCircuit, Cpu, History, ShieldCheck } from "lucide-react";
 import { WHY_CARDS } from "@/lib/content";
 import { GlassCard, Reveal, SectionHeading } from "./ui";
 
@@ -37,6 +37,16 @@ export function WhySection() {
             );
           })}
         </div>
+
+        <Reveal className="mt-10 text-center">
+          <a
+            href="/product"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan hover:underline"
+          >
+            Read the full product deep dive
+            <ArrowRight className="size-3.5" aria-hidden />
+          </a>
+        </Reveal>
       </div>
     </section>
   );

@@ -2,8 +2,9 @@ export const SITE_URL = "https://www.titanpilot.app";
 export const CONTACT_EMAIL = "admin@titanpilot.app";
 
 export const NAV_ITEMS = [
-  { label: "Product", href: "/#product" },
-  { label: "Architecture", href: "/#architecture" },
+  { label: "Product", href: "/product" },
+  { label: "Architecture", href: "/architecture" },
+  { label: "Security", href: "/security" },
   { label: "AI Model", href: "/#ai-model" },
   { label: "Safety", href: "/#safety" },
   { label: "Roadmap", href: "/#roadmap" },

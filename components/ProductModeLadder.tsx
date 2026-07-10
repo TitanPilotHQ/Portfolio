@@ -1,5 +1,6 @@
 "use client";
 
+import { ArrowRight } from "lucide-react";
 import { PRODUCT_MODES } from "@/lib/content";
 import { GlassCard, Reveal, SectionHeading } from "./ui";
 
@@ -41,10 +42,20 @@ export function ProductModeLadder() {
         </div>
 
         <Reveal className="mt-8 text-center">
-          <p className="mx-auto max-w-2xl font-mono text-[11px] leading-relaxed tracking-wide text-white/35">
+          <p className="mx-auto max-w-2xl font-mono text-[11px] leading-relaxed tracking-wide text-white/60">
             Live-money autonomy is outside the current public promise and must
             remain evidence-gated.
           </p>
+        </Reveal>
+
+        <Reveal className="mt-6 text-center">
+          <a
+            href="/product"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan hover:underline"
+          >
+            Read more about the autonomy ladder
+            <ArrowRight className="size-3.5" aria-hidden />
+          </a>
         </Reveal>
       </div>
     </section>

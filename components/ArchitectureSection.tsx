@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 import { ARCHITECTURE_FLOW, ARCHITECTURE_LAYERS } from "@/lib/content";
 import { GlassCard, Reveal, SectionHeading } from "./ui";
 
@@ -79,6 +79,16 @@ export function ArchitectureSection() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal className="mt-10 text-center">
+          <a
+            href="/architecture"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan hover:underline"
+          >
+            See the full architecture
+            <ArrowRight className="size-3.5" aria-hidden />
+          </a>
+        </Reveal>
       </div>
     </section>
   );
