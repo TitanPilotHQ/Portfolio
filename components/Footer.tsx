@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Mail } from "lucide-react";
 import { CONTACT_EMAIL, DISCLAIMER, GITHUB_URL } from "@/lib/content";
 
 export function Footer() {
@@ -24,7 +24,7 @@ export function Footer() {
                 </p>
               </div>
             </div>
-            <p className="mt-5 text-xs leading-relaxed text-white/40">{DISCLAIMER}</p>
+            <p className="mt-5 text-xs leading-relaxed text-white/60">{DISCLAIMER}</p>
           </div>
 
           <div className="flex gap-16">
@@ -81,15 +81,6 @@ export function Footer() {
                   </a>
                 </li>
                 <li>
-                  {/* TODO: add LinkedIn company page URL */}
-                  <a
-                    href="#"
-                    className="flex items-center gap-2 transition-colors hover:text-white"
-                  >
-                    <Linkedin className="size-4" aria-hidden /> LinkedIn
-                  </a>
-                </li>
-                <li>
                   <a
                     href={`mailto:${CONTACT_EMAIL}`}
                     className="flex items-center gap-2 transition-colors hover:text-white"
@@ -111,10 +102,10 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-6 sm:flex-row">
-          <p className="font-mono text-[10px] tracking-widest text-white/30">
+          <p className="font-mono text-[10px] tracking-widest text-white/60">
             © {new Date().getFullYear()} TITAN PILOT — TITANPILOT.APP
           </p>
-          <p className="font-mono text-[10px] tracking-widest text-white/30">
+          <p className="font-mono text-[10px] tracking-widest text-white/60">
             AI REASONS. SOFTWARE DECIDES.
           </p>
         </div>
