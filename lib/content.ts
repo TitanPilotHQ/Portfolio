@@ -434,3 +434,22 @@ export const COMPETITOR_COMPARISON = [
 
 export const COMPETITOR_PITCH =
   "They show you the market or a signal. Titan Pilot shows you a decision you can cross-examine.";
+
+export const ARCHITECTURE_DEEP_DIVE = [
+  {
+    title: "AI cannot bypass execution.",
+    body: "Three independent mechanisms enforce this, any one of which would be sufficient on its own. The AI code has no import path to execution code — a CI check fails the build if it ever does. The AI layer's only output is a recorded event; in shadow mode, nothing consumes it. And the deterministic no-trade rules the system checks against can only be tightened by AI output, never loosened.",
+  },
+  {
+    title: "One database, three data classes.",
+    body: "Decisions are event-sourced: an append-only log is the system of record, because the history is the product — audits, disputes, and forensics all require knowing exactly what the system believed and did, in order, forever. Market data (candles, calendar rows) is not event-sourced — it's high-volume and re-fetchable, with no accountability requirement of its own. What is recorded is every use of that data: each decision pins the exact input data it was built from, by hash.",
+  },
+  {
+    title: "Replay is a proof, not a re-implementation.",
+    body: "Replay doesn't re-implement the system's logic to check its own answer — it pushes the same events through the exact same production code into a scratch copy of the database, then compares every row. Rebuilding twice and hashing both results must match, or the run fails. This check runs daily, on every code change, and against every restored backup.",
+  },
+  {
+    title: "Dependencies point one way.",
+    body: "The AI and market-data code can never import execution code — mechanically enforced, not just a convention. Only one code path is allowed to write the system's official state, and the database itself backs this up: the application's role cannot delete a recorded event or bypass that single writer.",
+  },
+];
