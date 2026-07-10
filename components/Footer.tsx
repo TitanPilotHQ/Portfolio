@@ -34,13 +34,18 @@ export function Footer() {
               </p>
               <ul className="space-y-2.5 text-sm text-secondary">
                 <li>
-                  <a href="/#product" className="transition-colors hover:text-white">
+                  <a href="/product" className="transition-colors hover:text-white">
                     Product
                   </a>
                 </li>
                 <li>
-                  <a href="/#architecture" className="transition-colors hover:text-white">
+                  <a href="/architecture" className="transition-colors hover:text-white">
                     Architecture
+                  </a>
+                </li>
+                <li>
+                  <a href="/security" className="transition-colors hover:text-white">
+                    Security
                   </a>
                 </li>
                 <li>
