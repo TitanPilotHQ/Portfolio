@@ -413,7 +413,10 @@ filled in, not left as literal text.
 
 Run: `grep -oE '\| (Keep|Revise|Remove|Add|Needs owner/legal decision)( |,|$)' docs/audits/2026-07-titanpilot-website-audit.md | sort -u`
 Expected: every distinct value printed is one of the five allowed
-classifications — no typos or stray values.
+classifications — no typos or stray values. Note: this pattern predates
+the plan amendment allowing compound values (e.g. "Revise/Remove", "Keep
+(structure)") and won't match those cleanly — eyeball the `sort -u`
+output rather than expect this command to assert emptiness on its own.
 
 - [ ] **Step 4: Commit**
 

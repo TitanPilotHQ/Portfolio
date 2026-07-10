@@ -150,4 +150,10 @@ W1 begins with the items above classified `Revise` under "Positioning and
 copy" — the hero, CTAs, stale validation-status copy, and metadata keyword
 list. Items classified `Add` under "Security, dependencies, tooling" are
 deferred to W5 by design (per parent brief slice ordering) and should not
-block W1–W4 content work.
+block W1–W4 content work. The two `Revise` findings from the live
+production audit — the footer disclaimer's failing color contrast
+(`text-white/40`) and the footer "LinkedIn" link's `href="#"` — are also
+W1 work, since both are small, concrete UI fixes rather than new
+infrastructure; the LinkedIn link specifically can be fixed as soon as a
+real LinkedIn URL exists, so it need not block the rest of W1 if that URL
+isn't ready yet.
