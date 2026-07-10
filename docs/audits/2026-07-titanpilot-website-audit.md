@@ -78,7 +78,7 @@ tool's `viewport` parameter was used instead and correctly produced
 
 | Area | Result | Classification | Notes |
 | --- | --- | --- | --- |
-| Lighthouse — Performance | 95/100 | Keep (≥95) | `npx lighthouse` desktop run; top opportunity was Largest Contentful Paint (audit score 0.81, 25% weight, LCP = 1.5s / 1464ms) |
+| Lighthouse — Performance | 95, 100, 100 (median 100) /100 | Keep (≥95) | `npx lighthouse` desktop run; original single-sample score (95) sat exactly on the Keep/Revise boundary, so two additional runs were captured and the classification is based on the 3-run median (100) rather than one sample. First run's top opportunity was Largest Contentful Paint (audit score 0.81, 25% weight, LCP = 1.5s / 1464ms); re-runs did not reproduce that regression. |
 | Lighthouse — Accessibility | 96/100 | Revise (<98) | `color-contrast` audit failed (score 0): footer disclaimer paragraph (`text-white/40` on `bg-bg`/`#070a11`) measures 3.76:1, below the required 4.5:1 |
 | Lighthouse — Best Practices | 100/100 | Keep (≥95) | no issues flagged |
 | Lighthouse — SEO | 100/100 | Keep (=100) | no issues flagged |
