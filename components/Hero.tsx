@@ -46,7 +46,7 @@ export function Hero() {
             className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan/20 bg-cyan/5 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.3em] text-cyan"
           >
             <span className="animate-ticker size-1.5 rounded-full bg-cyan" />
-            AI Reasons. Software Decides.
+            SUPERVISED AI TRADING
           </motion.p>
 
           <motion.h1
@@ -55,9 +55,8 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="font-display text-balance text-[1.6rem] font-bold leading-[1.16] sm:text-4xl lg:text-[2.7rem] lg:leading-[1.14]"
           >
-            AI Trading Infrastructure That{" "}
-            <span className="text-gradient">Records Every Decision</span> Before
-            It Risks Capital.
+            The <span className="text-gradient">system of record</span> for AI
+            trading decisions.
           </motion.h1>
 
           <motion.p
@@ -66,9 +65,9 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.22 }}
             className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-secondary sm:text-lg"
           >
-            Titan Pilot is a replayable AI trading system where LLMs generate
-            structured reasoning, deterministic software scores decisions, and
-            risk gates remain in control.
+            Titan Pilot turns every thesis, objection, score, approval, and
+            refusal into machine-validated evidence your desk can replay,
+            govern, and defend.
           </motion.p>
 
           <motion.div
@@ -81,10 +80,10 @@ export function Hero() {
               whileHover={{ scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              href="#contact"
+              href="#evidence"
               className="group inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-cyan to-azure px-6 py-3 text-sm font-semibold text-bg shadow-[0_0_24px_-8px_rgba(0,215,255,0.5)] transition-shadow hover:shadow-[0_0_44px_-6px_rgba(0,215,255,0.7)]"
             >
-              Join Early Access
+              Explore a real decision
               <ArrowRight
                 className="size-4 transition-transform group-hover:translate-x-0.5"
                 aria-hidden
@@ -94,19 +93,29 @@ export function Hero() {
               whileHover={{ scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              href="#architecture"
+              href="#contact"
               className="rounded-lg border border-white/15 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-cyan/40 hover:bg-cyan/5"
             >
-              Explore the Architecture
+              Book an AI Desk Audit
             </motion.a>
           </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.42 }}
+            className="mt-4 text-xs text-white/60"
+          >
+            Built for professional trading desks — not retail signals,
+            performance promises, or one-click autonomy.
+          </motion.p>
 
           <motion.ul
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className="mt-10 flex flex-wrap gap-2.5"
-            aria-label="Platform guarantees"
+            aria-label="Platform status indicators"
           >
             {TRUST_BADGES.map((badge, i) => (
               <motion.li
