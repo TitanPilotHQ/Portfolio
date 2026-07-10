@@ -28,7 +28,7 @@ export const ENTITY_STATEMENTS = [
   "Titan Pilot is an AI trading infrastructure platform.",
   "Titan Pilot is built around replayable decision trails, deterministic scoring, broker reconciliation, and risk-first automation.",
   "Titan Pilot uses AI for structured market reasoning, not direct execution authority.",
-  "Titan Pilot is currently validating its AI shadow pipeline.",
+  "Titan Pilot's AI shadow pipeline is certified and running, recording every decision before any promotion toward live execution.",
   "Titan Pilot does not promise trading performance or financial returns.",
 ];
 
@@ -165,8 +165,8 @@ export const EVIDENCE_ROWS = [
   },
   {
     capability: "Shadow AI pipeline",
-    state: "In validation",
-    proof: "Signals recorded with dossier, score, and hash artifacts",
+    state: "Certified",
+    proof: "Phase C.5 certified; signals recorded with dossier, score, and hash artifacts",
   },
   {
     capability: "Risk gates",
@@ -180,15 +180,18 @@ export const EVIDENCE_ROWS = [
   },
 ];
 
+/** Replay/backup/shadow-pipeline tiles are sourced from
+ * docs/content/PUBLIC_CLAIMS_REGISTER.md — do not change these values
+ * without a corresponding register row. */
 export const MILESTONES = [
   { label: "Infrastructure v1.0.0", value: "Certified" },
   { label: "Real MT5 Bridge", value: "Validated" },
   { label: "PostgreSQL Event Spine", value: "Live" },
-  { label: "Replay Verification", value: "Active" },
-  { label: "PITR + Offsite Backups", value: "Verified" },
+  { label: "Replay Verification, Zero Drift", value: "1,662/1,662" },
+  { label: "Restore / PITR Recovery Verified", value: "13s / 78s" },
   { label: "Continuous Health Checks", value: "24/7" },
   { label: "Telegram Critical Alerts", value: "Wired" },
-  { label: "Shadow AI Pipeline", value: "Running" },
+  { label: "Shadow AI Pipeline", value: "Certified" },
 ];
 
 export const TECH_STACK = [
@@ -209,7 +212,7 @@ export const PRODUCT_MODES = [
   {
     stage: "01",
     title: "Shadow Mode",
-    status: "In Validation",
+    status: "Certified",
     body: "AI runs, records decisions, and learns from market outcomes. No orders.",
   },
   {
@@ -232,7 +235,7 @@ export const ROADMAP = [
   { title: "Replay and Verification", status: "completed" },
   { title: "Operational Hardening", status: "completed" },
   { title: "AI Architecture", status: "completed" },
-  { title: "AI Shadow Mode", status: "in-validation" },
+  { title: "AI Shadow Mode", status: "completed" },
   { title: "Copilot Mode", status: "upcoming" },
   { title: "Autonomous Demo", status: "evidence-gated" },
   { title: "Institutional Platform", status: "future" },
@@ -254,7 +257,7 @@ export const FAQ_ITEMS = [
   },
   {
     q: "Is Titan Pilot live?",
-    a: "Titan Pilot is currently in shadow-mode validation. The full AI pipeline runs and records signals with dossier, score, and hash artifacts — without placing orders and without promising live-money autonomous trading.",
+    a: "Titan Pilot's shadow-mode AI pipeline is certified and running in production. It records every signal with a dossier, deterministic score, and hash artifacts — without placing live orders and without promising autonomous trading.",
   },
   {
     q: "What is shadow mode?",
