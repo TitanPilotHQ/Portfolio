@@ -205,7 +205,7 @@ export const COMPETITOR_COMPARISON = [
   {
     name: "Tickeron",
     theyAre: "AI signal marketplace with confidence %",
-    difference: "Tickeron's confidence is a marketing number; Titan Pilot's score is a hash-pinned deterministic function of visible components with the counter-argument attached.",
+    difference: "Tickeron's confidence score is opaque; Titan Pilot's is a hash-pinned deterministic function of visible components with the counter-argument attached.",
     concede: "Asset breadth, pattern variety, consumer price point",
   },
   {
