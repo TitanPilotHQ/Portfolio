@@ -25,17 +25,17 @@ const siteUrl = "https://www.titanpilot.app";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Titan Pilot — Replayable AI Trading Infrastructure",
+    default: "Titan Pilot — The System of Record for AI Trading Decisions",
     template: "%s — Titan Pilot",
   },
   description:
-    "Titan Pilot is a risk-first AI trading infrastructure platform with replayable decisions, deterministic scoring, MT5 execution, broker reconciliation, and shadow-mode validation.",
+    "Titan Pilot is supervised AI trading infrastructure — every AI thesis, objection, score, and approval becomes replayable, evidence your desk can defend.",
   alternates: {
     canonical: "/",
   },
   keywords: [
     "AI trading infrastructure",
-    "autonomous trading platform",
+    "supervised AI trading",
     "algorithmic trading",
     "AI trading agents",
     "deterministic execution",
@@ -48,15 +48,15 @@ export const metadata: Metadata = {
     "risk-first trading automation",
     "event-sourced trading platform",
     "AI market analysis",
-    "forex automation",
+    "AI decision audit trail",
   ],
   openGraph: {
     type: "website",
     url: siteUrl,
     siteName: "Titan Pilot",
-    title: "Titan Pilot — Replayable AI Trading Infrastructure",
+    title: "Titan Pilot — The System of Record for AI Trading Decisions",
     description:
-      "AI reasons. Software decides. Risk-first AI trading infrastructure with replayable decisions, deterministic scoring, and shadow-mode validation.",
+      "Supervised AI trading. Titan Pilot turns every AI thesis, objection, score, and approval into replayable, machine-validated evidence.",
     images: [
       {
         url: "/banner.png",
@@ -68,9 +68,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Titan Pilot — AI Trading Infrastructure",
+    title: "Titan Pilot — Supervised AI Trading",
     description:
-      "Autonomous trading intelligence built like mission-critical infrastructure. AI reasons. Software decides.",
+      "Every AI trading decision, recorded and replayable. Titan Pilot is the system of record for supervised AI trading.",
     images: ["/banner.png"],
   },
   icons: {

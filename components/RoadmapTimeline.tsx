@@ -48,7 +48,7 @@ export function RoadmapTimeline() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Roadmap"
-          title="A Measured Path to Autonomous Market Intelligence."
+          title="A Measured, Evidence-Gated Roadmap."
         />
 
         <ol className="relative mx-auto mt-16 max-w-2xl">

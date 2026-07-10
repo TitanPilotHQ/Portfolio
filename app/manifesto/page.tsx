@@ -7,7 +7,7 @@ import { ENTITY_STATEMENTS, MANIFESTO_PRINCIPLES } from "@/lib/content";
 export const metadata: Metadata = {
   title: "The Titan Pilot Manifesto",
   description:
-    "AI should reason. Software should decide. The six principles behind Titan Pilot's risk-first, replayable AI trading infrastructure.",
+    "AI should reason. Software should decide. The six principles behind Titan Pilot's risk-first, replayable approach to supervised AI trading.",
   alternates: { canonical: "/manifesto" },
 };
 
