@@ -332,3 +332,105 @@ export const MANIFESTO_PRINCIPLES = [
 
 export const DISCLAIMER =
   "Titan Pilot is a software infrastructure project. Nothing on this website is financial advice, investment advice, or a promise of trading performance. Trading involves risk.";
+
+export const PRODUCT_PRINCIPLES = [
+  {
+    title: "Evidence or it didn't happen.",
+    body: "Every claim rendered from an AI model is visibly tagged as model output and linked to the exact dossier data it was reasoned from. Every number that comes from code — a score, a risk calculation, a price — is visibly tagged as deterministic. The two are never allowed to look the same.",
+  },
+  {
+    title: "The default action is nothing.",
+    body: "Signals that aren't acted on expire to nothing. Titan Pilot is built to make inaction feel competent, because in a risk-first pipeline, doing nothing is usually the correct outcome — not a failure state.",
+  },
+  {
+    title: "Two states of gravity.",
+    body: "Most of what the system shows is light: read-only evidence, fast to browse, safe to click around in. The small remainder — approving a trade, pulling the kill switch — is heavy: full-screen, deliberate, two steps, and fully audited. Nothing consequential ever happens from a hover or a swipe.",
+  },
+  {
+    title: "Reconstructable past.",
+    body: "Every decision can answer “as of when?” — pinned to exactly what was known at the time: the stored dossier, the model version, the scoring configuration. History is never silently re-rendered with today's code.",
+  },
+];
+
+export const PRODUCT_DOCTRINES = [
+  {
+    title: "Never-Guess",
+    body: "When the system encounters something it can't classify, it doesn't guess. An unrecognized event halts processing rather than being skipped. A reconciliation mismatch that matches no known pattern halts trading and pages a human. An AI output that fails a contract check is rejected with a closed reason code — there is no best-effort parse.",
+  },
+  {
+    title: "Fail-Closed",
+    body: "Every failure mode collapses toward no action. Can't reach the database at boot: the engine exits before trading starts. Both AI providers down: no signal, never a degraded guess. Budget cap would be exceeded: the call is refused before any money is spent. A 48-hour certification soak exercised every one of these paths in production, and each produced an explained, auditable outcome.",
+  },
+];
+
+export const AUTONOMY_LADDER_DETAIL = [
+  {
+    stage: "Shadow",
+    status: "Certified — current",
+    body: "The full pipeline runs on real market data with real AI calls. Every signal is recorded with its dossier, score, and hash artifacts. Nothing is executed.",
+  },
+  {
+    stage: "Copilot",
+    status: "Designed — next",
+    body: "A proposed signal reaches the desk lead with its reason codes attached. Approve or reject, with a hard expiry at the next candle close. An approved signal then walks the exact same risk gates as any other signal — there is no separate “trusted” execution path.",
+  },
+  {
+    stage: "Autonomous Demo",
+    status: "Evidence-gated — future",
+    body: "Requires at least 100 recorded signals, at least 8 weeks of evidence, and objective thresholds on expectancy, calibration, and veto quality. Promotion is always a deliberate, recorded decision — never an automatic transition.",
+  },
+];
+
+export const COMPETITOR_COMPARISON = [
+  {
+    name: "TradingView",
+    theyAre: "The world's charting + social ideas platform",
+    difference: "Titan Pilot's unit is the decision, not the chart. Charts here visualize the exact dossier the AI reasoned from — no social layer, and every signal comes with machine-checked citations, not likes.",
+    concede: "Charting depth, asset coverage, community, price",
+  },
+  {
+    name: "TrendSpider",
+    theyAre: "Automated technical analysis tooling",
+    difference: "TrendSpider automates finding patterns; Titan Pilot automates arguing about them — analyst, adversary, and deterministic score — then records the argument immutably.",
+    concede: "Breadth of TA automation, backtesting UX, multi-asset scanning",
+  },
+  {
+    name: "MetaTrader 5",
+    theyAre: "The retail execution standard",
+    difference: "Titan Pilot treats MT5 as a dumb execution limb. Everything MT5 lacks — provenance, approvals, replay, budget control, audit — is the product.",
+    concede: "Raw execution features, broker ubiquity, indicator ecosystem",
+  },
+  {
+    name: "Capitalise.ai",
+    theyAre: "Natural-language strategy automation",
+    difference: "Capitalise turns English into rules and hides the rest. Titan Pilot turns market state into an evidenced argument and shows all of it: a cited thesis, its rebuttal, and its score.",
+    concede: "Onboarding simplicity, no-ops setup, multi-broker reach",
+  },
+  {
+    name: "Tickeron",
+    theyAre: "AI signal marketplace with confidence %",
+    difference: "Tickeron's confidence is a marketing number; Titan Pilot's score is a hash-pinned deterministic function of visible components with the counter-argument attached.",
+    concede: "Asset breadth, pattern variety, consumer price point",
+  },
+  {
+    name: "Composer",
+    theyAre: "No-code quant strategy builder / backtester",
+    difference: "Composer sells hypotheticals — backtest curves. Titan Pilot sells reconstructables — hash-verified replay of what actually happened, including every no-trade.",
+    concede: "Strategy composition UX, portfolio breadth, backtesting speed",
+  },
+  {
+    name: "LuxAlgo",
+    theyAre: "Premium indicator overlays",
+    difference: "LuxAlgo decorates charts with proprietary signals. Every claim in Titan Pilot decomposes to dossier facts or code output — there's no proprietary mystique to defend, only evidence to show.",
+    concede: "Visual polish on charts, community, low cost",
+  },
+  {
+    name: "Bloomberg Terminal",
+    theyAre: "The institutional data monopoly",
+    difference: "Titan Pilot doesn't compete on data — it competes on decision accountability. Bloomberg tells you everything about the market and nothing about why your own system traded.",
+    concede: "Data universe, news, chat network effects, multi-asset analytics — essentially everything except this one thing",
+  },
+];
+
+export const COMPETITOR_PITCH =
+  "They show you the market or a signal. Titan Pilot shows you a decision you can cross-examine.";
