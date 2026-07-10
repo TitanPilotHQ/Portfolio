@@ -25,8 +25,14 @@ outdated`, `npm audit`.
   scope).
 - `/evidence` real fixture selection is explicitly NOT made in this plan
   (spec, Out of scope — deferred to W2).
-- Classification values in the audit doc must be exactly one of: `Keep`,
-  `Revise`, `Remove`, `Add`, `Needs owner/legal decision` (spec, Deliverable 1).
+- Classification values in the audit doc must be one of `Keep`, `Revise`,
+  `Remove`, `Add`, `Needs owner/legal decision`, or a compound of two of
+  those five joined by `/` or `, ` when a row genuinely means two things at
+  once (e.g. structure vs. content, now vs. later) — a compound value is
+  only valid when it carries a one-clause reason distinguishing the two
+  halves, not as a way to avoid picking one (spec, Deliverable 1; amended
+  2026-07-10 per Task 1 review finding and Emad's decision to keep the
+  compound rows already written).
 - IA table must cover all 11 routes named in the parent brief, including
   explicit exclusion reasoning for `/changelog` and `/status` (spec,
   Deliverable 3).
