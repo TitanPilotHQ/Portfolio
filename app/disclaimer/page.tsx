@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/ui";
 import { CONTACT_EMAIL } from "@/lib/content";
 
@@ -52,53 +51,47 @@ const CLARIFICATIONS = [
 
 export default function DisclaimerPage() {
   return (
-    <>
-      <Header />
-      <main className="relative overflow-hidden pt-32 pb-24 lg:pt-40">
-        <div className="grid-lines absolute inset-0" aria-hidden />
+    <PageShell>
+      <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <Reveal>
+          <p className="mb-4 font-mono text-xs uppercase tracking-[0.35em] text-amber">
+            Disclaimer
+          </p>
+          <h1 className="font-display text-balance text-3xl font-bold leading-[1.15] sm:text-4xl">
+            Read This Before Anything Else.
+          </h1>
+          <p className="mt-6 text-pretty text-lg leading-relaxed text-secondary">
+            Titan Pilot is a software infrastructure project. Nothing on this
+            website is financial advice, investment advice, or a promise of
+            trading performance. Trading involves risk.
+          </p>
+        </Reveal>
 
-        <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <p className="mb-4 font-mono text-xs uppercase tracking-[0.35em] text-amber">
-              Disclaimer
-            </p>
-            <h1 className="font-display text-balance text-3xl font-bold leading-[1.15] sm:text-4xl">
-              Read This Before Anything Else.
-            </h1>
-            <p className="mt-6 text-pretty text-lg leading-relaxed text-secondary">
-              Titan Pilot is a software infrastructure project. Nothing on this
-              website is financial advice, investment advice, or a promise of
-              trading performance. Trading involves risk.
-            </p>
-          </Reveal>
-
-          <div className="mt-12 space-y-5">
-            {CLARIFICATIONS.map((item, i) => (
-              <Reveal key={item.title} delay={i * 0.04}>
-                <section className="glass rounded-2xl p-6">
-                  <h2 className="text-base font-semibold">{item.title}</h2>
-                  <p className="mt-2 text-sm leading-relaxed text-secondary">
-                    {item.body}
-                  </p>
-                </section>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal className="mt-12">
-            <p className="text-center text-sm text-secondary">
-              Questions? Contact{" "}
-              <a
-                href={`mailto:${CONTACT_EMAIL}`}
-                className="text-cyan underline-offset-4 hover:underline"
-              >
-                {CONTACT_EMAIL}
-              </a>
-            </p>
-          </Reveal>
+        <div className="mt-12 space-y-5">
+          {CLARIFICATIONS.map((item, i) => (
+            <Reveal key={item.title} delay={i * 0.04}>
+              <section className="glass rounded-2xl p-6">
+                <h2 className="text-base font-semibold">{item.title}</h2>
+                <p className="mt-2 text-sm leading-relaxed text-secondary">
+                  {item.body}
+                </p>
+              </section>
+            </Reveal>
+          ))}
         </div>
-      </main>
-      <Footer />
-    </>
+
+        <Reveal className="mt-12">
+          <p className="text-center text-sm text-secondary">
+            Questions? Contact{" "}
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="text-cyan underline-offset-4 hover:underline"
+            >
+              {CONTACT_EMAIL}
+            </a>
+          </p>
+        </Reveal>
+      </div>
+    </PageShell>
   );
 }
