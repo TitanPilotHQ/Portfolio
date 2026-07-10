@@ -453,3 +453,34 @@ export const ARCHITECTURE_DEEP_DIVE = [
     body: "The AI and market-data code can never import execution code — mechanically enforced, not just a convention. Only one code path is allowed to write the system's official state, and the database itself backs this up: the application's role cannot delete a recorded event or bypass that single writer.",
   },
 ];
+
+export const SECURITY_CAPABILITIES = [
+  {
+    title: "Independently audited, fixed same-day",
+    body: "A security audit found issues in SSH access and backup file permissions. Both were fixed and verified the same day — SSH restricted to key-only authentication, backup files restricted to owner-only access.",
+  },
+  {
+    title: "Secrets never leave the server",
+    body: "Offsite backups are built by allowlist, not blocklist — only a sanitized database dump and a git commit hash are ever copied off the server. A blocklist approach fails open the moment a new secret is introduced; an allowlist can't.",
+  },
+  {
+    title: "Backups are proven, not assumed",
+    body: "A full restore with complete integrity verification completes in 13 seconds. Point-in-time recovery from a base backup completes in 78 seconds with zero event gap. Every week, the newest backup is restored into a throwaway copy and fully re-verified — a backup that can't pass verification isn't counted as one.",
+  },
+  {
+    title: "AI provider failure never increases risk",
+    body: "A 12-case fault-injection matrix — connection failures, DNS failures, timeouts, server errors — confirms automatic failover to a backup AI provider. If both providers are down, the system produces no signal. It never guesses.",
+  },
+  {
+    title: "The application can't touch its own history",
+    body: "The database role the application runs as cannot alter schema, and cannot delete a recorded event or a derived record — enforced by database grants and triggers, not application code that could have a bug.",
+  },
+  {
+    title: "Failure is contained by design",
+    body: "A compromised or hallucinating AI model can produce at most one recorded, validated, budget-capped document — never direct access to capital. A compromised AI provider account is capped in dollars. A stolen offsite backup exposes only a sanitized data dump and a commit hash.",
+  },
+  {
+    title: "Verified daily, not just at launch",
+    body: "A 12-check integrity suite — including replay determinism — runs automatically every day. It also runs on every code change and against every restored backup. This isn't a one-time launch audit; it's a standing, automated check.",
+  },
+];
