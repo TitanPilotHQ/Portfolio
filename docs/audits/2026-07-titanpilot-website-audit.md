@@ -94,4 +94,60 @@ tool's `viewport` parameter was used instead and correctly produced
 
 ## Synthesis
 
-Replaced by Task 4.
+### Needs owner/legal decision — full list
+
+These are surfaced here so nothing gets silently decided by an
+implementation pass.
+
+- **JSON-LD `Offer` schema** (`components/JsonLd.tsx`
+  `softwareApplication.offers`): currently publishes a `$0` "Early access
+  program" offer. There is no real priced/transactable product yet.
+  Weighing: keep publishing it as-is (clearly labeled `$0`, arguably
+  harmless) vs. remove or revise it (risk of a crawler/AI answer engine
+  reading it as an unsupported commercial claim).
+- **Dependency-upgrade prioritization** (`npm outdated`): several
+  major-version upgrades are available (`next` 15.5.20→16.2.10,
+  `typescript` 5.9.3→7.0.2, `@vercel/analytics` 1.6.1→2.0.1,
+  `@vercel/speed-insights` 1.3.1→2.0.0, `lucide-react` 0.525.0→1.24.0).
+  Weighing: which of these to prioritize and sequence, and when — each is
+  a major-version jump needing its own compatibility review, not a blind
+  bump.
+- **`npm audit` transitive vulnerability** (`npm audit --omit=dev`): 2
+  moderate PostCSS `<8.5.10` XSS advisories, pulled in transitively
+  through `next`'s bundled `postcss`. The only fix path shown
+  (`npm audit fix --force`) would downgrade `next` to `9.3.3`, a major
+  regression. Weighing: accept the residual risk and track it until the
+  next `next` upgrade vs. block on an upstream fix.
+- **Vercel Analytics real-user CWV follow-up**: `<Analytics />` and
+  `<SpeedInsights />` are wired correctly in `app/layout.tsx`, but this
+  audit could only test synthetic (Lighthouse) metrics — no Vercel
+  dashboard access was available in this session. Weighing: this isn't a
+  two-option call so much as an open action — Emad needs to pull
+  real-user CWV/traffic numbers from the Vercel dashboard directly to
+  confirm the synthetic results hold in production.
+
+### Information architecture decision
+
+Final route commitment for W1–W5:
+
+| Route | Slice | Status decided now |
+| --- | --- | --- |
+| `/` | W1 | rewrite |
+| `/product` | W3 | new |
+| `/evidence` | W2 | new — real fixture selection is its own decision, not made in W0 |
+| `/security` | W3 | new |
+| `/architecture` | W3 | new |
+| `/spec` | W3 | new — ships as an honest "public draft in preparation" state; no Decision Evidence Specification document exists yet in the `Titan` engine repo (confirmed by direct search, 2026-07-10) |
+| `/research` | W4 | new — index only; no publishable soak/incident reports exist yet, ships with a "nothing published yet" state, not fabricated entries |
+| `/company` | W4 | new |
+| `/contact` | W4 | rewrite — qualified AI Desk Audit / Design Partner form |
+| `/changelog` | — | excluded from W0–W5. Internal `CHANGELOG.md` exists in the `Titan` engine repo but is not public-safe as written (references internal ops detail); revisit only after someone does the curation work. |
+| `/status` | — | excluded from W0–W5. Internal `src/titan/ops/status.py` exists but is an operational tool, not a public status page; no public uptime commitment exists to publish. |
+
+### What ships next
+
+W1 begins with the items above classified `Revise` under "Positioning and
+copy" — the hero, CTAs, stale validation-status copy, and metadata keyword
+list. Items classified `Add` under "Security, dependencies, tooling" are
+deferred to W5 by design (per parent brief slice ordering) and should not
+block W1–W4 content work.
