@@ -31,11 +31,17 @@ export default function CompanyPage() {
       }
     >
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow={COMPANY_MISSION.eyebrow}
-          title={COMPANY_MISSION.title}
-          copy={COMPANY_MISSION.copy}
-        />
+        <Reveal className="mx-auto max-w-3xl text-center">
+          <p className="mb-4 font-mono text-xs uppercase tracking-[0.35em] text-cyan">
+            {COMPANY_MISSION.eyebrow}
+          </p>
+          <h1 className="font-display text-balance text-3xl font-bold leading-[1.15] sm:text-4xl">
+            {COMPANY_MISSION.title}
+          </h1>
+          <p className="mt-6 text-pretty text-lg leading-relaxed text-secondary">
+            {COMPANY_MISSION.copy}
+          </p>
+        </Reveal>
 
         <Reveal className="mx-auto mt-12 max-w-3xl text-center">
           <p className="text-pretty text-base leading-relaxed text-secondary">
