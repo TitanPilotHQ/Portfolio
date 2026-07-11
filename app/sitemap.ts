@@ -23,6 +23,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    { url: `${SITE_URL}/research`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE_URL}/company`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE_URL}/contact`, changeFrequency: "monthly", priority: 0.8 },
     {
       url: `${SITE_URL}/manifesto`,
       changeFrequency: "monthly",
