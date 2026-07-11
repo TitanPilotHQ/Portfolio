@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Check, X } from "lucide-react";
+import { X } from "lucide-react";
+import { CompanyTimeline } from "@/components/CompanyTimeline";
 import { PageShell } from "@/components/PageShell";
 import { GlassCard, Reveal, SectionHeading } from "@/components/ui";
 import {
@@ -52,9 +53,9 @@ export default function CompanyPage() {
         <div className="mx-auto mt-16 max-w-3xl">
           <Reveal>
             <GlassCard>
-              <h3 className="mb-2 text-base font-semibold">
+              <h2 className="mb-2 text-base font-semibold">
                 {COMPANY_FOUNDER.name}
-              </h3>
+              </h2>
               <p className="text-sm leading-relaxed text-secondary">
                 {COMPANY_FOUNDER.bio}
               </p>
@@ -110,23 +111,7 @@ export default function CompanyPage() {
               className="absolute bottom-4 left-[15px] top-1 w-px bg-gradient-to-b from-electric/50 via-cyan/40 to-white/10"
               aria-hidden
             />
-            <ol className="relative">
-              {COMPANY_TIMELINE.map((item, i) => (
-                <Reveal key={item.stage} delay={i * 0.07}>
-                  <li className="relative flex items-start gap-5 pb-8 pl-0 last:pb-0">
-                    <span className="relative z-10 flex size-8 shrink-0 items-center justify-center rounded-full border border-electric/40 bg-electric/10 text-electric">
-                      <Check className="size-4" aria-hidden />
-                    </span>
-                    <div className="glass flex-1 rounded-xl px-5 py-3.5">
-                      <p className="text-sm font-semibold">{item.stage}</p>
-                      <p className="mt-1 text-sm leading-relaxed text-secondary">
-                        {item.body}
-                      </p>
-                    </div>
-                  </li>
-                </Reveal>
-              ))}
-            </ol>
+            <CompanyTimeline items={COMPANY_TIMELINE} />
           </div>
         </div>
 
