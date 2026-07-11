@@ -47,11 +47,16 @@ In scope:
 6. `app/page.tsx` — swap `<EarlyAccessForm />` for `<ContactTeaser />`.
 7. `components/Hero.tsx` — secondary CTA `href="#contact"` →
    `href="/contact"`.
-8. `components/Footer.tsx` — add `Research`/`Company`/`Contact` links.
-9. `app/sitemap.ts` — add `/research`, `/company`, `/contact` entries.
-10. `docs/content/PUBLIC_CLAIMS_REGISTER.md` — new rows for owner-sourced
+8. `components/Header.tsx` — desktop + mobile nav CTA `href="/#contact"` →
+   `href="/contact"`, text `"Join Early Access"` → `"Book an AI Desk
+   Audit"` (stale copy, self-discovered).
+9. `app/product/page.tsx`, `app/security/page.tsx` — closing CTA
+   `href="/#contact"` → `href="/contact"` (self-discovered).
+10. `components/Footer.tsx` — add `Research`/`Company`/`Contact` links.
+11. `app/sitemap.ts` — add `/research`, `/company`, `/contact` entries.
+12. `docs/content/PUBLIC_CLAIMS_REGISTER.md` — new rows for owner-sourced
     facts used on `/company`.
-11. Accessibility/responsive pass on all three new pages (same bar as W3:
+13. Accessibility/responsive pass on all three new pages (same bar as W3:
     WCAG AA contrast, keyboard nav, no mobile overflow at 390×844 /
     440×956).
 
@@ -312,6 +317,22 @@ visual language, not a new button style).
 (text "Book an AI Desk Audit" is unchanged, already correct). Primary CTA
 (`href="#evidence"`) is untouched — evidence section still lives on the
 homepage.
+
+**Self-discovered addition:** a repo-wide search for `#contact` turns up
+four more references this slice must also fix, since the anchor target
+(`id="contact"` on the homepage section) no longer exists after this
+slice ships:
+- `components/Header.tsx:53` and `:106` — the desktop and mobile nav CTA
+  buttons, both `href="/#contact"`. Retarget both to `href="/contact"`.
+  Their button text, `"Join Early Access"`, is also stale — it predates
+  W1's Hero rewrite (which replaced "Join Early Access" messaging
+  sitewide) and was missed at the time. Change both instances' text to
+  `"Book an AI Desk Audit"`, matching the CTA copy already used
+  everywhere else on the site.
+- `app/product/page.tsx:179` and `app/security/page.tsx:59` — each
+  page's closing secondary CTA, `href="/#contact"`, text already "Book an
+  AI Desk Audit" (correct, no text change needed). Retarget both to
+  `href="/contact"`.
 
 ## Nav / Footer / Sitemap
 
