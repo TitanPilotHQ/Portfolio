@@ -136,6 +136,9 @@ export function EarlyAccessForm() {
                 className={inputClass}
               />
             </div>
+            <p className="text-center text-xs text-white/60">
+              Submitting opens a pre-filled email in your mail client — nothing is sent automatically.
+            </p>
             <button
               type="submit"
               className="group flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-cyan to-azure px-6 py-3.5 text-sm font-semibold text-bg transition-shadow hover:shadow-[0_0_36px_-6px_rgba(0,215,255,0.6)]"
@@ -148,7 +151,7 @@ export function EarlyAccessForm() {
                 Your email client should open — send the drafted message to finish.
               </p>
             ) : null}
-            <p className="pt-1 text-center text-[11px] leading-relaxed text-white/35">
+            <p className="pt-1 text-center text-[11px] leading-relaxed text-white/60">
               {EARLY_ACCESS_DISCLAIMER}
             </p>
           </form>

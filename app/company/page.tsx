@@ -105,27 +105,29 @@ export default function CompanyPage() {
 
         <div className="mt-16">
           <SectionHeading eyebrow="Timeline" title="Our Journey." />
-          <ol className="relative mx-auto mt-16 max-w-2xl">
+          <div className="relative mx-auto mt-16 max-w-2xl">
             <div
               className="absolute bottom-4 left-[15px] top-1 w-px bg-gradient-to-b from-electric/50 via-cyan/40 to-white/10"
               aria-hidden
             />
-            {COMPANY_TIMELINE.map((item, i) => (
-              <Reveal key={item.stage} delay={i * 0.07}>
-                <li className="relative flex items-start gap-5 pb-8 pl-0 last:pb-0">
-                  <span className="relative z-10 flex size-8 shrink-0 items-center justify-center rounded-full border border-electric/40 bg-electric/10 text-electric">
-                    <Check className="size-4" aria-hidden />
-                  </span>
-                  <div className="glass flex-1 rounded-xl px-5 py-3.5">
-                    <p className="text-sm font-semibold">{item.stage}</p>
-                    <p className="mt-1 text-sm leading-relaxed text-secondary">
-                      {item.body}
-                    </p>
-                  </div>
-                </li>
-              </Reveal>
-            ))}
-          </ol>
+            <ol className="relative">
+              {COMPANY_TIMELINE.map((item, i) => (
+                <Reveal key={item.stage} delay={i * 0.07}>
+                  <li className="relative flex items-start gap-5 pb-8 pl-0 last:pb-0">
+                    <span className="relative z-10 flex size-8 shrink-0 items-center justify-center rounded-full border border-electric/40 bg-electric/10 text-electric">
+                      <Check className="size-4" aria-hidden />
+                    </span>
+                    <div className="glass flex-1 rounded-xl px-5 py-3.5">
+                      <p className="text-sm font-semibold">{item.stage}</p>
+                      <p className="mt-1 text-sm leading-relaxed text-secondary">
+                        {item.body}
+                      </p>
+                    </div>
+                  </li>
+                </Reveal>
+              ))}
+            </ol>
+          </div>
         </div>
 
         <Reveal className="mx-auto mt-16 max-w-3xl">
