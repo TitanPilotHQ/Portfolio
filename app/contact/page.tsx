@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
-import { Reveal, SectionHeading } from "@/components/ui";
+import { Reveal } from "@/components/ui";
 import { EarlyAccessForm } from "@/components/EarlyAccessForm";
 import {
   CONTACT_EMAIL,
