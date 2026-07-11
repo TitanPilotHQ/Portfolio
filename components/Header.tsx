@@ -50,10 +50,10 @@ export function Header() {
             View GitHub
           </a>
           <a
-            href="/#contact"
+            href="/contact"
             className="rounded-lg bg-gradient-to-r from-cyan to-azure px-4 py-2 text-sm font-medium text-bg transition-shadow hover:shadow-[0_0_28px_-4px_rgba(0,215,255,0.55)]"
           >
-            Join Early Access
+            Book an AI Desk Audit
           </a>
         </div>
 
@@ -103,11 +103,11 @@ export function Header() {
                 View GitHub
               </a>
               <a
-                href="/#contact"
+                href="/contact"
                 onClick={() => setOpen(false)}
                 className="rounded-lg bg-gradient-to-r from-cyan to-azure px-4 py-2.5 text-center text-sm font-medium text-bg"
               >
-                Join Early Access
+                Book an AI Desk Audit
               </a>
             </div>
           </div>

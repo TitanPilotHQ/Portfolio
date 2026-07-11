@@ -37,7 +37,7 @@ export function EarlyAccessForm() {
     "w-full rounded-lg border border-white/10 bg-surface/80 px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition-colors focus:border-cyan/50 focus:ring-1 focus:ring-cyan/30";
 
   return (
-    <section id="contact" className="relative scroll-mt-20 py-24 lg:py-32">
+    <section className="relative py-24 lg:py-32">
       <div
         className="absolute left-1/2 top-1/2 h-[500px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-azure/[0.07] blur-[140px]"
         aria-hidden

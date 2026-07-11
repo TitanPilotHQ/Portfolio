@@ -176,7 +176,7 @@ export default function ProductPage() {
             />
           </a>
           <a
-            href="/#contact"
+            href="/contact"
             className="rounded-lg border border-white/15 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-cyan/40 hover:bg-cyan/5"
           >
             Book an AI Desk Audit
