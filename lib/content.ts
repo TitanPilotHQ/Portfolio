@@ -485,3 +485,117 @@ export const SECURITY_CAPABILITIES = [
     body: "A 12-check integrity suite — including replay determinism — runs automatically every day. It also runs on every code change and against every restored backup. This isn't a one-time launch audit; it's a standing, automated check.",
   },
 ];
+
+export const COMPANY_MISSION = {
+  eyebrow: "Company",
+  title: "AI is already influencing trading decisions.",
+  copy: "The question is no longer whether traders will use it, but whether firms can prove what it said, what evidence it used, how it was challenged, and who approved the final action. Titan Pilot exists to make that process supervised, replayable and accountable.",
+};
+
+export const COMPANY_PROBLEM =
+  "Traders are increasingly using general-purpose AI tools to influence market decisions, but those decisions usually have no reliable evidence trail, no deterministic risk controls, no replay, and no accountability when the AI is wrong. Titan Pilot was not built to promise better returns or to create another black-box trading bot — it was built to close that gap.";
+
+export const COMPANY_FOUNDER = {
+  name: "Emad Khan",
+  bio: "Emad Khan is a senior software and cloud architect with more than 12 years of experience building production-grade distributed systems. He founded Titan Pilot after seeing a growing gap between how quickly traders were adopting AI and how little governance existed around those decisions. Titan Pilot applies the same principles used in critical software systems — traceability, deterministic controls, failure isolation and replay — to AI-assisted trading.",
+};
+
+export const COMPANY_TEAM =
+  "Titan Pilot is currently founder-led and intentionally small. Emad is the sole founder and primary product and engineering owner. The platform has been developed with extensive AI-assisted engineering, but architecture, product direction, operational decisions, security posture, testing standards, and final approvals remain human-owned.";
+
+export const COMPANY_PRINCIPLES = [
+  { title: "Evidence over Claims", body: "Every public statement traces to a sourced, dated engineering record — not marketing language." },
+  { title: "Human Accountability", body: "AI reasons; a human or a deterministic rule approves. Every consequential action has an accountable owner." },
+  { title: "Fail Closed", body: "When something is uncertain, broken, or unverifiable, the system stops rather than guesses." },
+  { title: "Deterministic Risk", body: "Risk limits are enforced by rules the AI cannot loosen — not by asking the AI to behave." },
+  { title: "Replay Everything", body: "Every recorded decision can be replayed and re-verified, not just logged and forgotten." },
+  { title: "Security by Default", body: "Least-privilege access, sanitized backups, and blast-radius containment are structural, not optional configuration." },
+];
+
+export const COMPANY_NEVER_CLAIMS = [
+  "Guaranteed or predicted trading returns",
+  "Licensed financial or investment advice",
+  "A large team, institutional backing, or customers we don't have",
+  "Regulatory approval, certification, or endorsement we haven't received",
+  "Peer-reviewed research or academic partnerships that don't exist",
+  "Endorsement by any employer — Titan Pilot is independent of Emad's employment",
+];
+
+export const COMPANY_TIMELINE = [
+  { stage: "Idea", body: "Titan Pilot began as a response to a specific gap: AI was already influencing trading decisions with no evidence trail behind them." },
+  { stage: "Engineering", body: "Core infrastructure was built first — the event spine, replay verification, and deterministic risk controls — before any AI reasoning was added." },
+  { stage: "Shadow Certification", body: "The AI shadow pipeline completed Phase C.5 certification: ten operational-hardening tasks, each deployed and verified in production the same day." },
+  { stage: "Design Partner Phase (current)", body: "Titan Pilot is engaging qualified design partners to validate the product against real desk workflows before any broader release." },
+  { stage: "Future Copilot Phase", body: "Longer-term roadmap work toward higher autonomy stages, gated the same way every prior stage was — by evidence, not by schedule." },
+];
+
+export const COMPANY_STAGE =
+  "Titan Pilot is currently in a certified production shadow phase. The platform has completed its engineering certification, including replay verification, deterministic scoring, AI safety validation, and operational hardening. The system currently operates in supervised shadow mode while we engage with qualified design partners and continue validating the product with real operational evidence.";
+
+export const RESEARCH_INTRO = {
+  eyebrow: "Research",
+  title: "Built on evidence, not claims.",
+  copy: "Titan Pilot is built on measurable engineering evidence rather than marketing claims. Our research program exists to make that evidence public, reproducible, and correctable — on our timeline, not a launch deadline.",
+};
+
+export const RESEARCH_PRINCIPLES = [
+  "Evidence before claims",
+  "Reproducibility",
+  "Replayability",
+  "Public correction of mistakes",
+  "Transparent methodology",
+  "Versioned publications",
+];
+
+export type ResearchStatus = "Planned" | "In Preparation" | "Under Internal Review" | "Published";
+
+export const RESEARCH_PIPELINE: { title: string; status: ResearchStatus }[] = [
+  { title: "Whitepapers", status: "Planned" },
+  { title: "Engineering Reports", status: "Planned" },
+  { title: "Benchmark Studies", status: "Planned" },
+  { title: "Provider Evaluations", status: "Planned" },
+  { title: "AI Governance", status: "Planned" },
+  { title: "Replay Architecture", status: "Planned" },
+  { title: "Risk Engineering", status: "Planned" },
+  { title: "Hallucination Containment", status: "Planned" },
+  { title: "Decision Evidence", status: "Planned" },
+  { title: "Trading AI Methodology", status: "Planned" },
+];
+
+export const RESEARCH_STANDARDS = [
+  "Methodology",
+  "Datasets, where legally possible",
+  "Assumptions",
+  "Limitations",
+  "Version history",
+  "Errata",
+  "Reproducibility notes",
+];
+
+export const RESEARCH_CLAIMS_NOTE =
+  "Every public technical claim on titanpilot.app will eventually map to supporting engineering evidence or published research.";
+
+export const RESEARCH_STATUS = {
+  delayed: "Our publications are intentionally delayed until they satisfy our internal evidence standards.",
+  current: "Research is currently being prepared. Titan Pilot will publish technical papers and engineering reports only after they meet our internal evidence standards. We prefer publishing later with evidence rather than earlier with speculation.",
+};
+
+export const CONTACT_INTRO = {
+  eyebrow: "Contact",
+  title: "Book an AI Desk Audit.",
+  copy: "Tell us about your desk, and we'll assess whether Titan Pilot is an appropriate fit.",
+};
+
+export const CONTACT_QUALIFICATION_NOTICE =
+  "We work with professional trading desks, technology partners, and qualified design partners. If you're looking for trading signals or investment advice, Titan Pilot is probably not the right fit.";
+
+export const CONTACT_WHAT_HAPPENS_NEXT = [
+  "Your submission is reviewed.",
+  "We assess whether Titan Pilot is an appropriate fit.",
+  "Qualified enquiries normally receive a response within two business days.",
+];
+
+export const HOMEPAGE_CONTACT_TEASER = {
+  title: "Ready to evaluate AI decision governance?",
+  copy: "Book an AI Desk Audit to discuss how your trading desk currently uses AI, where governance gaps exist, and whether Titan Pilot is an appropriate fit.",
+};
