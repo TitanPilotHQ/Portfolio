@@ -85,3 +85,17 @@ sessions — trust this file and `git log` over conversational memory.
   to map each category to its real, distinct differentiator.
 - Merged: PR #9, branch `launchos-04-positioning`.
 - 4 of 16 modules now built (01-04). 12 remain, all unblocked.
+
+## 2026-07-12 — Global Constraint 4 (Single Source of Truth) + consistency pass
+
+- Added GC4 per Emad's instruction: every fact lives in exactly one
+  canonical location; other modules reference, never duplicate.
+- Consistency review found 2 real violations across Modules 01-04:
+  category-adjacency positioning duplicated in Modules 01 and 04 (fixed —
+  Module 01 now states only the category name); the ICP/target-customer
+  fact independently restated 4 times across Modules 03-04 (fixed —
+  consolidated into a new canonical seed, `docs/launchos/06-sales-os/
+  00-icp.md`, built early since 03/04 needed it before Module 06's turn).
+- Independent verification confirmed the fix is complete; no other
+  violations found.
+- Merged: PR #10, branch `launchos-00c-ssot-constraint`.
