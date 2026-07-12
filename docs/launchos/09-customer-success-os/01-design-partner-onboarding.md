@@ -14,10 +14,12 @@ Stage 7, it's the detailed expansion of it.
 ### Stage 1: Discovery session
 
 Distinct from Module 06's Stage 3 discovery meeting (pre-sale, evaluating
-fit) — this is a design-partner-specific discovery session establishing
-implementation-level context now that the relationship has moved past
-evaluation. This module doesn't blur the two; if Emad intends them to be the
-same conversation, that's a fact to confirm, not to assume.
+fit) — the working assumption here (an inference from the flow's position
+after Module 06's Stage 7 handoff, not a sourced fact) is that this is a
+design-partner-specific discovery session establishing implementation-level
+context now that the relationship has moved past evaluation. This module
+doesn't blur the two; if Emad intends them to be the same conversation,
+that's a fact to confirm, not to assume.
 
 ### Stage 2: Infrastructure review
 
@@ -39,10 +41,11 @@ sourced fact, so treated as a working assumption only.
 
 How the design partner's environment gets connected to Titan Pilot's shadow-
 mode pipeline. Ties to the product's real staged-autonomy structure (Module
-02's Trust Ladder scene) — deployment planning at this stage is explicitly
-for shadow mode only, never execution, consistent with the current Autonomy
-Ladder stage (`AUTONOMY_LADDER_DETAIL`, `lib/content.ts:349-365`: "Shadow —
-Certified — current").
+02's Trust Ladder scene) — deployment planning at this stage is for shadow
+mode only, never execution. Unlike Stages 1 and 3 above, this isn't a
+separate inference: it follows directly from the cited fact that Shadow is
+the only "current" Autonomy Ladder stage (`AUTONOMY_LADDER_DETAIL`,
+`lib/content.ts:349-365`: "Shadow — Certified — current").
 
 ### Stage 5: Shadow-mode onboarding
 

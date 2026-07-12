@@ -10,8 +10,8 @@ detail for them.
 
 The natural content of a design-partner feedback loop, given what shadow
 mode actually produces: each signal is recorded "with its dossier, score,
-and hash artifacts" (`AUTONOMY_LADDER_DETAIL`, Shadow stage,
-`lib/content.ts:352-353`). A design partner's feedback loop is the
+and hash artifacts" (`AUTONOMY_LADDER_DETAIL`, Shadow stage's body field,
+`lib/content.ts:353`). A design partner's feedback loop is the
 mechanism by which that recorded evidence gets reviewed with them —
 comparing what the pipeline produced against their own desk's judgment.
 This file doesn't specify a cadence (weekly, per-signal, monthly) since none
@@ -43,12 +43,17 @@ new criterion Emad has stated for Stage 7 specifically.
 
 ## Why this distinction matters enough to document explicitly
 
-Without this file, "production readiness review" could easily be
-(mis)read — by a design partner, a future hire, or in a stray piece of
-sales copy — as implying the onboarding flow itself leads to live trading.
-It doesn't. Making that explicit here, once, means every module citing
-Stage 7 (Module 06, Module 08's demo script) inherits the correct
-non-execution framing rather than each having to re-derive it.
+Without this file, "production readiness review" (this module's own Stage
+7, distinct from Module 06's separately-numbered Stage 7, "Onboarding, if
+mutually agreed") could easily be (mis)read — by a design partner, a future
+hire, or in a stray piece of sales copy — as implying the onboarding flow
+itself leads to live trading. It doesn't. Making that explicit here, once,
+means any future module that comes to discuss production-readiness review
+specifically can cite this file's framing rather than re-deriving it — as of
+this module's own construction, no other module (including Module 06 or
+Module 08) currently references "production readiness review" by name, so
+there is nothing yet actually inheriting this framing; this section
+documents the intended reference pattern for when that happens.
 
 ## What Titan Pilot commits to at this stage
 
