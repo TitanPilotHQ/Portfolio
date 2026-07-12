@@ -55,6 +55,12 @@ before any real fundraising conversation, not just relied on from memory.
   re-verification (a confirmed partner may change what can be claimed)
 - Any cited module (01, 02, 04, 05) changes a fact this module references →
   re-verify the citation still resolves correctly
+- Module 13 (Hiring OS) or Module 15 (Market Research Framework) is built →
+  re-verify the "not built yet" assertions in `02-traction-and-evidence.md`
+  ("Market size... no market-sizing data anywhere in LaunchOS") and
+  `04-investor-faq.md` ("team" and "TAM" answers) — these are currently
+  accurate because those modules don't exist, and will go stale silently
+  once they do
 
 ## Cross-references
 

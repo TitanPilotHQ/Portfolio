@@ -48,12 +48,17 @@ Founder-led, intentionally small. See Module 01's Company stage section
 (Hiring OS).
 
 **"What's your moat / why can't a competitor just copy this?"**
-Not a question this file answers with a new claim — route to the actual
-architecture facts (`lib/content.ts:421-438`, "AI cannot bypass execution,"
+Honestly: no defensibility moat (IP, data advantage, network effect,
+switching cost) is claimed here, because none is sourced anywhere in
+LaunchOS. What *is* real and citable is engineering rigor, not
+defensibility — `lib/content.ts:421-438` ("AI cannot bypass execution,"
 "Dependencies point one way," etc., already the subject of Module 02's
 Technical/partner audience variant, `02-story-architecture/
-02-audience-variants.md`) rather than a generic defensibility argument this
-module would have to invent.
+02-audience-variants.md`) describes *how* the system is built, which
+answers "is this engineered carefully," not "why can't this be copied."
+Don't let the architecture answer stand in for the moat answer — if asked
+directly, say plainly that no moat claim exists yet rather than letting
+architecture detail read as an implied one.
 
 **"When will you raise / are you raising now?"**
 Not currently. See `03-cap-table-and-funding.md`'s Phase B framing — the

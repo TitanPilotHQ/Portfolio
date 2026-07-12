@@ -23,13 +23,20 @@ any LaunchOS module independently redefine this evidence:
   rows: MT5 bridge (Built), Event spine (Running), Replay verification
   (Active), Shadow AI pipeline (Certified), Risk gates (Implemented), Broker
   reconciliation (Built).
-- `MILESTONES` (`lib/content.ts:187-196`) — eight dated-in-substance-but-
-  not-in-label numbered proofs, including "Replay Verification, Zero
-  Drift — 1,662/1,662" and "Restore / PITR Recovery Verified — 13s / 78s."
+- `MILESTONES` (`lib/content.ts:187-196`) — eight label/value tiles, none
+  carrying a date field in the data itself (Module 02's framing, "numbered
+  proof, no dates attached," `02-story-architecture/01-core-narrative.md`,
+  applies here too — not restated further); two carry the specific values
+  "Replay Verification, Zero Drift — 1,662/1,662" and "Restore / PITR
+  Recovery Verified — 13s / 78s," whose dated provenance lives in the
+  claims register below, not in the milestone tile itself.
 - `docs/content/PUBLIC_CLAIMS_REGISTER.md` — every one of the 15 registered
-  claims is independently sourced and dated (2026-07-08 for the engineering
-  certification claims, 2026-07-11 for the founder-background claims), each
-  with a named source document in the separate `Titan` engineering repo.
+  claims is independently sourced and dated. 13 of the 15 (the engineering
+  certification, security, and architecture claims, dated 2026-07-08) cite a
+  named document in the separate `Titan` engineering repo. The remaining 2
+  (the founder-led and founder-background claims, dated 2026-07-11) are
+  founder direct attestations to site content, not Titan-repo documents —
+  a real, disclosed distinction, not a uniform sourcing standard.
 
 **Investor framing (new content, not a restatement):** the significance of
 this evidence for an investor isn't the individual numbers — it's that

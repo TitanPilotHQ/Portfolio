@@ -3,7 +3,8 @@
 ## Phase A — today
 
 - **Legal entity:** none incorporated yet. *(Source: `INTAKE-REQUEST.md`
-  §3.4/§5.1, verbatim: "No incorporated legal entity exists yet.")*
+  §3.4, verbatim: "No incorporated legal entity exists yet." Corroborated,
+  not verbatim, by §5.1: "No legal entity has been incorporated yet.")*
 - **Team:** founder-led, intentionally small — canonical fact, Module 01
   (`01-brand-bible/01-identity.md`, "Company stage"), not restated here.
 - **Funding raised to date:** none. *(Source: `INTAKE-REQUEST.md` §3.1,
@@ -23,19 +24,24 @@
 
 *(Source: `INTAKE-REQUEST.md` §3.4 and §3.1, verbatim.)*
 
-No sequence between "incorporation" and "fundraising" is stated beyond both
-being Phase B events gated on different triggers (incorporation gates on
-commercial operations beginning; fundraising gates on product maturity and
-design-partner validation) — this file does not infer an order between them
-that Emad hasn't stated.
+Neither source states an order between "incorporation" and "fundraising" —
+they're described as gated on different triggers (incorporation on
+commercial operations beginning; fundraising on product maturity and
+design-partner validation). This file does not infer an order from that
+silence, and does not claim the two are "independent" either: as a practical
+matter, issuing real equity or a SAFE typically requires a legal entity to
+hold it, so incorporation likely precedes fundraising in practice even
+though no source states this as a plan. State only what's sourced (no order
+given) — don't round that up to "the two are independent," which is a
+stronger, unsourced claim.
 
 ## What this snapshot is for
 
 A one-screen orientation for any investor conversation, assembled entirely
 from citations rather than independent claims — every line above either
 quotes intake §3 verbatim or points to the module that owns the fact. This
-file's only original content is the observation about Phase B's two
-independent (not sequenced) triggers.
+file's only original content is the observation that Phase B's two triggers
+have no stated order — not a claim that they're independent.
 
 ## What this snapshot deliberately omits
 
