@@ -15,7 +15,7 @@ phrase to avoid being misread.
 | Score / Deterministic scorer | The non-AI, rule-based evaluation of a thesis | `lib/content.ts:115` |
 | Risk gate | The deterministic, non-negotiable check that sits below every decision | `lib/content.ts:117`, Manifesto Principle 1-2 |
 | Signal | A recorded decision output — in shadow mode, always non-executing | `lib/content.ts:116` |
-| Shadow mode | The current, certified operating mode: full pipeline runs, nothing executes | `AUTONOMY_LADDER_DETAIL`, `lib/content.ts:352-353` |
+| Shadow mode | The current operating mode (Phase C.5 certified — an internal engineering milestone, not a regulatory one): full pipeline runs, nothing executes | `AUTONOMY_LADDER_DETAIL`, `lib/content.ts:352-353` |
 | Replay | Rebuilding system state from the immutable event log and comparing it to live state | `lib/content.ts:268-270` |
 | Event / event log | The append-only, immutable record every decision is stored as | Manifesto Principle 3 |
 | Fail-closed | The doctrine that every failure mode collapses toward no action | `PRODUCT_DOCTRINES`, `lib/content.ts:344-346` |
@@ -35,7 +35,7 @@ overclaims.
 
 | Term | Mandatory companion | Why |
 |---|---|---|
-| "Certified" (outside the fixed GEO block) | "— Phase C.5 certified, an internal engineering milestone, not a regulatory one" | Module 01's certification-qualifier rule, `02-voice-and-tone.md` |
+| "Certified" (outside the fixed GEO block) | Do not write "[X] is certified" plus a separate qualifier — instead write the whole replacement unit: "[X] is Phase C.5 certified — an internal engineering milestone, not a regulatory one." Using bare "certified" and then appending the qualifier produces an awkward "certified... certified" repetition; folding "Phase C.5" into the verb phrase avoids it. | Module 01's certification-qualifier rule, `02-voice-and-tone.md` |
 | "AI" (when describing what it does) | A same-sentence statement of what it does NOT do (decide, execute, hold authority) | Manifesto Principle 1 |
 | "Autonomous" / "Autonomy" | The current stage word ("Evidence-gated — future") — never used to describe present capability | Autonomy Ladder, `AUTONOMY_LADDER_DETAIL` |
 | "Design partners" | "engaging" (process verb), never "have" or "working with" | Module 01, `01-identity.md`, Company stage section |
@@ -46,7 +46,7 @@ overclaims.
 
 | Term | Status | Use instead |
 |---|---|---|
-| "Signal" (retail-tip sense) | Banned in that sense | "Signal" (Titan Pilot's technical sense, defined above) |
+| "Signal" (retail-tip sense) | Banned in that sense | Restrict "signal" to Titan Pilot's technical sense (defined above); if a retail-tip meaning is genuinely needed (e.g. describing what Titan Pilot is *not*), name it explicitly as "trading signals" or "retail signals," never bare "signal" |
 | "AI agent" | Discouraged | "AI analyst" / "the AI layer" — "agent" implies autonomous action Titan Pilot's AI doesn't have |
 | "Trading bot" (applied to Titan Pilot itself) | Banned when describing Titan Pilot | "AI trading infrastructure" — the site explicitly defines itself against this term (`COMPANY_PROBLEM`, `lib/content.ts:477-478`: "not... another black-box trading bot") |
 | "Platform" (used loosely) | Discouraged as a filler word | Name the actual thing: "pipeline," "infrastructure," "system of record" |

@@ -83,7 +83,7 @@ reference; "Grounded by" replaces "Blocking need."
 | 01 | Brand Bible | Built | Live site content |
 | 02 | Story Architecture | Built | Live site content + Module 01 |
 | 03 | Messaging Bible | Ready | Live site content + Modules 01-02 |
-| 04 | Positioning | Ready | Live site content + Modules 01-02 |
+| 04 | Positioning | Ready | Live site content + Modules 01-03 |
 | 05 | Pricing System | Ready | Intake §1 (working assumptions, not public commitments) |
 | 06 | Sales OS | Ready | Intake §2 (real current process) |
 | 07 | Investor Data Room | Ready | Intake §3 + Global Constraint 3 (pre/post-incorporation phases) |

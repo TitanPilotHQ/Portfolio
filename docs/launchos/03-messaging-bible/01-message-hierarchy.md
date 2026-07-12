@@ -24,9 +24,10 @@ hierarchy — three tiers, each with a distinct job (`components/Hero.tsx:
 **Rule:** any new primary message surface (a deck title slide, a landing
 page for a specific channel) should include all four tiers where space
 allows, in this order. Cutting the qualifier tier for space is the most
-common mistake — Module 08 (Demo Playbooks) and Module 04 (Positioning) both
-depend on the qualifier tier doing its filtering job consistently, not just
-on the homepage.
+common mistake; the working assumption is that Module 08 (Demo Playbooks) and
+Module 04 (Positioning), once built, will each need the qualifier tier doing
+its filtering job consistently, not just on the homepage — flag this for
+re-confirmation once those modules exist rather than treating it as settled.
 
 ## The SEO/share instance (a second real hierarchy)
 
