@@ -47,18 +47,16 @@ No single existing category (bot, signal service, charting tool, no-code
 automation, data terminal) combines all four. That combination — AI
 reasoning + deterministic control + mandatory replay — is the category.
 
-## Target segment (grounded in the intake, internal planning input)
+## Target segment (canonical definition lives in Module 06)
 
-Per `INTAKE-REQUEST.md` §1.4 and §2.2: the target paid customer is a
-professional trading desk, prop firm, hedge fund, broker, or institutional
-trading organization — not an individual retail trader — and the ICP is
-specifically organizations already experimenting with AI-assisted trading
-that need governance, auditability, explainability, and operational control.
-This is an internal planning input, not yet a published site claim (Global
-Constraint 3) — but it sharpens the category positioning: Supervised AI
-Trading is a category for organizations that have already decided to use AI
-in trading decisions and need to govern that use, not a category aimed at
-convincing someone to start using AI trading tools for the first time.
+The target customer and ICP are canonically defined in Module 06 (Sales OS),
+`06-sales-os/00-icp.md`, per Global Constraint 4 — not restated here. That
+definition sharpens the category positioning: Supervised AI Trading is a
+category for organizations that have already decided to use AI in trading
+decisions and need to govern that use, not a category aimed at convincing
+someone to start using AI trading tools for the first time. This is an
+internal planning input, not yet a published site claim (Global Constraint 3
+/ 1's grounding rule) — see `00-icp.md` for its status and sourcing.
 
 ## Category positioning statement (one paragraph, for internal/deck use)
 

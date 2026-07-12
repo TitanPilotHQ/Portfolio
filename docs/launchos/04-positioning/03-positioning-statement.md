@@ -16,8 +16,9 @@
 > Unlike AI signal marketplaces, that score is a hash-pinned deterministic
 > function of visible components, not an opaque confidence percentage.
 
-**Sourcing:** the target-customer clause is from `INTAKE-REQUEST.md` §1.4/§2.2
-(internal planning input, not yet a public claim — see Global Constraint 3).
+**Sourcing:** the target-customer clause is from the canonical ICP definition
+(Module 06, `06-sales-os/00-icp.md`, per Global Constraint 4; internal
+planning input, not yet a public claim — see Global Constraint 3).
 Every other clause is a direct citation: the need clause is `COMPANY_MISSION`
 verbatim (`lib/content.ts:473-474`, "who approved the final action," not
 paraphrased); "turns every thesis, objection, score, approval, and refusal
@@ -83,13 +84,13 @@ to an existing citation. If a future business decision changes the target
 customer, pricing model, or category name, this file must be revised in the
 same change (see governance).
 
-## Segment note (from intake, not yet a formal segmentation)
+## Segment note
 
-Per intake §1 and §2, there's currently one ICP, not a segmented set:
-organizations already experimenting with AI-assisted trading that need
-governance, auditability, explainability, and operational control. This
-module does not create sub-segments (e.g., "hedge fund" vs. "prop firm"
-positioning variants) because no such segmentation exists yet in any real
-source — inventing one here would violate the grounding rule. If Module 06
-(Sales OS) or real sales conversations surface a genuine sub-segmentation
-later, add it here with its source.
+The ICP is canonically defined in Module 06 (Sales OS), `06-sales-os/
+00-icp.md` (Global Constraint 4) — not restated here. As of that file, there
+is currently one ICP, not a segmented set. This module does not create
+sub-segments (e.g., "hedge fund" vs. "prop firm" positioning variants)
+because no such segmentation exists yet in any real source — inventing one
+here would violate the grounding rule. If Module 06 or real sales
+conversations surface a genuine sub-segmentation later, it's added to
+`00-icp.md` first, and this module updates to reflect it in the same change.

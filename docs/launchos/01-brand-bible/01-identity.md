@@ -12,14 +12,18 @@ column, every row.)*
 
 ## Category
 
-**Supervised AI Trading.** This is a category Titan Pilot is defining, not
-borrowing — it deliberately sits between "AI trading bot" (implies autonomous
-execution and performance promises Titan Pilot explicitly refuses to make) and
-"trading signal service" (implies retail, low-accountability advice). The word
-"supervised" carries the entire differentiation: a human or deterministic rule
-is always the final authority.
+**Supervised AI Trading.** The category name Titan Pilot uses, always
+capitalized this way as a proper noun. "Supervised" is the operative word —
+it signals that a human or deterministic rule is always the final authority,
+never AI.
 *(Source: hero eyebrow badge, `components/Hero.tsx:49`; Twitter card title,
 `app/layout.tsx:71`.)*
+
+For why this category rather than adjacent ones ("AI trading bot," "trading
+signal service," and how it maps against real named competitors), see Module
+04 (Positioning), `04-positioning/01-category-positioning.md` — that
+analysis is canonical there, per Global Constraint 4 (Single Source of
+Truth), and isn't repeated here.
 
 ## One-line company description (GEO-canonical, do not paraphrase)
 

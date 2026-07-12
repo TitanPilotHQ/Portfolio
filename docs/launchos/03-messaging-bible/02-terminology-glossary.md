@@ -52,7 +52,7 @@ overclaims.
 | "Platform" (used loosely) | Discouraged as a filler word | Name the actual thing: "pipeline," "infrastructure," "system of record" |
 | "Solution" | Discouraged as vague SaaS filler | Name the actual mechanism |
 | "Powered by AI" | Discouraged — undersells the actual architecture | "AI produces reasoning; deterministic software and risk gates decide" (the real, more precise claim) |
-| "Trader" (as the default customer noun) | Use carefully | Per intake §1, the target paid customer is an organization (desk, prop firm, hedge fund, broker), not an individual trader — default to "desk" or "trading organization" unless specifically addressing an individual user |
+| "Trader" (as the default customer noun) | Use carefully | Per the canonical target-customer definition (Module 06, `06-sales-os/00-icp.md`), the target paid customer is an organization, not an individual trader — default to "desk" or "trading organization" unless specifically addressing an individual user |
 
 ## Category and naming discipline
 

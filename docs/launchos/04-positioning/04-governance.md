@@ -39,7 +39,8 @@ Emad, same rationale as prior modules.
 
 ## Cross-references
 
-- **Depends on:** Modules 01-03
+- **Depends on:** Modules 01-03, and Module 06's ICP seed
+  (`06-sales-os/00-icp.md`, Global Constraint 4)
 - **Feeds:** Module 06 (Sales OS — the formal positioning statement and
   competitive map are direct sales-enablement inputs), Module 08 (Demo
   Playbooks — objection handling for "why not [competitor]" questions),
