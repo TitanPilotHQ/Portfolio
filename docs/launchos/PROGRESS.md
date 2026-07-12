@@ -99,3 +99,17 @@ sessions — trust this file and `git log` over conversational memory.
 - Independent verification confirmed the fix is complete; no other
   violations found.
 - Merged: PR #10, branch `launchos-00c-ssot-constraint`.
+
+## 2026-07-12 — Module 05: Pricing System — closed
+
+- 5 files published: pricing philosophy, model structure (internal-only),
+  a pricing decision tree, governance. Zero dollar figures/numbers anywhere
+  in the module — verified by two independent scans.
+- Independent review: a partial ICP restatement (GC4) + an unsupported
+  industry-procurement claim — fixed.
+- Adversarial review: a real gap in the decision tree (future-paywall
+  statements fell through every branch) + a governance file missing the
+  honest-enforcement note Module 01 already has — both fixed; added a
+  pricing checkbox to `.github/PULL_REQUEST_TEMPLATE.md`.
+- Merged: PR #11, branch `launchos-05-pricing-system`.
+- 5 of 16 modules built (01-05), plus Module 06's ICP seed. 10 remain.
