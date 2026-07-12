@@ -29,20 +29,25 @@ the next section.
 Use Module 02's Decision Walkthrough scene
 (`02-story-architecture/03-narrative-components-library.md`) — the nine
 `DECISION_STEPS`. This is the longest section because it's the centerpiece
-device (Module 02's own framing: "the single highest-leverage narrative
-asset available"). Per that scene's "Do not" rule, never skip the Devil's
-Advocate or Risk Gate steps for time — if the demo is running short, cut
-detail from the opener or close instead, never from this section's two most
-differentiating steps.
+device (in Module 02's own words, "in the controller's judgment, the single
+highest-leverage narrative asset available — not a measured finding," a
+hedge preserved here rather than dropped). Per that scene's "Do not" rule,
+never skip the Devil's Advocate or Risk Gate steps for time — if the demo is
+running short, cut detail from the opener or close instead, never from this
+section's two most differentiating steps.
 
 **New content this file adds:** walk the steps in order, pausing after step
-6 ("Signal is recorded in shadow mode") to explicitly state the Trust Ladder
-context (Module 02's Trust Ladder scene, homepage short form —
-`PRODUCT_MODES`, `lib/content.ts:212-231`) — this is the natural point in
-the walkthrough where "so does this ever actually trade?" comes up, and
+7 ("Signal is recorded in shadow mode") to explicitly state the Trust Ladder
+context. Per Module 02's own rule for choosing between the two real Trust
+Ladder forms (`02-story-architecture/02-audience-variants.md`), a live demo
+is explicitly named as a "product depth" context requiring the **long**
+form — `AUTONOMY_LADDER_DETAIL` (`lib/content.ts:349-365`), not the
+homepage's short `PRODUCT_MODES`. This is the natural point in the
+walkthrough where "so does this ever actually trade?" comes up, and
 answering it here (rather than waiting for the question) keeps the demo
-proactive rather than reactive, consistent with Module 02's "Discipline
-List" scene's proactive-disclosure principle.
+proactive rather than reactive — a recommendation, not a measured result,
+per Module 02's own hedge on its Discipline List scene's proactive-
+disclosure guidance, which this file extends to the demo context.
 
 ### 4. Evidence and Failure-Mode beats (5 min)
 
@@ -65,7 +70,10 @@ allows (nothing, as of this module's construction).
 ## What this script deliberately does not include
 
 A features list, a roadmap walkthrough, or a competitive takedown — none of
-these are how Titan Pilot's real narrative arc works (Module 02's core
-narrative explicitly doesn't lead with feature lists). If a competitor comes
-up, that's `03-objection-handling.md`, not a scheduled section of the core
-script.
+these are how Titan Pilot's real narrative arc works. Module 02's core
+narrative doesn't lead with the mechanism or the problem before the claim
+(`02-story-architecture/01-core-narrative.md`); by extension, a features
+list — mechanism detail with no claim or walkthrough framing at all — fits
+that arc even less, though the source doesn't use the phrase "feature list"
+itself. If a competitor comes up, that's `03-objection-handling.md`, not a
+scheduled section of the core script.
