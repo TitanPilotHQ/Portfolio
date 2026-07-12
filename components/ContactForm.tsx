@@ -87,6 +87,13 @@ export function ContactForm() {
 
   const startedRef = useRef(false);
   const completedSectionsRef = useRef(new Set<string>());
+  const confirmationHeadingRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    if (submitted) {
+      confirmationHeadingRef.current?.focus();
+    }
+  }, [submitted]);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -183,7 +190,11 @@ export function ContactForm() {
     return (
       <Reveal className="mx-auto max-w-xl">
         <div className="glass-strong rounded-2xl p-10 text-center sm:p-14">
-          <h2 className="font-display text-2xl font-bold sm:text-3xl">
+          <h2
+            ref={confirmationHeadingRef}
+            tabIndex={-1}
+            className="font-display text-2xl font-bold outline-none sm:text-3xl"
+          >
             {CONTACT_CONFIRMATION.title}
           </h2>
           <p className="mt-3 text-base text-secondary">{CONTACT_CONFIRMATION.subtitle}</p>
@@ -229,22 +240,34 @@ export function ContactForm() {
               <input
                 id="cf-company"
                 required
+                aria-invalid={Boolean(errors.company)}
+                aria-describedby={errors.company ? "cf-company-error" : undefined}
                 className={inputClass}
                 value={values.company}
                 onChange={(e) => update("company", e.target.value)}
               />
-              {errors.company ? <p className={errorClass}>{errors.company}</p> : null}
+              {errors.company ? (
+                <p id="cf-company-error" role="alert" className={errorClass}>
+                  {errors.company}
+                </p>
+              ) : null}
             </div>
             <div>
               <label htmlFor="cf-name" className={labelClass}>Full Name</label>
               <input
                 id="cf-name"
                 required
+                aria-invalid={Boolean(errors.name)}
+                aria-describedby={errors.name ? "cf-name-error" : undefined}
                 className={inputClass}
                 value={values.name}
                 onChange={(e) => update("name", e.target.value)}
               />
-              {errors.name ? <p className={errorClass}>{errors.name}</p> : null}
+              {errors.name ? (
+                <p id="cf-name-error" role="alert" className={errorClass}>
+                  {errors.name}
+                </p>
+              ) : null}
             </div>
             <div>
               <label htmlFor="cf-email" className={labelClass}>Work Email</label>
@@ -252,28 +275,42 @@ export function ContactForm() {
                 id="cf-email"
                 type="email"
                 required
+                aria-invalid={Boolean(errors.workEmail)}
+                aria-describedby={errors.workEmail ? "cf-email-error" : undefined}
                 className={inputClass}
                 value={values.workEmail}
                 onChange={(e) => update("workEmail", e.target.value)}
               />
-              {errors.workEmail ? <p className={errorClass}>{errors.workEmail}</p> : null}
+              {errors.workEmail ? (
+                <p id="cf-email-error" role="alert" className={errorClass}>
+                  {errors.workEmail}
+                </p>
+              ) : null}
             </div>
             <div>
               <label htmlFor="cf-title" className={labelClass}>Job Title</label>
               <input
                 id="cf-title"
                 required
+                aria-invalid={Boolean(errors.jobTitle)}
+                aria-describedby={errors.jobTitle ? "cf-title-error" : undefined}
                 className={inputClass}
                 value={values.jobTitle}
                 onChange={(e) => update("jobTitle", e.target.value)}
               />
-              {errors.jobTitle ? <p className={errorClass}>{errors.jobTitle}</p> : null}
+              {errors.jobTitle ? (
+                <p id="cf-title-error" role="alert" className={errorClass}>
+                  {errors.jobTitle}
+                </p>
+              ) : null}
             </div>
             <div>
               <label htmlFor="cf-desk-size" className={labelClass}>Desk Size</label>
               <select
                 id="cf-desk-size"
                 required
+                aria-invalid={Boolean(errors.deskSize)}
+                aria-describedby={errors.deskSize ? "cf-desk-size-error" : undefined}
                 className={inputClass}
                 value={values.deskSize}
                 onChange={(e) => update("deskSize", e.target.value)}
@@ -283,7 +320,11 @@ export function ContactForm() {
                   <option key={o} value={o}>{o}</option>
                 ))}
               </select>
-              {errors.deskSize ? <p className={errorClass}>{errors.deskSize}</p> : null}
+              {errors.deskSize ? (
+                <p id="cf-desk-size-error" role="alert" className={errorClass}>
+                  {errors.deskSize}
+                </p>
+              ) : null}
             </div>
             <div>
               <SearchableSelect
@@ -293,7 +334,11 @@ export function ContactForm() {
                 onChange={(v) => update("jurisdiction", v)}
                 required
               />
-              {errors.jurisdiction ? <p className={errorClass}>{errors.jurisdiction}</p> : null}
+              {errors.jurisdiction ? (
+                <p role="alert" className={errorClass}>
+                  {errors.jurisdiction}
+                </p>
+              ) : null}
             </div>
           </div>
         </div>
@@ -311,13 +356,19 @@ export function ContactForm() {
               otherValue={values.assetClassesOther}
               onOtherChange={(v) => update("assetClassesOther", v)}
             />
-            {errors.assetClasses ? <p className={errorClass}>{errors.assetClasses}</p> : null}
+            {errors.assetClasses ? (
+              <p role="alert" className={errorClass}>
+                {errors.assetClasses}
+              </p>
+            ) : null}
           </div>
           <div>
             <label htmlFor="cf-ai-usage" className={labelClass}>Current AI Usage</label>
             <select
               id="cf-ai-usage"
               required
+              aria-invalid={Boolean(errors.aiUsage)}
+              aria-describedby={errors.aiUsage ? "cf-ai-usage-error" : undefined}
               className={inputClass}
               value={values.aiUsage}
               onChange={(e) => update("aiUsage", e.target.value)}
@@ -327,6 +378,11 @@ export function ContactForm() {
                 <option key={o} value={o}>{o}</option>
               ))}
             </select>
+            {errors.aiUsage ? (
+              <p id="cf-ai-usage-error" role="alert" className={errorClass}>
+                {errors.aiUsage}
+              </p>
+            ) : null}
             {values.aiUsage === "Other" ? (
               <input
                 className={`${inputClass} mt-2.5`}
@@ -343,6 +399,8 @@ export function ContactForm() {
             <select
               id="cf-governance"
               required
+              aria-invalid={Boolean(errors.governanceMethod)}
+              aria-describedby={errors.governanceMethod ? "cf-governance-error" : undefined}
               className={inputClass}
               value={values.governanceMethod}
               onChange={(e) => update("governanceMethod", e.target.value)}
@@ -352,6 +410,11 @@ export function ContactForm() {
                 <option key={o} value={o}>{o}</option>
               ))}
             </select>
+            {errors.governanceMethod ? (
+              <p id="cf-governance-error" role="alert" className={errorClass}>
+                {errors.governanceMethod}
+              </p>
+            ) : null}
             {values.governanceMethod === "Other" ? (
               <input
                 className={`${inputClass} mt-2.5`}
@@ -376,7 +439,11 @@ export function ContactForm() {
               otherValue={values.primaryGoalOther}
               onOtherChange={(v) => update("primaryGoalOther", v)}
             />
-            {errors.primaryGoal ? <p className={errorClass}>{errors.primaryGoal}</p> : null}
+            {errors.primaryGoal ? (
+              <p role="alert" className={errorClass}>
+                {errors.primaryGoal}
+              </p>
+            ) : null}
           </div>
           <div>
             <label htmlFor="cf-message" className={labelClass}>Message</label>
@@ -384,11 +451,17 @@ export function ContactForm() {
               id="cf-message"
               required
               rows={5}
+              aria-invalid={Boolean(errors.message)}
+              aria-describedby={errors.message ? "cf-message-error" : undefined}
               className={inputClass}
               value={values.message}
               onChange={(e) => update("message", e.target.value)}
             />
-            {errors.message ? <p className={errorClass}>{errors.message}</p> : null}
+            {errors.message ? (
+              <p id="cf-message-error" role="alert" className={errorClass}>
+                {errors.message}
+              </p>
+            ) : null}
           </div>
         </div>
 
@@ -399,13 +472,19 @@ export function ContactForm() {
               required
               checked={values.consent}
               onChange={(e) => update("consent", e.target.checked)}
+              aria-invalid={Boolean(errors.consent)}
+              aria-describedby={errors.consent ? "cf-consent-error" : undefined}
               className="mt-0.5 size-4 rounded border-white/20 bg-transparent text-cyan focus:ring-1 focus:ring-cyan/40"
             />
             <span>
               I agree to be contacted about this enquiry. {CONTACT_PRIVACY_STATEMENT}
             </span>
           </label>
-          {errors.consent ? <p className={errorClass}>{errors.consent}</p> : null}
+          {errors.consent ? (
+            <p id="cf-consent-error" role="alert" className={errorClass}>
+              {errors.consent}
+            </p>
+          ) : null}
 
           <button
             type="submit"
@@ -419,7 +498,9 @@ export function ContactForm() {
             />
           </button>
           {serverError ? (
-            <p className="text-center text-sm text-amber">{serverError}</p>
+            <p role="alert" className="text-center text-sm text-amber">
+              {serverError}
+            </p>
           ) : null}
         </div>
       </form>
