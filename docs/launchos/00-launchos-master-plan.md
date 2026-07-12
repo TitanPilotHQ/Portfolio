@@ -37,30 +37,71 @@ product, principles, known gaps, registered claims) was compiled on 2026-07-12 a
 is the primary source for every "Ready" module below. See individual module specs
 for citations.
 
+## Global Constraints
+
+Binding on every module, copied here verbatim so no module has to restate
+them:
+
+1. **No fabrication.** Every factual statement traces to live site content,
+   the claims register, or a direct, dated statement from Emad (see
+   Grounding rule above). A module with a missing fact stays unbuilt or
+   states the fact is undetermined — it never gets a placeholder or an
+   invented number.
+2. **Diligence-grade quality bar.** Every module must survive the read of a
+   skeptical investor or executive — no marketing filler, no duplicated
+   content across modules (cross-reference instead), and every module states
+   its own review/maintenance cadence (see Quality bar below).
+3. **Two-phase writing for pre-incorporation facts** (added 2026-07-12, from
+   Emad, in response to `INTAKE-REQUEST.md` answers). Titan Pilot is not
+   currently incorporated. Any module touching legal entity, finance,
+   contracting, or hiring must be structured in two clearly separated
+   phases rather than only describing today's state:
+   - **Phase A — Founder-led, pre-incorporation** (today): describe the
+     actual current state (sole founder, no legal entity, no CRM, no
+     accounting platform, etc.) as fact.
+   - **Phase B — Incorporated operating company** (future): describe the
+     structure/process that will exist once incorporation happens, framed
+     explicitly as a plan to execute at that trigger point — never as a
+     present-tense claim. Use conditional/future framing ("once
+     incorporated, X will..."), never blend it into Phase A's present-tense
+     facts.
+   This applies most directly to Modules 07 (Investor Data Room), 10
+   (Operations OS), 11 (Finance OS), and 13 (Hiring OS), and to any other
+   module that touches contracts, payroll, or legal structure in passing.
+   The intent (Emad's own words): so these modules don't need a rewrite the
+   day incorporation happens — only Phase A needs to flip to "historical"
+   and Phase B needs to flip to "current."
+
 ## Module readiness matrix
 
-| # | Module | Status | Blocking need |
-|---|---|---|---|
-| 01 | Brand Bible | Ready | — |
-| 02 | Story Architecture | Ready | — |
-| 03 | Messaging Bible | Ready | — |
-| 04 | Positioning | Ready | — |
-| 05 | Pricing System | Blocked | Real pricing philosophy, model, and figures (see intake §1) |
-| 06 | Sales OS | Blocked | Real sales process, ICP qualification bar, tooling (see intake §2) |
-| 07 | Investor Data Room | Blocked | Real cap table, financials, traction, fundraising history (see intake §3) |
-| 08 | Demo Playbooks | Ready (scoped to product-truth demo script; sales-motion sections wait on §2) | — |
-| 09 | Customer Success OS | Blocked | Real onboarding/support process, current design-partner practice (see intake §4) |
-| 10 | Operations OS | Blocked | Real legal entity, vendor/tool stack, day-to-day SOPs (see intake §5) |
-| 11 | Finance OS | Blocked | Real financials — burn, runway, revenue, accounting method (see intake §6) |
-| 12 | Partnership OS | Blocked | Real partnership targets and criteria (see intake §7) |
-| 13 | Hiring OS | Blocked | Real hiring plan, comp philosophy, equity pool (see intake §8) |
-| 14 | Competition Intelligence | Ready (framework + the site's existing real competitor comparison); expansion waits on §9 | — |
-| 15 | Market Research Framework | Ready (methodology, built on the site's existing research doctrine); market-sizing data waits on real research | — |
-| 16 | Asset Library | Ready (catalog of real existing assets + maintenance process) | — |
+**Updated 2026-07-12: Emad answered the full batched intake
+(`INTAKE-REQUEST.md`). All 16 modules are now Ready.** Table kept for
+reference; "Grounded by" replaces "Blocking need."
 
-9 modules ready to build now from existing real facts. 7 modules blocked on
-factual input only Emad can provide — intake questions below, asked once, in a
-single batch, per the mission's stop condition.
+| # | Module | Status | Grounded by |
+|---|---|---|---|
+| 01 | Brand Bible | Built | Live site content |
+| 02 | Story Architecture | Built | Live site content + Module 01 |
+| 03 | Messaging Bible | Ready | Live site content + Modules 01-02 |
+| 04 | Positioning | Ready | Live site content + Modules 01-02 |
+| 05 | Pricing System | Ready | Intake §1 (working assumptions, not public commitments) |
+| 06 | Sales OS | Ready | Intake §2 (real current process) |
+| 07 | Investor Data Room | Ready | Intake §3 + Global Constraint 3 (pre/post-incorporation phases) |
+| 08 | Demo Playbooks | Ready | Live site content + Module 02's Decision Walkthrough scene |
+| 09 | Customer Success OS | Ready | Intake §4 (real design-partner onboarding flow) |
+| 10 | Operations OS | Ready | Intake §5 + Global Constraint 3 |
+| 11 | Finance OS | Ready | Intake §6 + Global Constraint 3 (no figures to disclose yet — module documents process, not numbers that don't exist) |
+| 12 | Partnership OS | Ready | Intake §7 (real target categories, no fabricated names) |
+| 13 | Hiring OS | Ready | Intake §8 + Global Constraint 3 |
+| 14 | Competition Intelligence | Ready | Live site's real competitor comparison + intake §9 |
+| 15 | Market Research Framework | Ready | Live site's existing research doctrine |
+| 16 | Asset Library | Ready | Live site's real assets |
+
+Modules 05, 07, 09, 10, 11, 13 are built from Emad's direct answers, which are
+internal planning inputs (working assumptions, not yet public commitments).
+These modules must clearly distinguish internal planning content from
+anything cleared to say publicly — see the grounding rule and Global
+Constraint 3 above.
 
 ## Process (per module)
 
@@ -116,10 +157,10 @@ Catalyst, a Stripe executive, or an Apple design lead. Concretely:
 
 ## Sequencing rationale
 
-01–04 (Brand Bible, Story Architecture, Messaging Bible, Positioning) come first
-because every later module references them for voice, category language, and
-claims discipline. 14 and 15 (Competition Intelligence, Market Research Framework)
-are pulled forward because their methodology doesn't require blocked facts. 16
-(Asset Library) is built last among the "Ready" set since it catalogs the outputs
-of 01–15. The 7 blocked modules resume in numeric order as soon as intake answers
-land.
+01–04 (Brand Bible, Story Architecture, Messaging Bible, Positioning) come
+first because every later module references them for voice, category
+language, and claims discipline. With the intake answered (2026-07-12), the
+remaining build proceeds in roughly numeric order — 03, 04, 05, 06, 07, 08,
+09, 10, 11, 12, 13, 14, 15, 16 — since no module is blocked anymore. 16
+(Asset Library) still lands last regardless of order since it catalogs the
+outputs of every other module.

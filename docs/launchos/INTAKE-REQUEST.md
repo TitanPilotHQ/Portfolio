@@ -1,133 +1,157 @@
 # LaunchOS — Factual Intake Request
 
 **For:** Emad
-**Purpose:** Unblocks Modules 05, 06, 07, 09, 10, 11, 12, 13 (see
-`00-launchos-master-plan.md`'s readiness matrix). These modules require real
-business facts that don't exist anywhere in the `titan-site` repo or the
-public claims register — per the program's grounding rule, they stay
-unbuilt rather than filled with invented figures.
+**Status:** Answered in full 2026-07-12. Unblocks Modules 05, 06, 07, 09, 10,
+11, 12, 13.
 
-**How to answer:** Edit this file directly (replace each `> Answer:` line),
-or answer inline in chat and this file will be updated to match. Answer
-whatever you can now — partial answers unblock partial module drafting
-(e.g., answering §1 alone unblocks Module 05). Anything you can't answer yet
-just stays open; the corresponding module stays blocked until you can.
+**Standing rule from Emad, applies to every module drafted from this intake:**
+> Where the current company state is "not yet incorporated," write every
+> operational module so it works in two phases: (1) Founder-led,
+> pre-incorporation, and (2) Incorporated operating company. Clearly separate
+> today's reality from the future operating state, without fabricating
+> present facts.
+
+This is now Global Constraint 3 in `00-launchos-master-plan.md` and applies to
+every module below that touches legal entity, finance, hiring, or contracting
+— not just Investor Data Room and Operations OS.
+
+Working assumptions given below (e.g., pricing direction, ICP) are internal
+planning inputs, not public claims — they ground the module content but do
+not themselves become public-facing statements. Anything the modules
+eventually state publicly is still subject to the LaunchOS grounding rule and
+the claims-register process.
 
 ---
 
 ## §1 — Pricing System (Module 05)
 
-1. Does Titan Pilot have a real pricing model decided yet, even directionally
-   (per-seat, per-desk, usage-based, flat platform fee, none yet)?
-   > Answer:
-2. Are there real price points, even provisional/internal ones, or is pricing
-   entirely undecided while in the design-partner phase?
-   > Answer:
-3. Is the early-access/design-partner phase free (the site's JSON-LD
-   currently states "$0 — Early access program — shadow-mode validation
-   phase" — is that still accurate)?
-   > Answer:
-4. What's the intended target customer for paid pricing — a single trader, a
-   desk, a whole firm?
-   > Answer:
+1. Does Titan Pilot have a real pricing model decided yet, even directionally?
+   > **Answer:** No final pricing model has been approved yet. The current
+   > direction is B2B SaaS with annual contracts. Pricing will most likely be
+   > per desk/workspace rather than per individual trader, with enterprise
+   > custom pricing available.
+2. Are there real price points, even provisional/internal ones?
+   > **Answer:** No final pricing has been approved. Internal working
+   > assumptions used for planning are not public pricing and should not be
+   > presented as commitments. Final pricing will be determined after the
+   > first design partners complete validation.
+3. Is the early-access/design-partner phase free?
+   > **Answer:** Yes. The current design-partner and early-access phase
+   > remains free. No customer is paying yet. Early participants are selected
+   > based on fit rather than volume.
+4. What's the intended target customer for paid pricing?
+   > **Answer:** The primary paid customer is a professional trading desk,
+   > prop firm, hedge fund, broker, or institutional trading organization
+   > rather than an individual retail trader.
 
 ## §2 — Sales OS (Module 06)
 
-1. What's the actual current sales process today? (e.g., contact form →
-   Emad reviews → manual follow-up — is that the whole process right now?)
-   > Answer:
-2. Is there a defined ideal customer profile (ICP) beyond what's in the
-   contact form's qualification fields (desk size, asset classes, AI usage,
-   governance method)?
-   > Answer:
-3. Any CRM or pipeline-tracking tool in use, or is it fully manual right now?
-   > Answer:
-4. What actually happens after a qualified lead responds — is there a demo,
-   a call, a written proposal? What's the real next step today?
-   > Answer:
+1. What's the actual current sales process today?
+   > **Answer:** Website qualified contact form → manual qualification by
+   > Emad → discovery meeting → product demonstration → technical discussion
+   > → design partner evaluation → onboarding if mutually agreed.
+2. Is there a defined ideal customer profile (ICP)?
+   > **Answer:** Yes. The primary ICP is organizations already experimenting
+   > with AI-assisted trading that require governance, auditability,
+   > explainability, and operational control. Retail traders are not the
+   > primary target.
+3. Any CRM or pipeline-tracking tool in use?
+   > **Answer:** No CRM is currently in use. Pipeline management is manual
+   > during the design-partner phase.
+4. What actually happens after a qualified lead responds?
+   > **Answer:** Qualified prospects receive a discovery call and a tailored
+   > product demonstration. If there is mutual fit, the discussion progresses
+   > toward a design-partner relationship rather than an immediate commercial
+   > sale.
 
 ## §3 — Investor Data Room (Module 07)
 
-1. Has Titan Pilot raised any funding to date? If yes: how much, from whom,
-   what instrument (SAFE, priced round, etc.)? If no: is fundraising even a
-   near-term goal, or is this module premature?
-   > Answer:
-2. Is there a cap table, and can a sanitized version be shared for this
-   module?
-   > Answer:
-3. What traction metrics exist and are shareable (e.g., number of design
-   partners actually engaged, not just "engaging")?
-   > Answer:
-4. Legal entity: is Titan Pilot incorporated? Where? What structure?
-   > Answer:
+1. Has Titan Pilot raised any funding to date?
+   > **Answer:** No external funding has been raised. The company is
+   > currently founder-funded. Fundraising is expected after product
+   > maturity and successful design-partner validation rather than before.
+2. Is there a cap table?
+   > **Answer:** Sole founder ownership. No external investors or option
+   > pool currently exist.
+3. What traction metrics exist and are shareable?
+   > **Answer:** No public customer traction should be claimed. Current
+   > measurable traction consists of engineering completion, production
+   > validation, and ongoing design-partner preparation.
+4. Legal entity: is Titan Pilot incorporated?
+   > **Answer:** No incorporated legal entity exists yet. Incorporation will
+   > occur before commercial operations begin. **(See the two-phase standing
+   > rule above — this module is written for both the pre-incorporation and
+   > post-incorporation state, not just today's.)**
 
 ## §4 — Customer Success OS (Module 09)
 
-1. Since there are no paying customers yet, is this module premature, or do
-   you want it built now for the design-partner relationship specifically?
-   > Answer:
-2. What does onboarding a design partner actually look like today, in
-   practice?
-   > Answer:
-3. Support channel(s) in use today (email only? something else?).
-   > Answer:
+1. Is this module premature?
+   > **Answer:** Build this module now around design-partner operations so
+   > it can evolve naturally into full customer success after commercial
+   > launch.
+2. What does onboarding a design partner actually look like today?
+   > **Answer:** Discovery session → infrastructure review → objectives →
+   > deployment planning → shadow-mode onboarding → feedback loop →
+   > production readiness review.
+3. Support channel(s) in use today?
+   > **Answer:** Support is currently founder-led via email and scheduled
+   > meetings.
 
 ## §5 — Operations OS (Module 10)
 
 1. What's the real legal entity name and structure?
-   > Answer:
-2. What tools/vendors does the company actually run on today (banking,
-   accounting, project management, communication, hosting/infra beyond
-   Vercel)?
-   > Answer:
-3. Any existing SOPs (even informal ones) for day-to-day operation worth
-   codifying, or is this genuinely being built from scratch?
-   > Answer:
+   > **Answer:** No legal entity has been incorporated yet.
+2. What tools/vendors does the company actually run on today?
+   > **Answer:** Current stack includes GitHub, Claude Code, ChatGPT, Vercel,
+   > Upstash, Resend, Hostinger, GitHub Actions, and self-managed VPS
+   > infrastructure.
+3. Any existing SOPs worth codifying?
+   > **Answer:** Most engineering SOPs already exist. Business operations
+   > are intentionally being formalized through LaunchOS.
 
 ## §6 — Finance OS (Module 11)
 
-1. Is there any revenue today? (The site currently states pre-revenue,
-   design-partner/shadow-mode phase — confirm still accurate.)
-   > Answer:
-2. Can you share real burn rate / runway figures, even approximate, for this
-   module — or is finance being run informally enough that there's nothing
-   written down yet?
-   > Answer:
-3. Accounting method/tool in use (or none yet)?
-   > Answer:
+1. Is there any revenue today?
+   > **Answer:** No revenue. Titan Pilot remains in the pre-revenue
+   > design-partner phase.
+2. Can you share real burn rate / runway figures?
+   > **Answer:** Financial management is currently founder-funded. Internal
+   > operating costs exist but are intentionally not documented publicly
+   > until incorporation.
+3. Accounting method/tool in use?
+   > **Answer:** No formal accounting platform has been adopted yet.
 
 ## §7 — Partnership OS (Module 12)
 
-1. Are there real partnership types you're pursuing or considering (broker
-   integrations, data providers, technology partners — the FAQ mentions
-   "technology partners" generally)? Name real categories, not fabricated
-   target companies.
-   > Answer:
-2. Any partnership conversations already in progress that are real and
-   shareable?
-   > Answer:
+1. Are there real partnership types you're pursuing or considering?
+   > **Answer:** Current target partnership categories include brokers,
+   > market-data providers, cloud infrastructure providers, AI model
+   > providers, compliance technology providers, and enterprise systems
+   > integrators.
+2. Any partnership conversations already in progress?
+   > **Answer:** No partnership discussions should be represented publicly
+   > until formal engagement exists.
 
 ## §8 — Hiring OS (Module 13)
 
-1. Is Titan Pilot hiring at all right now, or genuinely solo-founder for the
-   foreseeable future? (Site currently states "founder-led and intentionally
-   small.")
-   > Answer:
-2. If hiring is anticipated: what roles, what timeline, any comp philosophy
-   or equity-pool decisions already made?
-   > Answer:
+1. Is Titan Pilot hiring at all right now?
+   > **Answer:** Titan Pilot is currently founder-led and intentionally
+   > operated by a single founder.
+2. If hiring is anticipated: what roles, what timeline?
+   > **Answer:** Initial hires are expected only after successful
+   > design-partner validation. Early priorities include engineering,
+   > customer success, product design, and sales. No compensation or equity
+   > policy has been finalized.
 
 ---
 
 ## §9 — Competition Intelligence expansion (Module 14 — not blocking)
 
-Module 14 builds now from the real competitor comparison already on
-`/product` (`lib/content.ts:367-416`). This section is optional, for when you
-want to expand it:
-
-1. Are there specific named competitors beyond the ones already compared on
-   the site that you want tracked?
-   > Answer:
-2. Any existing competitive research (even informal notes) that should feed
-   this module rather than being independently researched?
-   > Answer:
+1. Additional competitors to track?
+   > **Answer:** Continue tracking existing governance and AI-assisted
+   > trading competitors, and expand monitoring to include emerging AI agent
+   > platforms, financial AI governance vendors, and enterprise
+   > decision-intelligence platforms as they become relevant.
+2. Existing competitive research?
+   > **Answer:** No structured competitive research repository exists yet.
+   > Module 14 should become the canonical source going forward.
