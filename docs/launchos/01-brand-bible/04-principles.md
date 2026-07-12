@@ -34,23 +34,35 @@ principles independently.
 ## Product Principles — how the product is built
 *(Source: `lib/content.ts:319-336`)*
 
-1. **Evidence or it didn't happen.** Model output is visibly tagged as model
-   output, tied to exact dossier data; deterministic numbers are visibly tagged
-   as deterministic. "The two are never allowed to look the same."
-2. **The default action is nothing.** Signals not acted on expire to nothing —
-   "doing nothing is usually the correct outcome — not a failure state."
-3. **Two states of gravity.** Most UI is "light" (read-only, fast); approving a
-   trade or kill switch is "heavy" (full-screen, deliberate, two steps, fully
-   audited). "Nothing consequential ever happens from a hover or a swipe."
-4. **Reconstructable past.** Every decision can answer "as of when?" — "History
-   is never silently re-rendered with today's code."
+1. **Evidence or it didn't happen.** "Every claim rendered from an AI model is
+   visibly tagged as model output and linked to the exact dossier data it was
+   reasoned from. Every number that comes from code — a score, a risk
+   calculation, a price — is visibly tagged as deterministic. The two are
+   never allowed to look the same."
+2. **The default action is nothing.** "Signals that aren't acted on expire to
+   nothing. Titan Pilot is built to make inaction feel competent, because in a
+   risk-first pipeline, doing nothing is usually the correct outcome — not a
+   failure state."
+3. **Two states of gravity.** "Most of what the system shows is light:
+   read-only evidence, fast to browse, safe to click around in. The small
+   remainder — approving a trade, pulling the kill switch — is heavy:
+   full-screen, deliberate, two steps, and fully audited. Nothing
+   consequential ever happens from a hover or a swipe."
+4. **Reconstructable past.** "Every decision can answer 'as of when?' —
+   pinned to exactly what was known at the time: the stored dossier, the
+   model version, the scoring configuration. History is never silently
+   re-rendered with today's code."
 
-Plus two product doctrines:
-- **Never-Guess** — "An unrecognized event halts processing rather than being
+Plus two product doctrines (`lib/content.ts:338-347`):
+- **Never-Guess** — "When the system encounters something it can't classify,
+  it doesn't guess. An unrecognized event halts processing rather than being
   skipped. A reconciliation mismatch that matches no known pattern halts
   trading and pages a human. An AI output that fails a contract check is
   rejected with a closed reason code — there is no best-effort parse."
-- **Fail-Closed** — "Every failure mode collapses toward no action... A 48-hour
+- **Fail-Closed** — "Every failure mode collapses toward no action. Can't
+  reach the database at boot: the engine exits before trading starts. Both AI
+  providers down: no signal, never a degraded guess. Budget cap would be
+  exceeded: the call is refused before any money is spent. A 48-hour
   certification soak exercised every one of these paths in production, and
   each produced an explained, auditable outcome."
 

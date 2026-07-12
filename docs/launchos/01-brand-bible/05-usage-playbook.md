@@ -105,7 +105,7 @@ module):**
 >
 > Example (real): "Unknown state means stop. When broker truth and internal
 > books disagree, or execution evidence is ambiguous, the system halts.
-> Guessing is not a recovery strategy." (`lib/content.ts:293-294`)
+> Guessing is not a recovery strategy." (`lib/content.ts:303-304`)
 
 ## Common mistakes (from patterns this playbook exists to prevent)
 

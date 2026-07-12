@@ -18,7 +18,7 @@ execution and performance promises Titan Pilot explicitly refuses to make) and
 "trading signal service" (implies retail, low-accountability advice). The word
 "supervised" carries the entire differentiation: a human or deterministic rule
 is always the final authority.
-*(Source: hero eyebrow badge, `components/Hero.tsx:49`; site title tag,
+*(Source: hero eyebrow badge, `components/Hero.tsx:49`; Twitter card title,
 `app/layout.tsx:71`.)*
 
 ## One-line company description (GEO-canonical, do not paraphrase)
@@ -43,12 +43,16 @@ statements — exact, quotable definitions for AI answer engines.")*
 
 ## Mission
 
-> "Titan Pilot exists to make [AI's growing influence on trading decisions]
-> supervised, replayable and accountable."
+> "AI is already influencing trading decisions. The question is no longer
+> whether traders will use it, but whether firms can prove what it said, what
+> evidence it used, how it was challenged, and who approved the final action.
+> Titan Pilot exists to make that process supervised, replayable and
+> accountable."
 
-Full context: "AI is already influencing trading decisions. The question is no
-longer whether traders will use it, but whether firms can prove what it said, what
-evidence it used, how it was challenged, and who approved the final action."
+"That process" refers specifically to proving what the AI said, what evidence
+it used, how it was challenged, and who approved the action — not to AI's
+influence on trading in general. Do not compress this into "Titan Pilot exists
+to make AI trading supervised" — that changes what the mission is about.
 *(Source: `lib/content.ts:473-474`.)*
 
 ## Problem statement
@@ -68,11 +72,15 @@ evidence it used, how it was challenged, and who approved the final action."
 
 **Medium (2–3 sentences, for an intro email or a demo opener):**
 > Titan Pilot turns every thesis, objection, score, approval, and refusal into
-> machine-validated evidence a trading desk can replay, govern, and defend. AI
-> produces the reasoning; deterministic software and explicit risk gates decide
-> whether anything happens. It's built for professional trading desks — not
-> retail signals, performance promises, or one-click autonomy.
-*(Source: `components/Hero.tsx:68-70,109-110`.)*
+> machine-validated evidence your desk can replay, govern, and defend. AI can
+> explain a market thesis, challenge assumptions, and summarize conflicting
+> evidence — it is not the final authority over capital; that belongs to
+> deterministic software and explicit risk gates. It's built for professional
+> trading desks — not retail signals, performance promises, or one-click
+> autonomy.
+*(Source: hero subhead and sub-caption, `components/Hero.tsx:68-70,109-110`,
+quoted verbatim; middle sentence is Manifesto Principle 1,
+`lib/content.ts:291-292`.)*
 
 **Long (for an investor conversation or a partnership intro — use verbatim, do not
 compress further than this):**
@@ -91,7 +99,9 @@ compress further than this):**
 > trail, and nothing is executed.
 *(Source: synthesized from `lib/content.ts:289-314` (Manifesto Principles),
 `lib/content.ts:473-478` (mission/problem), `lib/content.ts:514-515` (company
-stage). No sentence introduces a fact not present in these citations.)*
+stage), and `lib/content.ts:349-353` (Shadow-stage description, source of the
+closing sentence). No sentence introduces a fact not present in these
+citations.)*
 
 ## Tagline usage
 
@@ -118,7 +128,11 @@ product *is*, matching the site's "evidence over claims" voice pillar (see
 > final approvals remain human-owned."
 *(Source: `lib/content.ts:485-486`; also claims register row #14.)*
 
-Any external material (deck, one-pager, LinkedIn bio) that describes company stage
-must match this framing: pre-revenue, founder-led, shadow-mode validation with
-design partners, not "launched" or "live trading" in any sense that implies
-executed trades or paying customers.
+Any external material (deck, one-pager, LinkedIn bio) that describes company
+stage must match this framing verbatim in substance: founder-led, shadow-mode
+validation with design partners, not "launched" or "live trading" in any sense
+that implies executed trades or paying customers. ("Pre-revenue" is a
+reasonable inference from this framing, not a phrase that appears in any cited
+source — state the cited facts directly rather than the inferred label where
+precision matters, e.g. in Module 07 Investor Data Room or Module 11 Finance
+OS once those are unblocked.)

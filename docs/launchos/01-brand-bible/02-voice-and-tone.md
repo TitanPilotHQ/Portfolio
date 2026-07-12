@@ -16,9 +16,8 @@ engineering record — not marketing language" (`lib/content.ts:489`).
 **Rule:** Every capability statement names the mechanism or the proof, not just
 the outcome. Compare:
 - ❌ "Titan Pilot keeps your trading safe."
-- ✅ "Unknown broker state halts trading. Ambiguous execution evidence halts
-  trading. AI provider failure produces no signal — never a wider one."
-  (pattern from `lib/content.ts:140-148`)
+- ✅ "Unknown broker state → Halt. Ambiguous execution evidence → Halt. AI
+  provider failure → No signal." (`SAFETY_RULES`, `lib/content.ts:140-148`)
 
 ### 2. Concede before you compare
 
@@ -72,7 +71,7 @@ any LaunchOS module, may state or imply:
 
 | Banned | Why | Correct alternative |
 |---|---|---|
-| Guaranteed, predicted, or implied trading returns | Explicit never-claim | Cite the mechanism (risk gates, fail-closed rules), never the outcome |
+| Guaranteed or predicted trading returns (including implied via hedged language) | Explicit never-claim | Cite the mechanism (risk gates, fail-closed rules), never the outcome |
 | Licensed financial or investment advice | Explicit never-claim; also regulatory exposure | "This is not financial advice" disclaimer, always present near product claims |
 | A large team, institutional backing, or customers Titan Pilot doesn't have | Explicit never-claim | State actual stage: founder-led, design-partner phase |
 | Regulatory approval, certification, or endorsement not received | Explicit never-claim | Only cite certifications actually in the claims register (e.g., "Phase C.5 certified" — an internal engineering milestone, not a regulatory one — always described as such) |
@@ -87,13 +86,13 @@ any LaunchOS module, may state or imply:
 **Describing a safeguard**
 - ❌ "Our risk management keeps you protected."
 - ✅ "Hard limits, budgets, and circuit breakers sit below every decision — and
-  they cannot be argued with." (`lib/content.ts:293`)
+  they cannot be argued with." (`lib/content.ts:296`)
 
 **Describing an AI capability**
 - ❌ "Our AI makes smart trading decisions."
 - ✅ "AI can explain a market thesis, challenge assumptions, and summarize
   conflicting evidence. It should not be the final authority over capital."
-  (`lib/content.ts:290`)
+  (`lib/content.ts:292`)
 
 **Describing reliability**
 - ❌ "Titan Pilot is highly reliable and battle-tested."
