@@ -27,9 +27,10 @@ real, not just tidy. This is the centerpiece scene — see
 **Content:** the nine `DECISION_STEPS` (`lib/content.ts:109-119`).
 **Do not:** skip steps for brevity in a way that removes the Devil's
 Advocate or Risk Gate steps specifically — those two are what separate
-Titan Pilot's narrative from a generic "AI makes a prediction" story, and
-cutting them for time is the single most common way this scene gets
-weakened.
+Titan Pilot's narrative from a generic "AI makes a prediction" story. (This
+library has no shipped-content track record yet to say how often that
+mistake actually happens — treat the warning as a design safeguard, not a
+measured pattern.)
 
 ## Scene: The Failure-Mode Beat
 
@@ -58,7 +59,11 @@ disclaimer). Use whichever matches the surface you're writing for; see
 `02-audience-variants.md` for the rule on picking between them.
 **Do not:** present Copilot or Autonomous Demo as scheduled features with
 implied dates — the scene's entire value is that promotion is evidence-gated,
-not calendar-gated.
+not calendar-gated. **Do not** use the word "Certified" bare on any short
+surface (a slide, a tweet, a single-line status mention) — per
+`01-brand-bible/02-voice-and-tone.md`'s certification-qualifier rule, it must
+carry "Phase C.5 certified — an internal engineering milestone, not a
+regulatory one" in the same sentence outside the full GEO block.
 
 ## Scene: The Honest Comparison
 
@@ -83,9 +88,10 @@ mechanism — pairs well with the Investor variant in `02-audience-variants.md`.
 **Content:** `COMPANY_NEVER_CLAIMS` (`lib/content.ts:497-504`), framed
 explicitly as "here's what we've committed to never say" rather than left
 implicit.
-**Do not:** use defensively (i.e., only in response to a skeptical question)
-— it's stronger stated proactively, since it signals the discipline exists
-independent of being challenged.
+**Do not:** rely only on defensive use (i.e., only in response to a skeptical
+question) — the controller's judgment is that stating it proactively signals
+the discipline exists independent of being challenged, but this is a
+recommendation to test, not a measured result.
 
 ## Assembling scenes into a narrative
 

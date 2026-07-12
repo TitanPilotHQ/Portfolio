@@ -43,12 +43,14 @@ read in sequence, it is Titan Pilot's core narrative, already in production:
 Failure mode → Evidence → Trust ladder → Objections → Ask.**
 
 This is deliberately *not* a classic "problem-agitate-solve" marketing arc.
-It never agitates (no fear-based language anywhere in the copy — consistent
-with Voice Pillar 5 in `01-brand-bible/02-voice-and-tone.md`, precision over
-hype). It also doesn't lead with the mechanism — it leads with the claim, then
-immediately simplifies before going deep, then earns the right to go technical
-by showing one concrete decision before asking the reader to trust an
-abstraction.
+The copy doesn't use fear or manufactured urgency as a persuasion device
+(consistent with Voice Pillar 5 in `01-brand-bible/02-voice-and-tone.md`,
+precision over hype) — even where it states real risk (e.g. "No signal is
+worth an unbounded loss"), the risk is stated as a mechanism being described,
+not as pressure on the reader. It also doesn't lead with the mechanism — it
+leads with the claim, then immediately simplifies before going deep, then
+earns the right to go technical by showing one concrete decision before
+asking the reader to trust an abstraction.
 
 **Rule for any new long-form piece** (a deck, a one-pager, a long-form blog
 post): follow this order unless there's a specific reason not to — claim
@@ -59,10 +61,16 @@ genre (agitation-led) than Titan Pilot's established voice.
 
 ## The centerpiece device: "one decision, walked through"
 
-`DECISION_STEPS` (`lib/content.ts:109-119`) is the single most important
-narrative asset in the company. It takes the abstract mental model and makes
-it concrete by walking one hypothetical decision through all nine real
-pipeline stages:
+`DECISION_STEPS` (`lib/content.ts:109-119`) is, in the controller's judgment,
+the single highest-leverage narrative asset available — not a measured
+finding. It takes the abstract mental model and makes it concrete by walking
+one hypothetical decision through the nine steps below. These are not the
+same as the eleven `ARCHITECTURE_FLOW` stages (`lib/content.ts:68-80`): step 1
+here is the triggering event, not a pipeline stage; step 9 is the replay
+capability, not a stage; and the sequence intentionally excludes MT5
+Execution and Broker Reconciliation, since shadow mode never reaches them.
+Describe this scene as "one decision, walked through the shadow-mode
+pipeline," not as "all N pipeline stages":
 
 > "H1 candle closes" → "Pre-gate checks market conditions" → "Dossier is
 > built and hashed" → "Technical Analyst produces thesis" → "Devil's Advocate
@@ -70,12 +78,16 @@ pipeline stages:
 > recorded in shadow mode" → "Risk engine remains final authority" → "Replay
 > can reconstruct the full story."
 
-**Rule:** any time the product needs to be explained to a new audience — a
-demo, an investor conversation, a partner pitch — reach for this device before
-reaching for an abstract capability list. A reader remembers "here's what
-happens when a candle closes" far better than "here's our architecture."
-This is why Module 08 (Demo Playbooks) is built around walking exactly this
-sequence live rather than narrating features.
+**Recommendation (untested, treat as a hypothesis to validate through real
+demos and conversations, not a settled finding):** any time the product needs
+to be explained to a new audience — a demo, an investor conversation, a
+partner pitch — reach for this device before reaching for an abstract
+capability list. The working assumption is that a concrete walkthrough ("here's
+what happens when a candle closes") lands better than an abstract one ("here's
+our architecture"), though this hasn't been measured. This is why Module 08
+(Demo Playbooks) is built around walking this sequence live rather than
+narrating features — update this recommendation once real demo outcomes are
+observed.
 
 ## Where tension actually lives
 

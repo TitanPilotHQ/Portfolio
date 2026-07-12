@@ -31,10 +31,14 @@ standing rationale (Company Principle: Human Accountability).
 
 - `app/page.tsx`'s section order changes → re-verify `01-core-narrative.md`'s
   numbered list against the new order
-- Any `lib/content.ts` array cited here (`WHY_CARDS`, `DECISION_STEPS`,
-  `SAFETY_RULES`, `AUTONOMY_LADDER_DETAIL`, `COMPETITOR_COMPARISON`,
+- Any `lib/content.ts` array cited here (`MENTAL_MODEL`, `WHY_CARDS`,
+  `DECISION_STEPS`, `SAFETY_RULES`, `PRODUCT_DOCTRINES` (Fail-Closed),
+  `PRODUCT_MODES`, `AUTONOMY_LADDER_DETAIL`, `COMPETITOR_COMPARISON`,
   `COMPANY_NEVER_CLAIMS`) changes materially → re-verify the corresponding
-  scene in `03-narrative-components-library.md`
+  scene in `03-narrative-components-library.md`. `PRODUCT_MODES` and
+  `AUTONOMY_LADDER_DETAIL` must be checked together — they describe the same
+  three stages in two forms and can drift out of sync with each other, not
+  just with this file.
 - A new product mode is promoted → the Trust Ladder scene and the desk-lead
   audience variant both need review
 
