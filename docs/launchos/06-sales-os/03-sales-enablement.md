@@ -33,9 +33,9 @@ If a prospect asks a question with no existing answer in any LaunchOS module
 work," which are covered):
 1. Don't improvise a claim about the product, company, or commercial terms.
 2. Say the honest thing: "I don't have that answer worked out yet — let me
-   get back to you," or route to the appropriate disclaimer if it touches
-   trading performance (`01-brand-bible/02-voice-and-tone.md`'s
-   disclaimer-required rule).
+   get back to you," or route to the standard disclaimer if it touches
+   trading performance (the "Disclaimer present where required" checklist
+   item, `01-brand-bible/05-usage-playbook.md`).
 3. If the question recurs, that's a signal a new FAQ entry or a new module
    answer is needed — feed it back to Emad rather than let each
    conversation improvise its own answer independently (which would itself

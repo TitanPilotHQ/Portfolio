@@ -50,10 +50,12 @@ identically every time.
 
 ### Stage 5: Technical discussion
 
-For prospects with technical evaluators (Module 04's "Technical / partner"
-audience variant, `04-positioning/02-competitive-positioning-map.md`
-supplies the comparison material relevant here — e.g., architecture
-deep-dive facts, security capabilities).
+For prospects with technical evaluators: Module 02's "Technical / partner"
+audience variant (`02-story-architecture/02-audience-variants.md`) sets the
+entry point and emphasis (architecture deep-dive facts, security
+capabilities); Module 04's competitive positioning map
+(`04-positioning/02-competitive-positioning-map.md`) supplies the comparison
+material if a specific alternative comes up.
 
 ### Stage 6: Design-partner evaluation
 

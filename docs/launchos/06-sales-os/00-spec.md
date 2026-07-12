@@ -6,10 +6,12 @@ ICP fact before this module's own turn (Global Constraint 4). This spec
 covers the rest of the module: the actual sales process, tooling reality,
 and how sales conversations should draw on other modules' content rather
 than re-deriving it.
-**Depends on:** Module 01 (Brand Bible — voice), Module 03 (Messaging
-Bible — channel messages, terminology), Module 04 (Positioning — formal
-positioning statement, competitive map), Module 05 (Pricing System — what
-can and cannot be said about pricing in a sales conversation).
+**Depends on:** Module 01 (Brand Bible — voice), Module 02 (Story
+Architecture — the Decision Walkthrough scene and the Technical/partner
+audience variant used in Stage 5), Module 03 (Messaging Bible — channel
+messages, terminology), Module 04 (Positioning — formal positioning
+statement, competitive map), Module 05 (Pricing System — what can and cannot
+be said about pricing in a sales conversation).
 **Purpose:** The canonical home for how Titan Pilot actually sells today —
 process, tooling, and the rule that sales conversations assemble from
 already-approved content rather than improvising new claims in the room.
