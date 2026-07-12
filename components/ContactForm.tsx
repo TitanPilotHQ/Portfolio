@@ -216,7 +216,7 @@ export function ContactForm() {
           tabIndex={-1}
           autoComplete="off"
           className="absolute -left-[9999px] size-px opacity-0"
-          aria-hidden="true"
+          aria-label="Leave this field blank"
         />
 
         <div className="space-y-6">

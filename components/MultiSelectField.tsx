@@ -36,7 +36,7 @@ export function MultiSelectField({
       <legend id={groupId} className="mb-2 text-xs font-medium text-secondary">
         {label}
       </legend>
-      <div className="grid gap-2 sm:grid-cols-2" role="group" aria-labelledby={groupId}>
+      <div className="grid gap-2 sm:grid-cols-2">
         {options.map((option) => {
           const id = `${groupId}-${option}`;
           return (
