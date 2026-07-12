@@ -156,3 +156,19 @@ sessions — trust this file and `git log` over conversational memory.
   pricing gate, a loosely-scoped rule) — fixed.
 - Merged: PR #14, branch `launchos-08-demo-playbooks`.
 - 8 of 16 modules built (01-08). 8 remain.
+
+## 2026-07-13 — Module 09: Customer Success OS — closed
+
+- 5 files published: design-partner onboarding (7 real stages), support
+  model (founder-led, no SLA/tool invented), production-readiness framing
+  (explicitly not live execution, checked against real Autonomy Ladder
+  criteria), governance with an open-assumptions register.
+- Self-caught a citation error during drafting before review even started.
+- Independent + adversarial review: 7 findings (an inflated inheritance
+  claim, asymmetric hedging, a governance mischaracterization of a hedge as
+  settled fact, an asserted-negative over-reading its source, a missing
+  promotion path for working assumptions) — all fixed. The module's
+  highest-stakes claim (Stage 7 ≠ live execution) was stress-tested hardest
+  and held.
+- Merged: PR #15, branch `launchos-09-customer-success-os`.
+- 9 of 16 modules built (01-09). 7 remain.
