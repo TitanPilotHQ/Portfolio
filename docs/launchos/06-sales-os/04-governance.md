@@ -53,10 +53,12 @@ drift here is more likely to be caught by living it than by any checklist.
 
 ## Cross-references
 
-- **Depends on:** Modules 01, 03, 04, 05
-- **Feeds:** Module 08 (Demo Playbooks — Stage 4 hands off to it), Module 09
-  (Customer Success OS — Stage 7 hands off to it), Module 07 (Investor Data
-  Room — sales process and pipeline reality are real investor questions)
+- **Depends on:** Modules 01, 02, 03, 04, 05
+- **Consumes from Module 08** (Demo Playbooks — Stage 4's product
+  demonstration draws on it, once built) **and feeds into Module 09**
+  (Customer Success OS — Stage 7 hands off to it) **and Module 07**
+  (Investor Data Room — sales process and pipeline reality are real investor
+  questions)
 
 ## Closure
 

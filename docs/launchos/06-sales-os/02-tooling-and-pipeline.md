@@ -13,8 +13,9 @@ Module 10 (Operations OS) — this file doesn't restate that list, since sales
 tooling and general operational tooling are different facts even though they
 currently overlap (the contact-form backend, built on Resend/Upstash, is
 technically part of both; Module 10 owns the infrastructure fact, this file
-owns what it means for sales specifically: leads land in email/a database
-table, not a pipeline-tracking product).
+owns what it means for sales specifically: leads land in email and an
+Upstash Redis key-value store (`lib/server/leadStore.ts`), not a
+pipeline-tracking product).
 
 ## What "manual" means in practice
 
