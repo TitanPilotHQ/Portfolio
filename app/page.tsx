@@ -12,7 +12,7 @@ import { TechStack } from "@/components/TechStack";
 import { ProductModeLadder } from "@/components/ProductModeLadder";
 import { RoadmapTimeline } from "@/components/RoadmapTimeline";
 import { FAQ } from "@/components/FAQ";
-import { EarlyAccessForm } from "@/components/EarlyAccessForm";
+import { ContactTeaser } from "@/components/ContactTeaser";
 import { Footer } from "@/components/Footer";
 import { ScrollExtras } from "@/components/ScrollExtras";
 import { JsonLd } from "@/components/JsonLd";
@@ -37,7 +37,7 @@ export default function Home() {
         <ProductModeLadder />
         <RoadmapTimeline />
         <FAQ />
-        <EarlyAccessForm />
+        <ContactTeaser />
       </main>
       <Footer />
     </>

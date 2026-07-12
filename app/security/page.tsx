@@ -56,7 +56,7 @@ export default function SecurityPage() {
 
         <Reveal className="mt-10 flex justify-center">
           <a
-            href="/#contact"
+            href="/contact"
             className="group inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-cyan to-azure px-6 py-3 text-sm font-semibold text-bg shadow-[0_0_24px_-8px_rgba(0,215,255,0.5)] transition-shadow hover:shadow-[0_0_44px_-6px_rgba(0,215,255,0.7)]"
           >
             Talk to us about your desk&apos;s security requirements
