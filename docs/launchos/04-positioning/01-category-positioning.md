@@ -72,6 +72,9 @@ convincing someone to start using AI trading tools for the first time.
 > the strategy, or the dataset — as the unit of record.
 
 *(Synthesized from the sources cited above — `COMPANY_PROBLEM`,
-`CONTACT_QUALIFICATION_NOTICE`, `WHY_CARDS`, and `COMPETITOR_COMPARISON`'s
-four category clusters in `02-competitive-positioning-map.md`. No sentence
-introduces a fact not present in those sources.)*
+`CONTACT_QUALIFICATION_NOTICE`, `WHY_CARDS`, and three of
+`COMPETITOR_COMPARISON`'s five clusters in `02-competitive-positioning-map.md`
+(Cluster 1 Charting & TA Tools, Cluster 3 No-Code Strategy Automation,
+Cluster 5 Institutional Data Terminals — the three the adjacent-category
+table above actually draws on). No sentence introduces a fact not present in
+those sources.)*

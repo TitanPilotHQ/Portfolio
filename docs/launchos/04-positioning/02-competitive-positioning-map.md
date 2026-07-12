@@ -2,10 +2,13 @@
 
 All content in this file is sourced from `COMPETITOR_COMPARISON`
 (`lib/content.ts:367-416`) — the real, live comparison table on `/product`.
-This file adds only organization (clustering into groups); it does not add,
-remove, or reword any competitor's `theyAre`, `difference`, or `concede`
-field. Per Voice Pillar 2 (`01-brand-bible/02-voice-and-tone.md`), every row
-below keeps its concession — never cite a differentiation without it.
+This file adds only organization (clustering into groups) and, where a
+quoted field didn't end in terminal punctuation in the source (the `theyAre`
+and `concede` fields are sentence fragments in `lib/content.ts`), a trailing
+period for readability as prose. No word in any `theyAre`, `difference`, or
+`concede` field is added, removed, or reworded. Per Voice Pillar 2
+(`01-brand-bible/02-voice-and-tone.md`), every row below keeps its
+concession — never cite a differentiation without it.
 
 ## Cluster 1: Charting & Technical Analysis Tools
 
@@ -43,10 +46,12 @@ execution features, broker ubiquity, indicator ecosystem."
 
 **Cluster positioning:** not a competitor in the usual sense — MT5 is
 infrastructure Titan Pilot's own architecture uses (`TECH_STACK`,
-`lib/content.ts:198-210`, lists MetaTrader 5). The comparison exists because
-MT5 alone is sometimes mistaken for a complete solution; Titan Pilot's
-position is that MT5 is necessary but not sufficient — it's the execution
-layer, not the accountability layer.
+`lib/content.ts:198-210`, lists MetaTrader 5). The site's own comparison
+entry states the relationship directly: Titan Pilot "treats MT5 as a dumb
+execution limb," positioning itself as everything MT5 lacks (provenance,
+approvals, replay, budget control, audit) rather than a replacement for it —
+MT5 is necessary but not sufficient on its own, the execution layer rather
+than the accountability layer.
 
 ## Cluster 3: No-Code Strategy Automation
 
