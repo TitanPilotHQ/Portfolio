@@ -599,3 +599,17 @@ export const HOMEPAGE_CONTACT_TEASER = {
   title: "Ready to evaluate AI decision governance?",
   copy: "Book an AI Desk Audit to discuss how your trading desk currently uses AI, where governance gaps exist, and whether Titan Pilot is an appropriate fit.",
 };
+
+export const CONTACT_FORM_SECTIONS = {
+  aboutYou: "About You & Your Desk",
+  tradingProfile: "Your Trading Profile",
+  lookingFor: "What You're Looking For",
+};
+
+export const CONTACT_PRIVACY_STATEMENT =
+  "We collect only what's needed to evaluate your enquiry — your company, role, desk profile, and message. We never ask for trading credentials, broker access, or account information. Your submission is reviewed by Titan Pilot directly and is not sold or shared with third parties.";
+
+export const CONTACT_CONFIRMATION = {
+  title: "Thank you.",
+  subtitle: "Your request has been received.",
+};
