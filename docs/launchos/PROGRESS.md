@@ -70,3 +70,18 @@ sessions — trust this file and `git log` over conversational memory.
   definition that violated Module 01's own certification-qualifier rule —
   all fixed.
 - Merged: PR #8, branch `launchos-03-messaging-bible`.
+
+## 2026-07-12 — Module 04: Positioning — closed
+
+- 5 files published: category positioning, a competitive positioning map
+  covering all 8 real named competitors in `COMPETITOR_COMPARISON`, a formal
+  positioning statement (public-safe + internal variants), governance.
+- Independent review: 2 Important citation-precision issues + 4 minor — fixed.
+- Adversarial review: the "assembly overstates a claim" bug class recurred
+  twice more (an "unlike" clause that attributed the same two
+  differentiators to all 3 competitor categories when only one axis applied
+  per category; a cluster summary that misattributed "hides reasoning" to a
+  competitor whose actual gap was hypothetical-vs-actual) — both corrected
+  to map each category to its real, distinct differentiator.
+- Merged: PR #9, branch `launchos-04-positioning`.
+- 4 of 16 modules now built (01-04). 12 remain, all unblocked.
