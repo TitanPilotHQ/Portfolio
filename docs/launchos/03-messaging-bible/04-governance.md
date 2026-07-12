@@ -38,7 +38,9 @@ Emad, same rationale as Modules 01-02.
 
 ## Cross-references
 
-- **Depends on:** Module 01 (Brand Bible), Module 02 (Story Architecture)
+- **Depends on:** Module 01 (Brand Bible), Module 02 (Story Architecture),
+  and Module 06's ICP seed (`06-sales-os/00-icp.md`, Global Constraint 4) for
+  the "Trader" terminology row
 - **Feeds:** Module 04 (Positioning — shares source material, different
   purpose), Module 06 (Sales OS — cold-email and demo-opener messages),
   Module 08 (Demo Playbooks — demo opener)

@@ -71,6 +71,36 @@ them:
    The intent (Emad's own words): so these modules don't need a rewrite the
    day incorporation happens — only Phase A needs to flip to "historical"
    and Phase B needs to flip to "current."
+4. **Single Source of Truth** (added 2026-07-12, from Emad). Every factual
+   statement must exist in exactly one canonical location. Other modules may
+   reference that fact, but must never duplicate or independently redefine
+   it. Canonical ownership, as assigned by Emad:
+   - Brand principles → Brand Bible (Module 01) only.
+   - Positioning (category adjacency, competitive map, positioning
+     statement) → Positioning (Module 04) only.
+   - Pricing → Pricing System (Module 05) only.
+   - ICP → Sales OS (Module 06) only.
+   - Product capabilities → Titan engineering documentation (accessed in
+     this repo via `lib/content.ts` and the public claims register, which
+     function as the accessible published copy of that documentation — a
+     module citing `lib/content.ts` for a product-capability fact is
+     referencing the canonical source, not creating a second one; the
+     violation this guards against is a module writing its own independent
+     *description* of what the product does instead of quoting/citing the
+     existing one).
+   - Website messaging → Messaging Bible (Module 03) only; new site copy
+     should be authored via Module 03 first, then implemented on the site —
+     not written ad hoc on the site and back-filled into LaunchOS later.
+   - Research claims → the Research repository / Market Research Framework
+     (Module 15) only.
+   - Investor material → canonical sources (the modules above), never
+     restated independently inside Module 07.
+   Cross-reference instead of copy. If a fact changes, fixing it should
+   require editing exactly one canonical document. When a fact's rightful
+   canonical module doesn't exist yet (e.g., ICP was needed before Module 06
+   was built), create a minimal, explicitly-scoped seed of that module
+   containing only the canonical fact — never let an earlier module become
+   the fact's de facto owner by default.
 
 ## Module readiness matrix
 
@@ -82,10 +112,10 @@ reference; "Grounded by" replaces "Blocking need."
 |---|---|---|---|
 | 01 | Brand Bible | Built | Live site content |
 | 02 | Story Architecture | Built | Live site content + Module 01 |
-| 03 | Messaging Bible | Ready | Live site content + Modules 01-02 |
-| 04 | Positioning | Ready | Live site content + Modules 01-03 |
+| 03 | Messaging Bible | Built | Live site content + Modules 01-02, Module 06's ICP seed |
+| 04 | Positioning | Built | Live site content + Modules 01-03, Module 06's ICP seed |
 | 05 | Pricing System | Ready | Intake §1 (working assumptions, not public commitments) |
-| 06 | Sales OS | Ready | Intake §2 (real current process) |
+| 06 | Sales OS | Seeded (ICP canonical, `00-icp.md`) — rest Ready | Intake §2 (real current process) |
 | 07 | Investor Data Room | Ready | Intake §3 + Global Constraint 3 (pre/post-incorporation phases) |
 | 08 | Demo Playbooks | Ready | Live site content + Module 02's Decision Walkthrough scene |
 | 09 | Customer Success OS | Ready | Intake §4 (real design-partner onboarding flow) |
@@ -96,6 +126,13 @@ reference; "Grounded by" replaces "Blocking need."
 | 14 | Competition Intelligence | Ready | Live site's real competitor comparison + intake §9 |
 | 15 | Market Research Framework | Ready | Live site's existing research doctrine |
 | 16 | Asset Library | Ready | Live site's real assets |
+
+**Module 06 note:** its ICP sub-file was built early (`06-sales-os/00-icp.md`)
+because Modules 03 and 04 needed the canonical ICP fact before Module 06's
+own numbered turn — per Global Constraint 4, the fact moved to its rightful
+owner immediately rather than staying duplicated in earlier modules. The rest
+of Module 06 (sales process, tooling, pipeline stages) is still queued in
+numeric order.
 
 Modules 05, 07, 09, 10, 11, 13 are built from Emad's direct answers, which are
 internal planning inputs (working assumptions, not yet public commitments).
@@ -160,7 +197,13 @@ Catalyst, a Stripe executive, or an Apple design lead. Concretely:
 01–04 (Brand Bible, Story Architecture, Messaging Bible, Positioning) come
 first because every later module references them for voice, category
 language, and claims discipline. With the intake answered (2026-07-12), the
-remaining build proceeds in roughly numeric order — 03, 04, 05, 06, 07, 08,
-09, 10, 11, 12, 13, 14, 15, 16 — since no module is blocked anymore. 16
-(Asset Library) still lands last regardless of order since it catalogs the
-outputs of every other module.
+remaining build proceeds in roughly numeric order — 05, 06, 07, 08, 09, 10,
+11, 12, 13, 14, 15, 16 — since no module is blocked anymore. 16 (Asset
+Library) still lands last regardless of order since it catalogs the outputs
+of every other module. Exception: Module 06's ICP sub-file was built out of
+order (see Module 06's note above) because Global Constraint 4 required the
+fact to have a canonical home before Modules 03 and 04 could correctly cite
+it — future out-of-order sub-file builds should follow the same pattern
+(seed only the specific fact needed, leave the rest of the module for its
+numeric turn) rather than becoming a precedent for building whole modules
+early.

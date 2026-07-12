@@ -70,8 +70,9 @@ drift that didn't hit an explicit trigger.
   statement from `01-identity.md`
 - **03 Messaging Bible** — inherits banned language and sentence patterns from
   `02-voice-and-tone.md`
-- **04 Positioning** — inherits category definition and elevator pitches from
-  `01-identity.md`
+- **04 Positioning** — inherits the category *name* and elevator pitches from
+  `01-identity.md`; owns the category-adjacency and competitive-positioning
+  analysis itself (Global Constraint 4 — Single Source of Truth)
 - **08 Demo Playbooks** — inherits product stage/status language and the
   disclaimer requirement
 - **14 Competition Intelligence** — inherits the "concede before you compare"
