@@ -11,8 +11,8 @@ read in sequence, it is Titan Pilot's core narrative, already in production:
    "AI does not trade → AI writes a thesis → Software scores it → Risk gates
    decide → Events record everything → Replay proves what happened."
    (`lib/content.ts:36-43`)
-3. **Why** — the problem this solves (`WHY_CARDS`, `lib/content.ts:45-67`,
-   amplifying the mission/problem statement at `lib/content.ts:477-478`)
+3. **Why** — the problem this solves (`WHY_CARDS`, `lib/content.ts:45-66`,
+   amplifying the mission/problem statements at `lib/content.ts:471-478`)
 4. **Architecture** — the mechanism: how the pipeline is actually built
    (`ARCHITECTURE_FLOW`, `lib/content.ts:68-80`)
 5. **Decision Timeline** — proof-in-action: one real decision, walked step by
@@ -24,13 +24,17 @@ read in sequence, it is Titan Pilot's core narrative, already in production:
    `lib/content.ts:140-148`)
 8. **Evidence** — quantified proof of what's actually built
    (`EVIDENCE_ROWS`, `lib/content.ts:151-182`)
-9. **Milestones** — dated, numbered proof (`lib/content.ts:187-196`)
+9. **Milestones** — numbered proof, no dates attached (`MILESTONES`,
+   `lib/content.ts:187-196`)
 10. **Tech Stack** — credibility via real, named technology
     (`lib/content.ts:198-210`)
-11. **Product Mode Ladder** — how trust is earned toward autonomy
-    (`AUTONOMY_LADDER_DETAIL`, `lib/content.ts:349-365`)
+11. **Product Mode Ladder** — how trust is earned toward autonomy, short form
+    (`PRODUCT_MODES`, `lib/content.ts:212-231` — rendered by
+    `components/ProductModeLadder.tsx`; **not** `AUTONOMY_LADDER_DETAIL`,
+    which is a longer-form version used only on `/product`, see
+    `02-audience-variants.md`)
 12. **Roadmap** — the broader plan (`lib/content.ts:233-243`)
-13. **FAQ** — objection handling (`FAQ_ITEMS`, `lib/content.ts:246-286`)
+13. **FAQ** — objection handling (`FAQ_ITEMS`, `lib/content.ts:246-287`)
 14. **Contact teaser** — the ask
 
 ## The shape, named
@@ -75,13 +79,25 @@ sequence live rather than narrating features.
 
 ## Where tension actually lives
 
-Titan Pilot's story has real tension, but it isn't "trading is hard" — it's
-**the gap between AI's growing influence on trading decisions and the total
-absence of accountability for that influence** (the literal mission
-statement, `lib/content.ts:473-474`). The "Why" section and every comparison
-row exist to make that specific gap concrete, not to manufacture generic
-urgency. Any new narrative material should locate its tension here — the
-evidence gap — rather than inventing a new problem framing.
+Titan Pilot's story has real tension, but it isn't "trading is hard." The two
+source statements, quoted directly rather than paraphrased:
+
+> "AI is already influencing trading decisions. The question is no longer
+> whether traders will use it, but whether firms can prove what it said, what
+> evidence it used, how it was challenged, and who approved the final
+> action." (`COMPANY_MISSION`, `lib/content.ts:473-474`)
+
+> "Traders are increasingly using general-purpose AI tools to influence
+> market decisions, but those decisions usually have no reliable evidence
+> trail, no deterministic risk controls, no replay, and no accountability
+> when the AI is wrong." (`COMPANY_PROBLEM`, `lib/content.ts:477-478`)
+
+Together these locate the tension precisely: **the gap between AI's use in
+trading decisions and the absence of any evidence trail or accountability for
+that use.** The "Why" section and every comparison row exist to make that
+specific gap concrete, not to manufacture generic urgency. Any new narrative
+material should locate its tension here — the evidence gap — rather than
+inventing a new problem framing.
 
 ## The competitor line as narrative compression
 

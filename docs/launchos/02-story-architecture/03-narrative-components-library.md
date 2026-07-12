@@ -48,9 +48,14 @@ literal table — "Halt" stays "Halt," not "we handle it gracefully."
 as a weakness — reframes staged rollout as the actual safety mechanism.
 **Use when:** any audience asks (explicitly or implicitly) "when does this
 actually trade for me" — this scene is the honest, complete answer.
-**Content:** the three-stage `AUTONOMY_LADDER_DETAIL` (`lib/content.ts:
-349-365`): Shadow (certified, current), Copilot (designed, next), Autonomous
-Demo (evidence-gated, future, "may never occur" per the disclaimer).
+**Content:** the same three-stage structure exists in two real forms — the
+short homepage version, `PRODUCT_MODES` (`lib/content.ts:212-231`: Shadow
+Mode — Certified, Copilot Mode — Upcoming, Autonomous Demo —
+Evidence-Gated), and the long `/product` version, `AUTONOMY_LADDER_DETAIL`
+(`lib/content.ts:349-365`: Shadow — Certified — current, Copilot — Designed —
+next, Autonomous Demo — Evidence-gated — future, "may never occur" per the
+disclaimer). Use whichever matches the surface you're writing for; see
+`02-audience-variants.md` for the rule on picking between them.
 **Do not:** present Copilot or Autonomous Demo as scheduled features with
 implied dates — the scene's entire value is that promotion is evidence-gated,
 not calendar-gated.
