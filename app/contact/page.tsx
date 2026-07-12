@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/ui";
-import { EarlyAccessForm } from "@/components/EarlyAccessForm";
+import { ContactForm } from "@/components/ContactForm";
 import {
   CONTACT_EMAIL,
   CONTACT_INTRO,
@@ -62,7 +62,7 @@ export default function ContactPage() {
         </Reveal>
 
         <div className="mt-8">
-          <EarlyAccessForm />
+          <ContactForm />
         </div>
 
         <Reveal className="mx-auto mt-4 max-w-xl text-center">

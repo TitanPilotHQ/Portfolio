@@ -286,24 +286,6 @@ export const FAQ_ITEMS = [
   },
 ];
 
-export const EARLY_ACCESS_GETS = [
-  "Product build updates",
-  "Architecture notes",
-  "Shadow-mode progress",
-  "Demo access when available",
-  "Technical collaboration opportunities",
-];
-
-export const EARLY_ACCESS_NOT_GETS = [
-  "Guaranteed signals",
-  "Financial advice",
-  "Performance promises",
-  "Uncontrolled live-money automation",
-];
-
-export const EARLY_ACCESS_DISCLAIMER =
-  "By requesting access, you understand Titan Pilot is experimental trading infrastructure and does not provide investment advice, guaranteed returns, or live-money automation promises.";
-
 export const MANIFESTO_PRINCIPLES = [
   {
     title: "Reasoning is not authority.",
