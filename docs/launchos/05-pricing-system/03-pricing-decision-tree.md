@@ -44,14 +44,33 @@ Is this statement about pricing (a number, a model, a discount, "free,"
     │      without a number can still read as a commitment ("we're
     │      per-desk pricing" implies a live pricing page exists).
     │
-    └─ Is it a contract-term claim ("annual contracts," "enterprise
-        agreements")?
-        └─ Same gate as the model direction above — internal-only until
-           explicitly cleared, and subject to Global Constraint 3: while
-           Titan Pilot isn't incorporated, no real contract can exist, so
-           any contract-term claim must be framed as Phase B (future),
-           never as a present capability.
+    ├─ Is it a contract-term claim ("annual contracts," "enterprise
+    │   agreements")?
+    │   └─ Same gate as the model direction above — internal-only until
+    │      explicitly cleared, and subject to Global Constraint 3: while
+    │      Titan Pilot isn't incorporated, no real contract can exist, so
+    │      any contract-term claim must be framed as Phase B (future),
+    │      never as a present capability.
+    │
+    └─ None of the above — e.g. "Titan Pilot will eventually charge for
+        this," "early access won't stay free forever," "this won't always
+        be free," or any other statement that implies the free phase has an
+        end without stating a number, model, or contract term?
+        └─ STOP. Default to internal-only. This is exactly the future-
+           paywall implication the "already public" branch above warns
+           against creating — a vague future-paid statement is not covered
+           by the "already a public claim" branch (which only covers
+           restating that the *current* phase is free) and is not made safe
+           by the absence of a number. If in doubt, treat any statement
+           implying pricing will exist in the future as gated the same way
+           a model or contract-term claim is gated, until Emad explicitly
+           clears specific wording for that specific surface.
 ```
+
+No pricing-related statement should reach publication without matching one
+of the tree's branches. If a real statement doesn't cleanly fit any branch
+above, that's a gap in this tree, not a green light — treat it as the
+"none of the above" leaf and escalate to Emad rather than publishing.
 
 ## Review criteria for any pricing-adjacent copy
 

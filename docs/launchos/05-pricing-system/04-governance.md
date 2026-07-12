@@ -27,6 +27,18 @@ Company Principle 2, "Human Accountability."
 - Does the decision tree's "already public" branch (free early-access phase)
   match the live JSON-LD exactly, or does it drift from it?
 
+**Honest note on enforcement** (same caveat as Module 01,
+`01-brand-bible/06-governance.md`): there is no CI check, lint rule, or test
+that verifies a PR doesn't introduce a fabricated price or leak internal-only
+pricing structure onto a public surface. The real, concrete mechanism is
+`.github/PULL_REQUEST_TEMPLATE.md`'s "LaunchOS drift check" — which, as of
+this module's own build, did not yet include a pricing-specific checkbox
+(fixed in the same change as this note; see the template). Even with that
+checkbox added, it remains a reminder, not a gate — it can be skipped, and
+ultimately depends on whoever reviews a given PR actually reading it. For a
+solo-founder company this is the realistic ceiling on enforcement; this file
+should not claim more rigor than that.
+
 ## Maintenance triggers
 
 - A real price point or model clearance from Emad → update

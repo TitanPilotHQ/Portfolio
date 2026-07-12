@@ -22,15 +22,20 @@ it.
 
 ## Why pricing isn't finalized yet (the principle, not just the fact)
 
-Finalizing pricing before design-partner validation would mean pricing a
-product against assumed value rather than demonstrated value — this
-contradicts Company Principle 1, "Evidence over Claims" ("Every public
-statement traces to a sourced, dated engineering record — not marketing
-language," `01-brand-bible/04-principles.md`) applied to a commercial claim
-instead of a technical one. A price is a claim about value; Titan Pilot's
-standing discipline is not to make claims ahead of evidence. Design-partner
-validation is that evidence-gathering process for pricing, the same way
-shadow mode is the evidence-gathering process for autonomy (Module 02's
+Publicly committing to pricing before design-partner validation would mean
+claiming a product's value before it's demonstrated — this contradicts
+Company Principle 1, "Evidence over Claims" ("Every public statement traces
+to a sourced, dated engineering record — not marketing language,"
+`01-brand-bible/04-principles.md`) applied to a commercial claim instead of a
+technical one. Note the precise scope: Principle 1 governs *public*
+statements, so internally finalizing a working number is fine (and already
+happening — see `02-pricing-model-structure.md`'s model direction); what the
+principle actually forbids is *publishing* an unvalidated price as if it
+were settled. A published price is a claim about value; Titan Pilot's
+standing discipline is not to make public claims ahead of evidence.
+Design-partner validation is that evidence-gathering process for pricing,
+the same way shadow mode is the evidence-gathering process for autonomy
+(Module 02's
 Trust Ladder scene, `02-story-architecture/03-narrative-components-library.md`).
 
 ## Phase A → Phase B trigger
@@ -52,11 +57,14 @@ committed)
 2. **Contract structure follows the customer type.** Annual contracts match
    the customer defined in `06-sales-os/00-icp.md`, not the monthly
    self-serve pattern typical of individual-user SaaS.
-3. **Enterprise gets custom terms.** Per intake §1.1, the largest tier of
-   customer gets "enterprise custom pricing" rather than a published rate
-   card. This is Emad's stated direction, not a generalization about how
-   evidence/governance/audit products are procured industry-wide — no such
-   industry claim is sourced or made here.
+3. **Enterprise gets custom terms.** Per intake §1.1, enterprise customers
+   get "enterprise custom pricing" rather than a published rate card. Intake
+   §1.1 states two modes side by side — standard per-desk/workspace pricing
+   and enterprise custom pricing — not a size-ranked hierarchy of tiers; this
+   file doesn't characterize one as "the largest" beyond what "enterprise"
+   itself implies. This is Emad's stated direction, not a generalization
+   about how evidence/governance/audit products are procured industry-wide —
+   no such industry claim is sourced or made here.
 4. **No price is public until it's real.** This module's own working
    assumptions (`02-pricing-model-structure.md`) must never be copied into
    Messaging Bible, the website, or any external deck until Phase B's

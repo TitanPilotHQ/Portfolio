@@ -48,9 +48,13 @@ consistent with each other.
 
 ## What "enterprise custom pricing" means here
 
-Per the model direction, the largest customer tier (see `06-sales-os/
-00-icp.md` for who that is) negotiates rather than pays a published rate.
-This is a structural decision (custom pricing exists as a tier), not a
+Per the model direction, enterprise customers (see `06-sales-os/00-icp.md`
+for who that is) negotiate rather than pay a published rate. Intake §1.1
+states this as a second pricing mode alongside standard per-desk/workspace
+pricing, not as the top of a ranked tier hierarchy — this file doesn't
+characterize it as "the largest tier" beyond what "enterprise" itself
+implies. This is a structural decision (custom pricing exists as a mode), not
+a
 process decision (how a custom deal gets negotiated) — the negotiation
 process itself belongs to Module 06 (Sales OS) once its sales-process content
 is built, not here.
