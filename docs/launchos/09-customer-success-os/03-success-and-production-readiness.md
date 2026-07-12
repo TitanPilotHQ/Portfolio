@@ -35,9 +35,10 @@ either bar.
 
 **What it likely is:** a checkpoint where Titan Pilot and the design partner
 jointly assess whether the shadow-mode evidence gathered during Stages 5-6
-is sufficiently complete and clean to continue the relationship, expand it,
-or (eventually, evidence permitting) support a future promotion decision
-under the Autonomy Ladder's real criteria. This framing is this file's own
+is sufficiently complete and clean to continue the relationship, expand the
+engagement (e.g. more assets, more of the desk's workflow), or (eventually,
+evidence permitting) support a future promotion decision under the Autonomy
+Ladder's real criteria. This framing is this file's own
 inference connecting Stage 7 to the existing promotion-criteria fact — not a
 new criterion Emad has stated for Stage 7 specifically.
 

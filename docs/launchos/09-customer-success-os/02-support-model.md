@@ -6,9 +6,13 @@
 
 *(Source: `INTAKE-REQUEST.md` §4.3, verbatim.)*
 
-Two channels, both manual, both Emad directly. No ticketing system, no
-support SLA, no tiered response time, no after-hours coverage commitment —
-none of these exist, and per Global Constraint 1, none are invented here.
+Two channels, both manual, both Emad directly. No source describes a
+ticketing system, a support SLA, a tiered response time, or an after-hours
+coverage commitment — so, per Global Constraint 1, none is assumed or
+invented here. This is an absence of sourcing, not an independently
+confirmed absence in reality; if any of these exist informally and just
+weren't mentioned in intake §4.3, that's a fact to add once confirmed, not
+to assume either way.
 
 ## What this means in practice
 
