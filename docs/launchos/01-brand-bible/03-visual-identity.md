@@ -1,0 +1,122 @@
+# Brand Bible — 03. Visual Identity
+
+Every value in this file is a real design token in production, not a proposal.
+Source: `app/globals.css:1-26` (`@theme` block), `public/logo.png` and its live
+usage in `components/Header.tsx:27-28` and `components/Footer.tsx:14-15`.
+
+## Logo
+
+- File: `logo.png`, used as-is at multiple sizes — header navigation size and a
+  larger 56px treatment in the footer (per `components/Footer.tsx`, changed to
+  56px on 2026-07-12).
+- Alt text convention: always `"Titan Pilot logo"` — exact string, used
+  identically in both header and footer instances. Any new placement should
+  reuse this alt text unless the surrounding context requires more specificity.
+- No wordmark-only or icon-only variants exist yet. Until they do, any new
+  surface (deck cover, social profile, favicon) uses this file directly rather
+  than approximating a redraw.
+
+## Color system
+
+| Token | Hex | Role |
+|---|---|---|
+| `--color-bg` | `#05070a` | Page background — near-black, not pure black |
+| `--color-surface` | `#0b1020` | Panel/card background |
+| `--color-elevated` | `#111827` | Raised surface (modals, elevated cards) |
+| `--color-cyan` | `#00d7ff` | Primary accent — links, focus states, primary CTAs, selection highlight |
+| `--color-azure` | `#0078ff` | Secondary accent — gradient partner to cyan |
+| `--color-violet` | `#7c3aed` | Tertiary accent, used sparingly in gradients |
+| `--color-electric` | `#a855f7` | Gradient endpoint (paired with cyan/azure in `.text-gradient`) |
+| `--color-success` | `#22c55e` | Status-positive states only (e.g., "Certified," "Built," "Live") |
+| `--color-amber` | `#f59e0b` | Warning / form-validation-error states only |
+| `--color-secondary` | `#a7b0c0` | Secondary/muted text |
+| Body text | `#ffffff` | Primary text color (`app/globals.css:94`) |
+
+**Rule:** cyan/azure is the brand's identity color — reach for it first for
+anything that represents "Titan Pilot" as a system (links, active states,
+selection). Violet/electric only ever appear as gradient partners, never as a
+standalone accent. Success-green and warning-amber are semantic, not
+decorative — they mean "positive status" and "needs attention" respectively and
+should not be used for anything else (e.g., don't use amber for a neutral
+highlight).
+
+## Typography
+
+| Token | Stack | Role |
+|---|---|---|
+| `--font-sans` (Geist Sans) | `var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif` | Body text, default |
+| `--font-mono` (Geist Mono) | `var(--font-geist-mono), ui-monospace, monospace` | Data, labels, technical values (evidence rows, metrics, code-adjacent content) |
+| `--font-display` (Unbounded) | `var(--font-unbounded), var(--font-geist-sans), sans-serif` | Headings — bold, geometric display face, `letter-spacing: -0.01em` (`app/globals.css:150-153`) |
+
+**Rule:** headline/H1-H2 copy uses the display face; body copy uses Geist Sans;
+any tabular, quantitative, or "proof" content (metrics, evidence tables, code
+references, IDs like `TP-2026-000001`) uses Geist Mono to visually mark it as
+data rather than prose — reinforcing the "evidence over claims" voice pillar at
+the typographic level.
+
+## Motion and interaction vocabulary
+
+Named, reusable motion tokens already defined (`app/globals.css:19-25,28-83`):
+
+- **`pulse-slow`** — slow 4s pulse, used for ambient "alive" indicators
+- **`flow`** — animated stroke-dashoffset, for diagram/connection lines
+  (matches the "system," not "static graphic," framing of the architecture page)
+- **`float`** — gentle vertical drift (7s), for ambient background elements
+- **`scan`** — vertical sweep (8s), a scanning/verification visual metaphor —
+  well-suited to anything representing verification or audit
+- **`ticker`** — fast opacity pulse (2.4s), for live/real-time-feeling indicators
+- **`marquee`** — horizontal scroll (32s), for logo strips or evidence ticker rows
+- **`shimmer`** — background-position sweep (5s), used on `.text-gradient`
+
+**Rule:** motion should represent something real — verification, live status,
+data flow — not decoration for its own sake. This matches the site's explicit
+anti-decoration stance on the architecture page: "Architecture is a credibility
+signal here, not decoration." (`app/architecture/page.tsx:32-35`) The same
+standard applies to motion design.
+
+**Accessibility floor:** every animation must degrade under
+`prefers-reduced-motion: reduce` — already enforced globally
+(`app/globals.css:207-215`, collapses all animation/transition durations to
+0.01ms). Any new component reusing these tokens inherits this floor
+automatically through the global rule; do not add animation via inline styles
+that bypass it.
+
+## Surface treatments
+
+- **`.glass`** — translucent panel, `blur(14px)`, subtle cyan-tinted 1px border
+  (`rgba(0, 215, 255, 0.09)`) — default card/panel treatment
+- **`.glass-strong`** — higher-opacity variant (`blur(18px)`, border
+  `rgba(0, 215, 255, 0.12)`) — for content that needs to read clearly over a
+  busier background
+- **`.grid-lines`** — faint cyan grid background (`rgba(0, 215, 255, 0.045)`,
+  56px cells), radial-masked to fade at the edges — ambient technical texture,
+  used behind hero/section content, never behind dense text blocks
+- **`.glow-cyan`** — soft cyan box-shadow, for emphasis on a single focal
+  element (a primary CTA, a highlighted card) — not for repeated/list use,
+  since repeated glow reads as noise rather than emphasis
+
+## Focus and selection states
+
+- Keyboard focus: `2px solid rgba(0, 215, 255, 0.7)` outline, `2px` offset,
+  `4px` border-radius — applied globally via `:focus-visible`
+  (`app/globals.css:105-109`). This is a real accessibility commitment already
+  in production — any new interactive surface must not override it with
+  `outline: none`.
+- Text selection: cyan-tinted (`rgba(0, 215, 255, 0.25)` background, white text)
+  — reinforces the accent color even in incidental interactions.
+
+## What this visual system communicates (and why it's a deliberate choice, not decoration)
+
+Near-black backgrounds + cyan/azure accents + monospace data + scan/flow motion
+together read as "instrumentation," not "marketing site" — consistent with the
+brand's core positioning as infrastructure, not a consumer trading app. Any new
+surface (deck template, social asset, sales one-pager) should preserve this
+instrument-panel feeling rather than defaulting to generic SaaS visual patterns
+(large white space, pastel gradients, friendly rounded illustration).
+
+## Maintenance
+
+This file must be updated in the same PR as any change to `app/globals.css`'s
+`@theme` block or any new logo asset. It is the canonical record of what's
+*actually* shipping — if this file and `app/globals.css` disagree, the CSS file
+is correct and this file is stale and must be fixed.
