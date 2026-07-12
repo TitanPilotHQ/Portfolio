@@ -12,7 +12,7 @@ and they reference it. The rest of Module 06 (sales process, CRM, discovery
 ## Target paid customer
 
 > The primary paid customer is a professional trading desk, prop firm, hedge
-> fund, broker, or institutional trading organization — rather than an
+> fund, broker, or institutional trading organization rather than an
 > individual retail trader.
 
 *(Source: `INTAKE-REQUEST.md` §1.4, Emad's direct answer, 2026-07-12.)*
@@ -43,11 +43,15 @@ file changes):**
   and its derivative "organizations that have already decided to use AI..."
   paraphrase) and `03-positioning-statement.md` (the formal statement's
   target-customer clause verbatim, and "Segment note")
+- Module 05 (Pricing System), `01-pricing-philosophy.md` (Phase B
+  principles 1-2) and `02-pricing-model-structure.md` ("Why 'per
+  desk/workspace'")
 
 **References this file's role without restating the fact (no propagation
 needed):**
 - Module 03 (Messaging Bible), `04-governance.md`
 - Module 04 (Positioning), `00-spec.md`, `04-governance.md`
+- Module 05 (Pricing System), `00-spec.md`, `04-governance.md`
 
 Any future module needing the ICP or target-customer fact cites this file
 rather than `INTAKE-REQUEST.md` directly — this file is the canonical

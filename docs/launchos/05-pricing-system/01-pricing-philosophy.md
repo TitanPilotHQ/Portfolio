@@ -50,13 +50,13 @@ committed)
    `06-sales-os/00-icp.md` — a desk/workspace, not a per-user seat. See
    `02-pricing-model-structure.md` for the structural detail.
 2. **Contract structure follows the customer type.** Annual contracts match
-   the target customer (institutional trading organizations), not the
-   monthly self-serve pattern typical of individual-user SaaS.
-3. **Enterprise gets custom terms.** The largest tier of customer (per
-   Module 06's ICP: institutional trading organizations) is expected to
-   negotiate rather than accept a published rate card — consistent with how
-   evidence/governance/audit products are typically procured by that buyer
-   type.
+   the customer defined in `06-sales-os/00-icp.md`, not the monthly
+   self-serve pattern typical of individual-user SaaS.
+3. **Enterprise gets custom terms.** Per intake §1.1, the largest tier of
+   customer gets "enterprise custom pricing" rather than a published rate
+   card. This is Emad's stated direction, not a generalization about how
+   evidence/governance/audit products are procured industry-wide — no such
+   industry claim is sourced or made here.
 4. **No price is public until it's real.** This module's own working
    assumptions (`02-pricing-model-structure.md`) must never be copied into
    Messaging Bible, the website, or any external deck until Phase B's

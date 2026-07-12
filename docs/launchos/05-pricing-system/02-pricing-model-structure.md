@@ -29,23 +29,29 @@ Module 11, or deal-structuring guidance in Module 06).
 
 ## Why "per desk/workspace," not "per trader"
 
-This choice is consistent with, though not derived from, Module 06's
-canonical target-customer definition (`06-sales-os/00-icp.md`): the customer
-is an organization, not an individual, so pricing the organization as the
-unit (rather than seat-counting individual traders within it) matches how
-the product is bought and used. Module 03's terminology glossary already
-encodes the individual-vs-organization distinction at the word-choice level
-(`03-messaging-bible/02-terminology-glossary.md`, "Trader" row) — this
-module's pricing-unit choice is the commercial expression of the same
-underlying fact, cited from the same canonical source rather than
-independently re-justified.
+Two related but distinct facts, kept separate rather than treated as one
+deriving the other:
+
+1. **Who the buyer is:** defined canonically in Module 06's
+   `06-sales-os/00-icp.md` — not restated here.
+2. **How the price is unitized:** intake §1.1 states the direction directly
+   as "per desk/workspace rather than per individual trader" — this is
+   itself a distinct, directly-sourced answer, not something inferred from
+   fact 1. An organization-level buyer doesn't mechanically imply
+   organization-level billing (many B2B products sell to organizations but
+   bill per individual seat within them) — the per-desk unit is a specific
+   choice Emad stated, not a logical consequence of who the customer is.
+
+Both facts point the same direction and are worth reading together, but this
+file does not claim fact 2 follows from fact 1 — only that they're
+consistent with each other.
 
 ## What "enterprise custom pricing" means here
 
-Per the model direction, the largest customer tier (institutional trading
-organizations, per Module 06's ICP) negotiates rather than pays a published
-rate. This is a structural decision (custom pricing exists as a tier), not
-a process decision (how a custom deal gets negotiated) — the negotiation
+Per the model direction, the largest customer tier (see `06-sales-os/
+00-icp.md` for who that is) negotiates rather than pays a published rate.
+This is a structural decision (custom pricing exists as a tier), not a
+process decision (how a custom deal gets negotiated) — the negotiation
 process itself belongs to Module 06 (Sales OS) once its sales-process content
 is built, not here.
 
