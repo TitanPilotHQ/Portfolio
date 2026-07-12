@@ -286,24 +286,6 @@ export const FAQ_ITEMS = [
   },
 ];
 
-export const EARLY_ACCESS_GETS = [
-  "Product build updates",
-  "Architecture notes",
-  "Shadow-mode progress",
-  "Demo access when available",
-  "Technical collaboration opportunities",
-];
-
-export const EARLY_ACCESS_NOT_GETS = [
-  "Guaranteed signals",
-  "Financial advice",
-  "Performance promises",
-  "Uncontrolled live-money automation",
-];
-
-export const EARLY_ACCESS_DISCLAIMER =
-  "By requesting access, you understand Titan Pilot is experimental trading infrastructure and does not provide investment advice, guaranteed returns, or live-money automation promises.";
-
 export const MANIFESTO_PRINCIPLES = [
   {
     title: "Reasoning is not authority.",
@@ -598,4 +580,18 @@ export const CONTACT_WHAT_HAPPENS_NEXT = [
 export const HOMEPAGE_CONTACT_TEASER = {
   title: "Ready to evaluate AI decision governance?",
   copy: "Book an AI Desk Audit to discuss how your trading desk currently uses AI, where governance gaps exist, and whether Titan Pilot is an appropriate fit.",
+};
+
+export const CONTACT_FORM_SECTIONS = {
+  aboutYou: "About You & Your Desk",
+  tradingProfile: "Your Trading Profile",
+  lookingFor: "What You're Looking For",
+};
+
+export const CONTACT_PRIVACY_STATEMENT =
+  "We collect only what's needed to evaluate your enquiry — your company, role, desk profile, and message. We never ask for trading credentials, broker access, or account information. Your submission is reviewed by Titan Pilot directly and is not sold or shared with third parties.";
+
+export const CONTACT_CONFIRMATION = {
+  title: "Thank you.",
+  subtitle: "Your request has been received.",
 };
