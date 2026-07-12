@@ -4,7 +4,7 @@
 
 The homepage hero is the canonical instance of Titan Pilot's message
 hierarchy — three tiers, each with a distinct job (`components/Hero.tsx:
-49,58-60,68-70,109-110`):
+49,58-59,68-70,109-110`):
 
 1. **Category tier (eyebrow badge):** "SUPERVISED AI TRADING" — names the
    category before anything else, since it's a category Titan Pilot is
@@ -59,10 +59,12 @@ Timeline, Evidence, and Milestones sections (Module 02,
 `01-core-narrative.md`). In message-hierarchy terms, these are **tier 5:
 proof** — they exist to substantiate tiers 2-4, never to introduce a new
 primary claim. A common failure mode this rule exists to prevent: a proof
-point (e.g., "1,662 of 1,662 replay events with zero drift") getting
-promoted to a headline on its own, disconnected from the claim it's proving.
-Proof points support; they don't lead, except in the specific short-form
-compression case below.
+point on its own (e.g., a headline built solely from the "Replay
+Verification, Zero Drift — 1,662/1,662" milestone, `MILESTONES`,
+`lib/content.ts:191` — this is a hypothetical illustration of the mistake,
+not a real headline that has shipped) getting promoted to a headline,
+disconnected from the claim it's proving. Proof points support; they don't
+lead, except in the specific short-form compression case below.
 
 ## Objection tier
 

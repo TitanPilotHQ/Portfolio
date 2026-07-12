@@ -12,7 +12,7 @@ trading decisions." · Elaboration: "Titan Pilot turns every thesis,
 objection, score, approval, and refusal into machine-validated evidence your
 desk can replay, govern, and defend." · Qualifier: "Built for professional
 trading desks — not retail signals, performance promises, or one-click
-autonomy." (`components/Hero.tsx:49,58-60,68-70,109-110`)
+autonomy." (`components/Hero.tsx:49,58-59,68-70,109-110`)
 
 ## Search snippet / meta description (verbatim, live)
 
@@ -26,18 +26,28 @@ Title: "Titan Pilot — Supervised AI Trading" · Description: "Every AI trading
 decision, recorded and replayable. Titan Pilot is the system of record for
 supervised AI trading." (`app/layout.tsx:71-73`)
 
-## One-line bio (assembled from Module 02's compression line)
+## One-line bio (adapted from Module 02's compression line)
 
-"Titan Pilot — AI trading infrastructure. They show you the market or a
+"Titan Pilot — AI trading infrastructure. Most tools show you the market or a
 signal; Titan Pilot shows you a decision you can cross-examine."
-(assembled from `lib/content.ts:29` (`ENTITY_STATEMENTS[0]`) +
-`lib/content.ts:418-419`)
+
+(Adapted, not verbatim: `COMPETITOR_PITCH`'s "They" (`lib/content.ts:418-419`)
+refers to the named alternatives in `COMPETITOR_COMPARISON` and has no
+antecedent standalone — replaced with "Most tools" so the line is
+self-contained. First sentence is `ENTITY_STATEMENTS[0]`,
+`lib/content.ts:29`, verbatim.)
 
 Use for: Twitter/X bio, LinkedIn headline, conference badge line.
 
-## Cold email subject line (assembled from the category + claim tiers)
+## Cold email subject line (assembled from the claim + qualifier tiers)
 
-"Supervised AI trading — a system of record for your desk's AI decisions"
+"The system of record for your desk's AI trading decisions"
+
+(Assembled from the claim tier — "The system of record for AI trading
+decisions," `components/Hero.tsx:58-59` — with "your desk's" drawn from the
+qualifier tier's audience framing, `components/Hero.tsx:109-110`, not
+invented. Keeps "The," not "a," to avoid weakening the site's primary
+positioning statement from a definite claim to an indefinite one.)
 
 Use for: cold outbound to a qualified ICP contact (Module 06 defines the
 ICP). Do not use for inbound reply subject lines — those should reference the

@@ -9,8 +9,8 @@ phrase to avoid being misread.
 
 | Term | Definition to use | Source |
 |---|---|---|
-| Thesis | The AI-generated market reasoning for a candidate decision | `DECISION_STEPS`, `lib/content.ts:112` |
-| Dossier | The versioned, hashed bundle of market data a thesis is reasoned from | `lib/content.ts:113`, Manifesto Principle 6 |
+| Thesis | The AI-generated market reasoning for a candidate decision | `DECISION_STEPS`, `lib/content.ts:113` |
+| Dossier | The versioned, hashed bundle of market data a thesis is reasoned from | `lib/content.ts:112`, Manifesto Principle 6 |
 | Devil's Advocate | The step that challenges the thesis before scoring | `lib/content.ts:114` |
 | Score / Deterministic scorer | The non-AI, rule-based evaluation of a thesis | `lib/content.ts:115` |
 | Risk gate | The deterministic, non-negotiable check that sits below every decision | `lib/content.ts:117`, Manifesto Principle 1-2 |
@@ -19,7 +19,7 @@ phrase to avoid being misread.
 | Replay | Rebuilding system state from the immutable event log and comparing it to live state | `lib/content.ts:268-270` |
 | Event / event log | The append-only, immutable record every decision is stored as | Manifesto Principle 3 |
 | Fail-closed | The doctrine that every failure mode collapses toward no action | `PRODUCT_DOCTRINES`, `lib/content.ts:344-346` |
-| Evidence | Recorded, replayable proof of what happened — never a synonym for "result" or "performance" | Voice Pillar 1, `01-brand-bible/02-voice-and-tone.md` |
+| Evidence | Recorded, replayable proof of what happened — never a synonym for "result" or "performance" | Banned-language table (results/performance/win-rate row), `01-brand-bible/02-voice-and-tone.md` |
 
 **Rule:** use these words for these meanings only. Do not use "signal" to mean
 a trading tip (retail-signal-service connotation Titan Pilot explicitly
