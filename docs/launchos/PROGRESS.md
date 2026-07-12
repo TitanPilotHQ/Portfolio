@@ -143,3 +143,16 @@ sessions — trust this file and `git log` over conversational memory.
   equity-issuance mechanics — all fixed.
 - Merged: PR #13, branch `launchos-07-investor-data-room`.
 - 7 of 16 modules built (01-07). 9 remain.
+
+## 2026-07-13 — Module 08: Demo Playbooks — closed
+
+- 6 files published: demo script, audience variants, objection handling,
+  demo checklist, governance. Zero new product facts — pure sequencing/
+  timing, every claim cited to Modules 01-07.
+- Independent review: 2 Critical errors (wrong Trust Ladder form for a live
+  demo context, an off-by-one in a scripted pause placement) — fixed.
+- Adversarial review (elevated scrutiny given the Criticals): verified both
+  fixes complete and correct; found 2 more Minor issues (a mischaracterized
+  pricing gate, a loosely-scoped rule) — fixed.
+- Merged: PR #14, branch `launchos-08-demo-playbooks`.
+- 8 of 16 modules built (01-08). 8 remain.
