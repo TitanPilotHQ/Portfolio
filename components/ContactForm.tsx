@@ -220,9 +220,9 @@ export function ContactForm() {
         />
 
         <div className="space-y-6">
-          <h3 className="font-display text-lg font-semibold">
+          <h2 className="font-display text-lg font-semibold">
             {CONTACT_FORM_SECTIONS.aboutYou}
-          </h3>
+          </h2>
           <div className="grid gap-5 sm:grid-cols-2">
             <div>
               <label htmlFor="cf-company" className={labelClass}>Company Name</label>
@@ -299,9 +299,9 @@ export function ContactForm() {
         </div>
 
         <div className="space-y-6">
-          <h3 className="font-display text-lg font-semibold">
+          <h2 className="font-display text-lg font-semibold">
             {CONTACT_FORM_SECTIONS.tradingProfile}
-          </h3>
+          </h2>
           <div>
             <MultiSelectField
               label="Asset Classes"
@@ -364,9 +364,9 @@ export function ContactForm() {
         </div>
 
         <div className="space-y-6">
-          <h3 className="font-display text-lg font-semibold">
+          <h2 className="font-display text-lg font-semibold">
             {CONTACT_FORM_SECTIONS.lookingFor}
-          </h3>
+          </h2>
           <div>
             <MultiSelectField
               label="Primary Goal"
