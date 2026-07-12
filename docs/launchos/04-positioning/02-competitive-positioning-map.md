@@ -68,11 +68,21 @@ every no-trade." Concede: "Strategy composition UX, portfolio breadth,
 backtesting speed."
 
 **Cluster positioning:** this group competes on ease of building automated
-strategies. The shared distinction: both hide their internal reasoning
-behind a simple interface ("turns English into rules," "backtest curves").
-Titan Pilot's position is the inverse trade-off — harder to onboard, but
-nothing is hidden: every reasoning step, challenge, and score is visible and
-replayable.
+strategies, but the two competitors differ from Titan Pilot on different
+axes — treat them separately rather than as one shared distinction. Against
+Capitalise, the axis is hidden vs. visible reasoning: Capitalise "turns
+English into rules and hides the rest," while Titan Pilot "shows all of it:
+a cited thesis, its rebuttal, and its score" — and Titan Pilot concedes
+Capitalise's "onboarding simplicity, no-ops setup, multi-broker reach" in
+return. Against Composer, the axis is hypothetical vs. actual: Composer
+"sells hypotheticals — backtest curves," while Titan Pilot "sells
+reconstructables — hash-verified replay of what actually happened" — and
+Titan Pilot concedes Composer's "strategy composition UX, portfolio breadth,
+backtesting speed" in return. Both trade-offs point the same general
+direction (Titan Pilot gives up ease/breadth for visibility/verifiability),
+but neither competitor's comparison row supports both axes at once — don't
+claim Composer "hides reasoning" or that Capitalise's gap is about
+hypotheticals.
 
 ## Cluster 4: AI Signal Marketplaces
 

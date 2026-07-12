@@ -64,7 +64,7 @@ convincing someone to start using AI trading tools for the first time.
 
 > Supervised AI Trading is the category for organizations that already use
 > AI to inform trading decisions and need to prove what it said, what
-> evidence it used, how it was challenged, and who approved the result.
+> evidence it used, how it was challenged, and who approved the final action.
 > Unlike AI trading bots, it never gives AI execution authority. Unlike
 > trading signal services, it isn't built for individual retail
 > decision-making. Unlike charting tools, no-code automation platforms, or
