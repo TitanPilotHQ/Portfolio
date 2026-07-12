@@ -38,12 +38,28 @@ This module must be updated (not just re-reviewed) whenever:
 - `docs/content/PUBLIC_CLAIMS_REGISTER.md` gains, changes, or retires a row
 - `app/globals.css`'s `@theme` block changes, or a new logo asset ships
 - Company stage changes (e.g., first paying customer, first raised round,
-  first hire) — `01-identity.md`'s "Company stage" section must reflect reality
-  immediately, since Modules 07 (Investor Data Room) and 13 (Hiring OS) will
-  cite it
+  first hire, first *confirmed* design partner — see `01-identity.md`'s
+  design-partner caveat) — `01-identity.md`'s "Company stage" section must
+  reflect reality immediately, since Modules 07 (Investor Data Room) and 13
+  (Hiring OS) will cite it
 - A new product mode is promoted (e.g., Copilot Mode moves from "Designed —
   next" to "Certified — current") — `01-identity.md` and any status table here
   must update in the same change
+
+**Honest note on enforcement:** Titan Pilot is a solo-founder company with no
+CI check, lint rule, or automated test that verifies this module against the
+live site — none of the triggers above are mechanically enforced. The one
+real, concrete mechanism that exists is
+`.github/PULL_REQUEST_TEMPLATE.md`'s "LaunchOS drift check" section, added
+alongside this module: every PR touching a trigger file surfaces the relevant
+checkbox at PR-creation time. This is a reminder, not a gate — it can be
+skipped, and for a solo founder, review and maintenance ultimately depend on
+Emad (or whoever is reviewing a given PR) actually reading the checklist. If
+this company adds a second reviewer or CI capacity later, upgrading this to an
+actual automated check (e.g., a script that diffs the claims register against
+citations in `docs/launchos/`) is the natural next step — but this file
+should not claim more rigor than the PR-template checkbox actually provides
+today.
 
 Recommended baseline review cadence even absent a trigger: quarterly, to catch
 drift that didn't hit an explicit trigger.
@@ -70,7 +86,7 @@ that's stale (see Maintenance triggers above).
 
 ## Closure
 
-Module 01 (Brand Bible) is considered complete for LaunchOS v1 once: all six
+Module 01 (Brand Bible) is considered complete for LaunchOS v1 once: all seven
 files in this directory pass independent review and adversarial review with no
 open findings, and the PR is merged to `main`. A closure entry is then appended
 to `docs/launchos/PROGRESS.md`.

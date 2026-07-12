@@ -67,7 +67,11 @@ Named, reusable motion tokens already defined (`app/globals.css:19-25,28-83`):
   well-suited to anything representing verification or audit
 - **`ticker`** — fast opacity pulse (2.4s), for live/real-time-feeling indicators
 - **`marquee`** — horizontal scroll (32s), for logo strips or evidence ticker rows
-- **`shimmer`** — background-position sweep (5s), used on `.text-gradient`
+- **`shimmer`** — background-position sweep; the `--animate-shimmer` token is
+  5s, but the one live consumer, `.text-gradient` (`app/globals.css:167`),
+  hardcodes its own 6s duration rather than using the token — if you reuse
+  `shimmer`, decide deliberately whether to match `.text-gradient`'s 6s or the
+  token's 5s, and note which
 
 **Rule:** motion should represent something real — verification, live status,
 data flow — not decoration for its own sake. This matches the site's explicit

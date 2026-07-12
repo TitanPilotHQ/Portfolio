@@ -8,8 +8,8 @@ doesn't.
 
 ### 1. Evidence over claims
 
-The house phrase, used twice near-verbatim in live copy: "Titan Pilot is built
-on measurable engineering evidence rather than marketing claims"
+The house idea, expressed in two distinct sentences in live copy: "Titan Pilot
+is built on measurable engineering evidence rather than marketing claims"
 (`lib/content.ts:520`) and "Every public statement traces to a sourced, dated
 engineering record — not marketing language" (`lib/content.ts:489`).
 
@@ -80,6 +80,25 @@ any LaunchOS module, may state or imply:
 | Words implying live/executed trades or profitability ("results," "performance," "win rate," "profitable") applied to the current product | Disclaimer: "Titan Pilot makes no claims about trading performance, profitability, win rates, or returns"; shadow-mode signals are explicitly "engineering evidence, not evidence of future or past profitability" | "Recorded," "validated," "certified" — words about the evidence process, not the trading outcome |
 | Describing interface visuals as real trading records | Disclaimer: "product simulations with non-live data, not records of real trading results" | Caption any screenshot or demo visual as a simulation if it isn't a literal recorded event |
 | Treating autonomous execution as a committed roadmap item | Disclaimer: "Any autonomous operation remains outside the current public promise... and may never occur" | Autonomous Demo mode is always "evidence-gated," never a date-committed feature |
+
+**Note on "certified" outside the GEO block:** the five GEO-canonical sentences
+in `01-identity.md` (repeated verbatim per that file's rule) include, in the
+same five-sentence set, "Titan Pilot does not promise trading performance or
+financial returns" — so the block as a whole is never read in isolation from
+its own non-performance framing. **Outside that fixed block** — in a status
+table, a single-line mention, a slide, a tweet — "certified" must always carry
+its qualifier ("Phase C.5 certified — an internal engineering milestone, not a
+regulatory one") in the same sentence. Never quote "is certified and running"
+as a standalone fragment; either use the full GEO sentence or the qualified
+form, never a partial excerpt of either.
+
+**Note on status words ("Live," "Certified," "Built," etc.):** these words are
+safe for infrastructure/data-pipeline status ("PostgreSQL Event Spine — Live,"
+`lib/content.ts:190`) and unsafe for anything describing trading or execution
+status. Never pair a bare status word with "trading," "execution," or
+"autonomous" — those always route through the Autonomy Ladder's three-stage
+language ("Certified — current" / "Designed — next" / "Evidence-gated —
+future") instead of a plain status word, per Voice Pillar 3 above.
 
 ## Sentence-pattern examples (before/after, drawn from real site voice)
 

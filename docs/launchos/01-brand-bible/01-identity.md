@@ -74,13 +74,15 @@ to make AI trading supervised" — that changes what the mission is about.
 > Titan Pilot turns every thesis, objection, score, approval, and refusal into
 > machine-validated evidence your desk can replay, govern, and defend. AI can
 > explain a market thesis, challenge assumptions, and summarize conflicting
-> evidence — it is not the final authority over capital; that belongs to
-> deterministic software and explicit risk gates. It's built for professional
-> trading desks — not retail signals, performance promises, or one-click
-> autonomy.
+> evidence — it should not be the final authority over capital; execution
+> authority belongs to deterministic software, explicit risk rules, and
+> broker-verified state. It's built for professional trading desks — not
+> retail signals, performance promises, or one-click autonomy.
 *(Source: hero subhead and sub-caption, `components/Hero.tsx:68-70,109-110`,
 quoted verbatim; middle sentence is Manifesto Principle 1,
-`lib/content.ts:291-292`.)*
+`lib/content.ts:291-292`, quoted with its original modal verb — "should not
+be," not "is not" — since the principle is normative and also governs future
+Copilot/Autonomous modes, not only the current shadow-mode system.)*
 
 **Long (for an investor conversation or a partnership intro — use verbatim, do not
 compress further than this):**
@@ -128,10 +130,22 @@ product *is*, matching the site's "evidence over claims" voice pillar (see
 > final approvals remain human-owned."
 *(Source: `lib/content.ts:485-486`; also claims register row #14.)*
 
+**No claims-register row exists for "design partners" as of this writing, and
+the source language is deliberately process-verbed — "engaging," "engage
+with" — not "validated with" or "working with."** There is no confirmed signed
+design partner yet. Any external material must preserve that hedge exactly:
+say "Titan Pilot is engaging qualified design partners to validate the product"
+(source phrasing, `lib/content.ts:510`), never "Titan Pilot has design
+partners" or "is validating the product with design partners" — the latter
+implies active third-party participation the register does not yet support.
+If a real design partner is ever confirmed, add a claims-register row before
+this file (or any deck) names them.
+
 Any external material (deck, one-pager, LinkedIn bio) that describes company
 stage must match this framing verbatim in substance: founder-led, shadow-mode
-validation with design partners, not "launched" or "live trading" in any sense
-that implies executed trades or paying customers. ("Pre-revenue" is a
+validation, currently engaging (not yet confirmed) design partners — not
+"launched" or "live trading" in any sense that implies executed trades or
+paying customers. ("Pre-revenue" is a
 reasonable inference from this framing, not a phrase that appears in any cited
 source — state the cited facts directly rather than the inferred label where
 precision matters, e.g. in Module 07 Investor Data Room or Module 11 Finance

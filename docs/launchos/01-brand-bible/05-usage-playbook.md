@@ -90,13 +90,25 @@ real, sourced fact or removed if none exists).
 > a decision you can cross-examine." (`lib/content.ts:418-419`)
 
 **Stage/status statement:**
-> [Capability] — [status word from: Certified / Built / Live / Designed —
-> next / Evidence-gated — future] — [one sentence describing what that status
-> concretely means].
+> [Capability] — [status word from: Certified / Built / Live / Running /
+> Designed — next / Evidence-gated — future] — [one sentence describing what
+> that status concretely means].
 >
-> Example (real): "Shadow AI pipeline — Certified — Phase C.5 certified;
-> signals recorded with dossier, score, and hash artifacts."
+> **Guard: "Live," "Certified," "Built," and "Running" are only for
+> infrastructure/data-pipeline capabilities (MT5 bridge, event spine, replay
+> verification). Never attach any of these words to a trading- or
+> execution-related capability — those always use the three-stage Autonomy
+> Ladder language ("Certified — current" / "Designed — next" /
+> "Evidence-gated — future") instead of a bare status word, per Voice Pillar 3
+> in `02-voice-and-tone.md`.**
+>
+> Example (real, infrastructure): "Shadow AI pipeline — Certified — Phase C.5
+> certified; signals recorded with dossier, score, and hash artifacts."
 > (`lib/content.ts:151-182`)
+>
+> Example (real, trading/execution — note the different pattern): "Shadow —
+> Certified — current — The full pipeline runs on real market data with real
+> AI calls... Nothing is executed." (`lib/content.ts:349-353`)
 
 **Principle-title pattern (for any new internal doctrine, e.g. in a future
 module):**
