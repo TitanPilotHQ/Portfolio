@@ -18,6 +18,12 @@ the **same PR** — do not defer it:
       unblocking
 - [ ] A product mode's status changed (e.g. Copilot Mode promoted) → update
       any status table in `docs/launchos/`
+- [ ] A real price point, pricing-model clearance, or contract-term
+      clearance from Emad → update
+      `docs/launchos/05-pricing-system/02-pricing-model-structure.md` and
+      `03-pricing-decision-tree.md` in the same PR, and confirm no other
+      module (Messaging Bible, Sales OS, Investor Data Room, Finance OS)
+      independently restates the new figure instead of citing Module 05
 - [ ] None of the above apply to this PR
 
 ## Test plan
