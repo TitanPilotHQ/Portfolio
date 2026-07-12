@@ -63,9 +63,12 @@ Depends on where the conversation is in Module 06's sales process
 (`06-sales-os/01-sales-process.md`): if this is Stage 4 (product
 demonstration) proceeding toward Stage 5 (technical discussion) or Stage 6
 (design-partner evaluation), say so plainly — "the next step, if this is a
-fit, is [X]" — rather than leaving next steps implicit. Do not close with
-any pricing statement beyond what Module 05's decision tree currently
-allows (nothing, as of this module's construction).
+fit, is [X]" — rather than leaving next steps implicit. On pricing, stay
+strictly within what Module 05's decision tree currently allows — as of
+this module's construction, that's only restating that the current
+design-partner phase is free (already public, `05-pricing-system/
+03-pricing-decision-tree.md`'s "already public" branch); no model, term, or
+figure beyond that.
 
 ## What this script deliberately does not include
 

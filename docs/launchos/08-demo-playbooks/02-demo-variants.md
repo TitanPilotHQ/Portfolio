@@ -13,7 +13,11 @@ audience is already past the initial pitch by the time a demo is scheduled
 Trust Ladder (`AUTONOMY_LADDER_DETAIL`) during section 3's Trust Ladder
 pause — per Module 02's rule for picking between the two Trust Ladder forms,
 a demo is explicitly named as a "product depth" context requiring the long
-form, not the homepage short form, for every variant, not just this one.
+form, not the homepage short form. This is a location-based rule (it's about
+the demo setting, not this specific audience), so it applies whenever any
+variant's version of section 3 surfaces the Trust Ladder — including the
+investor variant's compressed summary below, if it touches the ladder at
+all.
 
 ## Investor
 
