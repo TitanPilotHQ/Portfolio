@@ -126,3 +126,20 @@ sessions — trust this file and `git log` over conversational memory.
   both fixed.
 - Merged: PR #12, branch `launchos-06-sales-os`.
 - 6 of 16 modules built (01-06). 10 remain.
+
+## 2026-07-13 — Module 07: Investor Data Room — closed
+
+- 6 files published: company snapshot, traction/evidence (engineering proof
+  only, no customer traction), cap table/funding reality (none — sole
+  founder, no legal entity), investor FAQ, governance.
+- Highest scrutiny applied so far given investor-facing stakes; 2 fabrication
+  scans confirmed zero dollar figures/valuations/percentages/investor names.
+- Independent review: an inferred ownership percentage, a citation to
+  nonexistent content, 2 dependency-list gaps — fixed.
+- Adversarial review: a false claim about uniform claims-register sourcing
+  (2 of 15 rows are founder attestations, not Titan-repo documents), a
+  "moat" FAQ answer that read as evasive rather than disciplined, and an
+  unsourced "independent triggers" claim that collided with real
+  equity-issuance mechanics — all fixed.
+- Merged: PR #13, branch `launchos-07-investor-data-room`.
+- 7 of 16 modules built (01-07). 9 remain.
