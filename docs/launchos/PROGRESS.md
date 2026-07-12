@@ -113,3 +113,16 @@ sessions — trust this file and `git log` over conversational memory.
   pricing checkbox to `.github/PULL_REQUEST_TEMPLATE.md`.
 - Merged: PR #11, branch `launchos-05-pricing-system`.
 - 5 of 16 modules built (01-05), plus Module 06's ICP seed. 10 remain.
+
+## 2026-07-12 — Module 06: Sales OS — closed
+
+- 5 new files published (plus the earlier ICP seed): real 7-stage sales
+  process, tooling reality (no CRM, manual), a sales-enablement content map,
+  governance.
+- Independent review: a misattributed citation + a citation to a
+  non-existent rule — fixed.
+- Adversarial review: the fix itself left a propagation gap (spec updated,
+  governance cross-reference left stale) + a minor technical imprecision —
+  both fixed.
+- Merged: PR #12, branch `launchos-06-sales-os`.
+- 6 of 16 modules built (01-06). 10 remain.
