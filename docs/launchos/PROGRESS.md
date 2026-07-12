@@ -45,3 +45,28 @@ sessions — trust this file and `git log` over conversational memory.
   Module 01's banned-language rule, several narrative-strategy opinions
   stated as fact) — all fixed with corrections or explicit hedging.
 - Merged: PR #6, branch `launchos-02-story-architecture`.
+
+## 2026-07-12 — Intake received, all 16 modules unblocked
+
+- Emad answered the full batched intake (pricing direction, sales process,
+  funding/incorporation state, design-partner onboarding, tool stack,
+  revenue/accounting state, partnership categories, hiring plan).
+- Added Global Constraint 3: modules touching legal entity, finance,
+  contracting, or hiring must separate today's founder-led
+  pre-incorporation reality (Phase A) from the future incorporated state
+  (Phase B), so they don't need a rewrite the day incorporation happens.
+- Merged: PR #7, branch `launchos-00b-intake-received`.
+
+## 2026-07-12 — Module 03: Messaging Bible — closed
+
+- 5 files published: message hierarchy (grounded in the hero's real 4-tier
+  structure + SEO/share metadata's parallel hierarchy), terminology
+  glossary, channel-specific messages, governance.
+- Independent review: 1 Critical (swapped Thesis/Dossier citations) + several
+  assembly-introduced meaning shifts — all fixed.
+- Adversarial review: 6 findings, including two separate instances of
+  "adaptation quietly introduces an unsourced claim" (a false "verbatim"
+  label, an unsourced "Most tools" landscape claim) plus a glossary
+  definition that violated Module 01's own certification-qualifier rule —
+  all fixed.
+- Merged: PR #8, branch `launchos-03-messaging-bible`.
