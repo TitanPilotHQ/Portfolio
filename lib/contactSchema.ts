@@ -42,7 +42,7 @@ export const contactFormSchema = z.object({
   workEmail: z.string().trim().email("Enter a valid work email").max(320),
   jobTitle: z.string().trim().min(1, "Job title is required").max(200),
   deskSize: z.enum(DESK_SIZE_VALUES, {
-    errorMap: () => ({ message: "Select a desk size" }),
+    error: "Select a desk size",
   }),
   jurisdiction: z.string().trim().min(1, "Select a jurisdiction").max(120),
   assetClasses: z
@@ -50,11 +50,11 @@ export const contactFormSchema = z.object({
     .min(1, "Select at least one asset class"),
   assetClassesOther: z.string().trim().max(200).optional(),
   aiUsage: z.enum(AI_USAGE_VALUES, {
-    errorMap: () => ({ message: "Select your current AI usage" }),
+    error: "Select your current AI usage",
   }),
   aiUsageOther: z.string().trim().max(200).optional(),
   governanceMethod: z.enum(GOVERNANCE_METHOD_VALUES, {
-    errorMap: () => ({ message: "Select a governance method" }),
+    error: "Select a governance method",
   }),
   governanceMethodOther: z.string().trim().max(200).optional(),
   primaryGoal: z
@@ -63,7 +63,7 @@ export const contactFormSchema = z.object({
   primaryGoalOther: z.string().trim().max(200).optional(),
   message: z.string().trim().min(1, "Message is required").max(4000),
   consent: z.literal(true, {
-    errorMap: () => ({ message: "Consent is required" }),
+    error: "Consent is required",
   }),
   honeypot: z.string().optional(),
   utm: utmSchema,
