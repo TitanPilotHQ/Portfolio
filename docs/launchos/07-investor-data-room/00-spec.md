@@ -2,8 +2,9 @@
 
 **Status:** Ready to build
 **Depends on:** Module 01 (Brand Bible — principles, evidence/milestones
-citations), Module 04 (Positioning), Module 05 (Pricing System), Module 06
-(Sales OS, ICP)
+citations), Module 02 (Story Architecture — narrative arc, audience
+variants, Discipline List scene), Module 04 (Positioning), Module 05
+(Pricing System)
 **Purpose:** The canonical home for how Titan Pilot presents itself to
 investors — company snapshot, what traction can and cannot be claimed, cap
 table and funding-history reality, and an honest investor FAQ. Per Global

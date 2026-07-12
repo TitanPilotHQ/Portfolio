@@ -8,10 +8,12 @@
 *(Source: `INTAKE-REQUEST.md` §3.2, verbatim.)*
 
 There is no cap table document to share because there is no capitalization
-event yet — ownership is 100% Emad, unstructured (no legal entity exists to
-formally hold equity in, per `01-company-snapshot.md`). This file states
-that plainly rather than presenting a placeholder table or an assumed
-percentage split.
+event yet — no legal entity exists to formally hold or issue equity in, per
+`01-company-snapshot.md`. Ownership is sole-founder per the quote above; this
+file does not convert that into a specific percentage (e.g. "100%"), since
+no source states one and no formal equity instrument exists yet to make a
+percentage meaningful. This file states the fact plainly rather than
+presenting a placeholder table or an assumed split.
 
 ## Funding history (Phase A — today)
 

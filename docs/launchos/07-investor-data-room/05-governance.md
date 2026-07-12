@@ -53,12 +53,12 @@ before any real fundraising conversation, not just relied on from memory.
 - A design partner is confirmed and added to the claims register →
   `02-traction-and-evidence.md`'s "what's NOT evidence of" section needs
   re-verification (a confirmed partner may change what can be claimed)
-- Any cited module (01, 04, 05, 06) changes a fact this module references →
+- Any cited module (01, 02, 04, 05) changes a fact this module references →
   re-verify the citation still resolves correctly
 
 ## Cross-references
 
-- **Depends on:** Modules 01, 02, 04, 05, 06
+- **Depends on:** Modules 01, 02, 04, 05
 - **Feeds:** nothing downstream — this is a terminal/audience-facing module,
   not a source other modules build on
 
