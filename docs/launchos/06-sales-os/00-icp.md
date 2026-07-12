@@ -36,9 +36,18 @@ statement for the public-safe/internal-only split this produces in practice.
 
 ## Who cites this file
 
+**Restates or embeds the fact (propagation targets — must update if this
+file changes):**
 - Module 03 (Messaging Bible), `02-terminology-glossary.md`, "Trader" row
-- Module 04 (Positioning), `01-category-positioning.md` ("Target segment")
-  and `03-positioning-statement.md` (target-customer clause, "Segment note")
+- Module 04 (Positioning), `01-category-positioning.md` ("Target segment,"
+  and its derivative "organizations that have already decided to use AI..."
+  paraphrase) and `03-positioning-statement.md` (the formal statement's
+  target-customer clause verbatim, and "Segment note")
+
+**References this file's role without restating the fact (no propagation
+needed):**
+- Module 03 (Messaging Bible), `04-governance.md`
+- Module 04 (Positioning), `00-spec.md`, `04-governance.md`
 
 Any future module needing the ICP or target-customer fact cites this file
 rather than `INTAKE-REQUEST.md` directly — this file is the canonical
