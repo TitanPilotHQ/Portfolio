@@ -31,3 +31,17 @@ sessions — trust this file and `git log` over conversational memory.
 - Merged: PR #5, branch `launchos-01-brand-bible`.
 - Downstream modules (02, 03, 04, 08, 14, 16) now have a stable voice/identity
   source to inherit from.
+
+## 2026-07-12 — Module 02: Story Architecture — closed
+
+- 5 files published: core narrative arc (grounded in `app/page.tsx`'s real
+  section order), 3 audience variants, a reusable narrative-scenes library,
+  governance.
+- Independent review: 1 Critical (conflated homepage `PRODUCT_MODES` with
+  `/product`'s `AUTONOMY_LADDER_DETAIL` — now split into two correctly
+  documented variants) + 4 other findings — all fixed.
+- Adversarial review: 6 findings (an overstated stage-count claim, a
+  governance trigger gap, a scene that was followable yet could still violate
+  Module 01's banned-language rule, several narrative-strategy opinions
+  stated as fact) — all fixed with corrections or explicit hedging.
+- Merged: PR #6, branch `launchos-02-story-architecture`.
