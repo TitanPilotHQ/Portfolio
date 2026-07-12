@@ -59,7 +59,10 @@ export async function POST(req: NextRequest) {
       timestamp: new Date().toISOString(),
       userAgent: req.headers.get("user-agent") ?? "unknown",
     });
-    return NextResponse.json({ success: true, leadId: null }, { status: 200 });
+    return NextResponse.json(
+      { success: true, leadId: `TP-${new Date().getUTCFullYear()}-000000` },
+      { status: 200 },
+    );
   }
 
   const parsed = contactFormSchema.safeParse(body);
@@ -106,22 +109,28 @@ export async function POST(req: NextRequest) {
     job_title: values.jobTitle,
     desk_size: values.deskSize,
     jurisdiction: values.jurisdiction,
-    asset_classes: values.assetClassesOther
-      ? [
-          ...values.assetClasses.filter((v) => v !== "Other"),
-          `Other: ${values.assetClassesOther}`,
-        ]
-      : values.assetClasses,
-    ai_usage: values.aiUsageOther ? `Other: ${values.aiUsageOther}` : values.aiUsage,
-    governance_method: values.governanceMethodOther
-      ? `Other: ${values.governanceMethodOther}`
-      : values.governanceMethod,
-    primary_goal: values.primaryGoalOther
-      ? [
-          ...values.primaryGoal.filter((v) => v !== "Other"),
-          `Other: ${values.primaryGoalOther}`,
-        ]
-      : values.primaryGoal,
+    asset_classes:
+      values.assetClasses.includes("Other") && values.assetClassesOther
+        ? [
+            ...values.assetClasses.filter((v) => v !== "Other"),
+            `Other: ${values.assetClassesOther}`,
+          ]
+        : values.assetClasses,
+    ai_usage:
+      values.aiUsage === "Other" && values.aiUsageOther
+        ? `Other: ${values.aiUsageOther}`
+        : values.aiUsage,
+    governance_method:
+      values.governanceMethod === "Other" && values.governanceMethodOther
+        ? `Other: ${values.governanceMethodOther}`
+        : values.governanceMethod,
+    primary_goal:
+      values.primaryGoal.includes("Other") && values.primaryGoalOther
+        ? [
+            ...values.primaryGoal.filter((v) => v !== "Other"),
+            `Other: ${values.primaryGoalOther}`,
+          ]
+        : values.primaryGoal,
     message: values.message,
     consent: values.consent,
     hashed_ip: hashedIp,
