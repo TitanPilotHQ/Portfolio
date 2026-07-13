@@ -73,8 +73,8 @@ any LaunchOS module, may state or imply:
 |---|---|---|
 | Guaranteed or predicted trading returns (including implied via hedged language) | Explicit never-claim | Cite the mechanism (risk gates, fail-closed rules), never the outcome |
 | Licensed financial or investment advice | Explicit never-claim; also regulatory exposure | "This is not financial advice" disclaimer, always present near product claims |
-| A large team, institutional backing, or customers Titan Pilot doesn't have | Explicit never-claim | State actual stage: founder-led, design-partner phase |
-| Regulatory approval, certification, or endorsement not received | Explicit never-claim | Only cite certifications actually in the claims register (e.g., "Phase C.5 certified" — an internal engineering milestone, not a regulatory one — always described as such) |
+| A large team, institutional backing, or customers we don't have | Explicit never-claim | State actual stage: founder-led, design-partner phase |
+| Regulatory approval, certification, or endorsement we haven't received | Explicit never-claim | Only cite certifications actually in the claims register (e.g., "Phase C.5 certified" — an internal engineering milestone, not a regulatory one — always described as such) |
 | Peer-reviewed research or academic partnerships that don't exist | Explicit never-claim | Research page states publications are "Planned," not published — say so |
 | Endorsement by any employer of Emad's | Explicit never-claim; Titan Pilot is independent of his employment | Omit employer references entirely in Titan Pilot materials |
 | Words implying live/executed trades or profitability ("results," "performance," "win rate," "profitable") applied to the current product | Disclaimer: "Titan Pilot makes no claims about trading performance, profitability, win rates, or returns"; shadow-mode signals are explicitly "engineering evidence, not evidence of future or past profitability" | "Recorded," "validated," "certified" — words about the evidence process, not the trading outcome |

@@ -39,10 +39,13 @@ statement for the public-safe/internal-only split this produces in practice.
 **Restates or embeds the fact (propagation targets — must update if this
 file changes):**
 - Module 03 (Messaging Bible), `02-terminology-glossary.md`, "Trader" row
-- Module 04 (Positioning), `01-category-positioning.md` ("Target segment,"
-  and its derivative "organizations that have already decided to use AI..."
-  paraphrase) and `03-positioning-statement.md` (the formal statement's
-  target-customer clause verbatim, and "Segment note")
+- Module 04 (Positioning), `04-positioning/01-category-positioning.md`
+  ("Target segment," and its derivative "organizations that have already
+  decided to use AI..." paraphrase) and
+  `04-positioning/03-positioning-statement.md` (the formal statement's
+  target-customer clause — adapted: pluralized, merged with the ICP's
+  "already experimenting" behavioral fact, retail-exclusion clause
+  omitted, not a literal verbatim copy — and "Segment note")
 - Module 05 (Pricing System), `01-pricing-philosophy.md` (Phase B
   principles 1-2) and `02-pricing-model-structure.md` ("Why 'per
   desk/workspace'")

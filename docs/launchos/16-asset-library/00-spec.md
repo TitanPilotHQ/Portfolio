@@ -14,8 +14,9 @@ templates that don't exist as real files in this repo.
 Grounded in: this repo's own `docs/launchos/` directory tree (all 15 built
 modules, verified by directory listing, not by memory), `public/logo.png`
 and `public/banner.png` (the only two real visual asset files in this
-repo), and Module 01's visual identity file (`01-brand-bible/
-03-visual-identity.md`) for brand tokens, cited not restated.
+repo), and Module 01's visual identity file
+(`01-brand-bible/03-visual-identity.md`) for brand tokens, cited not
+restated.
 
 ## Global Constraint 1 application
 

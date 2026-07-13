@@ -38,8 +38,8 @@ measured pattern.)
 audience has to ask — pre-empts the most common skeptical question.
 **Use when:** any audience with risk sensitivity (desk leads, investors,
 technical evaluators) — i.e., almost always, just not necessarily first.
-**Content:** the `SAFETY_RULES` condition→response table (`lib/content.ts:
-140-148`) and the Fail-Closed doctrine (`lib/content.ts:344-346`).
+**Content:** the `SAFETY_RULES` condition→response table
+(`lib/content.ts:140-148`) and the Fail-Closed doctrine (`lib/content.ts:344-346`).
 **Do not:** soften any response into something more comforting than the
 literal table — "Halt" stays "Halt," not "we handle it gracefully."
 

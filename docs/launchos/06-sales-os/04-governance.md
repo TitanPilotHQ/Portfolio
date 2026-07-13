@@ -55,10 +55,12 @@ drift here is more likely to be caught by living it than by any checklist.
 
 - **Depends on:** Modules 01, 02, 03, 04, 05
 - **Consumes from Module 08** (Demo Playbooks — Stage 4's product
-  demonstration draws on it, once built) **and feeds into Module 09**
-  (Customer Success OS — Stage 7 hands off to it) **and Module 07**
-  (Investor Data Room — sales process and pipeline reality are real investor
-  questions)
+  demonstration draws on it) **and feeds into Module 09** (Customer Success
+  OS — Stage 7 hands off to it). Module 07 (Investor Data Room) does not
+  currently cite this module — sales process and pipeline reality would be
+  a reasonable future investor-FAQ addition, but as of this module's own
+  construction, no Module 07 file references Module 06. This is stated
+  here as a possible future citation, not a present dependency relationship.
 
 ## Closure
 

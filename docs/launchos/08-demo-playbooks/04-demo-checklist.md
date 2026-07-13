@@ -12,8 +12,10 @@
       reviewed (pricing content stays internal-only unless Emad has
       explicitly cleared it for this specific conversation).
 - [ ] If this is an investor-variant demo, reviewed Module 07's Investor
-      Data Room in full, not from memory (per that module's own governance
-      note).
+      Data Room in full, not from memory — extending that module's own
+      governance rule (re-read in full before any real fundraising
+      conversation, not relied on from memory) to investor-facing demos
+      generally, not just active fundraising conversations.
 
 ## During the demo
 

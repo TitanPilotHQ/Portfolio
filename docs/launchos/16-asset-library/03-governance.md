@@ -155,11 +155,12 @@ module has no single fact to watch, only a structure to mirror.
 "no module's governance file states a baseline review cadence independent
 of triggers — a program-wide gap to address at closure." Only Module 01
 (`01-brand-bible/06-governance.md`) states a baseline cadence ("quarterly")
-independent of a specific trigger; Modules 02 through 15 document
-trigger-based maintenance only. This module does not resolve that gap —
-doing so correctly would mean deciding a real cadence for 14 other
-modules, which is not this module's fact to own, and is not something this
-module invents on Emad's behalf. It is carried forward explicitly, by
+independent of a specific trigger; Modules 02 through 16 — including this
+module's own governance file — document trigger-based maintenance only.
+This module does not resolve that gap — doing so correctly would mean
+deciding a real cadence for 15 other modules, which is not this module's
+fact to own, and is not something this module invents on Emad's behalf.
+It is carried forward explicitly, by
 name, into the LaunchOS v1 closure report as an open owner decision — not
 silently dropped now that all 16 modules have a first version published.
 

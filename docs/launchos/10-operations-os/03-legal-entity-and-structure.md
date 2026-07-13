@@ -47,7 +47,7 @@ type, legal name — those get added here as sourced fact, dated to when
 Emad stated them, and Phase A's content moves from present-tense fact to
 historical framing (per the master plan's stated intent: "so these modules
 don't need a rewrite the day incorporation happens — only Phase A needs to
-flip to 'historical' and Phase B needs to flip to 'current,'"
+flip to 'historical' and Phase B needs to flip to 'current.'"
 `00-launchos-master-plan.md:71-73`).
 
 ## What this file deliberately does not invent

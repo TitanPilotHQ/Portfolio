@@ -3,7 +3,9 @@
 **Status:** Ready to build
 **Depends on:** Module 01 (elevator pitches), Module 02 (Mental Model and
 Decision Walkthrough scenes), Module 03 (terminology), Module 04
-(competitive map), Module 06 (Stage 4 of the sales process, ICP)
+(competitive map), Module 05 (pricing gate for what a demo may say about
+pricing), Module 06 (Stage 4 of the sales process, ICP), Module 07
+(investor-facing objection routing)
 **Purpose:** The canonical home for how a live product demonstration
 actually runs. Per Global Constraint 4, this module does not redefine the
 Mental Model, the Decision Walkthrough, elevator pitches, or the ICP — it

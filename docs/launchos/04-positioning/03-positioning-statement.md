@@ -29,8 +29,8 @@ adjective elsewhere in this sentence, unlike an earlier draft of this file
 (`components/Hero.tsx:68-70`); "deterministic risk gates...final authority"
 is a present-tense factual claim, correctly stated as fact (not softened to
 "should"), sourced to `ARCHITECTURE_LAYERS`'s "Risk Gate — Final
-deterministic risk authority before any execution path" (`lib/content.ts:
-96-98`) and `DECISION_STEPS`'s "Risk engine remains final authority"
+deterministic risk authority before any execution path"
+(`lib/content.ts:96-98`) and `DECISION_STEPS`'s "Risk engine remains final authority"
 (`lib/content.ts:117`) — both describe the system as built, today, unlike
 Manifesto Principle 1's normative "should not be" framing
 (`lib/content.ts:291-292`), which is related context but not the source of
