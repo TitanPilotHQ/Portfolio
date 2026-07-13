@@ -24,6 +24,12 @@ the **same PR** — do not defer it:
       `03-pricing-decision-tree.md` in the same PR, and confirm no other
       module (Messaging Bible, Sales OS, Investor Data Room, Finance OS)
       independently restates the new figure instead of citing Module 05
+- [ ] A real financial figure, cost disclosure, revenue event, or
+      accounting-platform decision from Emad → update
+      `docs/launchos/11-finance-os/01-financial-reality.md` and
+      `02-accounting-and-reporting.md` in the same PR — this module has the
+      highest fabrication risk in LaunchOS (no dollar figures, percentages,
+      or burn/runway estimates permitted without a direct source)
 - [ ] None of the above apply to this PR
 
 ## Test plan
