@@ -254,7 +254,9 @@ module in the same change. This section is now a record of what was
 decided and where, not an open list. The primary, dated, quoted source for
 every decision below is `OWNER-DECISIONS-2026-07-13.md` — this table is a
 register that cites it, matching the relationship `INTAKE-REQUEST.md` has
-to every earlier module.
+to every earlier module. An eleventh row (the fundraising trigger) was
+added the same day, resolving §5e — a gap discovered after the original
+ten, not part of the original batch.
 
 **Canonical terminology, confirmed 2026-07-13 (resolving a phrasing tension
 found while recording the "formal engagement" decision below):** "design
@@ -270,7 +272,8 @@ not restates it.
 |---|---|---|
 | Baseline review cadence for Modules 02-16 | Trigger-only by default, plus one annual full-program consistency review; Module 01 keeps its quarterly cadence | `00-launchos-master-plan.md`, "Post-closure review cadence" |
 | Definition of "formal engagement" (partnerships) | Six-item threshold list, plus a boundary rule that a Module 06/09 design-partner agreement or pilot does not by itself qualify | `12-partnership-os/02-engagement-rules.md` |
-| Definition of "successful design-partner validation" (hiring trigger) | Six-item criteria list (not revenue alone); becomes a hiring trigger only when workload can no longer be handled safely by the founder | `13-hiring-os/02-anticipated-hiring.md` |
+| Definition of "successful design-partner validation" (hiring trigger) | Six-item criteria list (not revenue alone); becomes a hiring trigger only when workload can no longer be handled safely by the founder — a product/customer evidence threshold, distinct from and not indicative of fundraising readiness (see §5e) | `13-hiring-os/02-anticipated-hiring.md` |
+| Fundraising trigger, distinct from the hiring/design-partner-validation threshold above | Five-condition list — see the canonical file for the exact conditions; a validated design partner is supporting evidence only, not a trigger by itself | `07-investor-data-room/03-cap-table-and-funding.md` |
 | Threshold for "as they become relevant" (competitor-category expansion) | Trigger-only, plus quarterly monitoring; a sourced development must materially affect one of seven named areas (not mere AI/trading resemblance) | `14-competition-intelligence/01-monitoring-scope.md`, `14-competition-intelligence/02-research-process.md` |
 | Phase B accounting method | Deferred until incorporation and accountant/platform selection; default planning assumption is cash-basis initially, not a final method | `11-finance-os/02-accounting-and-reporting.md` |
 | Feedback-loop cadence (design-partner Stage 6) | Weekly/monthly cadence plus an immediate-escalation and validation-closeout rule — see the canonical file for the four-item schedule and the pilot-period/validation-period glossary | `09-customer-success-os/03-success-and-production-readiness.md` |
@@ -306,18 +309,20 @@ Added to all three in this closure phase — see the module files
 themselves; no factual claim changed, this is a documentation-completeness
 fix, not an open item.
 
-### 5e. New open item discovered during PR #24's adversarial review — not resolved by this decision batch
+### 5e. Design-partner validation vs. fundraising trigger — RESOLVED 2026-07-13
 
-Module 13's newly-resolved "successful design-partner validation" six-item
-bar (5a above) uses the exact phrase intake §3.1 also uses, unresolved, as
-Module 07's fundraising trigger
-(`07-investor-data-room/01-company-snapshot.md`,
-`07-investor-data-room/03-cap-table-and-funding.md`). Whether Module 13's six-item
-bar also governs Module 07's fundraising trigger, or whether the two are
-only phrase-adjacent, is not stated by Emad. Both Module 07 files now carry
-a cross-reference note rather than an assumed answer. **What resolves it:**
-Emad confirms whether the two triggers share one bar or are independently
-defined, or a real fundraising conversation resolves it in practice.
+Originally an open item found during PR #24's adversarial review: Module
+13's "successful design-partner validation" bar reused the exact phrase
+Module 07 used, undefined, for its fundraising trigger. Resolved by owner
+decision, `OWNER-DECISIONS-2026-07-13.md` §10: the two are separate
+thresholds with deliberately different criteria, cross-referenced not
+merged. Design-partner validation (`13-hiring-os/02-anticipated-hiring.md`)
+is a product/customer evidence threshold that may inform hiring but does
+not by itself indicate fundraising readiness. The fundraising trigger
+(`07-investor-data-room/03-cap-table-and-funding.md`) is a separate
+founder/company financing decision, gated on five conditions of its own —
+a validated design partner is supporting evidence toward one of those
+conditions, not a trigger by itself.
 
 ## 6. LaunchOS readiness score
 

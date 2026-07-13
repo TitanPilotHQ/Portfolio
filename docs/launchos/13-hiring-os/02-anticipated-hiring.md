@@ -32,28 +32,38 @@ itself is stated for any of the four here.
 ## The trigger: "successful design-partner validation"
 
 *(Source: `OWNER-DECISIONS-2026-07-13.md` §3, Emad's direct decision,
-quoted verbatim there; carried in `CLOSURE-REPORT.md` §5a as an owner
-decision.)*
+quoted verbatim there, as refined by §10; carried in `CLOSURE-REPORT.md`
+§5a as an owner decision.)*
 
-Revenue alone does not constitute validation. "Successful design-partner
-validation" requires all of the following:
+This is a **product/customer evidence threshold**, not a fundraising or
+commercial-readiness signal — see the boundary note below. Revenue alone
+does not constitute validation. "Successful design-partner validation"
+requires all of the following:
 
 - At least one real design partner
-- Completion of the pilot period **and** the validation closeout review
+- Completion of the agreed pilot period and the validation period
   (`09-customer-success-os/03-success-and-production-readiness.md` defines
-  both terms canonically — cited here, not restated; the two are distinct
-  and completing the pilot period alone is not sufficient)
+  both terms canonically — cited here, not restated)
 - Regular product usage
 - No unresolved Critical safety or security issue
 - Written confirmation that the product solves a meaningful operational
   problem
-- At least one concrete workflow, product, or commercial learning
-  incorporated into the roadmap
+- Concrete product/workflow learning incorporated into the roadmap
 
 This threshold becomes the hiring trigger only when workload can no longer
 be handled safely by the founder — meeting the validation criteria above
 does not, on its own, obligate a hire; it establishes that the *option* to
 hire is now grounded in real evidence rather than an assumption.
+
+**Boundary with Module 07's fundraising trigger (owner decision,
+2026-07-13, `OWNER-DECISIONS-2026-07-13.md` §10):** meeting this threshold
+may inform a hiring decision, but does not automatically mean Titan Pilot
+is fundraising-ready. Fundraising is a separate founder/company financing
+decision with its own trigger conditions, owned by Module 07
+(`07-investor-data-room/03-cap-table-and-funding.md`) — a validated
+design partner is supporting evidence there, not by itself a fundraising
+trigger. The two thresholds are cross-referenced, not merged, and use
+deliberately different criteria.
 
 This decision is conceptually adjacent to, but distinct from, Module 09's
 (`09-customer-success-os/03-success-and-production-readiness.md`) Stage 7
@@ -109,12 +119,17 @@ This file does not set a date for when that combination will be true.
 
 - **Depends on:** Module 09 (`03-success-and-production-readiness.md` —
   closest existing framing of "validation," cited as adjacent, not
-  identical), Module 10 and Module 07 (`03-legal-entity-and-structure.md` —
+  identical), Module 10 (`10-operations-os/03-legal-entity-and-structure.md`)
+  and Module 07 (`07-investor-data-room/01-company-snapshot.md` —
   no-incorporated-entity fact, cited not restated), Module 12
   (`02-engagement-rules.md` — the matching contracting-dependency pattern
   for signed agreements, and the same 2026-07-13 owner-decision batch that
   resolved this module's validation-threshold gap)
-- **Feeds:** `03-governance.md` (review criteria specific to this file)
+- **Feeds:** `03-governance.md` (review criteria specific to this file);
+  Module 07 (`03-cap-table-and-funding.md` — cites this module's
+  validation threshold as one input to its fundraising trigger, per the
+  2026-07-13 boundary decision; the two thresholds use different criteria
+  and are not merged)
 
 See `03-governance.md` for review criteria, maintenance triggers, and the
 adversarial-review focus for this module.

@@ -35,15 +35,16 @@ though no source states this as a plan. State only what's sourced (no order
 given) — don't round that up to "the two are independent," which is a
 stronger, unsourced claim.
 
-**Cross-reference note, added 2026-07-13:** Module 13
-(`13-hiring-os/02-anticipated-hiring.md`) gives the identical phrase
-"successful design-partner validation" a precise six-item bar for its own
-(hiring) trigger, per an owner decision that was scoped explicitly to
-hiring. Whether that same six-item bar also governs *this* file's
-fundraising trigger is not stated by Emad — this file does not assume
-either way, and treats the fundraising-trigger reading of the phrase as
-still undefined, adjacent to but not confirmed identical with Module 13's
-reading. Carried forward as an open item in `CLOSURE-REPORT.md` §5a.
+**Cross-reference note, updated 2026-07-13:** Module 13
+(`13-hiring-os/02-anticipated-hiring.md`) and this file's own
+`03-cap-table-and-funding.md` (the canonical home for the fundraising
+trigger) both use language adjacent to "design-partner validation," but
+per an owner decision (`OWNER-DECISIONS-2026-07-13.md` §10) they are
+deliberately separate thresholds with different criteria — a design
+partner validated under Module 13's bar is supporting evidence for
+fundraising, not itself the fundraising trigger. See
+`03-cap-table-and-funding.md`, "Fundraising trigger," for the actual
+conditions; this file does not restate them.
 
 ## What this snapshot is for
 

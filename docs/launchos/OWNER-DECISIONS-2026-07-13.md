@@ -282,6 +282,61 @@ resolution:
 glossary location:
 `09-customer-success-os/03-success-and-production-readiness.md`.
 
+## §10 — Design-partner validation vs. fundraising trigger (resolves `CLOSURE-REPORT.md` §5e)
+
+PR #24's adversarial review found that Module 13's "successful
+design-partner validation" bar (§3 above) reuses the exact phrase Module
+07 uses, undefined, for its fundraising trigger — flagged as a new open
+item rather than resolved by assumption. Asked to resolve; Emad's
+decision:
+
+> Design-partner validation and fundraising readiness are separate
+> thresholds.
+>
+> 1. Design-partner validation threshold
+> This is a product/customer evidence threshold.
+>
+> It requires:
+> - at least one real design partner
+> - completion of the agreed pilot and validation period
+> - regular product usage
+> - no unresolved Critical safety or security issue
+> - written confirmation that Titan solves a meaningful operational
+>   problem
+> - concrete product/workflow learning incorporated into the roadmap
+>
+> This threshold may inform hiring decisions, but does not automatically
+> mean the company is fundraising-ready.
+>
+> 2. Fundraising trigger
+> This is a separate founder/company financing decision.
+>
+> Fundraising may be considered only when one or more of these is true:
+> - additional capital is needed to satisfy validated customer demand
+> - hiring or infrastructure requirements exceed sustainable founder
+>   funding
+> - a credible expansion opportunity has evidence and a defined use of
+>   funds
+> - strategic investors can materially accelerate distribution,
+>   compliance, data access or enterprise adoption
+> - runway, risk and dilution trade-offs justify external capital
+>
+> A validated design partner is supporting evidence, not by itself a
+> fundraising trigger.
+>
+> 3. Canonical ownership
+> - Module 13 owns the hiring-validation threshold.
+> - Module 07 owns the fundraising trigger.
+> - Cross-reference the two, but do not reuse identical threshold
+>   wording.
+> - Neither threshold should imply funding, traction, revenue or investor
+>   readiness that does not exist.
+
+*(Source: Emad, direct decision, 2026-07-13, quoted verbatim.)* Canonical
+locations: `13-hiring-os/02-anticipated-hiring.md` (design-partner
+validation threshold), `07-investor-data-room/03-cap-table-and-funding.md`
+(fundraising trigger).
+
 ---
 
 ## Program acceptance, same date
