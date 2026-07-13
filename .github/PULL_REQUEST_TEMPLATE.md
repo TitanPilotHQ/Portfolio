@@ -58,6 +58,10 @@ the **same PR** — do not defer it:
       real, checkable source, update
       `docs/launchos/15-market-research-framework/02-market-research-scope.md`
       with the sourced figure — never before
+- [ ] Any LaunchOS module's file structure changed — a file added,
+      renamed, or removed in any `docs/launchos/*/` directory → update
+      `docs/launchos/16-asset-library/01-launchos-catalog.md` in the same
+      PR
 - [ ] None of the above apply to this PR
 
 ## Test plan
