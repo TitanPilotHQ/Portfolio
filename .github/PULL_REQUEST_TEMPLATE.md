@@ -50,6 +50,14 @@ the **same PR** — do not defer it:
       monitoring category → update
       `docs/launchos/14-competition-intelligence/01-monitoring-scope.md`
       in the same PR
+- [ ] Any `RESEARCH_*` constant in `lib/content.ts` changed — especially a
+      pipeline item's status advancing past "Planned" — update
+      `docs/launchos/15-market-research-framework/01-research-doctrine.md`
+      in the same PR; and if real market-sizing data (TAM, SAM, SOM,
+      industry-growth, competitor market share) becomes available from a
+      real, checkable source, update
+      `docs/launchos/15-market-research-framework/02-market-research-scope.md`
+      with the sourced figure — never before
 - [ ] None of the above apply to this PR
 
 ## Test plan

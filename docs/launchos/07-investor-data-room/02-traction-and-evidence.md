@@ -57,10 +57,10 @@ self-applied.
   register (Module 01's caveat, `01-brand-bible/01-identity.md`) — do not
   present "engaging design partners" as demand validation.
 - **Market size or category adoption.** Market-sizing methodology belongs to
-  Module 15 (Market Research Framework) once built — not built yet as of
-  this module's own construction, so there is no market-sizing data
-  anywhere in LaunchOS to cite. No number should be offered here or
-  invented for this purpose.
+  Module 15 (Market Research Framework), which owns this fact but has no
+  sourced market-sizing data as of this module's own construction (see
+  `15-market-research-framework/02-market-research-scope.md`) — no number
+  should be offered here or invented for this purpose.
 
 ## How to present this to an investor (assembly, not new claims)
 
