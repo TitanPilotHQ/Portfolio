@@ -14,9 +14,38 @@ and hash artifacts" (`AUTONOMY_LADDER_DETAIL`, Shadow stage's body field,
 `lib/content.ts:353`). A design partner's feedback loop is the
 mechanism by which that recorded evidence gets reviewed with them —
 comparing what the pipeline produced against their own desk's judgment.
-This file doesn't specify a cadence (weekly, per-signal, monthly) since none
-is sourced; whatever cadence is used, it should be stated here once real,
-not assumed.
+
+**Canonical glossary — "pilot period" vs. "validation period" (owner
+decision, `OWNER-DECISIONS-2026-07-13.md` §6's follow-up clarification;
+carried in `CLOSURE-REPORT.md` §5a):** these two terms are
+distinct and not interchangeable, and this is their one canonical
+definition for the whole program — other files cite this section rather
+than defining either term independently.
+
+- **Pilot period:** the active product-use and workflow-testing window
+  during which the design partner uses Titan Pilot in the agreed
+  environment.
+- **Validation period:** the broader design-partner evaluation window —
+  beginning with onboarding and including the pilot period, evidence
+  collection, feedback, issue resolution, and the formal closeout review.
+  The validation period contains the pilot period; it is not a synonym for
+  it.
+
+**Cadence (owner decision, 2026-07-13):** *(Source:
+`OWNER-DECISIONS-2026-07-13.md` §6, Emad's direct decision, quoted verbatim
+there; carried in `CLOSURE-REPORT.md` §5a.)*
+
+- Weekly feedback session during onboarding and the pilot period
+- Monthly executive review throughout the validation period, where its
+  duration warrants it
+- Immediate escalation for security, risk, execution, or data-integrity
+  issues
+- A formal validation closeout review at the end of the validation period
+
+"Successful design-partner validation" (the Hiring OS trigger, Module 13)
+is assessed only after the pilot period is complete **and** the validation
+closeout review has occurred — completing the pilot period alone is not
+sufficient.
 
 ## Production readiness review (Stage 7)
 

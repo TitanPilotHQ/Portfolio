@@ -6,11 +6,15 @@
 
 *(Source: `INTAKE-REQUEST.md` §4.3, verbatim.)*
 
-Two channels, both manual, both Emad directly. No source describes a
-ticketing system, a support SLA, a tiered response time, or an after-hours
-coverage commitment — so, per Global Constraint 1, none is assumed or
-invented here. This is an absence of sourcing, not an independently
-confirmed absence in reality; if any of these exist informally and just
+Two channels, both manual, both Emad directly. Intake §4.3 alone describes
+no ticketing system, no contractual support SLA, no tiered response time,
+and no after-hours coverage commitment — so, per Global Constraint 1, none
+of those was assumed or invented from intake §4.3 itself. A founder-led
+(non-contractual) tiered response target was separately added by owner
+decision on 2026-07-13, below — this sentence describes intake §4.3's own
+scope, not the file as a whole. This is an absence of *intake* sourcing,
+not an independently confirmed absence in reality; if a ticketing system,
+a contractual SLA, or after-hours coverage exist informally and just
 weren't mentioned in intake §4.3, that's a fact to add once confirmed, not
 to assume either way.
 
@@ -18,10 +22,23 @@ to assume either way.
 
 A design partner's support request goes to Emad's email or gets raised in a
 scheduled meeting (the cadence of which isn't specified in any source — this
-file doesn't invent one). Response time is whatever a single founder running
-engineering, sales, and support simultaneously can provide — this file
-states that plainly rather than implying a professional support-team
-response time that doesn't exist.
+file doesn't invent one).
+
+**Response targets for the design-partner phase (owner decision,
+2026-07-13):** *(Source: `OWNER-DECISIONS-2026-07-13.md` §7, Emad's direct
+decision, quoted verbatim there; carried in `CLOSURE-REPORT.md` §5a.)*
+
+- Critical safety/security/execution issue: acknowledge within 4 business
+  hours
+- High-impact operational issue: acknowledge within 1 business day
+- General product question: acknowledge within 2 business days
+
+These are founder-led service targets, not contractual SLAs — response
+time is still whatever a single founder running engineering, sales, and
+support simultaneously can actually provide, and this file states that
+plainly rather than implying a professional support-team commitment that
+doesn't exist. Contractual SLAs remain undefined until an enterprise
+agreement exists.
 
 ## Relationship to Module 06's tooling reality
 
@@ -32,7 +49,8 @@ founder-led, tool-light operating reality applied to a different function.
 
 ## What this file deliberately does not invent
 
-- A support SLA or response-time commitment
+- A *contractual* SLA — the response targets above are founder-led service
+  targets for the design-partner phase, not a binding commitment.
 - A support tier structure (e.g., "design partners get priority support")
 - A ticketing or helpdesk tool
 - A dedicated support role or hire

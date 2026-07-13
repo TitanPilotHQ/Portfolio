@@ -21,6 +21,13 @@ Not part of any numbered module; scope the program as a whole.
   2026-07-12, grounding the modules that needed a founder-supplied fact.
 - `PROGRESS.md` — append-only closure ledger, one entry per module
   closure or program milestone.
+- `CLOSURE-REPORT.md` — the LaunchOS v1 closure deliverable (2026-07-13):
+  program summary, whole-program audits, source-of-truth map, owner
+  decisions, readiness score, and next-milestone recommendation.
+- `OWNER-DECISIONS-2026-07-13.md` — the dated, quoted capture of Emad's
+  owner-decision batch that resolved `CLOSURE-REPORT.md` §5a, matching
+  `INTAKE-REQUEST.md`'s role as a primary source for later modules to
+  cite.
 
 ## Modules 01–15
 

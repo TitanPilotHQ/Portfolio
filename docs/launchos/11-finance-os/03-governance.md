@@ -25,10 +25,12 @@ A change to this module passes review only if:
    external funding raised, founder-funded" fact are cited from their
    canonical files, never independently restated with their own sourcing
    detail (Global Constraint 4).
-4. `02-accounting-and-reporting.md`'s Phase B section names only the
-   categories of future infrastructure the spec authorizes (a method, likely
-   external support, potential audit requirements) — it does not name a
-   specific method, tool, platform, firm, or date.
+4. `02-accounting-and-reporting.md`'s Phase B section states only the
+   sourced cash-basis planning default (Emad's 2026-07-13 decision,
+   correctly labeled non-final) plus the categories of future
+   infrastructure the spec authorizes (likely external support, potential
+   audit requirements) — it does not name a specific tool, platform, firm,
+   or date, and does not present the planning default as a final method.
 
 ## Adversarial review focus
 
@@ -38,13 +40,13 @@ A change to this module passes review only if:
   fabricated characterizations of a figure that isn't available — none of
   them belong in this module regardless of how natural they sound as
   hedges.
-- Does `02-accounting-and-reporting.md`'s Phase B section smuggle in a
-  specific accounting method (cash-basis vs. accrual) or a named
-  tool/platform anywhere, even as an example or a "likely" default?
-  Plausible-sounding defaults are the failure mode Global Constraint 1
-  targets, and Phase B sections are the highest-risk spot for it across the
-  whole LaunchOS program (see Module 10's `04-governance.md` for the same
-  concern applied to legal-entity type/jurisdiction).
+- Does `02-accounting-and-reporting.md`'s cash-basis planning default stay
+  correctly sourced to Emad's 2026-07-13 decision and labeled as
+  non-final — never drifting into being presented as a settled method, and
+  never getting a named tool/platform attached to it that isn't sourced?
+  Phase B sections are the highest-risk spot for unsourced defaults across
+  the whole LaunchOS program (see Module 10's `04-governance.md` for the
+  same concern applied to legal-entity type/jurisdiction).
 - Does this module contradict Module 05's canonical "free, no customer
   paying" fact, or Module 07's canonical "founder-funded, no external
   funding raised" fact — either by restating them with drifted wording, or

@@ -13,13 +13,21 @@ Stage 7, it's the detailed expansion of it.
 
 ### Stage 1: Discovery session
 
-Distinct from Module 06's Stage 3 discovery meeting (pre-sale, evaluating
-fit) — the working assumption here (an inference from the flow's position
-after Module 06's Stage 7 handoff, not a sourced fact) is that this is a
-design-partner-specific discovery session establishing implementation-level
-context now that the relationship has moved past evaluation. This module
-doesn't blur the two; if Emad intends them to be the same conversation,
-that's a fact to confirm, not to assume.
+**Confirmed distinct from Module 06's sales process (owner decision,
+`OWNER-DECISIONS-2026-07-13.md` §9, including its Stage 6/7 follow-up
+clarification; carried in `CLOSURE-REPORT.md` §5a):** Module 06's Stage 3
+is the first
+live conversation only, for prospects already qualified at Module 06's
+Stage 2 — a discovery call and demo, not a decision point
+(`06-sales-os/01-sales-process.md`). The mutual-fit
+decision to proceed happens at Module 06's Stage 6 ("Design-partner
+evaluation"), and Module 06's own process ends at its Stage 7 ("Onboarding,
+if mutually agreed") — exactly where this file's intro above says this
+module picks up. This Stage 1 does **not** begin at Module 06's Stage 3; it
+begins only after Module 06's sales process concludes and the engagement is
+formally accepted, establishing implementation-level context now that the
+relationship has moved past evaluation. Sales ends when the engagement is
+formally accepted; Customer Success begins when onboarding starts.
 
 ### Stage 2: Infrastructure review
 
@@ -30,12 +38,25 @@ doesn't invent one.
 
 ### Stage 3: Objectives
 
-What the design partner wants to learn or validate from the engagement.
-Given intake §4.1's framing (this evolves toward customer success, not
-straight to commercial), objectives here are likely validation-oriented
-(does the product work for their desk) rather than ROI-oriented (a
-commercial customer's objectives) — an inference from context, not a
-sourced fact, so treated as a working assumption only.
+**Confirmed validation-oriented, not ROI-oriented (owner decision,
+`OWNER-DECISIONS-2026-07-13.md` §9; carried in `CLOSURE-REPORT.md` §5a):**
+during the design-partner phase,
+the primary objectives are:
+
+- Workflow fit
+- Usability
+- Governance value
+- Trust
+- Operational reliability
+- Safety
+- Adoption
+- Measurable reduction in ungoverned AI decision-making
+
+ROI or trading-performance targets are explicitly not the primary
+validation metric during this phase. ROI-oriented objectives may be
+introduced later for paying enterprise customers, once evidence exists —
+this file does not set a date or condition for that shift beyond "paying
+enterprise customer."
 
 ### Stage 4: Deployment planning
 

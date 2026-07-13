@@ -31,26 +31,37 @@ itself is stated for any of the four here.
 
 ## The trigger: "successful design-partner validation"
 
-Intake §8.2 does not define "successful design-partner validation"
-precisely — no threshold, no metric, no specific milestone is stated. This
-file does not manufacture one, the same way Module 12's
-`02-engagement-rules.md` declines to define "formal engagement" beyond the
-plain-language boundary the phrase implies.
+*(Source: `OWNER-DECISIONS-2026-07-13.md` §3, Emad's direct decision,
+quoted verbatim there; carried in `CLOSURE-REPORT.md` §5a as an owner
+decision.)*
 
-Module 09 (`09-customer-success-os/03-success-and-production-readiness.md`)
-documents the closest existing framing of what "validation" plausibly
-relates to within this program: its discussion of "production readiness
-review" (Stage 7) as a checkpoint for assessing whether shadow-mode
-evidence gathered with a design partner is sufficiently complete to
-continue, expand, or eventually support a promotion decision. That file is
-explicit that this connection is its own inference, not a criterion Emad
-stated for Stage 7 specifically. This file does not go further than Module
-09 already did — it does not claim that Module 09's Stage 7 IS,
-definitionally, the "successful design-partner validation" referenced in
-intake §8.2. No source states that these two phrases refer to the same
-event; they are conceptually adjacent (both concern judging whether
-design-partner engagement has reached a sufficiency threshold), and this
-file notes that adjacency without merging them into a single fact.
+Revenue alone does not constitute validation. "Successful design-partner
+validation" requires all of the following:
+
+- At least one real design partner
+- Completion of the pilot period **and** the validation closeout review
+  (`09-customer-success-os/03-success-and-production-readiness.md` defines
+  both terms canonically — cited here, not restated; the two are distinct
+  and completing the pilot period alone is not sufficient)
+- Regular product usage
+- No unresolved Critical safety or security issue
+- Written confirmation that the product solves a meaningful operational
+  problem
+- At least one concrete workflow, product, or commercial learning
+  incorporated into the roadmap
+
+This threshold becomes the hiring trigger only when workload can no longer
+be handled safely by the founder — meeting the validation criteria above
+does not, on its own, obligate a hire; it establishes that the *option* to
+hire is now grounded in real evidence rather than an assumption.
+
+This decision is conceptually adjacent to, but distinct from, Module 09's
+(`09-customer-success-os/03-success-and-production-readiness.md`) Stage 7
+"production readiness review" framing — that file's discussion of
+shadow-mode evidence sufficiency is about the product relationship with a
+given design partner, not about when Titan Pilot itself is ready to hire.
+Both draw on the same design-partner engagement, but this file does not
+claim they are the same event.
 
 ## The employment/contracting dependency
 
@@ -85,14 +96,24 @@ that word beyond what is stated.
   bare category name itself — no responsibilities, no required experience,
   no seniority, no department structure.
 
+**Compensation/equity policy is a confirmed deferral, not an open gap.**
+*(Source: `OWNER-DECISIONS-2026-07-13.md` §8, Emad's direct decision,
+quoted verbatim there.)* No compensation bands, option pool, or equity
+grants are approved. Policy
+work starts only after: incorporation, funding or stable revenue, a first
+validated hiring need (per the trigger above), and legal/tax advice —
+whichever combination of those is actually true when policy work begins.
+This file does not set a date for when that combination will be true.
+
 ## Cross-references
 
 - **Depends on:** Module 09 (`03-success-and-production-readiness.md` —
   closest existing framing of "validation," cited as adjacent, not
   identical), Module 10 and Module 07 (`03-legal-entity-and-structure.md` —
   no-incorporated-entity fact, cited not restated), Module 12
-  (`02-engagement-rules.md` — the pattern for handling an undefined term
-  and a contracting dependency without inventing specifics)
+  (`02-engagement-rules.md` — the matching contracting-dependency pattern
+  for signed agreements, and the same 2026-07-13 owner-decision batch that
+  resolved this module's validation-threshold gap)
 - **Feeds:** `03-governance.md` (review criteria specific to this file)
 
 See `03-governance.md` for review criteria, maintenance triggers, and the

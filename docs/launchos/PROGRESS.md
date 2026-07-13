@@ -367,8 +367,8 @@ sessions — trust this file and `git log` over conversational memory.
   instance anywhere in the corpus outside the fixed GEO block, violating
   Module 01's own certification-qualifier rule) + roughly a dozen
   Important findings (citation/attribution drift across Modules 01, 03,
-  05, 06, 08, 11, 12 — a mislabeled "verbatim" quote, a wrong `lib/
-  content.ts` line citation, an unsupported "feeds into" claim, a stale
+  05, 06, 08, 11, 12 — a mislabeled "verbatim" quote, a wrong
+  `lib/content.ts` line citation, an unsupported "feeds into" claim, a stale
   spec dependency list, misattributed Module 02 guidance presented as
   Module 08's own, an ICP citation that doesn't exist in the module it was
   claimed in, a "customer-side"/"discloses publicly" mischaracterization
@@ -398,3 +398,129 @@ sessions — trust this file and `git log` over conversational memory.
   own stated triggers, plus the open owner decisions in
   `CLOSURE-REPORT.md` §5 — starting with confirming a real design partner,
   per §7's recommendation.
+
+## 2026-07-13 — LaunchOS v1 accepted; maintenance mode; owner decisions resolved
+
+- Emad accepted LaunchOS v1's closure and placed the program in
+  **maintenance mode**: no new modules unless a real customer requires
+  one, an owner decision changes, or a factual inconsistency is found.
+- Emad resolved all 10 items in `CLOSURE-REPORT.md` §5a in a single
+  decision batch, applied to each item's canonical module in this change:
+  baseline review cadence (trigger-only + one annual full-program review,
+  Module 01 keeps quarterly — see `00-launchos-master-plan.md`); "formal
+  engagement" threshold, a six-item list (see
+  `12-partnership-os/02-engagement-rules.md`); "successful design-partner
+  validation" threshold, a six-item list, not revenue alone (see
+  `13-hiring-os/02-anticipated-hiring.md`); competitor-category expansion
+  threshold, trigger-only + quarterly monitoring against seven materiality
+  areas (see `14-competition-intelligence/01-monitoring-scope.md` and
+  `14-competition-intelligence/02-research-process.md`); Phase B
+  accounting method, deferred with a cash-basis planning default (see
+  `11-finance-os/02-accounting-and-reporting.md`); design-partner
+  feedback-loop cadence (see
+  `09-customer-success-os/03-success-and-production-readiness.md`);
+  support response targets, founder-led not contractual (see
+  `09-customer-success-os/02-support-model.md`); compensation/equity
+  policy, confirmed deferral (see
+  `13-hiring-os/02-anticipated-hiring.md`); Module 09 Stage 1 vs. Module
+  06 Stage 3, confirmed distinct; Module 09 Stage 3 objectives, confirmed
+  validation-oriented not ROI-oriented (both see
+  `09-customer-success-os/01-design-partner-onboarding.md`).
+- `CLOSURE-REPORT.md` §5a rewritten from an open list to a resolved
+  register citing each decision's canonical module. §6's
+  "Governance/maintenance discipline" rating raised from Medium to
+  Medium-High to reflect the resolved cadence gap (held short of High
+  since the new annual-review mechanism is not yet exercised).
+- Self-consistency pass caught one phrasing tension: the "formal
+  engagement" decision's literal wording included "design-partner
+  agreement" as a qualifying form, which would have reintroduced the
+  exact design-partner/partnership ambiguity the closure audit had just
+  fixed in this same file. Flagged to Emad rather than resolved
+  unilaterally; Emad's resolution: drop the bare phrase, and add an
+  explicit boundary sentence to `12-partnership-os/02-engagement-rules.md`
+  stating a Module 06/09 design-partner agreement does not, by itself,
+  satisfy this module's threshold. Canonical terminology now stated in
+  `CLOSURE-REPORT.md` §5a.
+- Housekeeping found while editing the master plan: the module readiness
+  matrix still showed Modules 05-09 as "Ready"/"Seeded" from before they
+  were built — corrected to "Built" to match `CLOSURE-REPORT.md`'s
+  16/16-built fact; `Status` line updated from "Program kickoff" to
+  "Maintenance mode."
+- **Branch `launchos/owner-decisions-closure-update`, five-audit pass
+  before PR:** cross-module consistency, broken-link/citation, canonical
+  source-of-truth ownership, duplicate-terminology, and maintenance-mode
+  invariant checks. Findings and fixes:
+  - Canonical-source-of-truth audit: `CLOSURE-REPORT.md` §5a had fully
+    reproduced five decisions' enumerated detail instead of citing their
+    canonical module (Global Constraint 4 violation risk); compressed to
+    genuine summaries. `14-competition-intelligence/02-research-process.md`
+    restated its materiality list instead of citing `01-monitoring-scope.md`;
+    fixed to cite.
+  - Broken-link audit: 3 split code-spans (line-wrap bug) newly introduced
+    in this entry's own first draft, and an unqualified path citation in
+    `CLOSURE-REPORT.md` §5a. Both fixed. Separately, PR #24's own
+    adversarial review found one more, pre-existing split code-span left
+    over from this file's 2026-07-13 Closure Report entry above (a
+    `lib/content.ts` citation broken across a line-wrap) — fixed in the
+    same change, though it predates and is unrelated to this entry.
+  - Terminology scan: the Module 12 "design-partner agreement" fix didn't
+    cover the parallel "pilot" collision (Module 12's "signed pilot" vs.
+    the design partner's own pilot) — extended the boundary sentence.
+    Also surfaced that "active pilot," "agreed pilot period," and "agreed
+    validation period" were three labels for what turned out to be two
+    distinct spans; Emad's resolution: "pilot period" and "validation
+    period" (the broader window containing it) are now canonically
+    defined once, in
+    `09-customer-success-os/03-success-and-production-readiness.md`, and
+    cited elsewhere — Module 13's validation trigger now requires both
+    pilot-period completion **and** the validation closeout review, not
+    pilot completion alone.
+  - Cross-module consistency audit: found the "Module 06 Stage 3 =
+    commercial qualification and decision to proceed" characterization in
+    Module 09's Stage 1 was factually wrong against Module 06's own
+    canonical file — that content is actually Module 06's Stage 6
+    ("Design-partner evaluation"). Flagged to Emad rather than resolved
+    unilaterally; Emad's correction: Module 09 Stage 1 begins after Module
+    06's sales process concludes (Stage 7 handoff), not at Stage 3 — fixed
+    in `09-customer-success-os/01-design-partner-onboarding.md` and
+    `CLOSURE-REPORT.md` §5a. Also fixed six other stale hedges/cross-
+    references left contradicting the new decisions (Modules 09, 11, 12,
+    13, 16, and `CLOSURE-REPORT.md` §7) and one inaccurate claim in the
+    master plan's new cadence section about which governance sections
+    originally carried the cadence gap.
+  - A second, independent re-verification pass (requested by Emad after
+    the pilot/validation-period correction) caught one remaining count
+    error introduced by the §7 fix above: it said Module 09 had "two of
+    four" hedges resolved when the correct count (per
+    `09-customer-success-os/04-governance.md`'s own register) is three of
+    four resolved, one remaining open. Corrected in `CLOSURE-REPORT.md`
+    §7.
+- **PR #24, one independent adversarial review (REQUEST CHANGES, then
+  fixed):** found a structural sourcing gap — every new decision cited
+  `CLOSURE-REPORT.md` §5a as its source, but §5a is itself part of this
+  same change and contains no verbatim quote, breaking the citation chain
+  Global Constraint 1 requires (every other module traces to
+  `INTAKE-REQUEST.md`'s dated, quoted answers). Fixed by adding
+  `OWNER-DECISIONS-2026-07-13.md` — a new program-level file (not a
+  module; same category as `INTAKE-REQUEST.md`), capturing Emad's literal
+  decision text and both follow-up clarifications verbatim, dated and
+  numbered — and repointing all citation sites to it, with
+  `CLOSURE-REPORT.md` §5a and `16-asset-library/01-launchos-catalog.md`
+  updated to reference it as a register/index entry rather than a source.
+  The same review also found: a stale sentence in the master plan
+  claiming Module 06's sales process was "still queued," left over from
+  before this PR's own readiness-matrix update — fixed; and a real,
+  previously-unnoticed phrase collision — Module 13's newly-precise
+  "successful design-partner validation" six-item bar uses the exact
+  phrase Module 07 already uses, undefined, for its fundraising trigger.
+  Not resolved by assumption (no source states the two triggers share one
+  bar); instead both Module 07 files got a cross-reference note, and the
+  gap is now tracked as a new item, `CLOSURE-REPORT.md` §5e — the one
+  thing this whole exercise did *not* close, flagged honestly rather than
+  guessed at.
+- No new modules created. W2 remains blocked on Titan's sanitized
+  certified fixture; W5 not started.
+- **Next commercial milestone: First Design Partner** (per §7's
+  recommendation) — several of the just-resolved decisions (formal
+  engagement, design-partner validation, Stage 1/3 framing) were written
+  specifically to be ready for that event.

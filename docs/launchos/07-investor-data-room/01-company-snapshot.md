@@ -35,6 +35,16 @@ though no source states this as a plan. State only what's sourced (no order
 given) — don't round that up to "the two are independent," which is a
 stronger, unsourced claim.
 
+**Cross-reference note, added 2026-07-13:** Module 13
+(`13-hiring-os/02-anticipated-hiring.md`) gives the identical phrase
+"successful design-partner validation" a precise six-item bar for its own
+(hiring) trigger, per an owner decision that was scoped explicitly to
+hiring. Whether that same six-item bar also governs *this* file's
+fundraising trigger is not stated by Emad — this file does not assume
+either way, and treats the fundraising-trigger reading of the phrase as
+still undefined, adjacent to but not confirmed identical with Module 13's
+reading. Carried forward as an open item in `CLOSURE-REPORT.md` §5a.
+
 ## What this snapshot is for
 
 A one-screen orientation for any investor conversation, assembled entirely
