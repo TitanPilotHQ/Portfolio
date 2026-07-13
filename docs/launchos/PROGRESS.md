@@ -213,3 +213,25 @@ sessions — trust this file and `git log` over conversational memory.
   next sentence explicitly disclaimed, a real self-contradiction) — fixed.
 - Merged: PR #17, branch `launchos-11-finance-os`.
 - 11 of 16 modules built (01-11). 5 remain.
+
+## 2026-07-13 — Module 12: Partnership OS — closed
+
+- 3 files published: six real target partnership categories (brokers,
+  market-data providers, cloud infrastructure, AI model providers,
+  compliance tech, systems integrators), described at the general industry
+  level with zero named partners anywhere; engagement rules enforcing
+  intake's strict no-public-representation-until-formal-engagement rule;
+  governance. Added a Partnership OS checkbox to the PR template.
+- Independent review: 0 findings (clean pass) — the first clean independent
+  review in the program.
+- Adversarial review, deliberately probing harder than the clean pass: 3
+  Important findings — an AI-model-provider category description
+  asymmetrically hedged current-usage status in a way that implied live
+  evaluation activity; the conversations-silence disclaimer, though
+  individually neutral, repeated with present-tense/"Phase A" framing that
+  cumulatively read as foreshadowing rather than clean silence; no stated
+  disambiguation between "partnership" (this module, total silence) and
+  "design partner" (Module 06/09, already public) — a real future
+  conflation risk for a solo-founder company with no comms team. All fixed.
+- Merged: PR #18, branch `launchos-12-partnership-os`.
+- 12 of 16 modules built (01-12). 4 remain.
