@@ -125,7 +125,7 @@ reference; "Grounded by" replaces "Blocking need."
 | 13 | Hiring OS | Built | Intake §8 + Global Constraint 3 |
 | 14 | Competition Intelligence | Built | Live site's real competitor comparison + intake §9 |
 | 15 | Market Research Framework | Built | Live site's existing research doctrine |
-| 16 | Asset Library | Ready | Live site's real assets |
+| 16 | Asset Library | Built | Live site's real assets |
 
 **Module 06 note:** its ICP sub-file was built early (`06-sales-os/00-icp.md`)
 because Modules 03 and 04 needed the canonical ICP fact before Module 06's
