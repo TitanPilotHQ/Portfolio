@@ -34,6 +34,12 @@ A change to this module passes review only if:
    no-incorporated-entity fact are cited from their canonical files, never
    independently restated with their own sourcing detail (Global
    Constraint 4).
+5. The "Boundary with Module 07's fundraising trigger" paragraph never
+   states or implies Titan Pilot has met, or is close to meeting, any of
+   Module 07's five fundraising conditions, and never restates those five
+   conditions here — it cites
+   `07-investor-data-room/03-cap-table-and-funding.md` for them (Global
+   Constraint 4).
 
 ## Adversarial review focus
 
@@ -53,6 +59,10 @@ A change to this module passes review only if:
 - Does anything in this module read as more organizationally mature than a
   solo pre-revenue founder actually is — an implied interview process,
   offer process, hiring committee, or HR function that isn't sourced?
+- Does the fundraising-boundary paragraph drift toward implying the
+  design-partner-validation threshold and Module 07's fundraising trigger
+  share one bar, when Emad's 2026-07-13 decision requires them to stay
+  distinct with different criteria?
 
 ## Honest note on enforcement
 

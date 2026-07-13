@@ -42,11 +42,28 @@ scheduled one. This file does not state, imply, or estimate:
 None of these exist as real facts yet. Per Global Constraint 1, this file
 does not fill any of them in with an "industry standard" placeholder.
 
-**Cross-reference note, added 2026-07-13:** see `01-company-snapshot.md`'s
-matching note — Module 13 now defines "successful design-partner
-validation" precisely for its own hiring trigger; whether the same bar
-governs this file's fundraising trigger is not stated by Emad and remains
-undefined here.
+## Fundraising trigger (owner decision, 2026-07-13)
+
+*(Source: `OWNER-DECISIONS-2026-07-13.md` §10, Emad's direct decision,
+quoted verbatim there — resolves the ambiguity `CLOSURE-REPORT.md` §5e
+flagged between this trigger and Module 13's hiring-validation threshold.)*
+
+This is a separate founder/company financing decision, not the same
+threshold as Module 13's design-partner validation bar
+(`13-hiring-os/02-anticipated-hiring.md`). Fundraising may be considered
+only when one or more of the following is true:
+
+- Additional capital is needed to satisfy validated customer demand
+- Hiring or infrastructure requirements exceed sustainable founder funding
+- A credible expansion opportunity has evidence and a defined use of funds
+- Strategic investors can materially accelerate distribution, compliance,
+  data access, or enterprise adoption
+- Runway, risk, and dilution trade-offs justify external capital
+
+A validated design partner (Module 13's threshold) is supporting evidence
+toward the first condition above — not by itself a fundraising trigger.
+The two thresholds are cross-referenced, not merged, and deliberately use
+different criteria.
 
 ## What changes when incorporation happens
 

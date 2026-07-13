@@ -524,3 +524,31 @@ sessions — trust this file and `git log` over conversational memory.
   recommendation) — several of the just-resolved decisions (formal
   engagement, design-partner validation, Stage 1/3 framing) were written
   specifically to be ready for that event.
+
+## 2026-07-13 — Design-partner validation vs. fundraising trigger — resolved (PR #24 follow-up)
+
+- Emad accepted PR #24's closure and resolved `CLOSURE-REPORT.md` §5e —
+  the one open item PR #24 flagged rather than guessed at — with a new
+  owner decision, captured as `OWNER-DECISIONS-2026-07-13.md` §10.
+- Design-partner validation (Module 13,
+  `13-hiring-os/02-anticipated-hiring.md`) and the fundraising trigger
+  (Module 07, `07-investor-data-room/03-cap-table-and-funding.md`) are now
+  confirmed as two separate thresholds with deliberately different
+  criteria — a product/customer evidence bar for hiring, and a five-
+  condition founder/company financing decision for fundraising. A
+  validated design partner is supporting evidence toward one fundraising
+  condition, not a trigger by itself. Module 13 gained an explicit
+  boundary note; Module 07's `03-cap-table-and-funding.md` gained the
+  actual fundraising-trigger definition (previously undefined, per PR
+  #24's own honest flag); `01-company-snapshot.md` now cites it rather
+  than restating.
+- `CLOSURE-REPORT.md` §5e rewritten from open to resolved; §5a gained an
+  eleventh row (the fundraising trigger) and row 3's design-partner-
+  validation entry now notes the boundary explicitly.
+- Scope: 6 files touched (`OWNER-DECISIONS-2026-07-13.md`,
+  `13-hiring-os/02-anticipated-hiring.md`,
+  `07-investor-data-room/01-company-snapshot.md`,
+  `07-investor-data-room/03-cap-table-and-funding.md`,
+  `CLOSURE-REPORT.md`, this file) — a small, focused follow-up, not a
+  reopening of LaunchOS v1. No new module created. LaunchOS remains in
+  maintenance mode.
