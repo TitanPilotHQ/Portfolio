@@ -37,6 +37,10 @@ the **same PR** — do not defer it:
       ships anywhere, and update
       `docs/launchos/12-partnership-os/01-partnership-categories.md` in the
       same PR with the sourced fact
+- [ ] Any real hire, compensation figure, equity grant, or hiring-process
+      decision from Emad → update
+      `docs/launchos/13-hiring-os/01-current-state.md` and
+      `02-anticipated-hiring.md` in the same PR
 - [ ] None of the above apply to this PR
 
 ## Test plan
