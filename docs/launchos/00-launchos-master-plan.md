@@ -123,7 +123,7 @@ reference; "Grounded by" replaces "Blocking need."
 | 11 | Finance OS | Built | Intake §6 + Global Constraint 3 (no figures to disclose yet — module documents process, not numbers that don't exist) |
 | 12 | Partnership OS | Built | Intake §7 (real target categories, no fabricated names) |
 | 13 | Hiring OS | Built | Intake §8 + Global Constraint 3 |
-| 14 | Competition Intelligence | Ready | Live site's real competitor comparison + intake §9 |
+| 14 | Competition Intelligence | Built | Live site's real competitor comparison + intake §9 |
 | 15 | Market Research Framework | Ready | Live site's existing research doctrine |
 | 16 | Asset Library | Ready | Live site's real assets |
 

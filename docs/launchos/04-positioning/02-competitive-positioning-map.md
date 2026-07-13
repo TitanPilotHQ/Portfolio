@@ -122,6 +122,6 @@ without exception, is **decision accountability**: a recorded,
 cross-examinable, replayable argument behind the decision, which none of the
 8 named alternatives provide. Any new competitor added to this map in the
 future (see intake §9 for the categories Emad wants tracked going forward —
-AI agent platforms, financial AI governance vendors, decision-intelligence
-platforms) should be evaluated against this same single axis, not added to
-prove breadth for its own sake.
+AI agent platforms, financial AI governance vendors, enterprise
+decision-intelligence platforms) should be evaluated against this same
+single axis, not added to prove breadth for its own sake.
