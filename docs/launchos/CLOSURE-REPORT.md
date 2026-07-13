@@ -310,8 +310,9 @@ fix, not an open item.
 
 Module 13's newly-resolved "successful design-partner validation" six-item
 bar (5a above) uses the exact phrase intake §3.1 also uses, unresolved, as
-Module 07's fundraising trigger (`07-investor-data-room/01-company-
-snapshot.md`, `03-cap-table-and-funding.md`). Whether Module 13's six-item
+Module 07's fundraising trigger
+(`07-investor-data-room/01-company-snapshot.md`,
+`07-investor-data-room/03-cap-table-and-funding.md`). Whether Module 13's six-item
 bar also governs Module 07's fundraising trigger, or whether the two are
 only phrase-adjacent, is not stated by Emad. Both Module 07 files now carry
 a cross-reference note rather than an assumed answer. **What resolves it:**
