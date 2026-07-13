@@ -31,9 +31,9 @@ itself is stated for any of the four here.
 
 ## The trigger: "successful design-partner validation"
 
-*(Source: Emad's direct decision, 2026-07-13 — resolves the threshold this
-file previously left undefined; carried in `CLOSURE-REPORT.md` §5a as an
-owner decision.)*
+*(Source: `OWNER-DECISIONS-2026-07-13.md` §3, Emad's direct decision,
+quoted verbatim there; carried in `CLOSURE-REPORT.md` §5a as an owner
+decision.)*
 
 Revenue alone does not constitute validation. "Successful design-partner
 validation" requires all of the following:
@@ -97,8 +97,9 @@ that word beyond what is stated.
   no seniority, no department structure.
 
 **Compensation/equity policy is a confirmed deferral, not an open gap.**
-*(Source: Emad's direct decision, 2026-07-13, `CLOSURE-REPORT.md` §5a.)*
-No compensation bands, option pool, or equity grants are approved. Policy
+*(Source: `OWNER-DECISIONS-2026-07-13.md` §8, Emad's direct decision,
+quoted verbatim there.)* No compensation bands, option pool, or equity
+grants are approved. Policy
 work starts only after: incorporation, funding or stable revenue, a first
 validated hiring need (per the trigger above), and legal/tax advice —
 whichever combination of those is actually true when policy work begins.

@@ -63,9 +63,9 @@ in a trading-specific context.
 
 ## On "as they become relevant"
 
-*(Source: Emad's direct decision, 2026-07-13 — resolves the threshold this
-file previously left undefined; carried in `CLOSURE-REPORT.md` §5a as an
-owner decision.)*
+*(Source: `OWNER-DECISIONS-2026-07-13.md` §4, Emad's direct decision,
+quoted verbatim there; carried in `CLOSURE-REPORT.md` §5a as an owner
+decision.)*
 
 Trigger-only, plus quarterly monitoring. A competitor or category is added
 only when a sourced development materially affects at least one of:

@@ -42,6 +42,12 @@ scheduled one. This file does not state, imply, or estimate:
 None of these exist as real facts yet. Per Global Constraint 1, this file
 does not fill any of them in with an "industry standard" placeholder.
 
+**Cross-reference note, added 2026-07-13:** see `01-company-snapshot.md`'s
+matching note — Module 13 now defines "successful design-partner
+validation" precisely for its own hiring trigger; whether the same bar
+governs this file's fundraising trigger is not stated by Emad and remains
+undefined here.
+
 ## What changes when incorporation happens
 
 Per Global Constraint 3's Phase A/B structure: once Titan Pilot incorporates,

@@ -14,7 +14,9 @@ Stage 7, it's the detailed expansion of it.
 ### Stage 1: Discovery session
 
 **Confirmed distinct from Module 06's sales process (owner decision,
-2026-07-13, `CLOSURE-REPORT.md` §5a):** Module 06's Stage 3 is the first
+`OWNER-DECISIONS-2026-07-13.md` §9, including its Stage 6/7 follow-up
+clarification; carried in `CLOSURE-REPORT.md` §5a):** Module 06's Stage 3
+is the first
 live conversation only, for prospects already qualified at Module 06's
 Stage 2 — a discovery call and demo, not a decision point
 (`06-sales-os/01-sales-process.md`). The mutual-fit
@@ -37,7 +39,8 @@ doesn't invent one.
 ### Stage 3: Objectives
 
 **Confirmed validation-oriented, not ROI-oriented (owner decision,
-2026-07-13, `CLOSURE-REPORT.md` §5a):** during the design-partner phase,
+`OWNER-DECISIONS-2026-07-13.md` §9; carried in `CLOSURE-REPORT.md` §5a):**
+during the design-partner phase,
 the primary objectives are:
 
 - Workflow fit

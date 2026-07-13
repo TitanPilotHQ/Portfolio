@@ -367,8 +367,8 @@ sessions — trust this file and `git log` over conversational memory.
   instance anywhere in the corpus outside the fixed GEO block, violating
   Module 01's own certification-qualifier rule) + roughly a dozen
   Important findings (citation/attribution drift across Modules 01, 03,
-  05, 06, 08, 11, 12 — a mislabeled "verbatim" quote, a wrong `lib/
-  content.ts` line citation, an unsupported "feeds into" claim, a stale
+  05, 06, 08, 11, 12 — a mislabeled "verbatim" quote, a wrong
+  `lib/content.ts` line citation, an unsupported "feeds into" claim, a stale
   spec dependency list, misattributed Module 02 guidance presented as
   Module 08's own, an ICP citation that doesn't exist in the module it was
   claimed in, a "customer-side"/"discloses publicly" mischaracterization
@@ -456,9 +456,13 @@ sessions — trust this file and `git log` over conversational memory.
     genuine summaries. `14-competition-intelligence/02-research-process.md`
     restated its materiality list instead of citing `01-monitoring-scope.md`;
     fixed to cite.
-  - Broken-link audit: 3 split code-spans (line-wrap bug) in this file's
-    own prior changelog entry; an unqualified path citation in
-    `CLOSURE-REPORT.md` §5a. Both fixed.
+  - Broken-link audit: 3 split code-spans (line-wrap bug) newly introduced
+    in this entry's own first draft, and an unqualified path citation in
+    `CLOSURE-REPORT.md` §5a. Both fixed. Separately, PR #24's own
+    adversarial review found one more, pre-existing split code-span left
+    over from this file's 2026-07-13 Closure Report entry above (a
+    `lib/content.ts` citation broken across a line-wrap) — fixed in the
+    same change, though it predates and is unrelated to this entry.
   - Terminology scan: the Module 12 "design-partner agreement" fix didn't
     cover the parallel "pilot" collision (Module 12's "signed pilot" vs.
     the design partner's own pilot) — extended the boundary sentence.
@@ -491,6 +495,29 @@ sessions — trust this file and `git log` over conversational memory.
     `09-customer-success-os/04-governance.md`'s own register) is three of
     four resolved, one remaining open. Corrected in `CLOSURE-REPORT.md`
     §7.
+- **PR #24, one independent adversarial review (REQUEST CHANGES, then
+  fixed):** found a structural sourcing gap — every new decision cited
+  `CLOSURE-REPORT.md` §5a as its source, but §5a is itself part of this
+  same change and contains no verbatim quote, breaking the citation chain
+  Global Constraint 1 requires (every other module traces to
+  `INTAKE-REQUEST.md`'s dated, quoted answers). Fixed by adding
+  `OWNER-DECISIONS-2026-07-13.md` — a new program-level file (not a
+  module; same category as `INTAKE-REQUEST.md`), capturing Emad's literal
+  decision text and both follow-up clarifications verbatim, dated and
+  numbered — and repointing all citation sites to it, with
+  `CLOSURE-REPORT.md` §5a and `16-asset-library/01-launchos-catalog.md`
+  updated to reference it as a register/index entry rather than a source.
+  The same review also found: a stale sentence in the master plan
+  claiming Module 06's sales process was "still queued," left over from
+  before this PR's own readiness-matrix update — fixed; and a real,
+  previously-unnoticed phrase collision — Module 13's newly-precise
+  "successful design-partner validation" six-item bar uses the exact
+  phrase Module 07 already uses, undefined, for its fundraising trigger.
+  Not resolved by assumption (no source states the two triggers share one
+  bar); instead both Module 07 files got a cross-reference note, and the
+  gap is now tracked as a new item, `CLOSURE-REPORT.md` §5e — the one
+  thing this whole exercise did *not* close, flagged honestly rather than
+  guessed at.
 - No new modules created. W2 remains blocked on Titan's sanitized
   certified fixture; W5 not started.
 - **Next commercial milestone: First Design Partner** (per §7's

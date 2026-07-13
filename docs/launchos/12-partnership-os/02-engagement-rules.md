@@ -46,9 +46,10 @@ only; it does not restrict or apply to either "design partner" or
 
 ## What "formal engagement" means
 
-*(Source: Emad's direct decision, 2026-07-13 — resolves the threshold this
-file previously left undefined; carried in `CLOSURE-REPORT.md` §5a as an
-owner decision.)*
+*(Source: `OWNER-DECISIONS-2026-07-13.md` §2, Emad's direct decision,
+quoted verbatim there, including the follow-up clarification that produced
+the design-partner boundary paragraph below; carried in `CLOSURE-REPORT.md`
+§5a as an owner decision.)*
 
 A formal partnership engagement exists when there is a signed agreement, a
 signed pilot, a letter of intent, a paid engagement, a jointly approved

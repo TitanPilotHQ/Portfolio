@@ -16,7 +16,8 @@ mechanism by which that recorded evidence gets reviewed with them —
 comparing what the pipeline produced against their own desk's judgment.
 
 **Canonical glossary — "pilot period" vs. "validation period" (owner
-decision, 2026-07-13, `CLOSURE-REPORT.md` §5a):** these two terms are
+decision, `OWNER-DECISIONS-2026-07-13.md` §6's follow-up clarification;
+carried in `CLOSURE-REPORT.md` §5a):** these two terms are
 distinct and not interchangeable, and this is their one canonical
 definition for the whole program — other files cite this section rather
 than defining either term independently.
@@ -30,8 +31,9 @@ than defining either term independently.
   The validation period contains the pilot period; it is not a synonym for
   it.
 
-**Cadence (owner decision, 2026-07-13):** *(Source: Emad's direct decision,
-`CLOSURE-REPORT.md` §5a.)*
+**Cadence (owner decision, 2026-07-13):** *(Source:
+`OWNER-DECISIONS-2026-07-13.md` §6, Emad's direct decision, quoted verbatim
+there; carried in `CLOSURE-REPORT.md` §5a.)*
 
 - Weekly feedback session during onboarding and the pilot period
 - Monthly executive review throughout the validation period, where its

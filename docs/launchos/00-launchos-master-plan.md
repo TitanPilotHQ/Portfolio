@@ -128,12 +128,13 @@ them:
 | 15 | Market Research Framework | Built | Live site's existing research doctrine |
 | 16 | Asset Library | Built | Live site's real assets |
 
-**Module 06 note:** its ICP sub-file was built early (`06-sales-os/00-icp.md`)
-because Modules 03 and 04 needed the canonical ICP fact before Module 06's
-own numbered turn — per Global Constraint 4, the fact moved to its rightful
-owner immediately rather than staying duplicated in earlier modules. The rest
-of Module 06 (sales process, tooling, pipeline stages) is still queued in
-numeric order.
+**Module 06 note (historical):** its ICP sub-file was built early
+(`06-sales-os/00-icp.md`) because Modules 03 and 04 needed the canonical
+ICP fact before Module 06's own numbered turn — per Global Constraint 4,
+the fact moved to its rightful owner immediately rather than staying
+duplicated in earlier modules. The rest of Module 06 (sales process,
+tooling, pipeline stages) has since been built in full, alongside every
+other module — see the table above and `CLOSURE-REPORT.md`.
 
 Modules 05, 07, 09, 10, 11, 13 are built from Emad's direct answers, which are
 internal planning inputs (working assumptions, not yet public commitments).
@@ -201,8 +202,9 @@ maintenance mode. This resolves the baseline-cadence gap first flagged in
 `CLOSURE-REPORT.md` §5a and Module 16's `03-governance.md` ("Formerly-open
 item, resolved 2026-07-13").
 
-*(Source: Emad's direct decision, 2026-07-13, quoted in substance below —
-not a re-derivation.)*
+*(Source: `OWNER-DECISIONS-2026-07-13.md` §1, Emad's direct decision,
+quoted verbatim there — the list below restates it in substance, not a
+re-derivation.)*
 
 - **Modules 02-16: trigger-only review.** No independent baseline cadence.
   Each module's own governance file's "Maintenance triggers" section remains

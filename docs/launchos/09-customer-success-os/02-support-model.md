@@ -25,7 +25,8 @@ scheduled meeting (the cadence of which isn't specified in any source — this
 file doesn't invent one).
 
 **Response targets for the design-partner phase (owner decision,
-2026-07-13):** *(Source: Emad's direct decision, `CLOSURE-REPORT.md` §5a.)*
+2026-07-13):** *(Source: `OWNER-DECISIONS-2026-07-13.md` §7, Emad's direct
+decision, quoted verbatim there; carried in `CLOSURE-REPORT.md` §5a.)*
 
 - Critical safety/security/execution issue: acknowledge within 4 business
   hours

@@ -251,7 +251,10 @@ resolves each item.
 All ten items originally listed here were resolved in a single batch by
 Emad's direct decision on 2026-07-13, applied to each item's canonical
 module in the same change. This section is now a record of what was
-decided and where, not an open list.
+decided and where, not an open list. The primary, dated, quoted source for
+every decision below is `OWNER-DECISIONS-2026-07-13.md` — this table is a
+register that cites it, matching the relationship `INTAKE-REQUEST.md` has
+to every earlier module.
 
 **Canonical terminology, confirmed 2026-07-13 (resolving a phrasing tension
 found while recording the "formal engagement" decision below):** "design
@@ -302,6 +305,18 @@ on enforcement" section that 12 of the other 13 governance files have.
 Added to all three in this closure phase — see the module files
 themselves; no factual claim changed, this is a documentation-completeness
 fix, not an open item.
+
+### 5e. New open item discovered during PR #24's adversarial review — not resolved by this decision batch
+
+Module 13's newly-resolved "successful design-partner validation" six-item
+bar (5a above) uses the exact phrase intake §3.1 also uses, unresolved, as
+Module 07's fundraising trigger (`07-investor-data-room/01-company-
+snapshot.md`, `03-cap-table-and-funding.md`). Whether Module 13's six-item
+bar also governs Module 07's fundraising trigger, or whether the two are
+only phrase-adjacent, is not stated by Emad. Both Module 07 files now carry
+a cross-reference note rather than an assumed answer. **What resolves it:**
+Emad confirms whether the two triggers share one bar or are independently
+defined, or a real fundraising conversation resolves it in practice.
 
 ## 6. LaunchOS readiness score
 

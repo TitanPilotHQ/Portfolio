@@ -57,7 +57,9 @@ independent claim about what Titan Pilot's finances will look like.
 
 ## Default planning assumption for Phase B (owner decision, 2026-07-13)
 
-*(Source: Emad's direct decision, 2026-07-13, `CLOSURE-REPORT.md` §5a.)*
+*(Source: `OWNER-DECISIONS-2026-07-13.md` §5, Emad's direct decision,
+quoted verbatim there; carried in `CLOSURE-REPORT.md` §5a as an owner
+decision.)*
 
 The accounting method question is deferred until incorporation and
 selection of an accountant/accounting platform — that sequencing itself is
