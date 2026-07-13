@@ -282,3 +282,32 @@ sessions — trust this file and `git log` over conversational memory.
   — reworded) — all fixed.
 - Merged: PR #20, branch `launchos-14-competition-intelligence`.
 - 14 of 16 modules built (01-14). 2 remain.
+
+## 2026-07-13 — Module 15: Market Research Framework — closed
+
+- 3 files published: research doctrine (Titan Pilot's real, already-public
+  research-publication program — 6 principles, a 10-item publication
+  pipeline with every item honestly stated as status "Planned," 7
+  standards, the forward-looking claims note, current status — sourced to
+  `lib/content.ts:517-563`), market-research scope (an explicit naming
+  clarification: this module's real content is technical/engineering
+  research, not external market-sizing research — zero TAM/SAM/SOM/
+  market-share figures anywhere, established as the canonical, currently-
+  empty home for such data if it's ever produced), governance. Added a
+  Market Research Framework checkbox to the PR template.
+- Fired Module 07's standing maintenance trigger (recorded at that
+  module's own closure: "Module 15 is built → re-verify 'not built yet'
+  assertions"): updated `07-investor-data-room/02-traction-and-evidence.md`
+  and `04-investor-faq.md` to reflect Module 15 now exists as a canonical
+  home, while confirming it still holds zero market-sizing data — not
+  overclaiming.
+- Independent review: 1 Important (claimed Module 04 avoids market-size
+  claims "by design" when Module 04 has no explicit stated policy, unlike
+  Module 07's real explicit policy — reworded to distinguish incidental
+  absence from stated policy) — fixed.
+- Adversarial review: 2 Minor (markdown code-span line-wraps in the
+  investor FAQ splitting file paths mid-string and breaking rendering —
+  one introduced by this change, one pre-existing and fixed
+  opportunistically) — fixed.
+- Merged: PR #21, branch `launchos-15-market-research-framework`.
+- 15 of 16 modules built (01-15). 1 remains.
