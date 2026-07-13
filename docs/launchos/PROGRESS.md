@@ -311,3 +311,38 @@ sessions — trust this file and `git log` over conversational memory.
   opportunistically) — fixed.
 - Merged: PR #21, branch `launchos-15-market-research-framework`.
 - 15 of 16 modules built (01-15). 1 remains.
+
+## 2026-07-13 — Module 16: Asset Library — closed. All 16 modules built.
+
+- 3 files published: a byte-verified index of all 15 prior modules plus 3
+  program-level files (master plan, `INTAKE-REQUEST.md`, `PROGRESS.md`);
+  the two real visual asset files in the repo (`public/logo.png`,
+  1086×1448; `public/banner.png`, 1983×793), every code citation
+  independently verified, including an honest note on a genuine pre-
+  existing 1px width mismatch in `app/layout.tsx`'s Open Graph metadata
+  (not fixed — outside LaunchOS's scope, flagged only for accuracy);
+  governance. Added an Asset Library checkbox to the PR template.
+- Independent review: 0 findings — the third clean pass in the program,
+  reached by independently re-deriving the file listing, image
+  dimensions, and every code citation from scratch rather than trusting
+  the module's own claims.
+- Adversarial review: 2 Important + 1 Minor. The most significant catch in
+  the whole program's closing stretch: this module's original closing
+  language ("the program's structural build is complete") silently walked
+  past a real, self-flagged gap recorded at Module 10's own closure — no
+  module besides Module 01 states a baseline review cadence independent of
+  triggers, and Module 10's entry had explicitly named this "a program-
+  wide gap to address at closure." Fixed by adding an explicit "known open
+  item this module does not resolve" section and narrowing the closure
+  language to the accurate claim (all 16 modules have a first version
+  published, not that the program needs no further work). Also fixed: a
+  spec/deliverable mismatch (the spec didn't mention the catalog's
+  program-level-files section) and a maintenance trigger gap (didn't cover
+  a cited value itself changing, only line-number drift).
+- Merged: PR #22, branch `launchos-16-asset-library`.
+- **16 of 16 modules built. LaunchOS v1's module-build phase is complete.**
+  Per the master plan's process, next: LaunchOS v1 Closure Report, cross-
+  module consistency audit, broken-link/citation audit, canonical
+  source-of-truth map, remaining open assumptions and owner decisions
+  (including the review-cadence gap above), a readiness score, and a
+  recommendation for the next commercial milestone.
