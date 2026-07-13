@@ -43,11 +43,14 @@ A change to this module passes review only if:
   for example, describing the AI model provider category in a way that
   reads as "the models Titan Pilot uses" rather than "the models a product
   like this could draw on in general"?
-- Does `02-engagement-rules.md`'s definition of "formal engagement" overreach
-  into stating a specific legal process, approval chain, or document type
-  as *the* threshold, when no source defines one? The file should hedge
-  that the boundary is plain-language, not precise — a version that states
-  a specific process with confidence has drifted past what's sourced.
+- Does `02-engagement-rules.md`'s six-item "formal engagement" list still
+  match Emad's 2026-07-13 decision exactly (`CLOSURE-REPORT.md` §5a) — no
+  added form, no dropped form, no reworded threshold presented as
+  equivalent when it isn't?
+- Does `02-engagement-rules.md`'s design-partner/partnership boundary stay
+  clean — no sentence that reads as if a Module 06/09 design-partner
+  agreement, on its own, satisfies this module's formal-engagement
+  threshold?
 - Does anything in this module — a sentence structure, a hedge, an
   omission — imply whether or not exploratory partnership conversations are
   currently happening? The rule requires this module to stay silent on that

@@ -26,11 +26,9 @@ A change to this module passes review only if:
    anywhere in those category descriptions. Intake §9.1 names categories,
    not companies, and this module follows the same discipline until a
    real, sourced fact says otherwise.
-3. No invented research cadence, methodology, or tooling appears in
-   `02-research-process.md` beyond what is actually documented. If no
-   source states a review cadence, the file says so plainly — it does not
-   get a plausible-sounding cadence (e.g., "quarterly review") inserted
-   for polish.
+3. `02-research-process.md`'s stated cadence (quarterly) matches Emad's
+   2026-07-13 decision (`CLOSURE-REPORT.md` §5a) exactly, and no research
+   methodology or tooling is invented beyond that cadence.
 4. Module 04's competitive-positioning fact and `COMPETITOR_COMPARISON`
    (`lib/content.ts:367-416`) are cited from their canonical sources,
    never independently re-extracted or re-sourced inside this module
@@ -48,13 +46,11 @@ A change to this module passes review only if:
   `01-monitoring-scope.md` sneak in a real company name, a thinly
   disguised real company name, or a plausible-sounding invented company
   name presented as an example?
-- Does `02-research-process.md`'s "no cadence exists" honesty get
-  undermined anywhere by an inserted plausible-sounding process detail —
-  a cadence, a tool, a named methodology — that isn't sourced to intake
-  §9 or another canonical module?
+- Does `02-research-process.md` invent a research tool or named
+  methodology beyond the decided quarterly cadence?
 - Does `01-monitoring-scope.md`'s treatment of "as they become relevant"
-  quietly invent a threshold, trigger metric, or timeline that intake
-  §9.1 doesn't state?
+  drift from Emad's exact seven-area materiality list, or quietly add a
+  new trigger or timeline beyond the 2026-07-13 decision?
 
 ## Honest note on enforcement
 
@@ -85,10 +81,12 @@ module out of sync with its single-source-of-truth boundary.
   data). This module is checked afterward only for downstream
   relevance — e.g., whether `01-monitoring-scope.md`'s framing of
   "existing governance and AI-assisted trading competitors" still holds.
-- A research cadence, methodology, or tooling actually gets adopted →
-  update `02-research-process.md` with the real, sourced process,
-  replacing the current "no cadence exists" statement. Do not add a
-  cadence anywhere in this module preemptively based on an internal
+- Each quarter → check `01-monitoring-scope.md`'s three expanded
+  categories against real, sourced developments per the decided
+  materiality list; add a category/vendor fact only if the bar is met.
+- A research methodology or tooling actually gets adopted (beyond the
+  decided quarterly cadence) → update `02-research-process.md` with the
+  real, sourced detail. Do not add one preemptively based on an internal
   conversation alone.
 
 ## Cross-references

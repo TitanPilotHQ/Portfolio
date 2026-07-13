@@ -149,20 +149,21 @@ module has no single fact to watch, only a structure to mirror.
   master plan's sequencing rule places this module last precisely because
   it catalogs everything before it rather than being cataloged itself.
 
-## Known open item this module does not resolve
+## Formerly-open item, resolved 2026-07-13
 
-`PROGRESS.md`'s Module 10 closure entry (2026-07-13) explicitly flagged:
+`PROGRESS.md`'s Module 10 closure entry (2026-07-13) originally flagged:
 "no module's governance file states a baseline review cadence independent
-of triggers — a program-wide gap to address at closure." Only Module 01
-(`01-brand-bible/06-governance.md`) states a baseline cadence ("quarterly")
-independent of a specific trigger; Modules 02 through 16 — including this
-module's own governance file — document trigger-based maintenance only.
-This module does not resolve that gap — doing so correctly would mean
-deciding a real cadence for 15 other modules, which is not this module's
-fact to own, and is not something this module invents on Emad's behalf.
-It is carried forward explicitly, by
-name, into the LaunchOS v1 closure report as an open owner decision — not
-silently dropped now that all 16 modules have a first version published.
+of triggers — a program-wide gap to address at closure." This module
+deliberately did not resolve it — doing so would have meant deciding a
+real cadence for 15 other modules, not this module's fact to own — and
+carried it forward, by name, into the LaunchOS v1 closure report as an
+open owner decision instead of inventing one.
+
+Emad resolved it on 2026-07-13, after LaunchOS v1's closure was accepted:
+trigger-only review for Modules 02-16 by default, plus one annual
+full-program consistency review; Module 01 keeps its existing quarterly
+cadence. See `00-launchos-master-plan.md`, "Post-closure review cadence,"
+for the canonical statement — this file cites it, not restated.
 
 ## Closure
 
@@ -171,8 +172,9 @@ adversarial review with no open findings, and the PR is merged.
 
 This is the final module of LaunchOS v1 — 16 of 16 modules now have a
 first version published. That is a narrower claim than "LaunchOS is
-finished": every module carries open maintenance triggers, this module's
-own catalog requires ongoing upkeep to stay accurate, and the review-
-cadence gap above remains open. "Structural build complete" describes
-that every planned module now exists in reviewed form — not that the
-program requires no further work.
+finished": every module carries open maintenance triggers, and this
+module's own catalog requires ongoing upkeep to stay accurate. The
+review-cadence gap referenced above is resolved (see "Formerly-open item,
+resolved 2026-07-13" above), not part of what remains open. "Structural
+build complete" describes that every planned module now exists in
+reviewed form — not that the program requires no further work.

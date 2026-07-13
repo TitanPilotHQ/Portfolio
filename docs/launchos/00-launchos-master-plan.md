@@ -1,6 +1,7 @@
 # LaunchOS v1 — Master Plan
 
-**Status:** Program kickoff
+**Status:** Maintenance mode (all 16 modules built and closed, 2026-07-13 —
+see `PROGRESS.md` and `CLOSURE-REPORT.md`)
 **Owner:** Emad (sole founder)
 **Mission:** Build LaunchOS — the operating system of Titan Pilot — to enterprise-grade,
 immediately-usable quality. Not documentation. Not brainstorming. Every artifact must be
@@ -104,9 +105,9 @@ them:
 
 ## Module readiness matrix
 
-**Updated 2026-07-12: Emad answered the full batched intake
-(`INTAKE-REQUEST.md`). All 16 modules are now Ready.** Table kept for
-reference; "Grounded by" replaces "Blocking need."
+**Updated 2026-07-13: all 16 modules are Built and closed** (see
+`CLOSURE-REPORT.md`). Table kept for reference; "Grounded by" replaces
+"Blocking need."
 
 | # | Module | Status | Grounded by |
 |---|---|---|---|
@@ -114,11 +115,11 @@ reference; "Grounded by" replaces "Blocking need."
 | 02 | Story Architecture | Built | Live site content + Module 01 |
 | 03 | Messaging Bible | Built | Live site content + Modules 01-02, Module 06's ICP seed |
 | 04 | Positioning | Built | Live site content + Modules 01-03, Module 06's ICP seed |
-| 05 | Pricing System | Ready | Intake §1 (working assumptions, not public commitments) |
-| 06 | Sales OS | Seeded (ICP canonical, `00-icp.md`) — rest Ready | Intake §2 (real current process) |
-| 07 | Investor Data Room | Ready | Intake §3 + Global Constraint 3 (pre/post-incorporation phases) |
-| 08 | Demo Playbooks | Ready | Live site content + Module 02's Decision Walkthrough scene |
-| 09 | Customer Success OS | Ready | Intake §4 (real design-partner onboarding flow) |
+| 05 | Pricing System | Built | Intake §1 (working assumptions, not public commitments) |
+| 06 | Sales OS | Built | Intake §2 (real current process) |
+| 07 | Investor Data Room | Built | Intake §3 + Global Constraint 3 (pre/post-incorporation phases) |
+| 08 | Demo Playbooks | Built | Live site content + Module 02's Decision Walkthrough scene |
+| 09 | Customer Success OS | Built | Intake §4 (real design-partner onboarding flow) |
 | 10 | Operations OS | Built | Intake §5 + Global Constraint 3 |
 | 11 | Finance OS | Built | Intake §6 + Global Constraint 3 (no figures to disclose yet — module documents process, not numbers that don't exist) |
 | 12 | Partnership OS | Built | Intake §7 (real target categories, no fabricated names) |
@@ -191,6 +192,36 @@ Catalyst, a Stripe executive, or an Apple design lead. Concretely:
   playbooks, templates, checklists, operating procedures, decision trees,
   examples, review criteria, and a maintenance process
 - Every module states its own review/maintenance cadence
+
+## Post-closure review cadence (owner decision, 2026-07-13)
+
+LaunchOS v1 closed on 2026-07-13 (`CLOSURE-REPORT.md`) and is now in
+maintenance mode. This resolves the baseline-cadence gap first flagged in
+`PROGRESS.md`'s Module 10 closure entry and carried forward explicitly in
+`CLOSURE-REPORT.md` §5a and Module 16's `03-governance.md` ("Formerly-open
+item, resolved 2026-07-13").
+
+*(Source: Emad's direct decision, 2026-07-13, quoted in substance below —
+not a re-derivation.)*
+
+- **Modules 02-16: trigger-only review.** No independent baseline cadence.
+  Each module's own governance file's "Maintenance triggers" section remains
+  the mechanism.
+- **Program-wide exception:** one **annual full consistency review** across
+  all 16 modules, run the same way the LaunchOS v1 closure phase was run
+  (cross-module consistency, broken-link/citation, open-assumptions sweep).
+- **Module 01 (Brand Bible) keeps its existing quarterly cadence**
+  (`01-brand-bible/06-governance.md`) — unchanged by this decision.
+- **Triggers** that warrant an out-of-cycle review of the affected module(s):
+  customer feedback, a pricing change, a positioning change, legal
+  incorporation, a product capability change, fundraising, hiring, a
+  partnership, a regulatory requirement, or a discovered factual
+  inconsistency.
+
+This decision is the canonical source for program-wide review cadence.
+Individual module governance files' "Known open item this module does not
+resolve" or equivalent sections that referenced this gap should be read as
+resolved by this section, not restated.
 
 ## Sequencing rationale
 

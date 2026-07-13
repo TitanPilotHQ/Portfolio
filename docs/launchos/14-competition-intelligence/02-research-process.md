@@ -28,18 +28,18 @@ forward.
 This module's own existence — this file, `01-monitoring-scope.md`, and
 `03-governance.md` — is the first structured competitive-research
 artifact at Titan Pilot. That is a true but limited claim: it means the
-category scope and ownership now have a documented home, not that a
-research methodology, cadence, or tooling has been adopted alongside it.
+category scope and ownership now have a documented home, not that a full
+research methodology or tooling has been adopted alongside it (a cadence
+has — see below).
 
-No source — not intake §9, not `00-launchos-master-plan.md`, not any
-existing module — states a review cadence (e.g., a quarterly or
-monthly competitive review), a research methodology, or a tool used to
-conduct that research. None of those is invented here. As of this
-module's creation, the process is: this document defines what to track
-(`01-monitoring-scope.md`); when a real, sourced fact about a new
-competitor in one of the three expanded categories emerges, it gets
-added to this module (see `03-governance.md`'s maintenance triggers); and
-no cadence beyond "when a real fact emerges" currently governs when that
-happens. This is an open gap, not a filled-in default — see
-`03-governance.md`'s adversarial review focus and enforcement note for
-how that gap is tracked rather than papered over.
+**Monitoring cadence is now decided:** quarterly, per Emad's 2026-07-13
+decision (`CLOSURE-REPORT.md` §5a, and `01-monitoring-scope.md`'s "On 'as
+they become relevant'" section, which this file cites rather than
+restates). No research methodology or tool is decided beyond that cadence
+— none of those is invented here. The process is: this document defines
+what to track (`01-monitoring-scope.md`); each quarter, that scope is
+checked against real, sourced developments; when a real, sourced fact
+meets `01-monitoring-scope.md`'s materiality bar (cited there, not
+restated here) in one of the three expanded categories, it gets added to
+this module (see `03-governance.md`'s maintenance triggers). A specific
+methodology or tool remains an open gap, not a filled-in default.

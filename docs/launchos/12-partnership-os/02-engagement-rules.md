@@ -8,10 +8,13 @@
 *(Source: `INTAKE-REQUEST.md` §7.2, Emad's direct answer, 2026-07-12, quoted
 verbatim.)*
 
-This is the entire rule as stated. Intake §7.2 does not define "formal
-engagement," does not describe a process for reaching it, and does not
-state whether any partnership discussion — formal or informal — is
-currently underway. This file does not add any of those missing pieces.
+This is the entire rule as stated in intake §7.2 alone. Intake §7.2 does
+not define "formal engagement," does not describe a process for reaching
+it, and does not state whether any partnership discussion — formal or
+informal — is currently underway. This file does not add the process or
+in-progress-status pieces intake §7.2 leaves out. "Formal engagement"
+itself is no longer undefined, however — see the next section for Emad's
+2026-07-13 decision.
 
 **Scope note:** "partnership," in this module, means a vendor or
 infrastructure-side relationship (a broker, market-data provider, cloud
@@ -41,21 +44,34 @@ This module's silence rule governs vendor/infrastructure partnerships
 only; it does not restrict or apply to either "design partner" or
 "technology partner" language.
 
-## What "formal engagement" plausibly means
+## What "formal engagement" means
 
-No source in this program defines "formal engagement" precisely. Rather
-than invent a specific legal threshold Emad hasn't stated, this file states
-only the plain-language boundary the phrase implies: "formal" contrasts
-with informal, exploratory, or preliminary contact. Examples of what would
-plausibly cross that line, at a structural level rather than a
-Titan-Pilot-specific one — a signed agreement, a confirmed pilot, or a
-public joint announcement — are the general shapes "formal" takes in
-industry practice. This file does not claim any of these three specific
-forms is the one Titan Pilot requires, does not rank them, and does not
-claim the list is exhaustive. It hedges deliberately: the rule's practical
-boundary is knowable (informal talk doesn't count; a public/binding
-commitment does), but the precise threshold between them is not sourced,
-and this file does not manufacture one.
+*(Source: Emad's direct decision, 2026-07-13 — resolves the threshold this
+file previously left undefined; carried in `CLOSURE-REPORT.md` §5a as an
+owner decision.)*
+
+A formal partnership engagement exists when there is a signed agreement, a
+signed pilot, a letter of intent, a paid engagement, a jointly approved
+public announcement, or a formally scheduled technical integration with
+named owners and dates.
+
+Informal calls, introductions, and exploratory conversations do not count,
+regardless of how promising or advanced they feel — the list above is the
+line, not a matter of degree.
+
+**A customer-side design-partner agreement or pilot, governed by Module 06
+and Module 09, does not by itself constitute a Partnership OS
+engagement — including this module's own "signed pilot" item above, which
+means a pilot with a broker, market-data provider, cloud infrastructure
+provider, AI model provider, compliance technology provider, or systems
+integrator (`01-partnership-categories.md`'s six categories), never a
+design partner's product-evaluation pilot.** A design-partner arrangement
+falls within this module only if the same counterparty also enters a
+distinct, signed arrangement in one of those six categories — a separately
+identifiable agreement or scope, not the design-partner relationship
+itself. One counterparty may hold both roles at once, but only through two
+identifiably distinct agreements; this module's silence rule and this
+threshold apply to the partnership-side agreement only.
 
 ## Practical implications
 
@@ -76,28 +92,28 @@ describe.
 
 ## The contracting dependency
 
-A formal, signed partnership agreement requires a contracting party capable
-of signing one. Module 10 (`10-operations-os/03-legal-entity-and-structure.md`)
-and Module 07 establish that no legal entity is incorporated yet — that
-fact is cited here, not restated. As a pure structural consequence of that
-fact alone (not from any additional source): the signed-agreement form of
-formal engagement cannot exist until an entity capable of signing one does.
-The other examples of formal engagement above (a confirmed pilot, a public
-joint announcement) are not stated to carry the same dependency, since
-neither necessarily requires a signed contract — but this file does not
-otherwise characterize when or whether any form of formal engagement will
-be reached.
+A signed agreement or a signed pilot requires a contracting party capable
+of signing one. Module 10
+(`10-operations-os/03-legal-entity-and-structure.md`) and Module 07
+establish that no legal entity is incorporated yet — that fact is cited
+here, not restated. As a pure structural consequence of that fact alone
+(not from any additional source): the two signed forms of formal engagement
+above cannot exist until an entity capable of signing one does. The other
+four forms (a written letter of intent, a paid engagement, a jointly
+approved public announcement, a formally scheduled technical integration)
+are not stated to carry the same dependency, since none necessarily
+requires a signing entity — but this file does not otherwise characterize
+when or whether any form of formal engagement will be reached.
 
 ## What this file deliberately does not invent
 
-- A precise legal or procedural definition of "formal engagement" — not
-  sourced anywhere in this program.
 - Any statement, in either direction, about whether a partnership
   conversation is currently in progress — intake §7.2 states the
   representation rule, not the underlying status, and this file preserves
   that silence.
 - A specific approval process, sign-off chain, or checklist for reaching
-  formal engagement — not sourced.
+  formal engagement, beyond the six forms Emad's decision above names —
+  not sourced.
 - A restatement of the legal-entity fact's sourcing detail — that lives in
   Module 07/10; this file cites it.
 

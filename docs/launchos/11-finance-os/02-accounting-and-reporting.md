@@ -33,8 +33,10 @@ Per Global Constraint 3 and this module's spec (`00-spec.md`): once Titan
 Pilot incorporates and once revenue exists, formal financial infrastructure
 will become necessary. That includes, at a minimum:
 
-- A real accounting method (a defined way of recording and reporting
-  financial activity — not yet chosen).
+- A *final* accounting method (a defined way of recording and reporting
+  financial activity — a cash-basis planning default now exists, see
+  "Default planning assumption for Phase B" below, but it is not yet
+  final).
 - Likely eventual external accounting support (a bookkeeper, accountant, or
   firm — not yet engaged, and none identified).
 - Potential future audit requirements, if institutional customers or
@@ -53,10 +55,25 @@ separately conditional future event stated in this module's own
 distinct event from revenue actually occurring) — not from a new,
 independent claim about what Titan Pilot's finances will look like.
 
+## Default planning assumption for Phase B (owner decision, 2026-07-13)
+
+*(Source: Emad's direct decision, 2026-07-13, `CLOSURE-REPORT.md` §5a.)*
+
+The accounting method question is deferred until incorporation and
+selection of an accountant/accounting platform — that sequencing itself is
+the decision, not merely an absence of one. Until then, the default
+planning assumption is **cash basis initially**, subject to professional
+accounting and jurisdictional advice at the time an accountant is engaged.
+This is a planning default, not a final legal or accounting decision — it
+does not bind Titan Pilot to cash-basis accounting once real professional
+advice is available, and this file does not present it as settled.
+
 ## What this file deliberately does not invent (Phase B)
 
-- No specific accounting method (cash-basis vs. accrual, or any other) —
-  not sourced. Which method applies is undetermined until Emad states it.
+- A *final* accounting method (cash-basis vs. accrual, or any other) —
+  the planning default above is not a final determination; which method
+  actually applies is undetermined until Emad confirms it with an
+  accountant engaged.
 - No specific accounting tool or platform (e.g., a named software product)
   — not sourced.
 - No timeline or date for when Phase B begins — incorporation and first
@@ -69,11 +86,11 @@ independent claim about what Titan Pilot's finances will look like.
   named as plausible in the abstract, not as a real, pending demand from
   any real party.
 
-Phase B's specifics — method, tooling, timeline, and any audit posture —
-remain undetermined until Emad states them. When that happens, this
-section updates with the real fact and its citation; until then, this file
-states the gap plainly rather than filling it with a plausible-sounding
-default.
+Phase B's final specifics — beyond the cash-basis planning default above —
+remain undetermined until Emad states them with an accountant engaged.
+When that happens, this section updates with the real fact and its
+citation; until then, this file states the gap plainly rather than filling
+it with a plausible-sounding default.
 
 ## Cross-references
 

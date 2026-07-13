@@ -25,10 +25,11 @@ A change to this module passes review only if:
    product design, sales) stay flat and unranked in `02-anticipated-hiring.md`
    — no sequencing, priority order, or "first hire" implication beyond what
    intake §8.2 states.
-3. "Successful design-partner validation" is never given a specific
-   definition beyond what intake §8.2 states — no numeric threshold, no
-   named milestone, and no claim that Module 09's Stage 7 IS, definitionally,
-   the trigger.
+3. "Successful design-partner validation" matches Emad's 2026-07-13 decision
+   (`CLOSURE-REPORT.md` §5a) exactly — the six-item criteria list plus the
+   "workload can no longer be handled safely" hiring-trigger condition — and
+   still does not claim Module 09's Stage 7 IS, definitionally, the same
+   event.
 4. Module 01's founder-led team-composition fact and Module 10/07's
    no-incorporated-entity fact are cited from their canonical files, never
    independently restated with their own sourcing detail (Global
@@ -39,10 +40,13 @@ A change to this module passes review only if:
 - Does any role-category description sneak in an implied job description,
   seniority level (e.g., "senior," "lead," "head of"), or
   department-structure claim beyond the bare category name?
-- Does the validation-trigger discussion in `02-anticipated-hiring.md`
-  overreach by implying Module 09's Stage 7 IS definitionally the hiring
-  trigger, when that connection is Module 09's own stated inference about
-  its own subject, not a sourced fact linking the two documents?
+- Does the validation-trigger discussion in `02-anticipated-hiring.md` drift
+  from Emad's exact six-item criteria list, or overreach by implying Module
+  09's Stage 7 IS definitionally the hiring trigger, when the two are only
+  conceptually adjacent?
+- Does "revenue alone does not constitute validation" get contradicted
+  anywhere else in this module (e.g., by implying a revenue figure would be
+  sufficient on its own)?
 - Does the employment/contracting dependency section imply Titan Pilot is
   currently planning to use contractors, or any other specific interim
   arrangement, when no such plan is sourced anywhere in this program?
@@ -94,9 +98,11 @@ profile: its entire subject is a set of deliberately unfinalized figures
   closest existing framing of "validation," cited as adjacent, not
   identical), Module 11 (`03-governance.md` — the zero-fabricated-figures
   discipline this module follows), Module 12 (`02-engagement-rules.md`,
-  `03-governance.md` — the pattern for handling an undefined term and a
-  contracting dependency without inventing specifics, and the
-  governance-file pattern this file follows most directly)
+  `03-governance.md` — the matching contracting-dependency pattern for
+  signed agreements, the same 2026-07-13 owner-decision batch that
+  resolved both this module's validation-threshold gap and Module 12's
+  formal-engagement definition, and the governance-file pattern this file
+  follows most directly)
 - **Feeds:** none yet. No other built module currently cites Hiring OS's
   facts. Module 07 (Investor Data Room) and Module 01 (Brand Bible, company
   stage) are the most likely future citers once a first hire actually

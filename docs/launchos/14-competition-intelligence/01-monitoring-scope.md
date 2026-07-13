@@ -63,10 +63,22 @@ in a trading-specific context.
 
 ## On "as they become relevant"
 
-Intake §9.1 qualifies the expansion with "as they become relevant" but
-does not define what makes a category, or a specific vendor within a
-category, relevant enough to warrant active tracking. No timeline,
-trigger metric, or review cadence for this threshold exists in any
-sourced material. This file does not invent one. See
-`03-governance.md` for how a real, sourced addition to one of these
-categories gets handled when it happens.
+*(Source: Emad's direct decision, 2026-07-13 — resolves the threshold this
+file previously left undefined; carried in `CLOSURE-REPORT.md` §5a as an
+owner decision.)*
+
+Trigger-only, plus quarterly monitoring. A competitor or category is added
+only when a sourced development materially affects at least one of:
+
+- Positioning
+- Pricing
+- Product differentiation
+- Buyer expectations
+- Regulation
+- Distribution
+- Partnership strategy
+
+A competitor is not added merely because it uses AI or mentions trading —
+the bar is a sourced, material effect on one of the seven areas above, not
+category resemblance. See `03-governance.md` for how a real, sourced
+addition gets handled when it happens.

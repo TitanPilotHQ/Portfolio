@@ -246,20 +246,35 @@ Collected by a dedicated program-wide sweep of every governance file,
 every flagged inference, and every maintenance trigger. Organized by what
 resolves each item.
 
-### 5a. Decisions only Emad can make
+### 5a. Decisions only Emad can make — RESOLVED 2026-07-13
 
-| Item | Where | What resolves it |
+All ten items originally listed here were resolved in a single batch by
+Emad's direct decision on 2026-07-13, applied to each item's canonical
+module in the same change. This section is now a record of what was
+decided and where, not an open list.
+
+**Canonical terminology, confirmed 2026-07-13 (resolving a phrasing tension
+found while recording the "formal engagement" decision below):** "design
+partner" names the customer-side validation relationship owned by Modules
+06 and 09; "partnership" names the vendor/infrastructure/distribution/
+integration relationship owned by Module 12. One counterparty may hold
+both roles at once, but only through separately identifiable agreements or
+scopes. The canonical statement of this boundary lives in
+`12-partnership-os/02-engagement-rules.md` — this paragraph summarizes it,
+not restates it.
+
+| Item | Decision | Canonical location |
 |---|---|---|
-| Baseline review cadence for Modules 02-16 (only Module 01 states one — "quarterly" — independent of a trigger) | Flagged at Module 10's closure, carried forward at Module 16's closure (`16-asset-library/03-governance.md`) | Emad decides a real cadence for 15 modules, or explicitly ratifies "trigger-only" as sufficient |
-| Precise definition of "formal engagement" (partnerships) | `12-partnership-os/02-engagement-rules.md` | Emad states a threshold, or a real event (signed agreement, confirmed pilot, public announcement) occurs |
-| Precise definition of "successful design-partner validation" (hiring trigger) | `13-hiring-os/02-anticipated-hiring.md` | Emad states a threshold/metric, or a real event resolves it |
-| Threshold for "as they become relevant" (competitor-category expansion) | `14-competition-intelligence/01-monitoring-scope.md` | Emad states a cadence/trigger, or a real sourced competitor fact triggers the first addition |
-| Phase B accounting method (cash-basis vs. accrual) | `11-finance-os/02-accounting-and-reporting.md` | Emad states the method once infrastructure is adopted |
-| Feedback-loop cadence (design-partner Stage 6) | `09-customer-success-os/03-success-and-production-readiness.md` (open assumptions register, row 3) | Emad confirms, or it's observed from the first real engagement |
-| Support meeting cadence / response-time / SLA | `09-customer-success-os/02-support-model.md` | Emad states one, or one is formally adopted |
-| Compensation/equity policy | `13-hiring-os/02-anticipated-hiring.md` | Emad finalizes and states the policy |
-| Whether Module 09 Stage 1 is distinct from Module 06 Stage 3 | Open assumptions register, row 1 | Emad confirms; if distinct, drop hedge; if same, merge the stage descriptions |
-| Whether Module 09 Stage 3 objectives are validation- vs. ROI-oriented | Open assumptions register, row 2 | Emad confirms, or infer from a real design partner once one exists |
+| Baseline review cadence for Modules 02-16 | Trigger-only by default, plus one annual full-program consistency review; Module 01 keeps its quarterly cadence | `00-launchos-master-plan.md`, "Post-closure review cadence" |
+| Definition of "formal engagement" (partnerships) | Six-item threshold list, plus a boundary rule that a Module 06/09 design-partner agreement or pilot does not by itself qualify | `12-partnership-os/02-engagement-rules.md` |
+| Definition of "successful design-partner validation" (hiring trigger) | Six-item criteria list (not revenue alone); becomes a hiring trigger only when workload can no longer be handled safely by the founder | `13-hiring-os/02-anticipated-hiring.md` |
+| Threshold for "as they become relevant" (competitor-category expansion) | Trigger-only, plus quarterly monitoring; a sourced development must materially affect one of seven named areas (not mere AI/trading resemblance) | `14-competition-intelligence/01-monitoring-scope.md`, `14-competition-intelligence/02-research-process.md` |
+| Phase B accounting method | Deferred until incorporation and accountant/platform selection; default planning assumption is cash-basis initially, not a final method | `11-finance-os/02-accounting-and-reporting.md` |
+| Feedback-loop cadence (design-partner Stage 6) | Weekly/monthly cadence plus an immediate-escalation and validation-closeout rule — see the canonical file for the four-item schedule and the pilot-period/validation-period glossary | `09-customer-success-os/03-success-and-production-readiness.md` |
+| Support response targets (design-partner phase) | A three-tier, founder-led (non-contractual) response-time schedule — see the canonical file for the exact tiers | `09-customer-success-os/02-support-model.md` |
+| Compensation/equity policy | Confirmed deferral — no bands, pool, or grants approved; gated on four conditions stated in the canonical file | `13-hiring-os/02-anticipated-hiring.md` |
+| Whether Module 09 Stage 1 is distinct from Module 06 Stage 3 | Confirmed distinct — see the canonical file for the exact stage boundary | `09-customer-success-os/01-design-partner-onboarding.md` |
+| Whether Module 09 Stage 3 objectives are validation- vs. ROI-oriented | Confirmed validation-oriented, not revenue/ROI-oriented — see the canonical file for the objectives list | `09-customer-success-os/01-design-partner-onboarding.md` |
 
 ### 5b. Events that flip Phase A → Phase B across multiple modules simultaneously
 
@@ -303,7 +318,7 @@ taken on faith.
 | **Two-phase (Phase A/B) discipline** | High | Every module touching legal entity, finance, contracting, or hiring correctly separates present-tense founder-led fact from conditional future state; no jurisdiction, entity type, date, or figure was ever invented for Phase B anywhere in the program. |
 | **Investor-facing readiness** | Medium | The Investor Data Room (Module 07) is real, honest, and defensible — but it honestly documents a pre-incorporation, pre-funding, pre-revenue, sole-founder company with engineering evidence and no customer traction. The documentation is ready; the underlying business milestones it would report on are not yet reached. |
 | **Commercial readiness** | Low, by design | No pricing is finalized, no customer is paying, no partnership has reached formal engagement, no hire exists. This isn't a documentation gap — it accurately reflects Titan Pilot's actual current stage, which LaunchOS was built to support honestly, not to overstate. |
-| **Governance/maintenance discipline** | Medium | Every module has trigger-based maintenance and an honest enforcement note (no CI/lint gate — a manual PR-template checklist only). One real program-wide gap remains open: no baseline review cadence beyond Module 01's — flagged explicitly, not resolved, per §5a. |
+| **Governance/maintenance discipline** | Medium-High | Every module has trigger-based maintenance and an honest enforcement note (no CI/lint gate — a manual PR-template checklist only). The program-wide baseline-cadence gap was resolved 2026-07-13 (§5a) with a trigger-only default plus an annual full-program review; rating stays short of High because that mechanism itself is still unexercised — no annual review has yet occurred. |
 
 **Overall:** LaunchOS v1 is a complete, internally consistent, heavily
 cross-verified documentation program that accurately describes a very
@@ -331,9 +346,13 @@ logic and maintenance triggers already point to as the fulcrum:
   maintenance trigger — the one event that would let the Investor Data
   Room state real customer engagement for the first time, rather than
   "engaging (not yet confirmed)."
-- Module 09's own closure explicitly hedges two of its four working
-  assumptions (Stage 1/Stage 3 framing) as things only a real onboarding
-  can resolve.
+- Module 09 originally hedged three of its four working assumptions (Stage
+  1/Stage 3 framing and the feedback-loop cadence) as things only a real
+  onboarding could resolve; all three were instead resolved by Emad's
+  2026-07-13 owner decision (§5a), not by an onboarding event. The
+  remaining one of Module 09's four original hedges ("production readiness
+  review" content) stays genuinely open pending a real onboarding — see
+  `09-customer-success-os/04-governance.md`'s open assumptions register.
 - Module 01's claims register itself has a standing rule: the moment a
   design partner is confirmed, that's the trigger to add the first real
   customer-facing claim to the register — which is also the trigger this
