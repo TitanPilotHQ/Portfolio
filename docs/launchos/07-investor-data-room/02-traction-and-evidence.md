@@ -21,8 +21,9 @@ any LaunchOS module independently redefine this evidence:
 
 - `EVIDENCE_ROWS` (`lib/content.ts:151-182`) — six capability/state/proof
   rows: MT5 bridge (Built), Event spine (Running), Replay verification
-  (Active), Shadow AI pipeline (Certified), Risk gates (Implemented), Broker
-  reconciliation (Built).
+  (Active), Shadow AI pipeline (Phase C.5 certified — an internal
+  engineering milestone, not a regulatory one), Risk gates (Implemented),
+  Broker reconciliation (Built).
 - `MILESTONES` (`lib/content.ts:187-196`) — eight label/value tiles, none
   carrying a date field in the data itself (Module 02's framing, "numbered
   proof, no dates attached," `02-story-architecture/01-core-narrative.md`,
@@ -56,9 +57,10 @@ self-applied.
 - **Customer demand.** No confirmed design partner exists in the claims
   register (Module 01's caveat, `01-brand-bible/01-identity.md`) — do not
   present "engaging design partners" as demand validation.
-- **Market size or category adoption.** Market-sizing methodology belongs to
-  Module 15 (Market Research Framework), which owns this fact but has no
-  sourced market-sizing data as of this module's own construction (see
+- **Market size or category adoption.** Market-sizing methodology is Module
+  15's (Market Research Framework) designated canonical home once
+  produced; Module 15 currently holds zero sourced market-sizing data — a
+  standing state, not a placeholder (see
   `15-market-research-framework/02-market-research-scope.md`) — no number
   should be offered here or invented for this purpose.
 
@@ -66,7 +68,7 @@ self-applied.
 
 1. Open with the mission/problem framing (Module 02's core narrative,
    `02-story-architecture/01-core-narrative.md`, "Investor" audience
-   variant in `02-audience-variants.md`).
+   variant in `02-story-architecture/02-audience-variants.md`).
 2. Walk the evidence above.
 3. State plainly what it isn't evidence of (the section above) — proactively,
    per Module 02's "Discipline List" scene

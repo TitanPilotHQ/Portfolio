@@ -23,8 +23,8 @@ audience:
 - **Homepage (short form):** `PRODUCT_MODES` (`lib/content.ts:212-231`) —
   "Shadow Mode — Certified," "Copilot Mode — Upcoming," "Autonomous Demo —
   Evidence-Gated."
-- **`/product` (long form):** `AUTONOMY_LADDER_DETAIL` (`lib/content.ts:
-  349-365`) — the same three stages with full mechanism detail ("Shadow —
+- **`/product` (long form):** `AUTONOMY_LADDER_DETAIL`
+  (`lib/content.ts:349-365`) — the same three stages with full mechanism detail ("Shadow —
   Certified — current," "Copilot — Designed — next," "Autonomous Demo —
   Evidence-gated — future").
 
@@ -47,7 +47,7 @@ the "mechanism and safety first" framing above.
 ## Investor
 
 **Entry point:** The mission/problem statements (`COMPANY_MISSION`,
-`lib/content.ts:471-476`; `COMPANY_PROBLEM`, `lib/content.ts:477-479`) —
+`lib/content.ts:471-475`; `COMPANY_PROBLEM`, `lib/content.ts:477-478`) —
 judgment that this audience needs the category-defining gap established
 before anything else makes sense as a business.
 

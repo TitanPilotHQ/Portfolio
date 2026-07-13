@@ -12,7 +12,7 @@ and ICP, not messaging, positioning, or product content).
 | Discovery meeting opener | Medium elevator pitch | `01-brand-bible/01-identity.md` |
 | Product demonstration | Decision Walkthrough scene | `02-story-architecture/03-narrative-components-library.md` |
 | Handling "why not [competitor]" | Competitive positioning map | `04-positioning/02-competitive-positioning-map.md` |
-| Stating what Titan Pilot is / isn't | Category positioning + formal positioning statement | `04-positioning/01-category-positioning.md`, `03-positioning-statement.md` |
+| Stating what Titan Pilot is / isn't | Category positioning + formal positioning statement | `04-positioning/01-category-positioning.md`, `04-positioning/03-positioning-statement.md` |
 | Any pricing question | Pricing decision tree — determines what can even be said | `05-pricing-system/03-pricing-decision-tree.md` |
 | Objection handling | FAQ entries, used verbatim when the specific objection comes up | Module 03's objection-tier rule, `03-messaging-bible/01-message-hierarchy.md` |
 | Word choice throughout | Terminology glossary | `03-messaging-bible/02-terminology-glossary.md` |

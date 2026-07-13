@@ -39,16 +39,19 @@ will become necessary. That includes, at a minimum:
   firm — not yet engaged, and none identified).
 - Potential future audit requirements, if institutional customers or
   investors require them as a condition of doing business (this is a
-  plausible category of future requirement given the ICP Module 06 defines
-  — institutional trading organizations — not a stated certainty; no audit
-  has been requested, planned, or scoped by anyone).
+  plausible category of future requirement given the target-customer types
+  Module 06 defines — institutional trading organizations — not a stated
+  certainty; no audit has been requested, planned, or scoped by anyone).
 
-This framing follows directly from two already-sourced facts converging —
-no accounting platform exists today (§6.3), and incorporation plus real
-revenue are themselves conditional future events (Module 07's Phase B,
-`07-investor-data-room/01-company-snapshot.md`; Module 05's Phase B,
-`05-pricing-system/01-pricing-philosophy.md`) — not from a new, independent
-claim about what Titan Pilot's finances will look like.
+This framing follows directly from already-sourced facts converging — no
+accounting platform exists today (§6.3), incorporation is itself a
+conditional future event (Module 07's Phase B,
+`07-investor-data-room/01-company-snapshot.md`), and real revenue is a
+separately conditional future event stated in this module's own
+`01-financial-reality.md` (not a "Phase B" Module 05 itself states — Module
+05's own Phase B trigger is final pricing being cleared, a related but
+distinct event from revenue actually occurring) — not from a new,
+independent claim about what Titan Pilot's finances will look like.
 
 ## What this file deliberately does not invent (Phase B)
 
@@ -77,8 +80,9 @@ default.
 - **Depends on:** `01-financial-reality.md` (this module's Phase A revenue
   and cost-disclosure facts), Module 07 (`01-company-snapshot.md` —
   incorporation as a conditional trigger, cited not restated), Module 05
-  (`01-pricing-philosophy.md` — revenue as a conditional trigger, cited not
-  restated)
+  (`01-pricing-philosophy.md` — final pricing as a conditional trigger,
+  cited not restated; a related but distinct event from revenue actually
+  occurring)
 - **Feeds:** Module 10 (`01-tool-stack.md` — if an accounting platform is
   ever adopted, it belongs in that module's tool-stack list as well as
   here)

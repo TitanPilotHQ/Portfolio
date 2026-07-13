@@ -3,8 +3,8 @@
 ## The real hierarchy, as it ships
 
 The homepage hero is the canonical instance of Titan Pilot's message
-hierarchy — three tiers, each with a distinct job (`components/Hero.tsx:
-49,58-59,68-70,109-110`):
+hierarchy — three tiers, each with a distinct job
+(`components/Hero.tsx:49,58-59,68-70,109-110`):
 
 1. **Category tier (eyebrow badge):** "SUPERVISED AI TRADING" — names the
    category before anything else, since it's a category Titan Pilot is

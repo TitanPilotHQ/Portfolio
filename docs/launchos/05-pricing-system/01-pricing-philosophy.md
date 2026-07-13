@@ -52,8 +52,11 @@ committed)
 
 1. **Priced for the organization, not the individual.** The unit being
    priced is the customer defined in Module 06 (Sales OS),
-   `06-sales-os/00-icp.md` — a desk/workspace, not a per-user seat. See
-   `02-pricing-model-structure.md` for the structural detail.
+   `06-sales-os/00-icp.md`. The pricing unit itself — desk/workspace
+   rather than per-user seat — is a separately-sourced decision
+   (`INTAKE-REQUEST.md` §1.1), not something derived from the ICP; see
+   `02-pricing-model-structure.md` for that structural detail and the two
+   facts kept explicitly separate.
 2. **Contract structure follows the customer type.** Annual contracts match
    the customer defined in `06-sales-os/00-icp.md`, not the monthly
    self-serve pattern typical of individual-user SaaS.

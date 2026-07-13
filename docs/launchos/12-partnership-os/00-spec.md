@@ -3,8 +3,7 @@
 **Status:** Ready to build
 **Depends on:** Module 04 (positioning/category — this module cites, does
 not restate, competitive/category framing where a partnership category
-adjoins it), Module 06 (ICP — this module cites Module 06's ICP where a
-partnership category's rationale touches the target customer)
+adjoins it)
 **Purpose:** The canonical home for Titan Pilot's real target partnership
 categories and the explicit rule against representing any partnership
 publicly before formal engagement exists.
@@ -23,10 +22,15 @@ broker"-style vague-but-suggestive phrasing). It documents categories
 (broker, market-data provider, etc.) as abstract types, never instances.
 
 **Scope note:** "Partnership" here means vendor/infrastructure-side
-relationships only (the six categories above). It is distinct from
-"design partner," the customer-side relationship Module 06/09 already
-document and disclose publicly under their own framing — this module's
-silence rule does not govern design-partner language.
+relationships only (the six categories above). It is distinct from two
+other real terms that also contain "partner": "design partner" (the
+prospect-facing relationship Module 06/09 document as internal planning
+input — explicitly not a customer per Module 06's own framing — with only
+the bare term itself already public in site copy) and "technology
+partner" (generic, unnamed audience-qualification language already public
+in site copy). See `02-engagement-rules.md` for the full disambiguation
+and citations. This module's silence rule governs vendor/infrastructure
+partnerships only; it does not restrict either of the other two terms.
 
 ## Global Constraint 3 application
 

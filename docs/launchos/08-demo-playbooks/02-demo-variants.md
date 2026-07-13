@@ -2,19 +2,28 @@
 
 How `01-demo-script.md`'s five sections expand/compress per audience, using
 Module 02's audience variants (`02-story-architecture/02-audience-variants.md`)
-as the source of emphasis rules — not restated here, applied here.
+as the source of emphasis rules — not restated here, applied here. Module 02
+itself hedges its Expand/Compress guidance as "the controller's
+narrative-strategy judgment, not verified facts about reader behavior... a
+starting recommendation to test and revise, not a settled finding" — that
+hedge carries forward into every variant below; treat this file's
+emphasis/compression choices the same way, as recommendations to validate
+against real demos, not settled rules.
 
 ## Trading desk / prospective user
 
 Per Module 02's desk-lead variant: expand section 3 (Decision Walkthrough)
-and section 4 (Failure-Mode Beat); compress section 1 (opener) since this
-audience is already past the initial pitch by the time a demo is scheduled
-(Module 06's Stage 4 assumes Stage 2-3 already happened). Use the long-form
-Trust Ladder (`AUTONOMY_LADDER_DETAIL`) during section 3's Trust Ladder
-pause — per Module 02's rule for picking between the two Trust Ladder forms,
-a demo is explicitly named as a "product depth" context requiring the long
-form, not the homepage short form. This is a location-based rule (it's about
-the demo setting, not this specific audience), so it applies whenever any
+and section 4 (Failure-Mode Beat). Compressing section 1 (opener) — since
+this audience is already past the initial pitch by the time a demo is
+scheduled (Module 06's Stage 4 assumes Stage 2-3 already happened) — is this
+file's own sequencing judgment, not something Module 02's desk-lead variant
+itself states (that variant's own compress instruction targets "Tech Stack
+and company/team narrative," a different section). Use the long-form Trust
+Ladder (`AUTONOMY_LADDER_DETAIL`) during section 3's Trust Ladder pause —
+per Module 02's rule for picking between the two Trust Ladder forms, a demo
+is explicitly named as a "product depth" context requiring the long form,
+not the homepage short form. This is a location-based rule (it's about the
+demo setting, not this specific audience), so it applies whenever any
 variant's version of section 3 surfaces the Trust Ladder — including the
 investor variant's compressed summary below, if it touches the ladder at
 all.
@@ -28,8 +37,8 @@ needs the category-defining gap established before mechanism. Compress
 section 3 to a summary rather than the full nine-step walkthrough (Module
 02's exact wording: the granular walkthrough is "useful as backup detail if
 asked," not the opening beat, for this audience).
-Add the Discipline List scene (`02-story-architecture/
-03-narrative-components-library.md`) as an explicit section before the
+Add the Discipline List scene
+(`02-story-architecture/03-narrative-components-library.md`) as an explicit section before the
 close — for this audience, per that scene's use case, stating what's *not*
 claimed is itself a credibility signal. Route any pricing or traction
 question through Module 05's decision tree and Module 07's Investor Data

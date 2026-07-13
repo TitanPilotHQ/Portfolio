@@ -13,7 +13,7 @@ phrase to avoid being misread.
 | Dossier | The versioned, hashed bundle of market data a thesis is reasoned from | `lib/content.ts:112`, Manifesto Principle 6 |
 | Devil's Advocate | The step that challenges the thesis before scoring | `lib/content.ts:114` |
 | Score / Deterministic scorer | The non-AI, rule-based evaluation of a thesis | `lib/content.ts:115` |
-| Risk gate | The deterministic, non-negotiable check that sits below every decision | `lib/content.ts:117`, Manifesto Principle 1-2 |
+| Risk gate | The deterministic, non-negotiable check that sits below every decision | `lib/content.ts:75,96`, Manifesto Principle 1-2 |
 | Signal | A recorded decision output — in shadow mode, always non-executing | `lib/content.ts:116` |
 | Shadow mode | The current operating mode (Phase C.5 certified — an internal engineering milestone, not a regulatory one): full pipeline runs, nothing executes | `AUTONOMY_LADDER_DETAIL`, `lib/content.ts:352-353` |
 | Replay | Rebuilding system state from the immutable event log and comparing it to live state | `lib/content.ts:268-270` |

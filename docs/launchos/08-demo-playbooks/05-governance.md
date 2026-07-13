@@ -29,6 +29,17 @@ sales process).
   still accurate given Module 01's current company-stage caveat, or has it
   drifted?
 
+## Honest note on enforcement
+
+No CI/lint check enforces anything in this module. The one real, concrete
+mechanism is `.github/PULL_REQUEST_TEMPLATE.md`'s "LaunchOS drift check" —
+a checklist surfaced at PR-creation time, not a gate. It can be skipped,
+and review and maintenance ultimately depend on Emad (or whoever is
+reviewing a given PR) actually reading it and applying the maintenance
+triggers below by hand — this module in particular depends on whoever is
+delivering a demo actually re-reading the script rather than working from
+memory of an earlier version.
+
 ## Maintenance triggers
 
 - Any cited module's content changes (especially Module 02's scenes, Module

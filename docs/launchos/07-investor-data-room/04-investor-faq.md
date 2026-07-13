@@ -13,7 +13,7 @@ Sole founder ownership, no legal entity yet. See `03-cap-table-and-funding.md`.
 
 **"Do you have customers?"**
 No paying customers. Titan Pilot is engaging (not yet confirmed) design
-partners during a certified shadow-mode validation phase. See Module 01's
+partners during a certified production shadow phase. See Module 01's
 Company stage section (`01-brand-bible/01-identity.md`) and
 `02-traction-and-evidence.md`'s "what's explicitly NOT evidence of" section.
 
@@ -38,8 +38,9 @@ why Titan Pilot doesn't fit any existing category cleanly.
 
 **"What's your total addressable market?"**
 Not yet quantified in any sourced material. Module 15 (Market Research
-Framework) owns market-sizing methodology and confirms no market-sizing
-data exists anywhere in LaunchOS
+Framework) is the designated canonical home for any future market-sizing
+methodology and confirms no market-sizing data exists anywhere in
+LaunchOS today
 (`15-market-research-framework/02-market-research-scope.md`) — per Global
 Constraint 1, no number should be offered here or invented for this
 conversation until Module 15 has real, sourced data.

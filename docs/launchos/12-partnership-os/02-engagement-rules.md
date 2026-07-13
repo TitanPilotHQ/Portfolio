@@ -17,11 +17,29 @@ currently underway. This file does not add any of those missing pieces.
 infrastructure-side relationship (a broker, market-data provider, cloud
 infrastructure provider, AI model provider, compliance technology provider,
 or systems integrator — the six categories in `01-partnership-categories.md`).
-It is a distinct concept from "design partner," the customer-side
-relationship Module 06 and Module 09 already document and disclose publicly
-under their own, separately sourced framing. This module's silence rule
-governs vendor/infrastructure partnerships only; it does not restrict or
-apply to design-partner language.
+It is a distinct concept from two other real, unrelated terms that also
+contain the word "partner":
+
+- **"Design partner"** — the term itself is already public site copy
+  (`lib/content.ts:510`, `lib/content.ts:572`), but the detailed process
+  Module 06 (`06-sales-os/01-sales-process.md`, Stage 6) and Module 09
+  (`09-customer-success-os/01-design-partner-onboarding.md`) document
+  around it is internal planning input, not itself publicly disclosed
+  (Global Constraint 1/3). It is also, per Module 06's own emphatic
+  framing (`01-sales-process.md`, "the single most important process
+  fact in this module"), explicitly **not a customer** — this file does
+  not call it "customer-side" for that reason.
+- **"Technology partner"** — also already public site copy
+  (`lib/content.ts:572`, rendered at `app/contact/page.tsx:46`, and cited
+  in `02-story-architecture/02-audience-variants.md`). It is generic
+  audience-qualification language with no named party attached, so it
+  doesn't itself trigger intake §7.2's naming rule — but it is a
+  different concept from this module's six vendor/infrastructure
+  categories and is not governed by this file's silence rule either.
+
+This module's silence rule governs vendor/infrastructure partnerships
+only; it does not restrict or apply to either "design partner" or
+"technology partner" language.
 
 ## What "formal engagement" plausibly means
 

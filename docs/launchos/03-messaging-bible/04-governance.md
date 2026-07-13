@@ -27,6 +27,15 @@ Emad, same rationale as Modules 01-02.
   consistently across all of `03-channel-messages.md`, or does an older draft
   habit slip through?
 
+## Honest note on enforcement
+
+No CI/lint check enforces anything in this module. The one real, concrete
+mechanism is `.github/PULL_REQUEST_TEMPLATE.md`'s "LaunchOS drift check" —
+a checklist surfaced at PR-creation time, not a gate. It can be skipped,
+and review and maintenance ultimately depend on Emad (or whoever is
+reviewing a given PR) actually reading it and, where relevant, applying
+the maintenance triggers below by hand.
+
 ## Maintenance triggers
 
 - Any change to Module 01's elevator pitches or Module 02's scenes → re-check

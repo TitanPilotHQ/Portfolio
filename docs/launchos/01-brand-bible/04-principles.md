@@ -87,13 +87,13 @@ Plus two product doctrines (`lib/content.ts:338-347`):
 
 - Guaranteed or predicted trading returns
 - Licensed financial or investment advice
-- A large team, institutional backing, or customers Titan Pilot doesn't have
-- Regulatory approval, certification, or endorsement not received
+- A large team, institutional backing, or customers we don't have
+- Regulatory approval, certification, or endorsement we haven't received
 - Peer-reviewed research or academic partnerships that don't exist
 - Endorsement by any employer — Titan Pilot is independent of Emad's employment
 
 ## Research doctrine
-*(Source: `lib/content.ts:523-530,547-558`)*
+*(Source: `lib/content.ts:523-530,547-555`)*
 
 Principles: evidence before claims; reproducibility; replayability; public
 correction of mistakes; transparent methodology; versioned publications.
