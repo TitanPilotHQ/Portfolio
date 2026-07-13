@@ -38,7 +38,9 @@ why Titan Pilot doesn't fit any existing category cleanly.
 
 **"What's your total addressable market?"**
 Not yet quantified in any sourced material. Module 15 (Market Research
-Framework) owns market-sizing methodology once built, and per Global
+Framework) owns market-sizing methodology and confirms no market-sizing
+data exists anywhere in LaunchOS
+(`15-market-research-framework/02-market-research-scope.md`) — per Global
 Constraint 1, no number should be offered here or invented for this
 conversation until Module 15 has real, sourced data.
 
@@ -53,9 +55,10 @@ switching cost) is claimed here, because none is sourced anywhere in
 LaunchOS. What *is* real and citable is engineering rigor, not
 defensibility — `lib/content.ts:421-438` ("AI cannot bypass execution,"
 "Dependencies point one way," etc., already the subject of Module 02's
-Technical/partner audience variant, `02-story-architecture/
-02-audience-variants.md`) describes *how* the system is built, which
-answers "is this engineered carefully," not "why can't this be copied."
+Technical/partner audience variant,
+`02-story-architecture/02-audience-variants.md`) describes *how* the
+system is built, which answers "is this engineered carefully," not "why
+can't this be copied."
 Don't let the architecture answer stand in for the moat answer — if asked
 directly, say plainly that no moat claim exists yet rather than letting
 architecture detail read as an implied one.
