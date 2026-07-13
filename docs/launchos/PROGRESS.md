@@ -259,3 +259,26 @@ sessions — trust this file and `git log` over conversational memory.
   unlike Module 09's comparable hedge) — fixed.
 - Merged: PR #19, branch `launchos-13-hiring-os`.
 - 13 of 16 modules built (01-13). 3 remain.
+
+## 2026-07-13 — Module 14: Competition Intelligence — closed
+
+- 3 files published: monitoring scope (Module 04's 8 named competitors
+  cited, never restated, plus three new category types to expand tracking
+  to — AI agent platforms, financial AI governance vendors, enterprise
+  decision-intelligence platforms — described generically with zero named
+  companies), research process (an honest admission that no competitive-
+  research repository or cadence existed before this module), governance.
+  Added a Competition Intelligence checkbox to the PR template.
+- Independent review: 0 findings (second clean pass in the program).
+- Adversarial review, again probing past a clean pass: 2 Important (Module
+  04 itself had already drifted "enterprise decision-intelligence
+  platforms" to "decision-intelligence platforms" in a forward-reference to
+  this module's own categories — a real cross-module terminology
+  inconsistency, fixed at the source in Module 04; the spec's Purpose line
+  claimed this module documents "how monitoring works" while the module's
+  own body honestly states no process exists yet — a self-contradiction,
+  fixed) + 1 Minor (paragraph ordering in the Module 04/14 scope comparison
+  read as implicit criticism of Module 04 before its own mitigating clause
+  — reworded) — all fixed.
+- Merged: PR #20, branch `launchos-14-competition-intelligence`.
+- 14 of 16 modules built (01-14). 2 remain.
