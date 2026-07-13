@@ -235,3 +235,27 @@ sessions — trust this file and `git log` over conversational memory.
   conflation risk for a solo-founder company with no comms team. All fixed.
 - Merged: PR #18, branch `launchos-12-partnership-os`.
 - 12 of 16 modules built (01-12). 4 remain.
+
+## 2026-07-13 — Module 13: Hiring OS — closed
+
+- 3 files published: current state (founder-led, no open roles, no
+  process, no compensation/equity framework, citing Module 01's team-
+  composition fact), anticipated hiring Phase B (four real role priorities
+  — engineering, customer success, product design, sales — kept unranked,
+  triggered by "successful design-partner validation," explicitly not
+  equated with Module 09's Stage 7 since neither source states they're the
+  same event), employment/contracting dependency on incorporation
+  (mirroring Module 12's partnership-contract pattern), governance. Added a
+  Hiring OS checkbox to the PR template. Zero compensation figures, equity
+  percentages, headcount numbers, or hiring dates anywhere — verified by
+  two independent digit/currency scans.
+- Independent review: 1 Important (a Global Constraint 4 violation —
+  restated Module 01's internal `lib/content.ts` line citation instead of
+  pointing to Module 01's file) — fixed.
+- Adversarial review: 1 Important (unsourced editorializing reframed the
+  word "intentionally" into an unstated reassurance — "not a limitation...
+  not a problem to be urgently solved" — presented as flowing directly from
+  the sourced quote rather than flagged as this file's own inference,
+  unlike Module 09's comparable hedge) — fixed.
+- Merged: PR #19, branch `launchos-13-hiring-os`.
+- 13 of 16 modules built (01-13). 3 remain.
