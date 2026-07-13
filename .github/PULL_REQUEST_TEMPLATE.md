@@ -41,6 +41,15 @@ the **same PR** — do not defer it:
       decision from Emad → update
       `docs/launchos/13-hiring-os/01-current-state.md` and
       `02-anticipated-hiring.md` in the same PR
+- [ ] `COMPETITOR_COMPARISON` (`lib/content.ts`) changed → check
+      `docs/launchos/04-positioning/02-competitive-positioning-map.md`
+      first (it's the primary owner of the named-competitor analysis),
+      then check whether
+      `docs/launchos/14-competition-intelligence/01-monitoring-scope.md`
+      needs updating; a new competitor becomes tracked in a new
+      monitoring category → update
+      `docs/launchos/14-competition-intelligence/01-monitoring-scope.md`
+      in the same PR
 - [ ] None of the above apply to this PR
 
 ## Test plan
