@@ -119,7 +119,7 @@ reference; "Grounded by" replaces "Blocking need."
 | 07 | Investor Data Room | Ready | Intake §3 + Global Constraint 3 (pre/post-incorporation phases) |
 | 08 | Demo Playbooks | Ready | Live site content + Module 02's Decision Walkthrough scene |
 | 09 | Customer Success OS | Ready | Intake §4 (real design-partner onboarding flow) |
-| 10 | Operations OS | Ready | Intake §5 + Global Constraint 3 |
+| 10 | Operations OS | Built | Intake §5 + Global Constraint 3 |
 | 11 | Finance OS | Ready | Intake §6 + Global Constraint 3 (no figures to disclose yet — module documents process, not numbers that don't exist) |
 | 12 | Partnership OS | Ready | Intake §7 (real target categories, no fabricated names) |
 | 13 | Hiring OS | Ready | Intake §8 + Global Constraint 3 |
