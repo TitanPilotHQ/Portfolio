@@ -172,3 +172,24 @@ sessions — trust this file and `git log` over conversational memory.
   and held.
 - Merged: PR #15, branch `launchos-09-customer-success-os`.
 - 9 of 16 modules built (01-09). 7 remain.
+
+## 2026-07-13 — Module 10: Operations OS — closed
+
+- 4 files published: real tool stack (per-tool role independently verified
+  against repo artifacts, not assumed capability), SOP reality (engineering
+  SOPs confirmed to exist but not catalogued; business SOPs formalized
+  through LaunchOS itself), legal-entity Phase A/B structure (citing Module
+  07 for the underlying fact, not restating it), governance.
+- Independent review: 1 Critical (a Global Constraint 4 violation —
+  `03-legal-entity-and-structure.md` restated Module 07's sourcing quotes
+  instead of citing them) + 1 Important (a truncated/misquoted deployment-
+  checklist citation) — both fixed.
+- Adversarial review: 2 Important (corp-specific "board resolutions"
+  language implying an entity type Phase B deliberately doesn't state; a
+  self-indulgent "recursive relationship" section that read as circular
+  filler rather than doing diligence-relevant work, trimmed to one line) +
+  1 Minor (a self-contradictory VPS hedge) — all fixed. Noted but not
+  blocking: no module's governance file states a baseline review cadence
+  independent of triggers — a program-wide gap to address at closure.
+- Merged: PR #16, branch `launchos-10-operations-os`.
+- 10 of 16 modules built (01-10). 6 remain.
