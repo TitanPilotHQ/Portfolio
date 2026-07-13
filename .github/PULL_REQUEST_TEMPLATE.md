@@ -30,6 +30,13 @@ the **same PR** — do not defer it:
       `02-accounting-and-reporting.md` in the same PR — this module has the
       highest fabrication risk in LaunchOS (no dollar figures, percentages,
       or burn/runway estimates permitted without a direct source)
+- [ ] Any real partner name, partnership discussion, or engagement status is
+      about to appear in site copy, sales material, or investor material →
+      confirm formal engagement actually exists (per
+      `docs/launchos/12-partnership-os/02-engagement-rules.md`) before it
+      ships anywhere, and update
+      `docs/launchos/12-partnership-os/01-partnership-categories.md` in the
+      same PR with the sourced fact
 - [ ] None of the above apply to this PR
 
 ## Test plan
