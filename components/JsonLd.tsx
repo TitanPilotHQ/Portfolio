@@ -33,12 +33,10 @@ const softwareApplication = {
   url: SITE_URL,
   description:
     "Risk-first AI trading infrastructure with replayable decisions, deterministic scoring, MT5 execution, broker reconciliation, and shadow-mode validation. AI is used for structured market reasoning, not direct execution authority.",
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "USD",
-    description: "Early access program — shadow-mode validation phase.",
-  },
+  // No `offers` block: there is no transactable price, plan, or
+  // self-serve availability. Engagement happens through the design-partner
+  // contact flow, not a purchasable offer — an Offer schema here would be
+  // fabricated pricing/availability data.
 };
 
 const faqPage = {
@@ -62,7 +60,6 @@ export function JsonLd() {
         <script
           key={block["@type"]}
           type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: JSON.stringify(block) }}
         />
       ))}

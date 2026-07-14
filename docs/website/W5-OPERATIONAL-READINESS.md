@@ -18,17 +18,19 @@ No other environment variables are read anywhere in the codebase
 (`grep -r "process.env\." --include="*.ts" --include="*.tsx"`, verified
 2026-07-14).
 
-**Known limitation, not fixed in this pass:** if Upstash env vars are
-absent, rate limiting silently falls back to `MemoryRateLimiter`
+**Known limitation, now observable (previously silent):** if Upstash env
+vars are absent, rate limiting falls back to `MemoryRateLimiter`
 (`lib/server/rateLimit.ts`) — an in-process counter that resets on every
-serverless cold start. On Vercel's default (non-Fluid, or Fluid without
-warm reuse) this means rate limiting could be materially weaker than
-intended without any error or log line indicating degraded mode. This is
-acceptable given Upstash is a hard-required, already-documented
-prerequisite for lead storage (missing it breaks the form entirely, which
-would be caught immediately) — but worth knowing this specific
-degradation exists rather than assuming rate limiting is Upstash-backed
-by default.
+serverless cold start. As of the closure-verification pass, this fallback
+emits one privacy-safe `console.warn` (no IPs, hashes, emails, names, or
+message content) on first use per cold start, and `isRateLimiterDegraded()`
+is available for server-side diagnostics. It is still **not** wired into a
+public health endpoint — only into logs and the exported function — since
+this repo has no existing diagnostics surface, and adding a new public
+route to expose internal degraded-mode state would be its own scope
+decision. Grep Vercel function logs for `[rateLimit] Upstash credentials
+absent` after every deploy (added to the smoke checklist below) rather
+than assuming rate limiting is Upstash-backed by default.
 
 ## Production health / smoke checklist
 
@@ -59,6 +61,11 @@ Run after every production deploy, before considering it verified:
    data in the Vercel dashboard within a few minutes of the smoke test
    (this is the one signal that can't be verified via `curl`/local
    testing — see the audit's synthetic-vs-real-user-CWV note below).
+8. Grep Vercel function logs for `[rateLimit] Upstash credentials absent`.
+   Its absence confirms Upstash-backed distributed rate limiting is
+   active; its presence means production is running the weaker
+   per-instance memory fallback and `UPSTASH_REDIS_REST_URL`/`_TOKEN`
+   need to be checked in the Vercel project's environment variables.
 
 ## Deployment verification
 
@@ -69,9 +76,11 @@ Run after every production deploy, before considering it verified:
 - After merge, confirm the production deployment in the Vercel dashboard
   shows **Ready**, not **Error** or **Canceled**, before running the
   smoke checklist above.
-- `npm run build` must succeed locally with zero errors before opening
-  any PR (matches what Vercel's build step will run) — `npx tsc --noEmit`
-  first is faster feedback for type errors specifically.
+- `npm run lint`, `npm run typecheck`, `npm test`, and `npm run build`
+  must all succeed locally with zero errors before opening any PR (matches
+  what Vercel's build step will run, plus the quality gates added in the
+  closure-verification pass) — `npm run typecheck` first is faster
+  feedback for type errors specifically.
 - **One-time due diligence before `bot.titanpilot.app` (or any other
   subdomain) goes live:** the new `Strict-Transport-Security` header
   includes `includeSubDomains` — this only forces HTTPS on subdomains of
