@@ -14,6 +14,14 @@ function escapeHtml(value: string): string {
     .replace(/"/g, "&quot;");
 }
 
+// Contact responses carry lead-submission state and must never be cached
+// by a shared cache, browser back/forward cache, or CDN.
+function jsonNoStore(body: unknown, init?: { status?: number; headers?: HeadersInit }) {
+  const response = NextResponse.json(body, init);
+  response.headers.set("Cache-Control", "no-store");
+  return response;
+}
+
 function buildEmailBody(record: LeadRecord): { html: string; text: string } {
   const rows: [string, string][] = [
     ["Lead ID", record.lead_id],
@@ -47,7 +55,7 @@ export async function POST(req: NextRequest) {
   try {
     body = await req.json();
   } catch {
-    return NextResponse.json({ error: "Invalid request body" }, { status: 400 });
+    return jsonNoStore({ error: "Invalid request body" }, { status: 400 });
   }
 
   const honeypotValue =
@@ -59,7 +67,7 @@ export async function POST(req: NextRequest) {
       timestamp: new Date().toISOString(),
       userAgent: req.headers.get("user-agent") ?? "unknown",
     });
-    return NextResponse.json(
+    return jsonNoStore(
       { success: true, leadId: `TP-${new Date().getUTCFullYear()}-000000` },
       { status: 200 },
     );
@@ -67,7 +75,7 @@ export async function POST(req: NextRequest) {
 
   const parsed = contactFormSchema.safeParse(body);
   if (!parsed.success) {
-    return NextResponse.json(
+    return jsonNoStore(
       { error: "Validation failed", fieldErrors: parsed.error.flatten().fieldErrors },
       { status: 400 },
     );
@@ -84,7 +92,7 @@ export async function POST(req: NextRequest) {
       hashedIp,
       timestamp: new Date().toISOString(),
     });
-    return NextResponse.json(
+    return jsonNoStore(
       { error: "Too many submissions. Please try again later." },
       {
         status: 429,
@@ -162,19 +170,22 @@ export async function POST(req: NextRequest) {
     });
   }
   if (!storageOk) {
+    // Deliberately excludes `record` — it carries the lead's PII (name,
+    // work email, message) and must not be written to application logs.
+    // If both email and storage fail below, the submission is not
+    // recoverable from logs; the user is told to email the team directly.
     console.error("[contact] lead storage failed", {
       leadId: record.lead_id,
       error: storageResult.status === "rejected" ? storageResult.reason : undefined,
-      record,
     });
   }
 
   if (!emailOk && !storageOk) {
-    return NextResponse.json(
+    return jsonNoStore(
       { error: `Something went wrong. Please email us directly at ${CONTACT_EMAIL}.` },
       { status: 500 },
     );
   }
 
-  return NextResponse.json({ success: true, leadId: record.lead_id }, { status: 200 });
+  return jsonNoStore({ success: true, leadId: record.lead_id }, { status: 200 });
 }

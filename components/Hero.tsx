@@ -39,43 +39,23 @@ export function Hero() {
         className="relative mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:gap-10 lg:px-8"
       >
         <div>
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan/20 bg-cyan/5 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.3em] text-cyan"
-          >
+          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan/20 bg-cyan/5 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.3em] text-cyan">
             <span className="animate-ticker size-1.5 rounded-full bg-cyan" />
             SUPERVISED AI TRADING
-          </motion.p>
+          </p>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-display text-balance text-[1.6rem] font-bold leading-[1.16] sm:text-4xl lg:text-[2.7rem] lg:leading-[1.14]"
-          >
+          <h1 className="font-display text-balance text-[1.6rem] font-bold leading-[1.16] sm:text-4xl lg:text-[2.7rem] lg:leading-[1.14]">
             The <span className="text-gradient">system of record</span> for AI
             trading decisions.
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.22 }}
-            className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-secondary sm:text-lg"
-          >
+          <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-secondary sm:text-lg">
             Titan Pilot turns every thesis, objection, score, approval, and
             refusal into machine-validated evidence your desk can replay,
             govern, and defend.
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.34 }}
-            className="mt-8 flex flex-wrap items-center gap-4"
-          >
+          <div className="mt-8 flex flex-wrap items-center gap-4">
             <motion.a
               whileHover={{ scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.97 }}
@@ -98,38 +78,27 @@ export function Hero() {
             >
               Book an AI Desk Audit
             </motion.a>
-          </motion.div>
+          </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.42 }}
-            className="mt-4 text-xs text-white/60"
-          >
+          <p className="mt-4 text-xs text-white/60">
             Built for professional trading desks — not retail signals,
             performance promises, or one-click autonomy.
-          </motion.p>
+          </p>
 
-          <motion.ul
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+          <ul
             className="mt-10 flex flex-wrap gap-2.5"
             aria-label="Platform status indicators"
           >
-            {TRUST_BADGES.map((badge, i) => (
+            {TRUST_BADGES.map((badge) => (
               <motion.li
                 key={badge}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.55 + i * 0.08 }}
                 whileHover={{ scale: 1.08, borderColor: "rgba(0,215,255,0.4)" }}
                 className="rounded-full border border-white/10 bg-surface/80 px-3.5 py-1.5 font-mono text-[11px] tracking-wider text-secondary"
               >
                 {badge}
               </motion.li>
             ))}
-          </motion.ul>
+          </ul>
         </div>
 
         <DashboardMockup />
