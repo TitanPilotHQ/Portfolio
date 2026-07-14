@@ -9,6 +9,8 @@ export function MultiSelectField({
   onChange,
   otherValue,
   onOtherChange,
+  otherInputId,
+  otherError,
 }: {
   label: string;
   options: readonly string[];
@@ -16,6 +18,8 @@ export function MultiSelectField({
   onChange: (value: string[]) => void;
   otherValue: string;
   onOtherChange: (value: string) => void;
+  otherInputId?: string;
+  otherError?: string;
 }) {
   const groupId = useId();
   const showOther = value.includes("Other");
@@ -58,14 +62,25 @@ export function MultiSelectField({
         })}
       </div>
       {showOther ? (
-        <input
-          type="text"
-          value={otherValue}
-          onChange={(e) => onOtherChange(e.target.value)}
-          placeholder="Please specify…"
-          aria-label={`${label} — other, please specify`}
-          className={`${inputClass} mt-2.5`}
-        />
+        <>
+          <input
+            id={otherInputId}
+            type="text"
+            required
+            value={otherValue}
+            onChange={(e) => onOtherChange(e.target.value)}
+            placeholder="Please specify…"
+            aria-label={`${label} — other, please specify`}
+            aria-invalid={Boolean(otherError)}
+            aria-describedby={otherError && otherInputId ? `${otherInputId}-error` : undefined}
+            className={`${inputClass} mt-2.5`}
+          />
+          {otherError && otherInputId ? (
+            <p id={`${otherInputId}-error`} role="alert" className="mt-1.5 text-xs text-amber">
+              {otherError}
+            </p>
+          ) : null}
+        </>
       ) : null}
     </fieldset>
   );

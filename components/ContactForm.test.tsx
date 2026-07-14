@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
-import { cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { cleanup, fireEvent, render, screen, within } from "@testing-library/react";
 import { ContactForm } from "./ContactForm";
 
 vi.mock("@vercel/analytics", () => ({
@@ -162,5 +162,136 @@ describe("ContactForm client-side validation", () => {
     expect(document.activeElement).toBe(jobTitleInput);
     fireEvent.change(jobTitleInput, { target: { value: "CTO" } });
     expect(jobTitleInput.value).toBe("CTO");
+  });
+});
+
+describe("ContactForm 'Other' companion field validation", () => {
+  beforeEach(() => {
+    vi.stubGlobal("fetch", vi.fn());
+  });
+
+  it("clears the companion detail when a scalar field is switched away from Other", () => {
+    render(<ContactForm />);
+    fireEvent.change(screen.getByLabelText("Current AI Usage"), { target: { value: "Other" } });
+    fireEvent.change(screen.getByLabelText("Current AI Usage — other, please specify"), {
+      target: { value: "Some bespoke tool" },
+    });
+
+    // Switch away from "Other" — the companion input unmounts.
+    fireEvent.change(screen.getByLabelText("Current AI Usage"), { target: { value: "Claude" } });
+    expect(
+      screen.queryByLabelText("Current AI Usage — other, please specify"),
+    ).toBeNull();
+
+    // Switch back to "Other" — if the state was actually cleared (not just
+    // hidden), the companion input remounts empty rather than showing the
+    // stale text.
+    fireEvent.change(screen.getByLabelText("Current AI Usage"), { target: { value: "Other" } });
+    expect(
+      (screen.getByLabelText("Current AI Usage — other, please specify") as HTMLInputElement)
+        .value,
+    ).toBe("");
+  });
+
+  it("clears the companion detail when Other is deselected from a multi-select field", () => {
+    render(<ContactForm />);
+    const assetClassesFieldset = screen.getByText("Asset Classes").closest("fieldset");
+    expect(assetClassesFieldset).not.toBeNull();
+    const scope = within(assetClassesFieldset as HTMLElement);
+
+    fireEvent.click(scope.getByLabelText("Other"));
+    fireEvent.change(scope.getByLabelText("Asset Classes — other, please specify"), {
+      target: { value: "Structured products" },
+    });
+
+    // Deselect "Other" — the companion input unmounts.
+    fireEvent.click(scope.getByLabelText("Other"));
+    expect(
+      scope.queryByLabelText("Asset Classes — other, please specify"),
+    ).toBeNull();
+
+    // Re-select "Other" — companion should be empty, not the stale text.
+    fireEvent.click(scope.getByLabelText("Other"));
+    expect(
+      (scope.getByLabelText("Asset Classes — other, please specify") as HTMLInputElement).value,
+    ).toBe("");
+  });
+
+  it("reports an error on every missing companion field when multiple 'Other' selections are made, with no network request", () => {
+    render(<ContactForm />);
+    fillValidForm();
+
+    // fillValidForm already selected "FX"; also select "Other" for Asset
+    // Classes, and switch AI Usage to "Other" — two independent pairs,
+    // both left blank.
+    const assetClassesFieldset = screen.getByText("Asset Classes").closest("fieldset");
+    fireEvent.click(within(assetClassesFieldset as HTMLElement).getByLabelText("Other"));
+    fireEvent.change(screen.getByLabelText("Current AI Usage"), { target: { value: "Other" } });
+
+    fireEvent.click(screen.getByRole("button", { name: /book an ai desk audit/i }));
+
+    expect(screen.getByText("Please specify", { selector: "#cf-ai-usage-other-error" })).toBeTruthy();
+    expect(
+      screen.getByText("Please specify", { selector: "#cf-asset-classes-other-error" }),
+    ).toBeTruthy();
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+
+  it("passes and submits when a scalar Other field has a valid detail", async () => {
+    vi.mocked(global.fetch).mockResolvedValue(
+      new Response(JSON.stringify({ success: true, leadId: "TP-2026-000002" }), { status: 200 }),
+    );
+    render(<ContactForm />);
+    fillValidForm();
+    fireEvent.change(screen.getByLabelText("Current AI Usage"), { target: { value: "Other" } });
+    fireEvent.change(screen.getByLabelText("Current AI Usage — other, please specify"), {
+      target: { value: "An internal LLM tool" },
+    });
+
+    fireEvent.click(screen.getByRole("button", { name: /book an ai desk audit/i }));
+
+    await screen.findByText("Thank you.");
+    expect(global.fetch).toHaveBeenCalledTimes(1);
+  });
+
+  it("keeps aria-invalid, aria-describedby, and role=alert correct on Other companion inputs", () => {
+    render(<ContactForm />);
+    fillValidForm();
+    fireEvent.change(screen.getByLabelText("Current AI Usage"), { target: { value: "Other" } });
+    fireEvent.click(screen.getByRole("button", { name: /book an ai desk audit/i }));
+
+    const otherInput = screen.getByLabelText("Current AI Usage — other, please specify");
+    expect(otherInput.getAttribute("aria-invalid")).toBe("true");
+    expect(otherInput.getAttribute("aria-describedby")).toBe("cf-ai-usage-other-error");
+
+    const errorEl = document.getElementById("cf-ai-usage-other-error");
+    expect(errorEl).not.toBeNull();
+    expect(errorEl?.getAttribute("role")).toBe("alert");
+  });
+
+  it("still renders a server-side 400 error for an Other companion field", async () => {
+    vi.mocked(global.fetch).mockResolvedValue(
+      new Response(
+        JSON.stringify({
+          error: "Validation failed",
+          fieldErrors: { aiUsageOther: ["Please specify"] },
+        }),
+        { status: 400 },
+      ),
+    );
+    render(<ContactForm />);
+    fillValidForm();
+    fireEvent.change(screen.getByLabelText("Current AI Usage"), { target: { value: "Other" } });
+    fireEvent.change(screen.getByLabelText("Current AI Usage — other, please specify"), {
+      target: { value: "placeholder so client-side validation passes" },
+    });
+
+    fireEvent.click(screen.getByRole("button", { name: /book an ai desk audit/i }));
+
+    await screen.findByText(
+      "Please specify",
+      { selector: "#cf-ai-usage-other-error" },
+    );
+    expect(global.fetch).toHaveBeenCalledTimes(1);
   });
 });

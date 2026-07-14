@@ -78,6 +78,8 @@ function isSectionComplete(state: FormState, fields: (keyof FormState)[]): boole
 
 // Visual top-to-bottom order of every schema field, used to find "the
 // first invalid field" for focus management on client-side validation.
+// Each "...Other" companion sits directly after its parent field, matching
+// where it renders when visible.
 const FIELD_ORDER: (keyof FormState)[] = [
   "company",
   "name",
@@ -86,25 +88,33 @@ const FIELD_ORDER: (keyof FormState)[] = [
   "deskSize",
   "jurisdiction",
   "assetClasses",
+  "assetClassesOther",
   "aiUsage",
+  "aiUsageOther",
   "governanceMethod",
+  "governanceMethodOther",
   "primaryGoal",
+  "primaryGoalOther",
   "message",
   "consent",
 ];
 
 // Only fields rendered as a single focusable input with a stable id get an
-// entry here. SearchableSelect/MultiSelectField manage their own internal
-// ids and are intentionally left alone — focusing them narrowly would
-// require reaching into components outside this fix's scope.
+// entry here. SearchableSelect manages its own internal id and is
+// intentionally left alone — focusing it narrowly would require reaching
+// into that component outside this fix's scope.
 const FIELD_INPUT_ID: Partial<Record<keyof FormState, string>> = {
   company: "cf-company",
   name: "cf-name",
   workEmail: "cf-email",
   jobTitle: "cf-title",
   deskSize: "cf-desk-size",
+  assetClassesOther: "cf-asset-classes-other",
   aiUsage: "cf-ai-usage",
+  aiUsageOther: "cf-ai-usage-other",
   governanceMethod: "cf-governance",
+  governanceMethodOther: "cf-governance-other",
+  primaryGoalOther: "cf-primary-goal-other",
   message: "cf-message",
 };
 
@@ -167,6 +177,43 @@ export function ContactForm() {
     markStarted();
     setValues((prev) => {
       const next = { ...prev, [key]: value };
+      checkSectionCompletion(next);
+      return next;
+    });
+  }
+
+  // Clears the companion "...Other" text the moment its parent field is
+  // switched away from "Other", so stale text can never linger and get
+  // submitted alongside a non-"Other" selection.
+  function updateWithOtherReset(
+    key: "aiUsage" | "governanceMethod",
+    otherKey: "aiUsageOther" | "governanceMethodOther",
+    value: string,
+  ) {
+    markStarted();
+    setValues((prev) => {
+      const next: FormState = {
+        ...prev,
+        [key]: value,
+        [otherKey]: value === "Other" ? prev[otherKey] : "",
+      };
+      checkSectionCompletion(next);
+      return next;
+    });
+  }
+
+  function updateArrayWithOtherReset(
+    key: "assetClasses" | "primaryGoal",
+    otherKey: "assetClassesOther" | "primaryGoalOther",
+    value: string[],
+  ) {
+    markStarted();
+    setValues((prev) => {
+      const next: FormState = {
+        ...prev,
+        [key]: value,
+        [otherKey]: value.includes("Other") ? prev[otherKey] : "",
+      };
       checkSectionCompletion(next);
       return next;
     });
@@ -404,9 +451,11 @@ export function ContactForm() {
               label="Asset Classes"
               options={ASSET_CLASS_VALUES}
               value={values.assetClasses}
-              onChange={(v) => update("assetClasses", v)}
+              onChange={(v) => updateArrayWithOtherReset("assetClasses", "assetClassesOther", v)}
               otherValue={values.assetClassesOther}
               onOtherChange={(v) => update("assetClassesOther", v)}
+              otherInputId={FIELD_INPUT_ID.assetClassesOther}
+              otherError={errors.assetClassesOther}
             />
             {errors.assetClasses ? (
               <p role="alert" className={errorClass}>
@@ -423,7 +472,7 @@ export function ContactForm() {
               aria-describedby={errors.aiUsage ? "cf-ai-usage-error" : undefined}
               className={inputClass}
               value={values.aiUsage}
-              onChange={(e) => update("aiUsage", e.target.value)}
+              onChange={(e) => updateWithOtherReset("aiUsage", "aiUsageOther", e.target.value)}
             >
               <option value="" disabled>Select…</option>
               {AI_USAGE_VALUES.map((o) => (
@@ -436,12 +485,24 @@ export function ContactForm() {
               </p>
             ) : null}
             {values.aiUsage === "Other" ? (
-              <input
-                className={`${inputClass} mt-2.5`}
-                placeholder="Please specify…"
-                value={values.aiUsageOther}
-                onChange={(e) => update("aiUsageOther", e.target.value)}
-              />
+              <>
+                <input
+                  id="cf-ai-usage-other"
+                  required
+                  aria-label="Current AI Usage — other, please specify"
+                  aria-invalid={Boolean(errors.aiUsageOther)}
+                  aria-describedby={errors.aiUsageOther ? "cf-ai-usage-other-error" : undefined}
+                  className={`${inputClass} mt-2.5`}
+                  placeholder="Please specify…"
+                  value={values.aiUsageOther}
+                  onChange={(e) => update("aiUsageOther", e.target.value)}
+                />
+                {errors.aiUsageOther ? (
+                  <p id="cf-ai-usage-other-error" role="alert" className={errorClass}>
+                    {errors.aiUsageOther}
+                  </p>
+                ) : null}
+              </>
             ) : null}
           </div>
           <div>
@@ -455,7 +516,9 @@ export function ContactForm() {
               aria-describedby={errors.governanceMethod ? "cf-governance-error" : undefined}
               className={inputClass}
               value={values.governanceMethod}
-              onChange={(e) => update("governanceMethod", e.target.value)}
+              onChange={(e) =>
+                updateWithOtherReset("governanceMethod", "governanceMethodOther", e.target.value)
+              }
             >
               <option value="" disabled>Select…</option>
               {GOVERNANCE_METHOD_VALUES.map((o) => (
@@ -468,12 +531,26 @@ export function ContactForm() {
               </p>
             ) : null}
             {values.governanceMethod === "Other" ? (
-              <input
-                className={`${inputClass} mt-2.5`}
-                placeholder="Please specify…"
-                value={values.governanceMethodOther}
-                onChange={(e) => update("governanceMethodOther", e.target.value)}
-              />
+              <>
+                <input
+                  id="cf-governance-other"
+                  required
+                  aria-label="Current Governance Method — other, please specify"
+                  aria-invalid={Boolean(errors.governanceMethodOther)}
+                  aria-describedby={
+                    errors.governanceMethodOther ? "cf-governance-other-error" : undefined
+                  }
+                  className={`${inputClass} mt-2.5`}
+                  placeholder="Please specify…"
+                  value={values.governanceMethodOther}
+                  onChange={(e) => update("governanceMethodOther", e.target.value)}
+                />
+                {errors.governanceMethodOther ? (
+                  <p id="cf-governance-other-error" role="alert" className={errorClass}>
+                    {errors.governanceMethodOther}
+                  </p>
+                ) : null}
+              </>
             ) : null}
           </div>
         </div>
@@ -487,9 +564,11 @@ export function ContactForm() {
               label="Primary Goal"
               options={PRIMARY_GOAL_VALUES}
               value={values.primaryGoal}
-              onChange={(v) => update("primaryGoal", v)}
+              onChange={(v) => updateArrayWithOtherReset("primaryGoal", "primaryGoalOther", v)}
               otherValue={values.primaryGoalOther}
               onOtherChange={(v) => update("primaryGoalOther", v)}
+              otherInputId={FIELD_INPUT_ID.primaryGoalOther}
+              otherError={errors.primaryGoalOther}
             />
             {errors.primaryGoal ? (
               <p role="alert" className={errorClass}>

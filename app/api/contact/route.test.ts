@@ -100,6 +100,19 @@ describe("POST /api/contact", () => {
     expect(sendMock).not.toHaveBeenCalled();
   });
 
+  it("rejects a payload where 'Other' is selected but its companion detail is blank", async () => {
+    const res = await POST(
+      makeRequest({ ...VALID_PAYLOAD, aiUsage: "Other", aiUsageOther: "" }),
+    );
+    expect(res.status).toBe(400);
+    expect(res.headers.get("Cache-Control")).toBe("no-store");
+    const body = await res.json();
+    expect(body.error).toBe("Validation failed");
+    expect(body.fieldErrors.aiUsageOther).toBeTruthy();
+    expect(saveMock).not.toHaveBeenCalled();
+    expect(sendMock).not.toHaveBeenCalled();
+  });
+
   it("returns a fake success for honeypot submissions without touching storage or email", async () => {
     const res = await POST(makeRequest({ ...VALID_PAYLOAD, honeypot: "i-am-a-bot" }));
     expect(res.status).toBe(200);
