@@ -39,6 +39,7 @@ in this pass, with why).
 | Global visible focus ring | **Verified already good** — `:focus-visible` rule in `globals.css` applies everywhere |
 | `prefers-reduced-motion` handling | **Verified already good** — present in `globals.css` |
 | No custom-branded 404 page (Next.js default `_not-found` is used) | **Deferred, minor** — HTTP status is correctly `404` (verified via `curl`); the plan's requirement is "correct 404 behavior," which this satisfies. A branded 404 page is a polish item, not a defect |
+| Contact form's custom inline validation errors were unreachable: `<form>` had `required` attributes but no `noValidate`, so native browser constraint validation intercepted submission before React's `onSubmit` ever ran — a blank required field (e.g. Job Title) produced no usable feedback | **Fixed** (post-closure, PR #29, commit `90ae7dc`) — found during real-browser cross-browser certification (W5-MANUAL-CERTIFICATION-CHECKLIST.md §7–10), not by this pass's original static review. **This is itself a finding about the review method**: the original accessibility pass in this section verified markup correctness (`role="alert"`, `aria-invalid`, `aria-describedby` all present) but markup correctness does not prove an error path is *reachable* at runtime — that requires exercising the actual submit interaction in a real browser, which static code review cannot substitute for. Fixed by adding `noValidate` plus a client-side `contactFormSchema.safeParse()` in `handleSubmit`. Same pass also found and fixed: the four "Other"-selected companion fields (Asset Classes, AI Usage, Governance Method, Primary Goal) had no validation/error UI at all, and a stale-error bug where a companion field's error could resurface after its parent was deselected then reselected without resubmitting. See §14 of the certification checklist for full detail and re-verification evidence |
 
 ## 4. Responsive and browser verification
 
@@ -97,6 +98,8 @@ Not started — plan explicitly gates this on "all release-critical W5 work is g
 **Fixed this pass (original W5 pass):** hero/dashboard LCP defect (8.6s → 2.9s), full security header set, CSP, contact-API `Cache-Control: no-store`, PII removed from failure logs.
 
 **Fixed this pass (closure-verification pass):** fabricated JSON-LD `Offer` removed; rate-limiter degraded-mode observability added with tests; lint config turned on (and its two real pre-existing findings fixed); `typecheck` script added; Vitest added with 11 tests covering the contact route and rate-limit degradation; PostCSS advisory formally assessed as not reachable in production.
+
+**Fixed this pass (manual-certification pass, PR #29):** contact form's native-constraint-validation-masks-custom-errors defect (blank required fields gave no usable feedback), plus the "Other" companion-field validation gap and a stale-error state bug it exposed during fix review — found via real-browser cross-browser testing, not static review. See the Accessibility section above and `W5-MANUAL-CERTIFICATION-CHECKLIST.md` §14.
 
 **Verified already good (no code change needed):** footer contrast, form a11y (errors + success focus management), mobile nav pattern, global focus ring, reduced-motion support, SEO metadata/sitemap/robots/canonicals, 404 status code, footer LinkedIn link (already removed).
 
