@@ -76,14 +76,28 @@ class UpstashRateLimiter implements RateLimiter {
 }
 
 let cachedLimiter: RateLimiter | null = null;
+let degraded = false;
+
+// Diagnostic flag only — never expose in a public API response, since
+// confirming degraded-mode to an unauthenticated caller helps an attacker
+// time abuse around it. Safe to read from a server-only health check.
+export function isRateLimiterDegraded(): boolean {
+  return degraded;
+}
 
 export function getRateLimiter(): RateLimiter {
   if (cachedLimiter) return cachedLimiter;
   const url = process.env.UPSTASH_REDIS_REST_URL;
   const token = process.env.UPSTASH_REDIS_REST_TOKEN;
-  cachedLimiter =
-    url && token
-      ? new UpstashRateLimiter(new Redis({ url, token }))
-      : new MemoryRateLimiter();
+  if (url && token) {
+    cachedLimiter = new UpstashRateLimiter(new Redis({ url, token }));
+  } else {
+    degraded = true;
+    // No IPs, HMACs, emails, names, or message content — this fires once
+    // per cold start and only says *that* the limiter degraded, not who
+    // hit it.
+    console.warn("[rateLimit] Upstash credentials absent — falling back to per-instance memory rate limiting. Distributed rate-limit protection is NOT active.");
+    cachedLimiter = new MemoryRateLimiter();
+  }
   return cachedLimiter;
 }
