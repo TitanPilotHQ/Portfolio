@@ -182,6 +182,20 @@ export function ContactForm() {
     });
   }
 
+  // A companion field's error can only ever have come from validating it
+  // while it was visible (parent === "Other"). Once the parent moves away
+  // from "Other" the companion is cleared and hidden, so any lingering
+  // error for it is now stale — drop it, or it would silently reappear on
+  // the next visible-but-untouched render if the user re-selects "Other".
+  function clearOtherError(otherKey: keyof FormState) {
+    setErrors((prev) => {
+      if (!(otherKey in prev)) return prev;
+      const next = { ...prev };
+      delete next[otherKey];
+      return next;
+    });
+  }
+
   // Clears the companion "...Other" text the moment its parent field is
   // switched away from "Other", so stale text can never linger and get
   // submitted alongside a non-"Other" selection.
@@ -200,6 +214,7 @@ export function ContactForm() {
       checkSectionCompletion(next);
       return next;
     });
+    if (value !== "Other") clearOtherError(otherKey);
   }
 
   function updateArrayWithOtherReset(
@@ -217,6 +232,7 @@ export function ContactForm() {
       checkSectionCompletion(next);
       return next;
     });
+    if (!value.includes("Other")) clearOtherError(otherKey);
   }
 
   async function handleSubmit(e: FormEvent) {

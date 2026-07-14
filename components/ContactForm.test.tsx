@@ -294,4 +294,24 @@ describe("ContactForm 'Other' companion field validation", () => {
     );
     expect(global.fetch).toHaveBeenCalledTimes(1);
   });
+
+  it("does not resurrect a stale error when Other is deselected then re-selected without resubmitting", () => {
+    render(<ContactForm />);
+    fillValidForm();
+
+    // Trigger and confirm the error.
+    fireEvent.change(screen.getByLabelText("Current AI Usage"), { target: { value: "Other" } });
+    fireEvent.click(screen.getByRole("button", { name: /book an ai desk audit/i }));
+    expect(
+      screen.getByText("Please specify", { selector: "#cf-ai-usage-other-error" }),
+    ).toBeTruthy();
+
+    // Deselect, then re-select "Other" — no resubmission in between.
+    fireEvent.change(screen.getByLabelText("Current AI Usage"), { target: { value: "Claude" } });
+    fireEvent.change(screen.getByLabelText("Current AI Usage"), { target: { value: "Other" } });
+
+    expect(document.getElementById("cf-ai-usage-other-error")).toBeNull();
+    const otherInput = screen.getByLabelText("Current AI Usage — other, please specify");
+    expect(otherInput.getAttribute("aria-invalid")).toBe("false");
+  });
 });
