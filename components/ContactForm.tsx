@@ -7,6 +7,7 @@ import { COUNTRIES } from "@/lib/countries";
 import {
   AI_USAGE_VALUES,
   ASSET_CLASS_VALUES,
+  contactFormSchema,
   DESK_SIZE_VALUES,
   GOVERNANCE_METHOD_VALUES,
   PRIMARY_GOAL_VALUES,
@@ -75,6 +76,59 @@ function isSectionComplete(state: FormState, fields: (keyof FormState)[]): boole
   });
 }
 
+// Visual top-to-bottom order of every schema field, used to find "the
+// first invalid field" for focus management on client-side validation.
+// Each "...Other" companion sits directly after its parent field, matching
+// where it renders when visible.
+const FIELD_ORDER: (keyof FormState)[] = [
+  "company",
+  "name",
+  "workEmail",
+  "jobTitle",
+  "deskSize",
+  "jurisdiction",
+  "assetClasses",
+  "assetClassesOther",
+  "aiUsage",
+  "aiUsageOther",
+  "governanceMethod",
+  "governanceMethodOther",
+  "primaryGoal",
+  "primaryGoalOther",
+  "message",
+  "consent",
+];
+
+// Only fields rendered as a single focusable input with a stable id get an
+// entry here. SearchableSelect manages its own internal id and is
+// intentionally left alone — focusing it narrowly would require reaching
+// into that component outside this fix's scope.
+const FIELD_INPUT_ID: Partial<Record<keyof FormState, string>> = {
+  company: "cf-company",
+  name: "cf-name",
+  workEmail: "cf-email",
+  jobTitle: "cf-title",
+  deskSize: "cf-desk-size",
+  assetClassesOther: "cf-asset-classes-other",
+  aiUsage: "cf-ai-usage",
+  aiUsageOther: "cf-ai-usage-other",
+  governanceMethod: "cf-governance",
+  governanceMethodOther: "cf-governance-other",
+  primaryGoalOther: "cf-primary-goal-other",
+  message: "cf-message",
+};
+
+function formatFieldErrors(
+  fieldErrors: Record<string, string[] | undefined>,
+): Record<string, string> {
+  return Object.fromEntries(
+    Object.entries(fieldErrors).map(([k, v]) => [
+      k,
+      Array.isArray(v) ? String(v[0]) : String(v),
+    ]),
+  );
+}
+
 export function ContactForm() {
   const [values, setValues] = useState<FormState>(EMPTY_STATE);
   const [honeypot, setHoneypot] = useState("");
@@ -128,10 +182,74 @@ export function ContactForm() {
     });
   }
 
+  // A companion field's error can only ever have come from validating it
+  // while it was visible (parent === "Other"). Once the parent moves away
+  // from "Other" the companion is cleared and hidden, so any lingering
+  // error for it is now stale — drop it, or it would silently reappear on
+  // the next visible-but-untouched render if the user re-selects "Other".
+  function clearOtherError(otherKey: keyof FormState) {
+    setErrors((prev) => {
+      if (!(otherKey in prev)) return prev;
+      const next = { ...prev };
+      delete next[otherKey];
+      return next;
+    });
+  }
+
+  // Clears the companion "...Other" text the moment its parent field is
+  // switched away from "Other", so stale text can never linger and get
+  // submitted alongside a non-"Other" selection.
+  function updateWithOtherReset(
+    key: "aiUsage" | "governanceMethod",
+    otherKey: "aiUsageOther" | "governanceMethodOther",
+    value: string,
+  ) {
+    markStarted();
+    setValues((prev) => {
+      const next: FormState = {
+        ...prev,
+        [key]: value,
+        [otherKey]: value === "Other" ? prev[otherKey] : "",
+      };
+      checkSectionCompletion(next);
+      return next;
+    });
+    if (value !== "Other") clearOtherError(otherKey);
+  }
+
+  function updateArrayWithOtherReset(
+    key: "assetClasses" | "primaryGoal",
+    otherKey: "assetClassesOther" | "primaryGoalOther",
+    value: string[],
+  ) {
+    markStarted();
+    setValues((prev) => {
+      const next: FormState = {
+        ...prev,
+        [key]: value,
+        [otherKey]: value.includes("Other") ? prev[otherKey] : "",
+      };
+      checkSectionCompletion(next);
+      return next;
+    });
+    if (!value.includes("Other")) clearOtherError(otherKey);
+  }
+
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     setServerError(null);
     setErrors({});
+
+    const parsed = contactFormSchema.safeParse({ ...values, honeypot, utm });
+    if (!parsed.success) {
+      const fieldErrors = parsed.error.flatten().fieldErrors;
+      setErrors(formatFieldErrors(fieldErrors));
+      const firstInvalid = FIELD_ORDER.find((field) => fieldErrors[field]?.length);
+      const focusId = firstInvalid ? FIELD_INPUT_ID[firstInvalid] : undefined;
+      if (focusId) document.getElementById(focusId)?.focus();
+      return;
+    }
+
     setSubmitting(true);
     track("contact_submitted");
 
@@ -153,14 +271,7 @@ export function ContactForm() {
         const errBody = await response.json().catch(() => null);
         const fieldErrors = errBody?.fieldErrors ?? {};
         track("contact_validation_failed", { fields: Object.keys(fieldErrors).join(",") });
-        setErrors(
-          Object.fromEntries(
-            Object.entries(fieldErrors).map(([k, v]) => [
-              k,
-              Array.isArray(v) ? String(v[0]) : String(v),
-            ]),
-          ),
-        );
+        setErrors(formatFieldErrors(fieldErrors));
         return;
       }
 
@@ -218,7 +329,11 @@ export function ContactForm() {
 
   return (
     <Reveal className="mx-auto max-w-2xl">
-      <form onSubmit={handleSubmit} className="glass-strong space-y-12 rounded-2xl p-8 sm:p-12">
+      <form
+        onSubmit={handleSubmit}
+        noValidate
+        className="glass-strong space-y-12 rounded-2xl p-8 sm:p-12"
+      >
         <input
           type="text"
           name="hp-field"
@@ -352,9 +467,11 @@ export function ContactForm() {
               label="Asset Classes"
               options={ASSET_CLASS_VALUES}
               value={values.assetClasses}
-              onChange={(v) => update("assetClasses", v)}
+              onChange={(v) => updateArrayWithOtherReset("assetClasses", "assetClassesOther", v)}
               otherValue={values.assetClassesOther}
               onOtherChange={(v) => update("assetClassesOther", v)}
+              otherInputId={FIELD_INPUT_ID.assetClassesOther}
+              otherError={errors.assetClassesOther}
             />
             {errors.assetClasses ? (
               <p role="alert" className={errorClass}>
@@ -371,7 +488,7 @@ export function ContactForm() {
               aria-describedby={errors.aiUsage ? "cf-ai-usage-error" : undefined}
               className={inputClass}
               value={values.aiUsage}
-              onChange={(e) => update("aiUsage", e.target.value)}
+              onChange={(e) => updateWithOtherReset("aiUsage", "aiUsageOther", e.target.value)}
             >
               <option value="" disabled>Select…</option>
               {AI_USAGE_VALUES.map((o) => (
@@ -384,12 +501,24 @@ export function ContactForm() {
               </p>
             ) : null}
             {values.aiUsage === "Other" ? (
-              <input
-                className={`${inputClass} mt-2.5`}
-                placeholder="Please specify…"
-                value={values.aiUsageOther}
-                onChange={(e) => update("aiUsageOther", e.target.value)}
-              />
+              <>
+                <input
+                  id="cf-ai-usage-other"
+                  required
+                  aria-label="Current AI Usage — other, please specify"
+                  aria-invalid={Boolean(errors.aiUsageOther)}
+                  aria-describedby={errors.aiUsageOther ? "cf-ai-usage-other-error" : undefined}
+                  className={`${inputClass} mt-2.5`}
+                  placeholder="Please specify…"
+                  value={values.aiUsageOther}
+                  onChange={(e) => update("aiUsageOther", e.target.value)}
+                />
+                {errors.aiUsageOther ? (
+                  <p id="cf-ai-usage-other-error" role="alert" className={errorClass}>
+                    {errors.aiUsageOther}
+                  </p>
+                ) : null}
+              </>
             ) : null}
           </div>
           <div>
@@ -403,7 +532,9 @@ export function ContactForm() {
               aria-describedby={errors.governanceMethod ? "cf-governance-error" : undefined}
               className={inputClass}
               value={values.governanceMethod}
-              onChange={(e) => update("governanceMethod", e.target.value)}
+              onChange={(e) =>
+                updateWithOtherReset("governanceMethod", "governanceMethodOther", e.target.value)
+              }
             >
               <option value="" disabled>Select…</option>
               {GOVERNANCE_METHOD_VALUES.map((o) => (
@@ -416,12 +547,26 @@ export function ContactForm() {
               </p>
             ) : null}
             {values.governanceMethod === "Other" ? (
-              <input
-                className={`${inputClass} mt-2.5`}
-                placeholder="Please specify…"
-                value={values.governanceMethodOther}
-                onChange={(e) => update("governanceMethodOther", e.target.value)}
-              />
+              <>
+                <input
+                  id="cf-governance-other"
+                  required
+                  aria-label="Current Governance Method — other, please specify"
+                  aria-invalid={Boolean(errors.governanceMethodOther)}
+                  aria-describedby={
+                    errors.governanceMethodOther ? "cf-governance-other-error" : undefined
+                  }
+                  className={`${inputClass} mt-2.5`}
+                  placeholder="Please specify…"
+                  value={values.governanceMethodOther}
+                  onChange={(e) => update("governanceMethodOther", e.target.value)}
+                />
+                {errors.governanceMethodOther ? (
+                  <p id="cf-governance-other-error" role="alert" className={errorClass}>
+                    {errors.governanceMethodOther}
+                  </p>
+                ) : null}
+              </>
             ) : null}
           </div>
         </div>
@@ -435,9 +580,11 @@ export function ContactForm() {
               label="Primary Goal"
               options={PRIMARY_GOAL_VALUES}
               value={values.primaryGoal}
-              onChange={(v) => update("primaryGoal", v)}
+              onChange={(v) => updateArrayWithOtherReset("primaryGoal", "primaryGoalOther", v)}
               otherValue={values.primaryGoalOther}
               onOtherChange={(v) => update("primaryGoalOther", v)}
+              otherInputId={FIELD_INPUT_ID.primaryGoalOther}
+              otherError={errors.primaryGoalOther}
             />
             {errors.primaryGoal ? (
               <p role="alert" className={errorClass}>

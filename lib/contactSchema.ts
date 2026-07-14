@@ -36,7 +36,7 @@ const utmSchema = z
   .nullable()
   .optional();
 
-export const contactFormSchema = z.object({
+const contactFormBaseSchema = z.object({
   company: z.string().trim().min(1, "Company name is required").max(200),
   name: z.string().trim().min(1, "Full name is required").max(200),
   workEmail: z.string().trim().email("Enter a valid work email").max(320),
@@ -67,6 +67,48 @@ export const contactFormSchema = z.object({
   }),
   honeypot: z.string().optional(),
   utm: utmSchema,
+});
+
+// "Other" companion fields: required (and non-whitespace) only when their
+// parent field actually selects "Other". When the parent isn't "Other",
+// the companion is left unvalidated here — callers already ignore its
+// value in that case (see app/api/contact/route.ts's record-building
+// logic), so there is nothing to reject.
+function requireOtherDetail(
+  ctx: z.RefinementCtx,
+  isOtherSelected: boolean,
+  detail: string | undefined,
+  path: string,
+) {
+  if (isOtherSelected && (!detail || detail.trim().length === 0)) {
+    ctx.addIssue({
+      code: "custom",
+      message: "Please specify",
+      path: [path],
+    });
+  }
+}
+
+export const contactFormSchema = contactFormBaseSchema.superRefine((data, ctx) => {
+  requireOtherDetail(
+    ctx,
+    data.assetClasses.includes("Other"),
+    data.assetClassesOther,
+    "assetClassesOther",
+  );
+  requireOtherDetail(ctx, data.aiUsage === "Other", data.aiUsageOther, "aiUsageOther");
+  requireOtherDetail(
+    ctx,
+    data.governanceMethod === "Other",
+    data.governanceMethodOther,
+    "governanceMethodOther",
+  );
+  requireOtherDetail(
+    ctx,
+    data.primaryGoal.includes("Other"),
+    data.primaryGoalOther,
+    "primaryGoalOther",
+  );
 });
 
 export type ContactFormValues = z.infer<typeof contactFormSchema>;
