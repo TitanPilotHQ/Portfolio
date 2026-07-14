@@ -7,6 +7,7 @@ import { COUNTRIES } from "@/lib/countries";
 import {
   AI_USAGE_VALUES,
   ASSET_CLASS_VALUES,
+  contactFormSchema,
   DESK_SIZE_VALUES,
   GOVERNANCE_METHOD_VALUES,
   PRIMARY_GOAL_VALUES,
@@ -75,6 +76,49 @@ function isSectionComplete(state: FormState, fields: (keyof FormState)[]): boole
   });
 }
 
+// Visual top-to-bottom order of every schema field, used to find "the
+// first invalid field" for focus management on client-side validation.
+const FIELD_ORDER: (keyof FormState)[] = [
+  "company",
+  "name",
+  "workEmail",
+  "jobTitle",
+  "deskSize",
+  "jurisdiction",
+  "assetClasses",
+  "aiUsage",
+  "governanceMethod",
+  "primaryGoal",
+  "message",
+  "consent",
+];
+
+// Only fields rendered as a single focusable input with a stable id get an
+// entry here. SearchableSelect/MultiSelectField manage their own internal
+// ids and are intentionally left alone — focusing them narrowly would
+// require reaching into components outside this fix's scope.
+const FIELD_INPUT_ID: Partial<Record<keyof FormState, string>> = {
+  company: "cf-company",
+  name: "cf-name",
+  workEmail: "cf-email",
+  jobTitle: "cf-title",
+  deskSize: "cf-desk-size",
+  aiUsage: "cf-ai-usage",
+  governanceMethod: "cf-governance",
+  message: "cf-message",
+};
+
+function formatFieldErrors(
+  fieldErrors: Record<string, string[] | undefined>,
+): Record<string, string> {
+  return Object.fromEntries(
+    Object.entries(fieldErrors).map(([k, v]) => [
+      k,
+      Array.isArray(v) ? String(v[0]) : String(v),
+    ]),
+  );
+}
+
 export function ContactForm() {
   const [values, setValues] = useState<FormState>(EMPTY_STATE);
   const [honeypot, setHoneypot] = useState("");
@@ -132,6 +176,17 @@ export function ContactForm() {
     e.preventDefault();
     setServerError(null);
     setErrors({});
+
+    const parsed = contactFormSchema.safeParse({ ...values, honeypot, utm });
+    if (!parsed.success) {
+      const fieldErrors = parsed.error.flatten().fieldErrors;
+      setErrors(formatFieldErrors(fieldErrors));
+      const firstInvalid = FIELD_ORDER.find((field) => fieldErrors[field]?.length);
+      const focusId = firstInvalid ? FIELD_INPUT_ID[firstInvalid] : undefined;
+      if (focusId) document.getElementById(focusId)?.focus();
+      return;
+    }
+
     setSubmitting(true);
     track("contact_submitted");
 
@@ -153,14 +208,7 @@ export function ContactForm() {
         const errBody = await response.json().catch(() => null);
         const fieldErrors = errBody?.fieldErrors ?? {};
         track("contact_validation_failed", { fields: Object.keys(fieldErrors).join(",") });
-        setErrors(
-          Object.fromEntries(
-            Object.entries(fieldErrors).map(([k, v]) => [
-              k,
-              Array.isArray(v) ? String(v[0]) : String(v),
-            ]),
-          ),
-        );
+        setErrors(formatFieldErrors(fieldErrors));
         return;
       }
 
@@ -218,7 +266,11 @@ export function ContactForm() {
 
   return (
     <Reveal className="mx-auto max-w-2xl">
-      <form onSubmit={handleSubmit} className="glass-strong space-y-12 rounded-2xl p-8 sm:p-12">
+      <form
+        onSubmit={handleSubmit}
+        noValidate
+        className="glass-strong space-y-12 rounded-2xl p-8 sm:p-12"
+      >
         <input
           type="text"
           name="hp-field"
