@@ -17,7 +17,9 @@ const securityHeaders = [
       "geolocation=()",
       "payment=()",
       "usb=()",
-      "interest-cohort=()",
+      // Chrome's Topics API (browsing-topics) is FLoC's successor;
+      // interest-cohort itself is defunct and deliberately omitted.
+      "browsing-topics=()",
     ].join(", "),
   },
   // Legacy fallback for browsers that don't yet honor CSP frame-ancestors
@@ -40,7 +42,8 @@ const nextConfig: NextConfig = {
     return [
       {
         // Applies to every route. The Content-Security-Policy header is set
-        // separately in middleware.ts, since it requires a per-request nonce.
+        // separately in middleware.ts (document responses only — see that
+        // file's matcher for why it doesn't run here).
         source: "/:path*",
         headers: securityHeaders,
       },

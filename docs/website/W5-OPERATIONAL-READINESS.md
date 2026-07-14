@@ -72,6 +72,16 @@ Run after every production deploy, before considering it verified:
 - `npm run build` must succeed locally with zero errors before opening
   any PR (matches what Vercel's build step will run) — `npx tsc --noEmit`
   first is faster feedback for type errors specifically.
+- **One-time due diligence before `bot.titanpilot.app` (or any other
+  subdomain) goes live:** the new `Strict-Transport-Security` header
+  includes `includeSubDomains` — this only forces HTTPS on subdomains of
+  whichever exact host actually serves the header (verify at launch
+  time whether that's the apex `titanpilot.app` or `www.titanpilot.app`,
+  since that's a Vercel-dashboard/DNS decision this repo's code doesn't
+  control). HSTS failures are not click-through-bypassable in the browser
+  the way a certificate warning is, so confirm the future subdomain will
+  have valid HTTPS from the moment it's first resolvable, before this
+  header is live for its parent domain.
 
 ## Rollback procedure
 
