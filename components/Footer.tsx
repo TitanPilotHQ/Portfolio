@@ -64,14 +64,14 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <a href="/#roadmap" className="transition-colors hover:text-white">
+                  <Link href="/#roadmap" className="transition-colors hover:text-white">
                     Roadmap
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/#faq" className="transition-colors hover:text-white">
+                  <Link href="/#faq" className="transition-colors hover:text-white">
                     FAQ
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <Link href="/manifesto" className="transition-colors hover:text-white">

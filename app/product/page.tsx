@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { GlassCard, Reveal, SectionHeading } from "@/components/ui";
@@ -165,7 +166,7 @@ export default function ProductPage() {
         </div>
 
         <Reveal className="mt-16 flex flex-wrap items-center justify-center gap-4">
-          <a
+          <Link
             href="/#evidence"
             className="group inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-cyan to-azure px-6 py-3 text-sm font-semibold text-bg shadow-[0_0_24px_-8px_rgba(0,215,255,0.5)] transition-shadow hover:shadow-[0_0_44px_-6px_rgba(0,215,255,0.7)]"
           >
@@ -174,7 +175,7 @@ export default function ProductPage() {
               className="size-4 transition-transform group-hover:translate-x-0.5"
               aria-hidden
             />
-          </a>
+          </Link>
           <a
             href="/contact"
             className="rounded-lg border border-white/15 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-cyan/40 hover:bg-cyan/5"
