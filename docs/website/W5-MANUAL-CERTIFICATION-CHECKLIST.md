@@ -2,14 +2,44 @@
 
 Everything in this document requires Emad's hands — real credentials, a
 real inbox, real browsers, and production access that this session does
-not have. Nothing here has been executed yet. For each step: the exact
-URL/dashboard area, the exact action, the expected result, the evidence
-to capture, the pass/fail line, and what to do if it fails.
+not have. For each step: the exact URL/dashboard area, the exact action,
+the expected result, the evidence to capture, the pass/fail line, and
+what to do if it fails.
 
 Do this in order — later steps assume earlier ones passed. Report back
 per item (pass/fail + the evidence). W5 will not be declared complete,
 and `W5-CLOSURE-REPORT.md` will not be written, until this evidence is
 reviewed.
+
+**Project note:** the `titan-site` Vercel project referenced throughout
+the original version of this checklist was deleted by Emad during
+certification (it had zero Production deployments and was shadowing the
+real project). The live site is bound to the **`portfolio`** Vercel
+project — every dashboard URL below has been corrected to
+`vercel.com/emadkhanqais-projects/portfolio/...`. If you have a local
+`vercel` CLI link, re-run `vercel link` in this repo to repoint it
+(`.vercel/project.json` is gitignored, so this is a one-time local fix,
+not a code change).
+
+## Status as of 2026-07-14
+
+| # | Section | Status | Evidence |
+|---|---|---|---|
+| 1 | Preview/domain binding | **PASS** | Vercel dashboard screenshots confirmed `portfolio` project bound to `www.titanpilot.app`/`titanpilot.app`; production curl succeeded after `titan-site` project deletion |
+| 2 | Resend delivery | **PASS** | Email received at `admin@titanpilot.app`, screenshot provided |
+| 3 | Upstash persistence | **PASS** | Data Browser screenshot + full JSON record provided |
+| 4 | Sequential lead ID | **PASS** | Covered by the same submission evidence as 2–3 |
+| 5 | Duplicate submission behavior | **PASS** | Covered by the same submission evidence as 2–3; automated coverage in `app/api/contact/route.test.ts` |
+| 6 | PII-safe logs | **PASS** | Zero matches searching Vercel Runtime Logs for name, work email, and message text in the test-submission time window |
+| 5b | Rate-limit trigger (429) | **PENDING** | Needs one more rapid resubmission + Resend/Upstash dashboard confirmation of no new records — see note under §5b below |
+| 7–10 | Cross-browser (Chrome/Safari/Firefox/Edge) | **PASS** | Full 6-step script re-run post-fix on all four browsers against production; job-title and "Other" companion-field inline errors both confirmed working, no console/CSP errors |
+| 11 | Production deployment | **PASS** | Commit `90ae7dc` (PR #29) confirmed deployed via GitHub commit-status API (`state: success`) |
+| 12 | Production smoke test | **PARTIAL PASS** | Routes/titles/headers/sitemap/robots/404 all PASS; Analytics + Speed Insights real-data screenshots provided (RES 95, LCP 2.95s). Log grep for `[rateLimit] Upstash credentials absent` still **PENDING** |
+| 13 | Rollback verification | **PENDING** | Cold check (previous deployment + Promote to Production availability) not yet performed against the `portfolio` project |
+
+**Post-certification fix:** cross-browser certification (§7–10) surfaced
+that the contact form's client-side validation was unreachable — see the
+new §14 below for the defect, fix, and re-verification evidence.
 
 **Test-data convention, used throughout:** every test submission uses a
 payload that is unambiguously a test, so it's never confused with a real
@@ -44,7 +74,7 @@ to **Production** — meaning there may be no separate Preview build of
 this exact code to test in isolation. Confirm which is true before
 proceeding, so you certify against the right URL.
 
-- **Where:** `https://vercel.com/emadkhanqais-projects/titan-site/deployments`
+- **Where:** `https://vercel.com/emadkhanqais-projects/portfolio/deployments`
 - **Action:** Find the deployment for commit `2d68734` (the PR #27 merge
   commit). Check its environment badge.
   - If it says **Production** — there is no isolated Preview build. Skip
@@ -62,7 +92,7 @@ proceeding, so you certify against the right URL.
     code to `main`, isolated URL, isolated from Production traffic).
 - **Expected result:** A deployment shows **Ready** with environment
   **Preview**, on a URL like
-  `https://titan-site-git-w5-preview-cert-emadkhanqais-projects.vercel.app`
+  `https://portfolio-git-w5-preview-cert-emadkhanqais-projects.vercel.app`
   (exact hostname shown on the deployment's detail page — copy it, you'll
   reuse it through Section 10).
 - **Evidence to capture:** Screenshot of the deployment detail page
@@ -125,7 +155,7 @@ session.
   malformed/incomplete.
 - **If it fails:** Check `UPSTASH_REDIS_REST_URL`/`UPSTASH_REDIS_REST_TOKEN`
   are set correctly for the **Preview** environment specifically in
-  `https://vercel.com/emadkhanqais-projects/titan-site/settings/environment-variables`
+  `https://vercel.com/emadkhanqais-projects/portfolio/settings/environment-variables`
   (a Production-only-scoped credential would make Preview requests throw
   a 500 — check Section 2's contact-form submission actually returned
   success in the browser, not an error).
@@ -154,6 +184,11 @@ session.
 ---
 
 ## 5. Duplicate submission behavior
+
+**Status: submissions 1–2 (duplicate behavior) PASS. Submission 3 (rate-limit
+trigger, "5b") PENDING** — still needs: confirmed `429` response with
+`Retry-After` header, confirmation no new Resend email was sent for the
+blocked submission, and confirmation no new Upstash key was created for it.
 
 This uses the same two submissions from Section 4 — no new action
 needed, just a different read of the same evidence, plus one more
@@ -196,7 +231,7 @@ submission to confirm rate limiting engages.
 
 ## 6. PII-safe logs
 
-- **Where:** `https://vercel.com/emadkhanqais-projects/titan-site/logs`
+- **Where:** `https://vercel.com/emadkhanqais-projects/portfolio/logs`
   (Runtime Logs), filtered to the Preview deployment and the time window
   of Sections 2–5's test submissions.
 - **Action:** Search/filter the logs for the literal test values you
@@ -273,7 +308,7 @@ opened.
 
 Only proceed here once Sections 1–10 all pass.
 
-- **Where:** `https://vercel.com/emadkhanqais-projects/titan-site/deployments`
+- **Where:** `https://vercel.com/emadkhanqais-projects/portfolio/deployments`
   (if you built a throwaway `w5-preview-cert` branch in Section 1) or
   confirm the existing `main`/`2d68734` deployment already shown as
   **Production** (if `main` auto-deploys to Production and there was
@@ -301,6 +336,15 @@ Only proceed here once Sections 1–10 all pass.
 
 ## 12. Production smoke test
 
+**Status: 6 of 7 items PASS.** Routes/titles (all 9 return `200` with
+unique titles), security headers, sitemap/robots, and `404` behavior are
+all confirmed. Analytics and Speed Insights are confirmed receiving real
+data (RES 95, LCP 2.95s, real visitor recorded). **Still PENDING:** item
+8, the log grep for `[rateLimit] Upstash credentials absent` — needs zero
+matches confirmed in Vercel Runtime Logs to certify distributed
+(Upstash-backed) rate limiting is active in Production rather than the
+per-instance memory fallback.
+
 Run the full checklist already written in
 `docs/website/W5-OPERATIONAL-READINESS.md` → **"Production health / smoke
 checklist"** (8 items) against `https://www.titanpilot.app`. Do **not**
@@ -310,9 +354,9 @@ would create another test lead unnecessarily. Skip that one sub-item
 (item 6 in that checklist) and run the other 7.
 
 - **Where:** `https://www.titanpilot.app` (all checks) plus
-  `https://vercel.com/emadkhanqais-projects/titan-site/logs`
+  `https://vercel.com/emadkhanqais-projects/portfolio/logs`
   (item 8's log grep) and
-  `https://vercel.com/emadkhanqais-projects/titan-site/analytics` /
+  `https://vercel.com/emadkhanqais-projects/portfolio/analytics` /
   `.../speed-insights` (item 7).
 - **Action:** Follow that document's 8-item list exactly, skipping item 6
   as noted above.
@@ -337,49 +381,123 @@ would create another test lead unnecessarily. Skip that one sub-item
 
 ## 13. Rollback verification
 
-This confirms the rollback path works **without** actually disrupting
-live traffic, unless you choose the optional live drill below.
+**Status: PENDING** — not yet performed against the `portfolio` project
+(the original evidence trail for this section, if any existed, was
+against the now-deleted `titan-site` project and doesn't carry over).
 
-- **Where:** `https://vercel.com/emadkhanqais-projects/titan-site/deployments`
-- **Action (required — cold check):** Find the deployment immediately
-  before this one (commit `3dca42e`, PR #26's merge). Confirm it is
-  still listed (not deleted/expired) and that its **...** menu shows a
+Current production tip is commit `90ae7dc` (PR #29, the contact-form
+validation fix). The deployment immediately before it is `2d68734` (PR
+#27). This confirms the rollback path works **without** actually
+disrupting live traffic, unless you choose the optional live drill below.
+
+- **Where:** `https://vercel.com/emadkhanqais-projects/portfolio/deployments`
+- **Action (required — cold check):** Find the deployment for commit
+  `2d68734` (immediately before current production). Confirm it is still
+  listed (not deleted/expired) and that its **...** menu shows a
   **Promote to Production** option.
 - **Action (optional — live drill, do only if you want the higher-
   confidence version):**
-  1. Click **Promote to Production** on the `3dca42e` deployment.
-  2. Wait ~30 seconds, then `curl -I https://www.titanpilot.app/` and
-     confirm the response no longer includes the CSP/`X-Frame-Options`
-     headers added in this pass's work (confirms traffic actually moved
-     to the older build).
-  3. Promote `2d68734` back to Production.
-  4. Re-run `curl -I https://www.titanpilot.app/` and confirm the full
-     six-header set is back.
+  1. Click **Promote to Production** on the `2d68734` deployment.
+  2. Wait ~30 seconds, then load `https://www.titanpilot.app/contact` in
+     a browser, view source, and confirm the `<form>` tag no longer has
+     `novalidate` (confirms traffic actually moved to the pre-fix build —
+     the six security headers are unchanged between `2d68734` and
+     `90ae7dc`, so header-diffing won't distinguish them; the
+     `noValidate` attribute is the actual code difference between these
+     two deployments).
+  3. Promote `90ae7dc` back to Production.
+  4. Re-run the same check and confirm `novalidate` is back.
 - **Expected result:** The **Promote to Production** option is present
   and (if you ran the live drill) actually switches which code serves
   real traffic within under a minute, with no error page shown to users
   during the switch.
 - **Evidence to capture:** Screenshot of the **...** menu showing
-  **Promote to Production** on the `3dca42e` deployment (cold check); if
-  you ran the live drill, the two `curl -I` outputs showing headers
-  differing before/after.
+  **Promote to Production** on the `2d68734` deployment (cold check); if
+  you ran the live drill, the two view-source snapshots showing
+  `novalidate` present/absent before/after.
 - **Pass/fail:** Pass if the option is present and clickable (cold), or
   if the live drill completes both promotions cleanly with no downtime
   (hot). Fail if the old deployment has been deleted/expired, or a live
   drill promotion errors or serves a broken page.
 - **If it fails:** If the old deployment has expired (Vercel prunes old
   deployments after a retention window on some plans), the fallback
-  rollback path is `git revert 2d68734` on a new branch/PR — slower
-  (needs a full rebuild) but always available as long as `main`'s git
-  history is intact. Tell me if you hit this and I'll prepare the
-  revert PR.
+  rollback path is `git revert 90ae7dc` (or `git revert 2d68734`,
+  whichever commit needs undoing) on a new branch/PR — slower (needs a
+  full rebuild) but always available as long as `main`'s git history is
+  intact. This is documented in full in
+  `docs/website/W5-OPERATIONAL-READINESS.md` → "Rollback procedure". Tell
+  me if you hit this and I'll prepare the revert PR.
+
+---
+
+## 14. Post-certification defect: native validation masked custom errors
+
+**Status: PASS (fixed, deployed, re-verified).**
+
+The first pass through Sections 7–10 (cross-browser) surfaced a real
+defect that the earlier code-level accessibility review had missed:
+`components/ContactForm.tsx`'s `<form>` had `required` attributes on
+every field but no `noValidate`, so the browser's native constraint
+validation intercepted submission *before* React's `onSubmit` handler
+ever ran. Leaving **Job Title** blank and submitting gave the user zero
+feedback — no native popup (inconsistently suppressed by the surrounding
+layout in the browser tested) and no custom inline error either, because
+the custom validation code was unreachable.
+
+This is a genuine finding about the review method, not just the code:
+the original W5 accessibility pass (`W5-FINDINGS-REGISTER.md` §3)
+verified the *markup* — `role="alert"`, `aria-invalid`,
+`aria-describedby` were all correctly wired — but markup correctness
+alone doesn't prove the error path is *reachable*. Static review missed
+a runtime interaction between native and custom validation that only
+surfaced under real browser testing.
+
+**Fix (PR #29, commit `90ae7dc`):**
+- `<form>` now has `noValidate`; a client-side `contactFormSchema.safeParse()`
+  runs in `handleSubmit` before any network request, setting the same
+  `errors` state and focusing the first invalid field.
+- The same review pass surfaced a second, related gap: the four
+  "Other"-selected companion fields (Asset Classes, AI Usage, Governance
+  Method, Primary Goal) had no validation or error UI at all if their
+  parent was "Other" and the detail box was left blank. Fixed via a
+  shared `superRefine` in `lib/contactSchema.ts` (`requireOtherDetail`),
+  reused client- and server-side, plus UI wiring in `ContactForm.tsx`
+  and `MultiSelectField.tsx`.
+- A stale-error bug found during the fix's own adversarial review (a
+  companion field's error persisted in state after its parent was
+  deselected from "Other", then reappeared if "Other" was re-selected
+  without resubmitting) was fixed in the same PR (`clearOtherError`).
+- All three defects verified with new automated tests (schema-level,
+  API-route-level, and component-level) and three independent
+  adversarial review passes, each of which empirically reverted the fix
+  under test and confirmed specific tests failed (proving the tests are
+  non-vacuous, not just present).
+
+**Re-verification evidence:** Sections 7–10 above were re-run in full
+against production post-deploy, confirming: blank Job Title now shows an
+app-owned inline error; selecting "Other" with a blank companion detail
+shows the correct inline error; no native-browser validation popup
+intercepts submission; no network request fires for client-invalid
+input; keyboard/focus behavior (tab order, focus-first-invalid-field)
+remains correct.
 
 ---
 
 ## When you're done
 
-Send me the pass/fail status and evidence for each of the 13 sections
-above (screenshots, copied text, log excerpts — whatever you captured).
-I will not write `W5-CLOSURE-REPORT.md` or declare W5 complete until I've
-reviewed it. Any section that fails gets fixed and re-verified before
-closure, not silently noted and skipped.
+Three items remain **PENDING** as of this update — everything else above
+is PASS:
+
+1. **§5b** — one more rapid resubmission on production: confirm `429` +
+   `Retry-After` header, confirm no new Resend email, confirm no new
+   Upstash key for the blocked submission.
+2. **§12 item 8** — grep Vercel Runtime Logs for
+   `[rateLimit] Upstash credentials absent`; zero matches expected.
+3. **§13** — cold check: confirm the `2d68734` deployment is still
+   listed in the `portfolio` project with **Promote to Production**
+   available.
+
+Send the pass/fail status and evidence for these three (screenshots,
+copied text, log excerpts). `W5-CLOSURE-REPORT.md` will not be written
+until they're reviewed. Any item that fails gets fixed and re-verified
+before closure, not silently noted and skipped.
