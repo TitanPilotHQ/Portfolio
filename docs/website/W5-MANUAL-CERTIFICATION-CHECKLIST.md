@@ -7,9 +7,10 @@ the expected result, the evidence to capture, the pass/fail line, and
 what to do if it fails.
 
 Do this in order — later steps assume earlier ones passed. Report back
-per item (pass/fail + the evidence). W5 will not be declared complete,
-and `W5-CLOSURE-REPORT.md` will not be written, until this evidence is
-reviewed.
+per item (pass/fail + the evidence).
+
+**All 13 sections are now PASS.** See `W5-CLOSURE-REPORT.md` for the
+consolidated GO/NO-GO.
 
 **Project note:** the `titan-site` Vercel project referenced throughout
 the original version of this checklist was deleted by Emad during
@@ -31,11 +32,11 @@ not a code change).
 | 4 | Sequential lead ID | **PASS** | Covered by the same submission evidence as 2–3 |
 | 5 | Duplicate submission behavior | **PASS** | Covered by the same submission evidence as 2–3; automated coverage in `app/api/contact/route.test.ts` |
 | 6 | PII-safe logs | **PASS** | Zero matches searching Vercel Runtime Logs for name, work email, and message text in the test-submission time window |
-| 5b | Rate-limit trigger (429) | **PENDING** | Needs one more rapid resubmission + Resend/Upstash dashboard confirmation of no new records — see note under §5b below |
+| 5b | Rate-limit trigger (429) | **PASS** | `429` + `Retry-After` confirmed on the blocked resubmission; confirmed no new Resend email and no new Upstash key were created for it |
 | 7–10 | Cross-browser (Chrome/Safari/Firefox/Edge) | **PASS** | Full 6-step script re-run post-fix on all four browsers against production; job-title and "Other" companion-field inline errors both confirmed working, no console/CSP errors |
 | 11 | Production deployment | **PASS** | Commit `90ae7dc` (PR #29) confirmed deployed via GitHub commit-status API (`state: success`) |
-| 12 | Production smoke test | **PARTIAL PASS** | Routes/titles/headers/sitemap/robots/404 all PASS; Analytics + Speed Insights real-data screenshots provided (RES 95, LCP 2.95s). Log grep for `[rateLimit] Upstash credentials absent` still **PENDING** |
-| 13 | Rollback verification | **PENDING** | Cold check (previous deployment + Promote to Production availability) not yet performed against the `portfolio` project |
+| 12 | Production smoke test | **PASS** | Routes/titles/headers/sitemap/robots/404 all PASS; Analytics + Speed Insights real-data screenshots provided (RES 95, LCP 2.95s); zero Runtime Log matches for `[rateLimit] Upstash credentials absent` confirms Upstash-backed distributed rate limiting is active in Production (not the memory fallback) |
+| 13 | Rollback verification | **PASS** | Cold check confirmed against the `portfolio` project: the `2d68734` deployment is still listed and its **...** menu shows **Promote to Production** |
 
 **Post-certification fix:** cross-browser certification (§7–10) surfaced
 that the contact form's client-side validation was unreachable — see the
@@ -185,10 +186,10 @@ session.
 
 ## 5. Duplicate submission behavior
 
-**Status: submissions 1–2 (duplicate behavior) PASS. Submission 3 (rate-limit
-trigger, "5b") PENDING** — still needs: confirmed `429` response with
-`Retry-After` header, confirmation no new Resend email was sent for the
-blocked submission, and confirmation no new Upstash key was created for it.
+**Status: PASS** — submissions 1–2 each produced a distinct email + Upstash
+key (no accidental duplicate). Submission 3 ("5b") was rejected with `429`
+and a `Retry-After` header; confirmed no new Resend email and no new
+Upstash key were created for the blocked submission.
 
 This uses the same two submissions from Section 4 — no new action
 needed, just a different read of the same evidence, plus one more
@@ -336,14 +337,13 @@ Only proceed here once Sections 1–10 all pass.
 
 ## 12. Production smoke test
 
-**Status: 6 of 7 items PASS.** Routes/titles (all 9 return `200` with
+**Status: PASS, all 7 items.** Routes/titles (all 9 return `200` with
 unique titles), security headers, sitemap/robots, and `404` behavior are
 all confirmed. Analytics and Speed Insights are confirmed receiving real
-data (RES 95, LCP 2.95s, real visitor recorded). **Still PENDING:** item
-8, the log grep for `[rateLimit] Upstash credentials absent` — needs zero
-matches confirmed in Vercel Runtime Logs to certify distributed
-(Upstash-backed) rate limiting is active in Production rather than the
-per-instance memory fallback.
+data (RES 95, LCP 2.95s, real visitor recorded). Item 8, the log grep for
+`[rateLimit] Upstash credentials absent`, returned zero matches — confirms
+distributed (Upstash-backed) rate limiting is active in Production, not
+the per-instance memory fallback.
 
 Run the full checklist already written in
 `docs/website/W5-OPERATIONAL-READINESS.md` → **"Production health / smoke
@@ -381,9 +381,12 @@ would create another test lead unnecessarily. Skip that one sub-item
 
 ## 13. Rollback verification
 
-**Status: PENDING** — not yet performed against the `portfolio` project
-(the original evidence trail for this section, if any existed, was
-against the now-deleted `titan-site` project and doesn't carry over).
+**Status: PASS (cold check)** — confirmed against the `portfolio` project:
+the `2d68734` deployment is still listed (not deleted/expired) and its
+**...** menu shows **Promote to Production**. The live drill was not run
+(not required — the cold check satisfies this section's pass criteria,
+and an unnecessary live promotion carries its own small risk for no
+added certification value).
 
 Current production tip is commit `90ae7dc` (PR #29, the contact-form
 validation fix). The deployment immediately before it is `2d68734` (PR
@@ -485,19 +488,5 @@ remains correct.
 
 ## When you're done
 
-Three items remain **PENDING** as of this update — everything else above
-is PASS:
-
-1. **§5b** — one more rapid resubmission on production: confirm `429` +
-   `Retry-After` header, confirm no new Resend email, confirm no new
-   Upstash key for the blocked submission.
-2. **§12 item 8** — grep Vercel Runtime Logs for
-   `[rateLimit] Upstash credentials absent`; zero matches expected.
-3. **§13** — cold check: confirm the `2d68734` deployment is still
-   listed in the `portfolio` project with **Promote to Production**
-   available.
-
-Send the pass/fail status and evidence for these three (screenshots,
-copied text, log excerpts). `W5-CLOSURE-REPORT.md` will not be written
-until they're reviewed. Any item that fails gets fixed and re-verified
-before closure, not silently noted and skipped.
+All 13 sections are PASS. See `docs/website/W5-CLOSURE-REPORT.md` for the
+consolidated evidence summary and GO/NO-GO decision.
