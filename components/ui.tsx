@@ -76,11 +76,11 @@ export function GlassCard({
   const ref = useRef<HTMLDivElement>(null);
   const px = useMotionValue(0.5);
   const py = useMotionValue(0.5);
-  const rotateX = useSpring(useTransform(py, [0, 1], [7, -7]), {
+  const rotateX = useSpring(useTransform(py, [0, 1], [2.5, -2.5]), {
     stiffness: 250,
     damping: 22,
   });
-  const rotateY = useSpring(useTransform(px, [0, 1], [-9, 9]), {
+  const rotateY = useSpring(useTransform(px, [0, 1], [-3, 3]), {
     stiffness: 250,
     damping: 22,
   });

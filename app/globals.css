@@ -164,7 +164,7 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: shimmer 6s ease-in-out infinite;
+  animation: shimmer 16s ease-in-out infinite;
 }
 
 /* 3D perspective helper for tilt cards */
@@ -195,10 +195,10 @@ body {
 
 .grid-lines {
   background-image: linear-gradient(
-      rgba(0, 215, 255, 0.045) 1px,
+      rgba(0, 215, 255, 0.03) 1px,
       transparent 1px
     ),
-    linear-gradient(90deg, rgba(0, 215, 255, 0.045) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(0, 215, 255, 0.03) 1px, transparent 1px);
   background-size: 56px 56px;
   mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 40%, transparent 100%);
   -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 40%, transparent 100%);
