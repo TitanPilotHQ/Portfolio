@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronRight } from "lucide-react";
-import { ARCHITECTURE_FLOW, ARCHITECTURE_LAYERS } from "@/lib/content";
+import { ARCHITECTURE_FLOW, ARCHITECTURE_LAYERS, AUTONOMY_LADDER_DETAIL } from "@/lib/content";
 import { GlassCard, Reveal, SectionHeading } from "./ui";
 
 export function ArchitectureSection() {
@@ -79,6 +79,40 @@ export function ArchitectureSection() {
             </Reveal>
           ))}
         </div>
+
+        {/* What's live today vs. what's designed-next in the same pipeline */}
+        <Reveal className="mt-10">
+          <div className="glass mx-auto max-w-4xl rounded-2xl px-6 py-5">
+            <p className="mb-4 text-center font-mono text-[10px] uppercase tracking-[0.3em] text-secondary">
+              Where Each Stage Stands Today
+            </p>
+            <ul className="space-y-3">
+              {[
+                { stage: "Market data & dossier", status: "Live", tone: "text-success" },
+                { stage: "AI analysis & adversarial review", status: "Certified — shadow mode", tone: "text-cyan" },
+                { stage: "Evidence binding & replay", status: "Active", tone: "text-success" },
+                {
+                  stage: "Human approval (Copilot mode)",
+                  status: AUTONOMY_LADDER_DETAIL[1].status,
+                  tone: "text-electric",
+                },
+                { stage: "Risk Gate", status: "Mandatory, always-on", tone: "text-amber" },
+                { stage: "Execution & broker reconciliation", status: "Deterministic, MT5-bridged", tone: "text-success" },
+              ].map((row) => (
+                <li
+                  key={row.stage}
+                  className="flex items-center justify-between gap-4 border-b border-white/[0.04] pb-3 text-sm last:border-0 last:pb-0"
+                >
+                  <span className="text-secondary">{row.stage}</span>
+                  <span className={`font-mono text-xs ${row.tone}`}>{row.status}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 text-center text-xs leading-relaxed text-white/40">
+              {AUTONOMY_LADDER_DETAIL[1].body}
+            </p>
+          </div>
+        </Reveal>
 
         <Reveal className="mt-10 text-center">
           <a
