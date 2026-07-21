@@ -195,6 +195,24 @@ export const MILESTONES = [
   { label: "Shadow AI Pipeline", value: "Certified" },
 ];
 
+/** Owner-approved wording (session decision, 2026-07-21) — describes
+ * current deployment state without naming internal infrastructure
+ * (no tailnet/VPN/VPS/IP/port/hostname/db-role references). Not a
+ * quantitative claim gated by PUBLIC_CLAIMS_REGISTER.md; do not add
+ * numbers or infra names here without owner sign-off first. */
+export const BUILD_STATUS = {
+  eyebrow: "Current Build Status",
+  title: "What's Deployed Today.",
+  body: "The current build includes deterministic replay, an append-only approval event spine, and a read-only Approval Center. Live approval writes and execution activation remain subject to separate controls and owner authorization.",
+  facts: [
+    "Deterministic trading engine — built and certified.",
+    "MT5 bridge — validated end-to-end.",
+    "Replay verification and broker reconciliation — implemented.",
+    "A read-only operator approval surface is deployed for controlled internal use. Approval write authority and execution remain separately gated.",
+  ],
+  disclosure: "This public website does not expose internal operator tools or controls.",
+};
+
 export const TECH_STACK = [
   "Next.js",
   "Python",
