@@ -8,7 +8,7 @@ export function ReplayIntroButton() {
         window.localStorage.removeItem("titan_intro_last_seen");
         window.location.reload();
       }}
-      className="text-xs text-white/40 transition hover:text-white/70"
+      className="text-xs text-white/70 transition hover:text-white"
     >
       Replay intro
     </button>
