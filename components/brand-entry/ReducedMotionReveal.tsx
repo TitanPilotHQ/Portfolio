@@ -43,6 +43,7 @@ export function ReducedMotionReveal({ onComplete }: ReducedMotionRevealProps) {
         width={156}
         height={143}
         priority
+        unoptimized
         style={{
           opacity: visible ? 1 : 0,
           transition: `opacity ${FADE_IN_MS}ms ease-out`,

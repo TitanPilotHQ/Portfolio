@@ -14,9 +14,9 @@ const FRAGMENT_IDS = [
   "candle-5",
 ] as const;
 
-const DORMANT_MS = 700;
-const ALIGN_MS = 1300;
-const LOCK_MS = 800;
+const DORMANT_MS = 900;
+const ALIGN_MS = 1800;
+const LOCK_MS = 900;
 const STAGGER_MS = 70;
 
 interface LogoAssemblyProps {

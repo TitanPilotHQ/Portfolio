@@ -57,7 +57,7 @@ export function EntryControls({ variant, onEnter, onSkip }: EntryControlsProps) 
           {sound === "on" ? "🔊" : "🔇"}
         </button>
       </div>
-      <p className="text-xs text-white/50">
+      <p className="text-xs text-white/70">
         {sound === "on" ? "Experience with spatial sound" : "Continue muted"}
       </p>
     </div>

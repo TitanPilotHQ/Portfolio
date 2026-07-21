@@ -125,6 +125,7 @@ export function BrandEntryGate() {
   return (
     <div
       role="dialog"
+      aria-modal="true"
       aria-label="Titan Pilot entry sequence"
       className="fixed inset-0 z-[60] flex items-center justify-center bg-bg"
     >
