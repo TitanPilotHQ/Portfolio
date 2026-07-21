@@ -181,6 +181,15 @@ export const EVIDENCE_ROWS = [
   },
 ];
 
+/** Owner-approved wording (session decision, 2026-07-21). Describes
+ * the future interactive, per-decision Evidence Explorer (W2) — blocked
+ * pending Titan's certified sanitized fixture and versioned schema; see
+ * docs/website/W2-HANDOFF-READINESS.md. Must never imply the capability
+ * table above (EVIDENCE_ROWS) is incomplete, and must never show mock
+ * evidence. */
+export const EVIDENCE_EXPLORER_NOTE =
+  "Interactive Evidence Explorer in preparation. Public per-decision evidence will be released only after sanitization, schema validation, integrity verification, and publication approval.";
+
 /** Replay/backup/shadow-pipeline tiles are sourced from
  * docs/content/PUBLIC_CLAIMS_REGISTER.md — do not change these values
  * without a corresponding register row. */
