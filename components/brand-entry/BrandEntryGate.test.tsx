@@ -2,6 +2,7 @@
 // @vitest-environment jsdom
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import { act, cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { track } from "@vercel/analytics";
 import { BrandEntryGate } from "./BrandEntryGate";
 
 vi.mock("@vercel/analytics", () => ({ track: vi.fn() }));
@@ -65,6 +66,32 @@ describe("BrandEntryGate", () => {
     expect(
       document.getElementById("site-content")?.hasAttribute("inert")
     ).toBe(false);
+  });
+
+  it("skipping records intro_skipped exactly once and never records intro_completed", async () => {
+    // Keep the assembly scene mounted (never resolving) so the real
+    // "Skip intro" affordance — which only listens for Escape while the
+    // scene is in progress — has something to skip out of, instead of
+    // racing a synchronous fetch failure into the FAIL path.
+    vi.stubGlobal("fetch", vi.fn(() => new Promise(() => {})));
+    // vi.restoreAllMocks() (afterEach) does not clear call history recorded
+    // by other tests against this module-level mock — clear it explicitly
+    // so this assertion only reflects this test's render.
+    (track as ReturnType<typeof vi.fn>).mockClear();
+    render(<BrandEntryGate />);
+    await act(async () => {});
+    fireEvent.click(screen.getByText("Enter Titan"));
+    await act(async () => {});
+    fireEvent.keyDown(window, { key: "Escape" });
+    await act(async () => {
+      await new Promise((resolve) => setTimeout(resolve, 1300));
+    });
+    // "skipped" transitions to "complete" once the skip dissolve finishes
+    // (so the overlay tears down), but the outcome must only be recorded
+    // once — as a skip, not also as a completion.
+    expect(track).toHaveBeenCalledTimes(1);
+    expect(track).toHaveBeenCalledWith("intro_skipped");
+    expect(track).not.toHaveBeenCalledWith("intro_completed");
   });
 
   it("a same-day return visit auto-continues without showing Enter Titan", async () => {

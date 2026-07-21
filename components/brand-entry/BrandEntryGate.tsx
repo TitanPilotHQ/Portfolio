@@ -30,6 +30,7 @@ export function BrandEntryGate() {
   const { state, mounted, showFullSequence, dispatch } = useEntryExperience();
   const soundRef = useRef<AmbientSoundController | null>(null);
   const autoContinuedRef = useRef(false);
+  const outcomeRecordedRef = useRef(false);
 
   const visual = mounted
     ? resolveVisual(state.phase, showFullSequence, state.reducedMotion)
@@ -65,16 +66,25 @@ export function BrandEntryGate() {
     if (state.phase !== "complete" && state.phase !== "skipped" && state.phase !== "failed") {
       return;
     }
-    try {
-      track(
-        state.phase === "complete"
-          ? "intro_completed"
-          : state.phase === "skipped"
-            ? "intro_skipped"
-            : "intro_failed"
-      );
-    } catch {
-      // analytics must never block the reveal
+    // "skipped" and "failed" both eventually transition to "complete" once
+    // their dissolve fires REVEAL_COMPLETE (see entryState.ts). That's
+    // required so the overlay tears down, but it means this effect runs
+    // twice for a skip/fail: once on "skipped"/"failed", again later on
+    // "complete". Outcomes are mutually exclusive, so only the first one
+    // reached is ever recorded.
+    if (!outcomeRecordedRef.current) {
+      outcomeRecordedRef.current = true;
+      try {
+        track(
+          state.phase === "complete"
+            ? "intro_completed"
+            : state.phase === "skipped"
+              ? "intro_skipped"
+              : "intro_failed"
+        );
+      } catch {
+        // analytics must never block the reveal
+      }
     }
     soundRef.current?.dispose();
     soundRef.current = null;
