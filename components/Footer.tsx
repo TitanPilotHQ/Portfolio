@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Github, Mail } from "lucide-react";
@@ -115,6 +117,18 @@ export function Footer() {
                   >
                     titanpilot.app
                   </a>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      window.localStorage.removeItem("titan_intro_last_seen");
+                      window.location.reload();
+                    }}
+                    className="text-xs text-white/40 transition hover:text-white/70"
+                  >
+                    Replay intro
+                  </button>
                 </li>
               </ul>
             </div>

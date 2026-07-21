@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Unbounded } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { BrandEntryGate } from "@/components/brand-entry/BrandEntryGate";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -94,7 +95,8 @@ export default function RootLayout({
       className={`dark ${geistSans.variable} ${geistMono.variable} ${unbounded.variable}`}
     >
       <body className="antialiased bg-bg text-white">
-        {children}
+        <BrandEntryGate />
+        <div id="site-content">{children}</div>
         <Analytics />
         <SpeedInsights />
       </body>

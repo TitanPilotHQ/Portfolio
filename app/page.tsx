@@ -25,7 +25,7 @@ export default function Home() {
       <JsonLd />
       <ScrollExtras />
       <Header />
-      <main>
+      <main id="main-content" tabIndex={-1} className="outline-none">
         <Hero />
         <MentalModel />
         <WhySection />
