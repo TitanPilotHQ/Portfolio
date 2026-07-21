@@ -11,7 +11,7 @@ function buildNoiseBuffer(ctx: AudioContext, seconds: number): AudioBuffer {
   for (let i = 0; i < length; i++) {
     data[i] = Math.random() * 2 - 1;
     if (i < fadeSamples) data[i] *= i / fadeSamples;
-    if (i > length - fadeSamples) data[i] *= (length - i) / fadeSamples;
+    if (i >= length - fadeSamples) data[i] *= (length - i) / fadeSamples;
   }
   return buffer;
 }
@@ -120,28 +120,40 @@ export class AmbientSoundController {
 
   duckForReveal(): void {
     if (!this.ctx || !this.masterGain || this.muted) return;
-    this.masterGain.gain.setTargetAtTime(
-      REVEAL_DUCK_GAIN,
-      this.ctx.currentTime,
-      FADE_SECONDS
-    );
+    try {
+      this.masterGain.gain.setTargetAtTime(
+        REVEAL_DUCK_GAIN,
+        this.ctx.currentTime,
+        FADE_SECONDS
+      );
+    } catch {
+      // fail-open: any Web Audio error means the intro continues silently
+    }
   }
 
   mute(): void {
     this.muted = true;
     if (this.ctx && this.masterGain) {
-      this.masterGain.gain.setTargetAtTime(0, this.ctx.currentTime, 0.3);
+      try {
+        this.masterGain.gain.setTargetAtTime(0, this.ctx.currentTime, 0.3);
+      } catch {
+        // fail-open: any Web Audio error means the intro continues silently
+      }
     }
   }
 
   unmute(): void {
     this.muted = false;
     if (this.ctx && this.masterGain) {
-      this.masterGain.gain.setTargetAtTime(
-        REVEAL_DUCK_GAIN,
-        this.ctx.currentTime,
-        0.3
-      );
+      try {
+        this.masterGain.gain.setTargetAtTime(
+          REVEAL_DUCK_GAIN,
+          this.ctx.currentTime,
+          0.3
+        );
+      } catch {
+        // fail-open: any Web Audio error means the intro continues silently
+      }
     }
   }
 
@@ -160,7 +172,9 @@ export class AmbientSoundController {
     this.lfo?.disconnect();
     this.masterGain?.disconnect();
     if (this.ctx && this.ctx.state !== "closed") {
-      void this.ctx.close();
+      this.ctx.close().catch(() => {
+        // fail-open: a rejected close() must not surface as an unhandled rejection
+      });
     }
     this.roomSource = null;
     this.lfo = null;
