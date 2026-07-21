@@ -7,7 +7,9 @@ import { DecisionTimeline } from "@/components/DecisionTimeline";
 import { AIPhilosophy } from "@/components/AIPhilosophy";
 import { SafetyGrid } from "@/components/SafetyGrid";
 import { EvidenceSection } from "@/components/EvidenceSection";
+import { EvidenceExplorerNote } from "@/components/EvidenceExplorerNote";
 import { Milestones } from "@/components/Milestones";
+import { BuildStatus } from "@/components/BuildStatus";
 import { TechStack } from "@/components/TechStack";
 import { ProductModeLadder } from "@/components/ProductModeLadder";
 import { RoadmapTimeline } from "@/components/RoadmapTimeline";
@@ -32,7 +34,9 @@ export default function Home() {
         <AIPhilosophy />
         <SafetyGrid />
         <EvidenceSection />
+        <EvidenceExplorerNote />
         <Milestones />
+        <BuildStatus />
         <TechStack />
         <ProductModeLadder />
         <RoadmapTimeline />

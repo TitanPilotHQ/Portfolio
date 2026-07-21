@@ -25,12 +25,12 @@ export function Hero() {
       <div className="grid-lines absolute inset-0" aria-hidden />
       <motion.div
         style={{ y: orbY }}
-        className="absolute left-1/2 top-0 h-[600px] w-[900px] -translate-x-1/2 rounded-full bg-azure/10 blur-[140px]"
+        className="absolute left-1/2 top-0 h-[600px] w-[900px] -translate-x-1/2 rounded-full bg-azure/6 blur-[140px]"
         aria-hidden
       />
       <motion.div
         style={{ y: orbY2 }}
-        className="absolute -right-40 top-40 h-[400px] w-[400px] rounded-full bg-violet/10 blur-[120px]"
+        className="absolute -right-40 top-40 h-[400px] w-[400px] rounded-full bg-violet/6 blur-[120px]"
         aria-hidden
       />
 

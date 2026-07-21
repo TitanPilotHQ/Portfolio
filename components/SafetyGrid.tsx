@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { OctagonAlert, ShieldCheck } from "lucide-react";
-import { SAFETY_RULES } from "@/lib/content";
+import { PRODUCT_DOCTRINES, SAFETY_RULES } from "@/lib/content";
 import { Reveal, SectionHeading } from "./ui";
 
 export function SafetyGrid() {
@@ -14,6 +14,17 @@ export function SafetyGrid() {
           title="When Titan Pilot Cannot Prove State, It Stops."
           copy="This is the emotional opposite of reckless automation. Fail-closed behavior is not a feature flag — it is the foundation."
         />
+
+        <div className="mx-auto mt-10 grid max-w-4xl gap-4 sm:grid-cols-2">
+          {PRODUCT_DOCTRINES.map((doctrine) => (
+            <div key={doctrine.title} className="glass rounded-xl p-5">
+              <p className="mb-1.5 font-mono text-[10px] uppercase tracking-[0.3em] text-cyan/70">
+                {doctrine.title}
+              </p>
+              <p className="text-sm leading-relaxed text-secondary">{doctrine.body}</p>
+            </div>
+          ))}
+        </div>
 
         <div className="mx-auto mt-14 grid max-w-5xl gap-10 lg:grid-cols-[1fr_1.4fr] lg:items-center">
           {/* Shield visual */}
