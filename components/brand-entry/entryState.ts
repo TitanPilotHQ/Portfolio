@@ -31,8 +31,22 @@ export const initialEntryState: EntryState = {
   reducedMotion: false,
 };
 
-const TERMINAL_PHASES: readonly EntryPhase[] = [
-  "complete",
+// "complete" is the only truly terminal phase. "skipped" and "failed" are
+// exit *reasons*, not dead ends — BrandEntryGate still renders a dissolve
+// for them and depends on the follow-up REVEAL_COMPLETE (fired when that
+// dissolve finishes) to reach "complete" and release the scroll lock /
+// #site-content inert toggle. Blocking that dispatch would leave the site
+// permanently locked after a skip or an assembly failure.
+const TERMINAL_PHASES: readonly EntryPhase[] = ["complete"];
+
+// Phases from which a dissolve/reveal visual is mounted and may legitimately
+// signal completion: the full scene's final "revealing" step, the reduced-
+// motion / return-visit dissolve (which never advances past "assembling"),
+// and the "skipped" / "failed" exit dissolves.
+const REVEAL_COMPLETABLE_PHASES: readonly EntryPhase[] = [
+  "assembling",
+  "locked",
+  "revealing",
   "skipped",
   "failed",
 ];
@@ -59,7 +73,7 @@ export function entryReducer(
       if (state.phase !== "locked") return state;
       return { ...state, phase: "revealing" };
     case "REVEAL_COMPLETE":
-      if (state.phase !== "revealing") return state;
+      if (!REVEAL_COMPLETABLE_PHASES.includes(state.phase)) return state;
       return { ...state, phase: "complete" };
     case "SKIP":
       return { ...state, phase: "skipped" };
