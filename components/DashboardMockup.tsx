@@ -36,11 +36,11 @@ export function DashboardMockup() {
   const ref = useRef<HTMLDivElement>(null);
   const px = useMotionValue(0.5);
   const py = useMotionValue(0.5);
-  const rotateX = useSpring(useTransform(py, [0, 1], [6, -6]), {
+  const rotateX = useSpring(useTransform(py, [0, 1], [3, -3]), {
     stiffness: 160,
     damping: 20,
   });
-  const rotateY = useSpring(useTransform(px, [0, 1], [-8, 8]), {
+  const rotateY = useSpring(useTransform(px, [0, 1], [-4, 4]), {
     stiffness: 160,
     damping: 20,
   });
@@ -67,7 +67,7 @@ export function DashboardMockup() {
       aria-hidden
     >
       {/* Ambient glow behind panel */}
-      <div className="absolute -inset-8 rounded-[2rem] bg-gradient-to-tr from-azure/20 via-cyan/10 to-violet/20 blur-3xl" />
+      <div className="absolute -inset-8 rounded-[2rem] bg-gradient-to-tr from-azure/12 via-cyan/8 to-violet/12 blur-3xl" />
 
       <div className="glass-strong animate-float relative overflow-hidden rounded-2xl shadow-2xl">
         {/* Scanline sweep */}
